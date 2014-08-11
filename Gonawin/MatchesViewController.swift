@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  MatchesViewController.swift
 //  Gonawin
 //
 //  Created by Remy JOURDE on 11/08/2014.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class MatchesViewController: UIViewController {
                             
     override func viewDidLoad() {
         super.viewDidLoad()

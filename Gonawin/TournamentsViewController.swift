@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  TournamentsViewController.swift
 //  Gonawin
 //
 //  Created by Remy JOURDE on 11/08/2014.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class TournamentsViewController: UIViewController {
                             
     override func viewDidLoad() {
         super.viewDidLoad()

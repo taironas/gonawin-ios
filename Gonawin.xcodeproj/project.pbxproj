@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14F5905F1999008600F03D43 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F5905E1999008600F03D43 /* TeamsViewController.swift */; };
+		14F59061199900B400F03D43 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F59060199900B400F03D43 /* ProfileViewController.swift */; };
 		14F87A6A1998EBE400A6EB11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F87A691998EBE400A6EB11 /* AppDelegate.swift */; };
-		14F87A6C1998EBE400A6EB11 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F87A6B1998EBE400A6EB11 /* FirstViewController.swift */; };
-		14F87A6E1998EBE400A6EB11 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F87A6D1998EBE400A6EB11 /* SecondViewController.swift */; };
+		14F87A6C1998EBE400A6EB11 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F87A6B1998EBE400A6EB11 /* MatchesViewController.swift */; };
+		14F87A6E1998EBE400A6EB11 /* TournamentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F87A6D1998EBE400A6EB11 /* TournamentsViewController.swift */; };
 		14F87A711998EBE400A6EB11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F87A6F1998EBE400A6EB11 /* Main.storyboard */; };
 		14F87A731998EBE400A6EB11 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F87A721998EBE400A6EB11 /* Images.xcassets */; };
 		14F87A7F1998EBE400A6EB11 /* GonawinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F87A7E1998EBE400A6EB11 /* GonawinTests.swift */; };
@@ -26,11 +28,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14F5905E1999008600F03D43 /* TeamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
+		14F59060199900B400F03D43 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		14F87A641998EBE400A6EB11 /* Gonawin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gonawin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F87A681998EBE400A6EB11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14F87A691998EBE400A6EB11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		14F87A6B1998EBE400A6EB11 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		14F87A6D1998EBE400A6EB11 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		14F87A6B1998EBE400A6EB11 /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
+		14F87A6D1998EBE400A6EB11 /* TournamentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentsViewController.swift; sourceTree = "<group>"; };
 		14F87A701998EBE400A6EB11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14F87A721998EBE400A6EB11 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		14F87A781998EBE400A6EB11 /* GonawinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GonawinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,8 +82,10 @@
 			isa = PBXGroup;
 			children = (
 				14F87A691998EBE400A6EB11 /* AppDelegate.swift */,
-				14F87A6B1998EBE400A6EB11 /* FirstViewController.swift */,
-				14F87A6D1998EBE400A6EB11 /* SecondViewController.swift */,
+				14F87A6B1998EBE400A6EB11 /* MatchesViewController.swift */,
+				14F87A6D1998EBE400A6EB11 /* TournamentsViewController.swift */,
+				14F5905E1999008600F03D43 /* TeamsViewController.swift */,
+				14F59060199900B400F03D43 /* ProfileViewController.swift */,
 				14F87A6F1998EBE400A6EB11 /* Main.storyboard */,
 				14F87A721998EBE400A6EB11 /* Images.xcassets */,
 				14F87A671998EBE400A6EB11 /* Supporting Files */,
@@ -211,9 +217,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14F87A6E1998EBE400A6EB11 /* SecondViewController.swift in Sources */,
+				14F87A6E1998EBE400A6EB11 /* TournamentsViewController.swift in Sources */,
+				14F5905F1999008600F03D43 /* TeamsViewController.swift in Sources */,
+				14F59061199900B400F03D43 /* ProfileViewController.swift in Sources */,
 				14F87A6A1998EBE400A6EB11 /* AppDelegate.swift in Sources */,
-				14F87A6C1998EBE400A6EB11 /* FirstViewController.swift in Sources */,
+				14F87A6C1998EBE400A6EB11 /* MatchesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +407,7 @@
 				14F87A841998EBE400A6EB11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		14F87A851998EBE400A6EB11 /* Build configuration list for PBXNativeTarget "GonawinTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +416,7 @@
 				14F87A871998EBE400A6EB11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
