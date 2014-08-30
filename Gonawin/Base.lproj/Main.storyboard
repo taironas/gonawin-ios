@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1KZ-2K-Hpk">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
     </dependencies>
@@ -21,7 +21,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1562" y="-293"/>
+            <point key="canvasLocation" x="2374" y="-293"/>
         </scene>
         <!--Tournaments-->
         <scene sceneID="wg7-f3-ORb">
@@ -59,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJp-eV-etj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3042" y="-293"/>
+            <point key="canvasLocation" x="3854" y="-293"/>
         </scene>
         <!--Profile-->
         <scene sceneID="Dd4-h7-63h">
@@ -101,6 +101,40 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
+        <!--Gonawin-->
+        <scene sceneID="C95-gC-lte">
+            <objects>
+                <viewController id="490-8E-l6K" customClass="LoginViewController" customModule="Gonawin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LSl-cu-WhB"/>
+                        <viewControllerLayoutGuide type="bottom" id="odl-fI-emG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WhF-Yj-EBA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9g-dd-6B2" customClass="GPPSignInButton">
+                                <rect key="frame" x="286" y="285" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="j9g-dd-6B2" secondAttribute="centerY" id="9yH-hu-vd5"/>
+                            <constraint firstAttribute="centerX" secondItem="j9g-dd-6B2" secondAttribute="centerX" constant="-1" id="F6K-3y-YE1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Gonawin" id="7eG-8Q-j7U"/>
+                    <connections>
+                        <outlet property="loginWithGooglePlusButton" destination="j9g-dd-6B2" id="P1Y-R9-1hg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vmd-Ne-lK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792" y="-879"/>
+        </scene>
         <!--Matches-->
         <scene sceneID="9ve-Dp-KB1">
             <objects>
@@ -118,7 +152,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NS3-95-o2v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-293"/>
+            <point key="canvasLocation" x="1562" y="-293"/>
         </scene>
         <!--Tournaments-->
         <scene sceneID="dHK-oZ-eeb">
@@ -156,7 +190,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mI-5v-Ayx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2230" y="-293"/>
+            <point key="canvasLocation" x="3042" y="-293"/>
         </scene>
         <!--Profile-->
         <scene sceneID="qrC-1S-jgg">
@@ -176,6 +210,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="glI-Yq-4eA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2230" y="374"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gaf-Se-Zi3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1KZ-2K-Hpk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="scE-k6-lCh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="490-8E-l6K" kind="relationship" relationship="rootViewController" id="70Y-gW-Hbt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jS4-LO-AHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="-879"/>
         </scene>
     </scenes>
     <resources>
