@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import Alamofire
 
 class LoginViewController: UIViewController, GPPSignInDelegate {
 
     
-    @IBOutlet weak var loginWithGooglePlusButton: GPPSignInButton!
+    @IBOutlet weak var googlePlusButton: GPPSignInButton!
+    
+    @IBOutlet weak var usernameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,14 +34,23 @@ class LoginViewController: UIViewController, GPPSignInDelegate {
     }
     
     func finishedWithAuth(auth: GTMOAuth2Authentication,  error: NSError ) {
-        println("accessToken = \(auth.accessToken)")
-        
         var signIn = GPPSignIn.sharedInstance()
+        
         let name = "\(signIn.googlePlusUser.name.givenName) \(signIn.googlePlusUser.name.familyName)"
         
-        println("userID = \(signIn.userID)")
-        println("userEmail = \(signIn.userEmail)")
-        println("name = \(name)")
+        let authParams = ["access_token": auth.accessToken, "provider": "google", "id": signIn.userID, "email": signIn.userEmail, "name": name]
+        Alamofire.request(.GET, "http://www.gonawin.com/j/auth/", parameters: authParams)
+            .response { (request, response, data, error) in
+                let result: Result<User>  = parseData(data as NSData, response, error)
+                
+                switch result {
+                case let .Error(error):
+                    println(error)
+                case let .Value(boxedUser):
+                    let user = boxedUser.value
+                    self.usernameLabel?.text = user.username
+                }
+        }
     }
-      
+    
 }

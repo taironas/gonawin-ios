@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		14875BF2199D2443005791D0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14875BF1199D2443005791D0 /* LoginViewController.swift */; };
 		14D7F54419A25FB60020D51A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 14D7F54319A25FB60020D51A /* Podfile */; };
+		14F1842619C77C2D00437C59 /* GonawinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1842519C77C2D00437C59 /* GonawinController.swift */; };
+		14F1C74419C4DB7D00CA8975 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1C74319C4DB7D00CA8975 /* User.swift */; };
+		14F1C74719C4E1FD00CA8975 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1C74619C4E1FD00CA8975 /* JSON.swift */; };
+		14F1C74919C4E22B00CA8975 /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1C74819C4E22B00CA8975 /* JSONDecodable.swift */; };
+		14F1C74B19C4E67C00CA8975 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1C74A19C4E67C00CA8975 /* Functional.swift */; };
+		14F1C74D19C4E6C800CA8975 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1C74C19C4E6C800CA8975 /* Response.swift */; };
+		14F1C74F19C4E6EE00CA8975 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1C74E19C4E6EE00CA8975 /* Result.swift */; };
+		14F1C75119C4E71C00CA8975 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1C75019C4E71C00CA8975 /* NetworkClient.swift */; };
 		14F5905F1999008600F03D43 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F5905E1999008600F03D43 /* TeamsViewController.swift */; };
 		14F59061199900B400F03D43 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F59060199900B400F03D43 /* ProfileViewController.swift */; };
 		14F87A6A1998EBE400A6EB11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F87A691998EBE400A6EB11 /* AppDelegate.swift */; };
@@ -21,6 +29,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		14DC4C8819BB4A9300F09AE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14DC4C8319BB4A9300F09AE4 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		14DC4C8A19BB4A9300F09AE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14DC4C8319BB4A9300F09AE4 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
+		14DC4C8C19BB4AD200F09AE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14DC4C8319BB4A9300F09AE4 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
 		14F87A791998EBE400A6EB11 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 14F87A5C1998EBE400A6EB11 /* Project object */;
@@ -35,6 +64,15 @@
 		1474939F19A265650041BE1A /* Gonawin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gonawin-Bridging-Header.h"; sourceTree = "<group>"; };
 		14875BF1199D2443005791D0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		14D7F54319A25FB60020D51A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		14DC4C8319BB4A9300F09AE4 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		14F1842519C77C2D00437C59 /* GonawinController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GonawinController.swift; sourceTree = "<group>"; };
+		14F1C74319C4DB7D00CA8975 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		14F1C74619C4E1FD00CA8975 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		14F1C74819C4E22B00CA8975 /* JSONDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
+		14F1C74A19C4E67C00CA8975 /* Functional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functional.swift; sourceTree = "<group>"; };
+		14F1C74C19C4E6C800CA8975 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		14F1C74E19C4E6EE00CA8975 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		14F1C75019C4E71C00CA8975 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		14F5905E1999008600F03D43 /* TeamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		14F59060199900B400F03D43 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		14F87A641998EBE400A6EB11 /* Gonawin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gonawin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,10 +107,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14DC4C8419BB4A9300F09AE4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14DC4C8919BB4A9300F09AE4 /* Alamofire.framework */,
+				14DC4C8B19BB4A9300F09AE4 /* AlamofireTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14F1C74219C4DB6D00CA8975 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				14F1C74319C4DB7D00CA8975 /* User.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		14F1C74519C4E1EF00CA8975 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				14F1C74619C4E1FD00CA8975 /* JSON.swift */,
+				14F1C74819C4E22B00CA8975 /* JSONDecodable.swift */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
 		14F87A5B1998EBE400A6EB11 = {
 			isa = PBXGroup;
 			children = (
 				14D7F54319A25FB60020D51A /* Podfile */,
+				14DC4C8319BB4A9300F09AE4 /* Alamofire.xcodeproj */,
 				14F87A661998EBE400A6EB11 /* Gonawin */,
 				14F87A7B1998EBE400A6EB11 /* GonawinTests */,
 				14F87A651998EBE400A6EB11 /* Products */,
@@ -93,7 +158,10 @@
 		14F87A661998EBE400A6EB11 /* Gonawin */ = {
 			isa = PBXGroup;
 			children = (
+				14F1C74519C4E1EF00CA8975 /* JSON */,
+				14F1C74219C4DB6D00CA8975 /* Model */,
 				14F87A691998EBE400A6EB11 /* AppDelegate.swift */,
+				14F1842519C77C2D00437C59 /* GonawinController.swift */,
 				14875BF1199D2443005791D0 /* LoginViewController.swift */,
 				14F87A6B1998EBE400A6EB11 /* MatchesViewController.swift */,
 				14F87A6D1998EBE400A6EB11 /* TournamentsViewController.swift */,
@@ -103,6 +171,10 @@
 				14F87A721998EBE400A6EB11 /* Images.xcassets */,
 				14F87A671998EBE400A6EB11 /* Supporting Files */,
 				1474939F19A265650041BE1A /* Gonawin-Bridging-Header.h */,
+				14F1C74A19C4E67C00CA8975 /* Functional.swift */,
+				14F1C74C19C4E6C800CA8975 /* Response.swift */,
+				14F1C74E19C4E6EE00CA8975 /* Result.swift */,
+				14F1C75019C4E71C00CA8975 /* NetworkClient.swift */,
 			);
 			path = Gonawin;
 			sourceTree = "<group>";
@@ -156,6 +228,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				14DC4C8D19BB4AD200F09AE4 /* PBXTargetDependency */,
 			);
 			name = Gonawin;
 			productName = Gonawin;
@@ -209,6 +282,12 @@
 			mainGroup = 14F87A5B1998EBE400A6EB11;
 			productRefGroup = 14F87A651998EBE400A6EB11 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 14DC4C8419BB4A9300F09AE4 /* Products */;
+					ProjectRef = 14DC4C8319BB4A9300F09AE4 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				14F87A631998EBE400A6EB11 /* Gonawin */,
@@ -216,6 +295,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		14DC4C8919BB4A9300F09AE4 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 14DC4C8819BB4A9300F09AE4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14DC4C8B19BB4A9300F09AE4 /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = 14DC4C8A19BB4A9300F09AE4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		14F87A621998EBE400A6EB11 /* Resources */ = {
@@ -275,12 +371,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F1C74919C4E22B00CA8975 /* JSONDecodable.swift in Sources */,
 				14875BF2199D2443005791D0 /* LoginViewController.swift in Sources */,
+				14F1C74B19C4E67C00CA8975 /* Functional.swift in Sources */,
 				14F87A6E1998EBE400A6EB11 /* TournamentsViewController.swift in Sources */,
 				14F5905F1999008600F03D43 /* TeamsViewController.swift in Sources */,
 				14F59061199900B400F03D43 /* ProfileViewController.swift in Sources */,
+				14F1C74F19C4E6EE00CA8975 /* Result.swift in Sources */,
 				14F87A6A1998EBE400A6EB11 /* AppDelegate.swift in Sources */,
+				14F1C75119C4E71C00CA8975 /* NetworkClient.swift in Sources */,
+				14F1C74D19C4E6C800CA8975 /* Response.swift in Sources */,
 				14F87A6C1998EBE400A6EB11 /* MatchesViewController.swift in Sources */,
+				14F1C74419C4DB7D00CA8975 /* User.swift in Sources */,
+				14F1842619C77C2D00437C59 /* GonawinController.swift in Sources */,
+				14F1C74719C4E1FD00CA8975 /* JSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +399,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		14DC4C8D19BB4AD200F09AE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = 14DC4C8C19BB4AD200F09AE4 /* PBXContainerItemProxy */;
+		};
 		14F87A7A1998EBE400A6EB11 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 14F87A631998EBE400A6EB11 /* Gonawin */;
@@ -400,6 +509,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Gonawin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Gonawin/Gonawin-Bridging-Header.h";
@@ -413,6 +523,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Gonawin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Gonawin/Gonawin-Bridging-Header.h";
@@ -432,6 +543,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = GonawinTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -448,6 +560,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = GonawinTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
