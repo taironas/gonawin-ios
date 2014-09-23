@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1451CABD19CDBF3900678412 /* GonawinClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1451CABC19CDBF3900678412 /* GonawinClient.swift */; };
 		14875BF2199D2443005791D0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14875BF1199D2443005791D0 /* LoginViewController.swift */; };
 		14D7F54419A25FB60020D51A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 14D7F54319A25FB60020D51A /* Podfile */; };
 		14F1842619C77C2D00437C59 /* GonawinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1842519C77C2D00437C59 /* GonawinController.swift */; };
@@ -61,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		11FB782424D249F4B42264B7 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		1451CABC19CDBF3900678412 /* GonawinClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GonawinClient.swift; sourceTree = "<group>"; };
 		1474939F19A265650041BE1A /* Gonawin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gonawin-Bridging-Header.h"; sourceTree = "<group>"; };
 		14875BF1199D2443005791D0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		14D7F54319A25FB60020D51A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -175,6 +177,7 @@
 				14F1C74C19C4E6C800CA8975 /* Response.swift */,
 				14F1C74E19C4E6EE00CA8975 /* Result.swift */,
 				14F1C75019C4E71C00CA8975 /* NetworkClient.swift */,
+				1451CABC19CDBF3900678412 /* GonawinClient.swift */,
 			);
 			path = Gonawin;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				14F87A6A1998EBE400A6EB11 /* AppDelegate.swift in Sources */,
 				14F1C75119C4E71C00CA8975 /* NetworkClient.swift in Sources */,
 				14F1C74D19C4E6C800CA8975 /* Response.swift in Sources */,
+				1451CABD19CDBF3900678412 /* GonawinClient.swift in Sources */,
 				14F87A6C1998EBE400A6EB11 /* MatchesViewController.swift in Sources */,
 				14F1C74419C4DB7D00CA8975 /* User.swift in Sources */,
 				14F1842619C77C2D00437C59 /* GonawinController.swift in Sources */,

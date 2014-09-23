@@ -9,11 +9,15 @@
 import Foundation
 import Alamofire
 
-struct User {
-    let id: Int
-    let email: String
-    let username: String
-    let name: String
+struct User: JSONDecodable {
+    var id: Int
+    var email: String
+    var username: String
+    var name: String
+    
+    func encoded() -> Dictionary<String, AnyObject> {
+        return ["id": self.id, "email": self.email, "username": self.username, "name": self.name]
+    }
 }
 
 extension User: JSONDecodable {
@@ -22,7 +26,6 @@ extension User: JSONDecodable {
     }
     
     static func decode(json: JSON) -> User? {
-        println(json)
         return _JSONObject(json) >>> { d in
             d["User"]   >>> _JSONObject >>> { u in
                 User.create <^>
@@ -31,6 +34,16 @@ extension User: JSONDecodable {
                     u["Username"]   >>> _JSONString <*>
                     u["Name"]  >>> _JSONString
             }
+        }
+    }
+    
+    static func decode(dico: Dictionary<String, AnyObject>) -> User? {
+        return dico >>> _JSONObject >>> { u in
+            User.create <^>
+                u["id"]     >>> _JSONInt    <*>
+                u["email"]   >>> _JSONString <*>
+                u["username"]   >>> _JSONString <*>
+                u["name"]  >>> _JSONString
         }
     }
 }
