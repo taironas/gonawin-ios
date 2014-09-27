@@ -41,10 +41,10 @@ class LoginViewController: UIViewController, GPPSignInDelegate, GonawinClientDel
     
     func didAuthenticatedWithAccessToken(accessToken: String, user: User)
     {
-        // store access token in NSUserDefaults
-        NSUserDefaults.standardUserDefaults().setObject(accessToken, forKey: "AccessToken")
+        // save access token in KeychainService
+        KeychainService.saveAccessToken(accessToken)
         // store provider in NSUserDefaults
-        NSUserDefaults.standardUserDefaults().setObject(accessToken, forKey: "Provider")
+        NSUserDefaults.standardUserDefaults().setObject(googleProvider, forKey: "Provider")
         // store user in NSUserDefaults
         let data = NSKeyedArchiver.archivedDataWithRootObject(user.encoded())
         NSUserDefaults.standardUserDefaults().setObject(data, forKey: "CurrentUser")

@@ -14,6 +14,8 @@ protocol GonawinClientDelegate {
     func didFailToAuthenticateWithError(error: NSError)
 }
 
+let googleProvider = "google"
+
 class GonawinClient {
     var currentUser: User?
     var accessToken: String?
@@ -32,7 +34,7 @@ class GonawinClient {
     
     func loginWithGooglePlus(accessToken: String, id: String, email: String, name: String) {
         
-        let authParams = ["access_token": accessToken, "provider": "google", "id": id, "email": email, "name": name]
+        let authParams = ["access_token": accessToken, "provider": googleProvider, "id": id, "email": email, "name": name]
         Alamofire.request(.GET, "http://www.gonawin.com/j/auth/", parameters: authParams)
             .response { (request, response, data, error) in
                 let result: Result<User>  = parseData(data as NSData, response, error)
@@ -43,15 +45,33 @@ class GonawinClient {
                 case let .Value(boxedUser):
                     self.currentUser = boxedUser.value
                     self.accessToken = accessToken
-                    self.provider = "google"
+                    self.provider = googleProvider
                     self.delegate?.didAuthenticatedWithAccessToken(accessToken, user: boxedUser.value)
                 }
             }
     }
     
-    func initWithAccessToken(accessToken: String, user: User, provider: String) {
-        self.accessToken = accessToken
-        self.currentUser = user
-        self.provider = provider
+    init() {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        
+        if let provider = userDefaults.objectForKey("Provider") as? String {
+            if isProviderValid(provider) {
+                self.provider = provider
+            }
+        }
+        
+        let userData: NSData = userDefaults.objectForKey("CurrentUser") as NSData
+        let userDico: Dictionary<String, AnyObject> = NSKeyedUnarchiver.unarchiveObjectWithData(userData) as Dictionary<String, AnyObject>
+        self.currentUser = User.decode(userDico)
+        
+        self.accessToken = KeychainService.loadAccessToken()
+    }
+    
+    func isLoggedIn() -> Bool {
+        return (currentUser != nil && provider != nil && accessToken?.isEmpty != nil)
+    }
+    
+    private func isProviderValid(provider: String) -> Bool {
+        return (provider == googleProvider)
     }
 }
