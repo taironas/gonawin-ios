@@ -6,16 +6,13 @@
 //  Copyright (c) 2014 Taironas. All rights reserved.
 //
 
-import Foundation
-import Alamofire
-
 struct User: JSONDecodable {
     var id: Int
     var email: String
     var username: String
     var name: String
     
-    func encoded() -> Dictionary<String, AnyObject> {
+    func encoded() -> [String:AnyObject] {
         return ["id": self.id, "email": self.email, "username": self.username, "name": self.name]
     }
 }
@@ -37,13 +34,13 @@ extension User: JSONDecodable {
         }
     }
     
-    static func decode(dico: Dictionary<String, AnyObject>) -> User? {
+    static func decode(dico: [String:AnyObject]) -> User? {
         return dico >>> _JSONObject >>> { u in
             User.create <^>
-                u["id"]     >>> _JSONInt    <*>
-                u["email"]   >>> _JSONString <*>
-                u["username"]   >>> _JSONString <*>
-                u["name"]  >>> _JSONString
+                u["Id"]     >>> _JSONInt    <*>
+                u["Email"]   >>> _JSONString <*>
+                u["Username"]   >>> _JSONString <*>
+                u["Name"]  >>> _JSONString
         }
     }
 }

@@ -12,6 +12,12 @@
 	<dict>
 		<key>0876180256281154B1A90664CE70609513172DA5</key>
 		<string>https://github.com/taironas/gonawin-ios.git</string>
+		<key>2045D86BC5D391C299DCC498309E722E037BFF4E</key>
+		<string>https://github.com/p2/OAuth2.git</string>
+		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
+		<string>https://github.com/Alamofire/Alamofire.git</string>
+		<key>A65BCAA9B7A77500BBF95593800C3F1B9D215F5E</key>
+		<string>https://github.com/dongri/oauthswift.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Gonawin.xcworkspace</string>
@@ -19,6 +25,12 @@
 	<dict>
 		<key>0876180256281154B1A90664CE70609513172DA5</key>
 		<string>..</string>
+		<key>2045D86BC5D391C299DCC498309E722E037BFF4E</key>
+		<string>../../OAuth2</string>
+		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
+		<string>../Alamofire</string>
+		<key>A65BCAA9B7A77500BBF95593800C3F1B9D215F5E</key>
+		<string>../oauthswift</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/taironas/gonawin-ios.git</string>
@@ -32,9 +44,33 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>67620B5EFA902936DF04070AF595B76AB0333747</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Alamofire</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>0876180256281154B1A90664CE70609513172DA5</string>
 			<key>IDESourceControlWCCName</key>
 			<string>gonawin-ios</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2045D86BC5D391C299DCC498309E722E037BFF4E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OAuth2</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A65BCAA9B7A77500BBF95593800C3F1B9D215F5E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>oauthswift</string>
 		</dict>
 	</array>
 </dict>

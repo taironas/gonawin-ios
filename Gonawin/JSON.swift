@@ -9,8 +9,8 @@
 import Foundation
 
 typealias JSON = AnyObject
-typealias JSONDictionary = Dictionary<String, AnyObject>
-typealias JSONArray = Array<AnyObject>
+typealias JSONDictionary = [String:AnyObject]
+typealias JSONArray = [AnyObject]
 
 func _JSONString(object: JSON) -> String? {
     return object as? String
@@ -22,6 +22,10 @@ func _JSONInt(object: JSON) -> Int? {
 
 func _JSONObject(object: JSON) -> JSONDictionary? {
     return object as? JSONDictionary
+}
+
+func _JSONDate(object: JSON) -> NSDate? {
+    return object as? NSDate
 }
 
 func decodeJSON(data: NSData) -> Result<JSON> {

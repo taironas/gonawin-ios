@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>GooglePlus</key>
+	<dict>
+		<key>client_id</key>
+		<string>664439623416-eahlk6rvfdpabp4e3g6uev5e83hklivd.apps.googleusercontent.com</string>
+	</dict>
+	<key>Facebook</key>
+	<dict>
+		<key>client_id</key>
+		<string>232160743609875</string>
+		<key>client_secret</key>
+		<string>002d43b7b742d1c8098bef4b5319ed4e</string>
+	</dict>
+</dict>
+</plist>

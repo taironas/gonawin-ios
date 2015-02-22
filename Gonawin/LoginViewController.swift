@@ -7,54 +7,62 @@
 //
 
 import UIKit
+import OAuth2
 
-class LoginViewController: UIViewController, GPPSignInDelegate, GonawinClientDelegate {
-
+class LoginViewController: UITableViewController {
     
-    @IBOutlet weak var googlePlusButton: GPPSignInButton!
+    lazy var facebook = FacebookAuthentication.sharedInstance
+    lazy var googlePlus = GooglePlusAuthentication.sharedInstance
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        var signIn = GPPSignIn.sharedInstance()
-        signIn.clientID = "664439623416-eahlk6rvfdpabp4e3g6uev5e83hklivd.apps.googleusercontent.com"
-        signIn.scopes = [kGTLAuthScopePlusLogin]
-        signIn.shouldFetchGoogleUserID = true
-        signIn.shouldFetchGoogleUserEmail = true
-        signIn.shouldFetchGooglePlusUser = true
-        signIn.delegate = self
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        switch indexPath.row {
+        case 0:
+            authenticateWithGoogle()
+        case 1:
+            authenticateWithTwitter()
+        case 2:
+            authenticateWithFacebook()
+        default: break
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func finishedWithAuth(auth: GTMOAuth2Authentication,  error: NSError) {
-        var signIn = GPPSignIn.sharedInstance()
+    private func authenticateWithGoogle() {
+        googlePlus.authorize(self) { didFail, error in
+            if didFail && error != nil { self.showError(error!) }
+        }
         
-        let name = "\(signIn.googlePlusUser.name.givenName) \(signIn.googlePlusUser.name.familyName)"
-        
-        GonawinClient.sharedInstance.loginWithGooglePlus(auth.accessToken, id: signIn.userID, email: signIn.userEmail, name: name)
-        GonawinClient.sharedInstance.delegate = self;
     }
     
-    func didAuthenticatedWithAccessToken(accessToken: String, user: User)
-    {
-        // save access token in KeychainService
-        KeychainService.saveAccessToken(accessToken)
-        // store provider in NSUserDefaults
-        NSUserDefaults.standardUserDefaults().setObject(googleProvider, forKey: "Provider")
-        // store user in NSUserDefaults
-        let data = NSKeyedArchiver.archivedDataWithRootObject(user.encoded())
-        NSUserDefaults.standardUserDefaults().setObject(data, forKey: "CurrentUser")
-        
-        self.dismissViewControllerAnimated(true, completion: nil)
+    private func authenticateWithTwitter() {
+        showErrorDescription("Not yet implemented!")
     }
     
-    func didFailToAuthenticateWithError(error: NSError) {
-        // inform user that something wrong happened
-        println(error)
+    private func authenticateWithFacebook() {
+        facebook.authorize(self) { didFail, error in
+            if didFail && error != nil {
+                self.showError(error!)
+            }
+            else {
+                self.facebook.userInfo { result in
+                    switch result {
+                    case let .Error(error):
+                        self.showError(error)
+                    case let .Value(boxedUser):
+                        let userInfo = boxedUser.value
+                        GonawinAPI.sharedInstance.login(self.facebook.accessToken, provider: "facebook", id: userInfo.id.toInt()!, email: userInfo.email, name: userInfo.name)
+                    }
+                }
+            }
+        }
     }
     
+    private func showError(error: NSError) {
+        showErrorDescription(error.localizedDescription)
+    }
+    
+    private func showErrorDescription(description: NSString) {
+        let alert = UIAlertController(title: "Error", message: description, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
 }

@@ -31,6 +31,10 @@ class KeychainService : NSObject {
         self.save(serviceIdentifier, data: accessToken)
     }
     
+    class func deleteAccessToken(accessToken: String) {
+        return self.delete(serviceIdentifier, data: accessToken)
+    }
+    
     class func loadAccessToken() -> String? {
         return self.load(serviceIdentifier)
     }
@@ -75,5 +79,15 @@ class KeychainService : NSObject {
         }
         
         return contentsOfKeychain
+    }
+    
+    private class func delete(service: NSString, data: NSString) {
+        var dataFromString: NSData = data.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
+        
+        // Instantiate a new default keychain query
+        var keychainQuery = NSMutableDictionary(objects: [kSecClassGenericPasswordValue, service, userAccount, dataFromString], forKeys: [kSecClassValue, kSecAttrServiceValue, kSecAttrAccountValue, kSecValueDataValue])
+        
+        // Delete any existing items
+        SecItemDelete(keychainQuery as CFDictionaryRef)
     }
 }
