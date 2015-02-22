@@ -28,7 +28,7 @@
 		14F5905F1999008600F03D43 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F5905E1999008600F03D43 /* TeamsViewController.swift */; };
 		14F59061199900B400F03D43 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F59060199900B400F03D43 /* ProfileViewController.swift */; };
 		14F87A6A1998EBE400A6EB11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F87A691998EBE400A6EB11 /* AppDelegate.swift */; };
-		14F87A6C1998EBE400A6EB11 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F87A6B1998EBE400A6EB11 /* MatchesViewController.swift */; };
+		14F87A6C1998EBE400A6EB11 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F87A6B1998EBE400A6EB11 /* ActivitiesViewController.swift */; };
 		14F87A6E1998EBE400A6EB11 /* TournamentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F87A6D1998EBE400A6EB11 /* TournamentsViewController.swift */; };
 		14F87A711998EBE400A6EB11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F87A6F1998EBE400A6EB11 /* Main.storyboard */; };
 		14F87A731998EBE400A6EB11 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F87A721998EBE400A6EB11 /* Images.xcassets */; };
@@ -135,7 +135,7 @@
 		14F87A641998EBE400A6EB11 /* Gonawin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gonawin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F87A681998EBE400A6EB11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14F87A691998EBE400A6EB11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		14F87A6B1998EBE400A6EB11 /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
+		14F87A6B1998EBE400A6EB11 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		14F87A6D1998EBE400A6EB11 /* TournamentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentsViewController.swift; sourceTree = "<group>"; };
 		14F87A701998EBE400A6EB11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14F87A721998EBE400A6EB11 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -180,7 +180,7 @@
 			children = (
 				14F1842519C77C2D00437C59 /* GonawinController.swift */,
 				14875BF1199D2443005791D0 /* LoginViewController.swift */,
-				14F87A6B1998EBE400A6EB11 /* MatchesViewController.swift */,
+				14F87A6B1998EBE400A6EB11 /* ActivitiesViewController.swift */,
 				14F87A6D1998EBE400A6EB11 /* TournamentsViewController.swift */,
 				14F5905E1999008600F03D43 /* TeamsViewController.swift */,
 				14F59060199900B400F03D43 /* ProfileViewController.swift */,
@@ -516,7 +516,7 @@
 				14F1C75119C4E71C00CA8975 /* NetworkClient.swift in Sources */,
 				14F1C74D19C4E6C800CA8975 /* Response.swift in Sources */,
 				1451CABD19CDBF3900678412 /* GonawinAPI.swift in Sources */,
-				14F87A6C1998EBE400A6EB11 /* MatchesViewController.swift in Sources */,
+				14F87A6C1998EBE400A6EB11 /* ActivitiesViewController.swift in Sources */,
 				14F1C74419C4DB7D00CA8975 /* User.swift in Sources */,
 				142DEA691A90F9D100A1D6CA /* FBUserInfo.swift in Sources */,
 				14312E761A7EC0E5008FBEC4 /* FacebookAuthentication.swift in Sources */,
