@@ -117,8 +117,6 @@
 		142DEA681A90F9D100A1D6CA /* FBUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBUserInfo.swift; sourceTree = "<group>"; };
 		14312E751A7EC0E5008FBEC4 /* FacebookAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookAuthentication.swift; sourceTree = "<group>"; };
 		1445D29919D6DEEF00B09DD5 /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
-		14495CB01A98CF55000FF920 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		14495CB21A98CF98000FF920 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		1451CABC19CDBF3900678412 /* GonawinAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GonawinAPI.swift; sourceTree = "<group>"; };
 		1460C0E21A55BF80003D1E06 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		14875BF1199D2443005791D0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -174,7 +172,7 @@
 				14F1C74E19C4E6EE00CA8975 /* Result.swift */,
 				14F1C75019C4E71C00CA8975 /* NetworkClient.swift */,
 			);
-			name = FunctionalNetworking;
+			path = FunctionalNetworking;
 			sourceTree = "<group>";
 		};
 		140E243B1A911D9B0041E36A /* ViewControllers */ = {
@@ -187,7 +185,7 @@
 				14F5905E1999008600F03D43 /* TeamsViewController.swift */,
 				14F59060199900B400F03D43 /* ProfileViewController.swift */,
 			);
-			name = ViewControllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		144904D81A87D05100AC592B /* Authentication */ = {
@@ -197,7 +195,7 @@
 				142D9D1B1A8EA1C400EFD976 /* GooglePlusAuthentication.swift */,
 				142DEA681A90F9D100A1D6CA /* FBUserInfo.swift */,
 			);
-			name = Authentication;
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		144904DC1A87D07A00AC592B /* Utils */ = {
@@ -205,7 +203,7 @@
 			children = (
 				1445D29919D6DEEF00B09DD5 /* KeychainService.swift */,
 			);
-			name = Utils;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		1460C0E31A55BF80003D1E06 /* Products */ = {
@@ -232,7 +230,7 @@
 			children = (
 				14F1C74319C4DB7D00CA8975 /* User.swift */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		14F1C74519C4E1EF00CA8975 /* JSON */ = {
@@ -241,7 +239,7 @@
 				14F1C74619C4E1FD00CA8975 /* JSON.swift */,
 				14F1C74819C4E22B00CA8975 /* JSONDecodable.swift */,
 			);
-			name = JSON;
+			path = JSON;
 			sourceTree = "<group>";
 		};
 		14F87A5B1998EBE400A6EB11 = {
@@ -291,7 +289,7 @@
 				14F87A6F1998EBE400A6EB11 /* Main.storyboard */,
 				14F87A721998EBE400A6EB11 /* Images.xcassets */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		14F87A7B1998EBE400A6EB11 /* GonawinTests */ = {
@@ -308,14 +306,12 @@
 			children = (
 				14F87A7D1998EBE400A6EB11 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		EBD3BAC03FED45CD957DC2FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				14495CB21A98CF98000FF920 /* Accounts.framework */,
-				14495CB01A98CF55000FF920 /* Social.framework */,
 				8E8CD87DDBCB4B15BC8103DA /* libPods.a */,
 			);
 			name = Frameworks;
@@ -565,6 +561,7 @@
 				14F87A701998EBE400A6EB11 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -654,7 +651,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = Gonawin/Info.plist;
+				INFOPLIST_FILE = "Gonawin/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -668,7 +665,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = Gonawin/Info.plist;
+				INFOPLIST_FILE = "Gonawin/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -687,7 +684,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = GonawinTests/Info.plist;
+				INFOPLIST_FILE = "GonawinTests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -704,7 +701,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = GonawinTests/Info.plist;
+				INFOPLIST_FILE = "GonawinTests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

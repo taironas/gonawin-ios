@@ -6,6 +6,6 @@
 #
 # Pods/
 
-Gonawin.xcworkspace/xcshareddata
-Gonawin.xcworkspace/xcuserdata
+xcuserdata
+*.xccheckout
 APIKeys.plist
