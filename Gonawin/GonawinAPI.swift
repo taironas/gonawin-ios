@@ -33,8 +33,8 @@ class GonawinAPI {
     init() {
         let userDefaults = NSUserDefaults.standardUserDefaults()
         
-        if let userData = userDefaults.objectForKey("CurrentUser") as NSData? {
-            let userDico: Dictionary<String, AnyObject> = NSKeyedUnarchiver.unarchiveObjectWithData(userData) as Dictionary<String, AnyObject>
+        if let userData = userDefaults.objectForKey("CurrentUser") as? NSData {
+            let userDico: [String:AnyObject] = NSKeyedUnarchiver.unarchiveObjectWithData(userData) as! [String: AnyObject]
             self.currentUser = User.decode(userDico)
             
             self.accessToken = KeychainService.loadAccessToken()
@@ -48,7 +48,7 @@ class GonawinAPI {
         let authParams = ["access_token": accessToken, "provider": provider, "id": id.description, "email": email, "name": name]
         Alamofire.request(.GET, "http://www.gonawin.com/j/auth/", parameters: authParams)
             .response { (request, response, data, error) in
-                let result: Result<User>  = parseResult(data as NSData, response, error)
+                let result: Result<User>  = parseResult(data as! NSData, response, error)
                 
                 switch result {
                 case let .Error(error):

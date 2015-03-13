@@ -25,7 +25,7 @@ class FacebookAuthentication {
     init() {
         let apiKeysPath = NSBundle.mainBundle().pathForResource("APIKeys", ofType: "plist")
         let keys = NSDictionary(contentsOfFile: apiKeysPath!)
-        let FBKeys = keys!["Facebook"] as [String:String]
+        let FBKeys = keys!["Facebook"] as! [String:String]
         
         oauth2 = OAuth2CodeGrantFacebook(settings: [
             "client_id": FBKeys["client_id"]!,

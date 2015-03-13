@@ -60,7 +60,7 @@ class LoginViewController: UITableViewController {
         showErrorDescription(error.localizedDescription)
     }
     
-    private func showErrorDescription(description: NSString) {
+    private func showErrorDescription(description: String) {
         let alert = UIAlertController(title: "Error", message: description, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)

@@ -17,14 +17,14 @@ let serviceIdentifier = "GonawinClient"
 let userAccount = "authenticatedUser"
 
 // Arguments for the keychain queries
-let kSecClassValue = kSecClass as NSString
-let kSecAttrAccountValue = kSecAttrAccount as NSString
+let kSecClassValue = kSecClass as String
+let kSecAttrAccountValue = kSecAttrAccount as String
 let kSecValueDataValue = kSecValueData as NSString
-let kSecClassGenericPasswordValue = kSecClassGenericPassword as NSString
-let kSecAttrServiceValue = kSecAttrService as NSString
-let kSecMatchLimitValue = kSecMatchLimit as NSString
-let kSecReturnDataValue = kSecReturnData as NSString
-let kSecMatchLimitOneValue = kSecMatchLimitOne as NSString
+let kSecClassGenericPasswordValue = kSecClassGenericPassword as String
+let kSecAttrServiceValue = kSecAttrService as String
+let kSecMatchLimitValue = kSecMatchLimit as String
+let kSecReturnDataValue = kSecReturnData as String
+let kSecMatchLimitOneValue = kSecMatchLimitOne as String
 
 class KeychainService : NSObject {
     class func saveAccessToken(accessToken: String) {
@@ -54,7 +54,7 @@ class KeychainService : NSObject {
         var status: OSStatus = SecItemAdd(keychainQuery as CFDictionaryRef, nil)
     }
     
-    private class func load(service: NSString) -> NSString? {
+    private class func load(service: String) -> String? {
         // Instantiate a new default keychain query
         // Tell the query to return a result
         // Limit our results to one item
@@ -67,13 +67,13 @@ class KeychainService : NSObject {
         
         let opaque = dataTypeRef?.toOpaque()
         
-        var contentsOfKeychain: NSString?
+        var contentsOfKeychain: String?
         
-        if let op = opaque? {
+        if let op = opaque {
             let retrievedData = Unmanaged<NSData>.fromOpaque(op).takeUnretainedValue()
             
             // Convert the data retrieved from the keychain into a string
-            contentsOfKeychain = NSString(data: retrievedData, encoding: NSUTF8StringEncoding)
+            contentsOfKeychain = NSString(data: retrievedData, encoding: NSUTF8StringEncoding) as? String
         } else {
             println("Nothing was retrieved from the keychain. Status code \(status)")
         }

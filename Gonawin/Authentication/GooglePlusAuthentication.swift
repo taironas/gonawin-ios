@@ -25,7 +25,7 @@ class GooglePlusAuthentication {
     
     init() {
         let keys = NSDictionary(contentsOfFile: apiKeysPath!)
-        let GPKeys = keys!["GooglePlus"] as Dictionary<String, String>
+        let GPKeys = keys!["GooglePlus"] as! [String:String]
         
         oauth2 = OAuth2CodeGrant(settings: [
             "client_id": GPKeys["client_id"]!,
