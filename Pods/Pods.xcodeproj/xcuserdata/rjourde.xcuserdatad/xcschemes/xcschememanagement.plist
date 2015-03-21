@@ -4,29 +4,25 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-google-plus-ios-sdk.xcscheme</key>
+		<key>Pods-Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>7371E3F555B44695957EA084</key>
+		<key>221E6B76552488F0B72E5A44</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9C92B7FC688A4C8EB646559F</key>
+		<key>E9666865C415D5455C0E329D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

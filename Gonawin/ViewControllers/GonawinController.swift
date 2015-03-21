@@ -13,14 +13,14 @@ class GonawinController: UITabBarController, GonawinAPIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        GonawinAPI.sharedInstance.delegate = self
+        GonawinAPI.client.delegate = self
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
         // check if user is already logged in
-        if !GonawinAPI.sharedInstance.isLoggedIn() {
+        if !GonawinAPI.client.isLoggedIn() {
             self.performSegueWithIdentifier("showLogin", sender: self)
         }
     }
@@ -46,7 +46,12 @@ class GonawinController: UITabBarController, GonawinAPIDelegate {
         println(error)
     }
     
-    func didLogout() {
+    func didLogout(provider: String, accessToken: String) {
+        // delete access token in KeychainService
+        KeychainService.deleteAccessToken(accessToken)
+        // delete user in NSUserDefaults
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("CurrentUser")
+        
         self.performSegueWithIdentifier("showLogin", sender: self)
     }
 }

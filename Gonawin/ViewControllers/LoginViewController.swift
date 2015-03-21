@@ -7,53 +7,30 @@
 //
 
 import UIKit
-import OAuth2
+import Accounts
 
-class LoginViewController: UITableViewController {
+class LoginViewController: UIViewController {
     
-    lazy var facebook = FacebookAuthentication.sharedInstance
-    lazy var googlePlus = GooglePlusAuthentication.sharedInstance
+    @IBOutlet weak var facebookLoginButton: UIButton!
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        switch indexPath.row {
-        case 0:
-            authenticateWithGoogle()
-        case 1:
-            authenticateWithTwitter()
-        case 2:
-            authenticateWithFacebook()
-        default: break
-        }
+    override func viewDidLoad() {
     }
-
-    private func authenticateWithGoogle() {
-        googlePlus.authorize(self) { didFail, error in
-            if didFail && error != nil { self.showError(error!) }
-        }
+    
+    @IBAction func Facebooklogin() {
+        let facebookLogin = FacebookLogin()
         
-    }
-    
-    private func authenticateWithTwitter() {
-        showErrorDescription("Not yet implemented!")
-    }
-    
-    private func authenticateWithFacebook() {
-        facebook.authorize(self) { didFail, error in
-            if didFail && error != nil {
+        facebookLogin.login() {
+            userInfo, error in
+            
+            if userInfo != nil {
+                GonawinAPI.client.login(userInfo!.accessToken, provider: "facebook", id: userInfo!.id, email: userInfo!.email, name: userInfo!.name)
+            }
+            
+            if error != nil {
                 self.showError(error!)
             }
-            else {
-                self.facebook.userInfo { result in
-                    switch result {
-                    case let .Error(error):
-                        self.showError(error)
-                    case let .Value(boxedUser):
-                        let userInfo = boxedUser.value
-                        GonawinAPI.sharedInstance.login(self.facebook.accessToken, provider: "facebook", id: userInfo.id.toInt()!, email: userInfo.email, name: userInfo.name)
-                    }
-                }
-            }
         }
+
     }
     
     private func showError(error: NSError) {

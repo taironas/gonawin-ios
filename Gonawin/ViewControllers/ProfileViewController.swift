@@ -10,7 +10,7 @@ import UIKit
 
 class ProfileViewController: UITableViewController {
     
-    private let gonawinAPI = GonawinAPI.sharedInstance
+    private let gonawinAPI = GonawinAPI.client
     
     override func viewDidLoad() {
         super.viewDidLoad()

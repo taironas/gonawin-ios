@@ -6,29 +6,22 @@
 //  Copyright (c) 2014 Taironas. All rights reserved.
 //
 
-import UIKit
 import Alamofire
 
 protocol GonawinAPIDelegate {
     func didAuthenticatedWithAccessToken(accessToken: String, user: User)
     func didFailToAuthenticateWithError(error: NSError)
-    func didLogout()
+    func didLogout(provider: String, accessToken: String)
 }
 
 class GonawinAPI {
     var currentUser: User?
     var accessToken: String?
+    var provider: String?
     
     var delegate: GonawinAPIDelegate?
     
-    class var sharedInstance : GonawinAPI {
-        
-        struct Static {
-            static let instance : GonawinAPI = GonawinAPI()
-        }
-        
-        return Static.instance
-    }
+    static let client = GonawinAPI()
     
     init() {
         let userDefaults = NSUserDefaults.standardUserDefaults()
@@ -44,25 +37,23 @@ class GonawinAPI {
     // MARK: - Gonawin API
     
     func login(accessToken: String, provider: String, id: Int, email: String, name: String) {
-        
-        let authParams = ["access_token": accessToken, "provider": provider, "id": id.description, "email": email, "name": name]
-        Alamofire.request(.GET, "http://www.gonawin.com/j/auth/", parameters: authParams)
-            .response { (request, response, data, error) in
-                let result: Result<User>  = parseResult(data as! NSData, response, error)
-                
-                switch result {
-                case let .Error(error):
-                    self.delegate?.didFailToAuthenticateWithError(error)
-                case let .Value(boxedUser):
-                    self.currentUser = boxedUser.value
-                    self.accessToken = accessToken
-                    self.delegate?.didAuthenticatedWithAccessToken(accessToken, user: boxedUser.value)
-                }
+        Alamofire.request(Router.Auth(accessToken: accessToken, provider: provider, id: id.description, email: email, name: name)).response { _, response, data, error in
+            let result: Result<User> = parseResult(data as! NSData, response, error)
+            
+            switch result {
+            case let .Error(error):
+                self.delegate?.didFailToAuthenticateWithError(error)
+            case let .Value(boxedUser):
+                self.currentUser = boxedUser.value
+                self.accessToken = accessToken
+                self.provider = provider
+                self.delegate?.didAuthenticatedWithAccessToken(accessToken, user: boxedUser.value)
             }
+        }
     }
     
     func user(userId: Int) {
-        Alamofire.request(.GET, "http://www.gonawin.com/j/users/", parameters: ["id": userId])
+        Alamofire.request(Router.User(id: userId))
             .response { (request, response, data, error) in
                 println("userDetails response = \(response)")
         }
@@ -70,10 +61,11 @@ class GonawinAPI {
     
     func logout()
     {
+        self.delegate?.didLogout(provider!, accessToken: accessToken!)
+        
         currentUser = nil
         accessToken = nil
-        
-        self.delegate?.didLogout()
+        provider = nil
     }
     
     // MARK: - Private

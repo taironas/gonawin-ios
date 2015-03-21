@@ -35,12 +35,13 @@ extension User: JSONDecodable {
     }
     
     static func decode(dico: [String:AnyObject]) -> User? {
+        println("decode user = \(dico)")
         return dico >>> _JSONObject >>> { u in
             User.create <^>
-                u["Id"]     >>> _JSONInt    <*>
-                u["Email"]   >>> _JSONString <*>
-                u["Username"]   >>> _JSONString <*>
-                u["Name"]  >>> _JSONString
+                u["id"]     >>> _JSONInt    <*>
+                u["email"]   >>> _JSONString <*>
+                u["username"]   >>> _JSONString <*>
+                u["name"]  >>> _JSONString
         }
     }
 }
