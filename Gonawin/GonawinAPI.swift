@@ -37,7 +37,8 @@ class GonawinAPI {
     // MARK: - Gonawin API
     
     func login(accessToken: String, provider: String, id: Int, email: String, name: String) {
-        Alamofire.request(Router.Auth(accessToken: accessToken, provider: provider, id: id.description, email: email, name: name)).response { _, response, data, error in
+        Alamofire.request(Router.Auth(accessToken: accessToken, provider: provider, id: id.description, email: email, name: name)).response {
+            _, response, data, error in
             let result: Result<User> = parseResult(data as! NSData, response, error)
             
             switch result {

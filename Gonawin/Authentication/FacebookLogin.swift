@@ -9,23 +9,14 @@
 import Accounts
 import Social
 
-struct FBUserInfo {
-    let accessToken: String
-    let id: Int
-    let email: String
-    let name: String
-}
-
-typealias FacebookLoginUserInfoCompletionHandler = (userInfo: FBUserInfo?, error: NSError?) -> Void
-
 class FacebookLogin {
     
-    func login(completion: FacebookLoginUserInfoCompletionHandler) {
+    func login(completion: UserInfoCompletionHandler) {
         let accountStore = ACAccountStore()
         let accountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierFacebook)
         let accountOptions = [ACFacebookAppIdKey: facebookAppID(), ACFacebookPermissionsKey: ["email"]]
         
-        var userInfo: FBUserInfo?
+        var userInfo: UserInfo?
         
         accountStore.requestAccessToAccountsWithType(accountType, options: accountOptions as [NSObject : AnyObject]) {
             granted, error in
@@ -47,7 +38,7 @@ class FacebookLogin {
         }
     }
     
-    private func userInfo(account: ACAccount, completion: FacebookLoginUserInfoCompletionHandler ) {
+    private func userInfo(account: ACAccount, completion: UserInfoCompletionHandler ) {
         let url = NSURL(string: "https://graph.facebook.com/v2.2/me")!
         
         let request = SLRequest(forServiceType: SLServiceTypeFacebook, requestMethod: SLRequestMethod.GET, URL: url, parameters: nil)
@@ -64,7 +55,7 @@ class FacebookLogin {
                 let email = userInfoDico!["email"] as! String
                 let name = userInfoDico!["name"] as! String
                 
-                completion(userInfo: FBUserInfo(accessToken: account.credential.oauthToken, id: id.toInt()!, email: email, name: name), error: nil)
+                completion(userInfo: UserInfo(accessToken: account.credential.oauthToken, id: id.toInt()!, email: email, name: name), error: nil)
             }
             else {
                 completion(userInfo: nil, error: error)

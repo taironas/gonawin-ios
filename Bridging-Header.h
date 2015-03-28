@@ -9,4 +9,6 @@
 #ifndef Gonawin_Bridging_Header_h
 #define Gonawin_Bridging_Header_h
 
+#import "LVTwitterOAuthClient/LVTwitterOAuthClient.h"
+
 #endif

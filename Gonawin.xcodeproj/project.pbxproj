@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		02415271B56D02A6780E7F72 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBEC32148293525400398502 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		141EEFA01AB4CC8B0098FF55 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141EEF9F1AB4CC8B0098FF55 /* Router.swift */; };
+		1422E5C51AC734ED00E6454B /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422E5C41AC734ED00E6454B /* UserInfo.swift */; };
 		1423DD631AB5DF1D0097D800 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1423DD621AB5DF1D0097D800 /* Accounts.framework */; };
 		142D9D1C1A8EA1C400EFD976 /* GooglePlusAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D9D1B1A8EA1C400EFD976 /* GooglePlusAuthentication.swift */; };
 		142D9D211A8EA2BF00EFD976 /* APIKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 142D9D201A8EA2BF00EFD976 /* APIKeys.plist */; };
@@ -17,6 +18,7 @@
 		14875BF2199D2443005791D0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14875BF1199D2443005791D0 /* LoginViewController.swift */; };
 		14B484DF1ABE0327000E3BA6 /* FacebookLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B484DE1ABE0327000E3BA6 /* FacebookLogin.swift */; };
 		14B484E11ABE04FD000E3BA6 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B484E01ABE04FD000E3BA6 /* Social.framework */; };
+		14B484E31ABE24EB000E3BA6 /* TwitterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B484E21ABE24EB000E3BA6 /* TwitterLogin.swift */; };
 		14D7F54419A25FB60020D51A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 14D7F54319A25FB60020D51A /* Podfile */; };
 		14F1842619C77C2D00437C59 /* GonawinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1842519C77C2D00437C59 /* GonawinController.swift */; };
 		14F1C74419C4DB7D00CA8975 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1C74319C4DB7D00CA8975 /* User.swift */; };
@@ -61,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		141EEF9F1AB4CC8B0098FF55 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		1422E5C41AC734ED00E6454B /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		1423DD621AB5DF1D0097D800 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		142D9D1B1A8EA1C400EFD976 /* GooglePlusAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlusAuthentication.swift; sourceTree = "<group>"; };
 		142D9D201A8EA2BF00EFD976 /* APIKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = APIKeys.plist; sourceTree = "<group>"; };
@@ -70,6 +73,7 @@
 		148BBE721AB4D8030073F9EF /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../../Bridging-Header.h"; sourceTree = "<group>"; };
 		14B484DE1ABE0327000E3BA6 /* FacebookLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLogin.swift; sourceTree = "<group>"; };
 		14B484E01ABE04FD000E3BA6 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		14B484E21ABE24EB000E3BA6 /* TwitterLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterLogin.swift; sourceTree = "<group>"; };
 		14D7F54319A25FB60020D51A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		14F1842519C77C2D00437C59 /* GonawinController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GonawinController.swift; sourceTree = "<group>"; };
 		14F1C74319C4DB7D00CA8975 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 			children = (
 				142D9D1B1A8EA1C400EFD976 /* GooglePlusAuthentication.swift */,
 				14B484DE1ABE0327000E3BA6 /* FacebookLogin.swift */,
+				14B484E21ABE24EB000E3BA6 /* TwitterLogin.swift */,
+				1422E5C41AC734ED00E6454B /* UserInfo.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -431,6 +437,7 @@
 				14F59061199900B400F03D43 /* ProfileViewController.swift in Sources */,
 				14F1C74F19C4E6EE00CA8975 /* Result.swift in Sources */,
 				14F87A6A1998EBE400A6EB11 /* AppDelegate.swift in Sources */,
+				14B484E31ABE24EB000E3BA6 /* TwitterLogin.swift in Sources */,
 				14F1C75119C4E71C00CA8975 /* NetworkClient.swift in Sources */,
 				14F1C74D19C4E6C800CA8975 /* Response.swift in Sources */,
 				1451CABD19CDBF3900678412 /* GonawinAPI.swift in Sources */,
@@ -440,6 +447,7 @@
 				14F1842619C77C2D00437C59 /* GonawinController.swift in Sources */,
 				142D9D1C1A8EA1C400EFD976 /* GooglePlusAuthentication.swift in Sources */,
 				14B484DF1ABE0327000E3BA6 /* FacebookLogin.swift in Sources */,
+				1422E5C51AC734ED00E6454B /* UserInfo.swift in Sources */,
 				14F1C74719C4E1FD00CA8975 /* JSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

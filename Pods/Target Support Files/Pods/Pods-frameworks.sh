@@ -49,7 +49,13 @@ code_sign() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Alamofire.framework'
+  install_framework 'LVTwitterOAuthClient.framework'
+  install_framework 'NSData_Base64.framework'
+  install_framework 'OAuthCore.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Alamofire.framework'
+  install_framework 'LVTwitterOAuthClient.framework'
+  install_framework 'NSData_Base64.framework'
+  install_framework 'OAuthCore.framework'
 fi
