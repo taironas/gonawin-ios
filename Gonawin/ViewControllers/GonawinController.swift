@@ -46,7 +46,7 @@ class GonawinController: UITabBarController, GonawinAPIDelegate {
         println(error)
     }
     
-    func didLogout(provider: String, accessToken: String) {
+    func didLogoutWithAccessToken(accessToken: String) {
         // delete access token in KeychainService
         KeychainService.deleteAccessToken(accessToken)
         // delete user in NSUserDefaults

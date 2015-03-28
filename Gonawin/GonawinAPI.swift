@@ -11,13 +11,12 @@ import Alamofire
 protocol GonawinAPIDelegate {
     func didAuthenticatedWithAccessToken(accessToken: String, user: User)
     func didFailToAuthenticateWithError(error: NSError)
-    func didLogout(provider: String, accessToken: String)
+    func didLogoutWithAccessToken(accessToken: String)
 }
 
 class GonawinAPI {
     var currentUser: User?
     var accessToken: String?
-    var provider: String?
     
     var delegate: GonawinAPIDelegate?
     
@@ -47,7 +46,6 @@ class GonawinAPI {
             case let .Value(boxedUser):
                 self.currentUser = boxedUser.value
                 self.accessToken = accessToken
-                self.provider = provider
                 self.delegate?.didAuthenticatedWithAccessToken(accessToken, user: boxedUser.value)
             }
         }
@@ -62,11 +60,10 @@ class GonawinAPI {
     
     func logout()
     {
-        self.delegate?.didLogout(provider!, accessToken: accessToken!)
+        self.delegate?.didLogoutWithAccessToken(accessToken!)
         
         currentUser = nil
         accessToken = nil
-        provider = nil
     }
     
     // MARK: - Private
