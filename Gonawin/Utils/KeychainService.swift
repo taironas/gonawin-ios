@@ -27,12 +27,12 @@ let kSecReturnDataValue = kSecReturnData as String
 let kSecMatchLimitOneValue = kSecMatchLimitOne as String
 
 class KeychainService : NSObject {
-    class func saveAccessToken(accessToken: String) {
-        self.save(serviceIdentifier, data: accessToken)
+    class func saveAuthToken(authToken: String) {
+        self.save(serviceIdentifier, data: authToken)
     }
     
-    class func deleteAccessToken(accessToken: String) {
-        return self.delete(serviceIdentifier, data: accessToken)
+    class func deleteAuthToken(authToken: String) {
+        return self.delete(serviceIdentifier, data: authToken)
     }
     
     class func loadAccessToken() -> String? {

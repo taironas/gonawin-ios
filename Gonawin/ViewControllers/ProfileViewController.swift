@@ -44,13 +44,6 @@ class ProfileViewController: UITableViewController {
     
     private func logout()
     {
-        if let accessToken = gonawinAPI.accessToken {
-            KeychainService.deleteAccessToken(accessToken)
-        }
-        
-        NSUserDefaults.standardUserDefaults().removeObjectForKey("Provider")
-        NSUserDefaults.standardUserDefaults().removeObjectForKey("CurrentUser")
-        
         gonawinAPI.logout()
     }
 }

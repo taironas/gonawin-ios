@@ -6,42 +6,28 @@
 //  Copyright (c) 2014 Taironas. All rights reserved.
 //
 
-struct User: JSONDecodable {
+struct User {
     var id: Int
     var email: String
     var username: String
     var name: String
+    var auth: String
     
     func encoded() -> [String:AnyObject] {
-        return ["id": self.id, "email": self.email, "username": self.username, "name": self.name]
+        return ["Id": id, "Email": email, "Username": username, "Name": name]
     }
 }
 
-extension User: JSONDecodable {
-    static func create(id: Int)(email: String)(username: String)(name: String) -> User {
-        return User(id: id, email: email, username: username, name: name)
-    }
+func parseUser(dict: JSONDictionary) -> User? {
+    let makeUser = { User(id: $0, email: $1, username: $2, name: $3, auth: "") }
     
-    static func decode(json: JSON) -> User? {
-        return _JSONObject(json) >>> { d in
-            d["User"]   >>> _JSONObject >>> { u in
-                User.create <^>
-                    u["Id"]     >>> _JSONInt    <*>
-                    u["Email"]   >>> _JSONString <*>
-                    u["Username"]   >>> _JSONString <*>
-                    u["Name"]  >>> _JSONString
-            }
-        }
-    }
-    
-    static func decode(dico: [String:AnyObject]) -> User? {
-        println("decode user = \(dico)")
-        return dico >>> _JSONObject >>> { u in
-            User.create <^>
-                u["id"]     >>> _JSONInt    <*>
-                u["email"]   >>> _JSONString <*>
-                u["username"]   >>> _JSONString <*>
-                u["name"]  >>> _JSONString
-        }
-    }
+    return curry(makeUser)
+        <*> int(dict, "Id")
+        <*> string(dict, "Email")
+        <*> string(dict, "Username")
+        <*> string(dict, "Name")
+}
+
+func getAuthToken(dict: JSONDictionary) -> String? {
+    return string(dict, "Auth")
 }

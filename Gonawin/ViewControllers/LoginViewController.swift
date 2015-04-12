@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
             }
             
             if error != nil {
-                self.showError(error!)
+                showError(self, error!)
             }
         }
 
@@ -40,19 +40,9 @@ class LoginViewController: UIViewController {
             }
             
             if error != nil {
-                self.showError(error!)
+                showError(self, error!)
             }
         }
         
-    }
-    
-    private func showError(error: NSError) {
-        showErrorDescription(error.localizedDescription)
-    }
-    
-    private func showErrorDescription(description: String) {
-        let alert = UIAlertController(title: "Error", message: description, preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
     }
 }

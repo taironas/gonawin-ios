@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (1.1.4)
+  - DateTools (1.5.0)
   - LVTwitterOAuthClient (0.3.0):
     - OAuthCore
   - NSData+Base64 (1.0.0)
@@ -8,6 +9,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, branch `xcode-6.3`)
+  - DateTools
   - LVTwitterOAuthClient (~> 0.3)
 
 EXTERNAL SOURCES:
@@ -22,8 +24,9 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 6a2cbaebe78a6d469bc55ee37f0a24ba22af76ac
-  LVTwitterOAuthClient: 690a8d3ec312f9513ff1e156fd66eaa0cdf16681
-  NSData+Base64: aae92a2e3f0bd88b29fe6093551ded3f5c062548
-  OAuthCore: 09d3c56dd3f64a61d1ffcbf103f28118ff8ca2e9
+  DateTools: b93a2c2017747329c6077c7d7e8a75106e23d0d7
+  LVTwitterOAuthClient: 058199e43af92c0b99332332fa26d2229c59f04d
+  NSData+Base64: 4e84902c4db907a15673474677e57763ef3903e4
+  OAuthCore: 43dce261db846a1fe20234d95654257e00e78581
 
-COCOAPODS: 0.36.0
+COCOAPODS: 0.36.3

@@ -10,5 +10,6 @@
 #define Gonawin_Bridging_Header_h
 
 #import "LVTwitterOAuthClient/LVTwitterOAuthClient.h"
+#import "DateTools/DateTools.h"
 
 #endif

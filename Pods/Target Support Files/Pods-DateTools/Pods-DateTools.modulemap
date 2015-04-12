@@ -1,0 +1,6 @@
+framework module DateTools {
+  umbrella header "Pods-DateTools-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -30,10 +30,10 @@ class GonawinController: UITabBarController, GonawinAPIDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func didAuthenticatedWithAccessToken(accessToken: String, user: User)
+    func didAuthenticatedWithUser(user: User)
     {
         // save access token in KeychainService
-        KeychainService.saveAccessToken(accessToken)
+        KeychainService.saveAuthToken(user.auth)
         // store user in NSUserDefaults
         let data = NSKeyedArchiver.archivedDataWithRootObject(user.encoded())
         NSUserDefaults.standardUserDefaults().setObject(data, forKey: "CurrentUser")
@@ -46,9 +46,9 @@ class GonawinController: UITabBarController, GonawinAPIDelegate {
         println(error)
     }
     
-    func didLogoutWithAccessToken(accessToken: String) {
-        // delete access token in KeychainService
-        KeychainService.deleteAccessToken(accessToken)
+    func didLogoutWithAccessToken(authToken: String) {
+        // delete auth token in KeychainService
+        KeychainService.deleteAuthToken(authToken)
         // delete user in NSUserDefaults
         NSUserDefaults.standardUserDefaults().removeObjectForKey("CurrentUser")
         

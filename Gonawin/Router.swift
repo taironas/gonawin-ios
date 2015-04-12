@@ -37,7 +37,7 @@ enum Router: URLRequestConvertible {
             case .Activities(let page, let count):
                 return ("/activities/", ["page": page, "count": count])
             }
-            }()
+        }()
         
         let URL = NSURL(string: Router.baseURL)!
         let URLRequest = NSMutableURLRequest(URL: URL.URLByAppendingPathComponent(path))

@@ -48,8 +48,7 @@ class FacebookLogin {
         request.performRequestWithHandler() {
             data, response, error in
             if data != nil {
-                let jsonData: JSON! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0), error: nil)
-                let userInfoDico = _JSONObject(jsonData)
+                let userInfoDico = decodeJSON(data)
                 
                 let id = userInfoDico!["id"] as! String
                 let email = userInfoDico!["email"] as! String

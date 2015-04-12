@@ -12,6 +12,12 @@
 #define COCOAPODS_VERSION_MINOR_Alamofire 1
 #define COCOAPODS_VERSION_PATCH_Alamofire 4
 
+// DateTools
+#define COCOAPODS_POD_AVAILABLE_DateTools
+#define COCOAPODS_VERSION_MAJOR_DateTools 1
+#define COCOAPODS_VERSION_MINOR_DateTools 5
+#define COCOAPODS_VERSION_PATCH_DateTools 0
+
 // LVTwitterOAuthClient
 #define COCOAPODS_POD_AVAILABLE_LVTwitterOAuthClient
 #define COCOAPODS_VERSION_MAJOR_LVTwitterOAuthClient 0

@@ -9,14 +9,13 @@
 import Alamofire
 
 protocol GonawinAPIDelegate {
-    func didAuthenticatedWithAccessToken(accessToken: String, user: User)
+    func didAuthenticatedWithUser(user: User)
     func didFailToAuthenticateWithError(error: NSError)
     func didLogoutWithAccessToken(accessToken: String)
 }
 
 class GonawinAPI {
     var currentUser: User?
-    var accessToken: String?
     
     var delegate: GonawinAPIDelegate?
     
@@ -27,9 +26,11 @@ class GonawinAPI {
         
         if let userData = userDefaults.objectForKey("CurrentUser") as? NSData {
             let userDico: [String:AnyObject] = NSKeyedUnarchiver.unarchiveObjectWithData(userData) as! [String: AnyObject]
-            self.currentUser = User.decode(userDico)
+            self.currentUser = parseUser(userDico)
             
-            self.accessToken = KeychainService.loadAccessToken()
+            if let authToken = KeychainService.loadAccessToken() {
+                currentUser?.auth = authToken
+            }
         }
     }
     
@@ -38,16 +39,33 @@ class GonawinAPI {
     func login(accessToken: String, provider: String, id: Int, email: String, name: String) {
         Alamofire.request(Router.Auth(accessToken: accessToken, provider: provider, id: id.description, email: email, name: name)).response {
             _, response, data, error in
-            let result: Result<User> = parseResult(data as! NSData, response, error)
-            
-            switch result {
-            case let .Error(error):
-                self.delegate?.didFailToAuthenticateWithError(error)
-            case let .Value(boxedUser):
-                self.currentUser = boxedUser.value
-                self.accessToken = accessToken
-                self.delegate?.didAuthenticatedWithAccessToken(accessToken, user: boxedUser.value)
+            if let dico = decodeJSON(data as! NSData), user = parseUser(dico["User"] as! JSONDictionary), authToken = getAuthToken(dico["User"] as! JSONDictionary) {
+                self.currentUser = user
+                self.currentUser?.auth = authToken
+                self.delegate?.didAuthenticatedWithUser(self.currentUser!)
             }
+            else if error != nil {
+                self.delegate?.didFailToAuthenticateWithError(error!)
+            }
+        }
+    }
+
+    func activites(page: Int, count: Int, completion: (activities: [Activity], error: NSError?) -> Void) {
+        Router.authToken = currentUser?.auth
+        
+        var activities: [Activity] = []
+        
+        Alamofire.request(Router.Activities(page: page, count: count)).response {
+            _, response, data, error in
+            if let array = decodeJSONArray(data as! NSData) {
+                for jsonActivity in array {
+                    if let activity = parseActivity(jsonActivity) {
+                        activities.append(activity)
+                    }
+                }
+            }
+            
+            completion(activities: activities, error: nil)
         }
     }
     
@@ -60,15 +78,16 @@ class GonawinAPI {
     
     func logout()
     {
-        self.delegate?.didLogoutWithAccessToken(accessToken!)
+        if let authToken = currentUser?.auth {
+            self.delegate?.didLogoutWithAccessToken(authToken)
+        }
         
         currentUser = nil
-        accessToken = nil
     }
     
     // MARK: - Private
     
     func isLoggedIn() -> Bool {
-        return (currentUser != nil && accessToken?.isEmpty != nil)
+        return (currentUser != nil)
     }
 }
