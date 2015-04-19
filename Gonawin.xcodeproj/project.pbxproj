@@ -17,6 +17,7 @@
 		142D9D211A8EA2BF00EFD976 /* APIKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 142D9D201A8EA2BF00EFD976 /* APIKeys.plist */; };
 		142FE38C1AD2AA1E0087BB0E /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142FE38B1AD2AA1E0087BB0E /* ActivityTableViewCell.swift */; };
 		143495301ACF2DFF0005C86B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1434952F1ACF2DFF0005C86B /* Error.swift */; };
+		143E96821AE3E2EB00E39EF4 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 143E96811AE3E2EB00E39EF4 /* FontAwesome.otf */; };
 		1445D29A19D6DEEF00B09DD5 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1445D29919D6DEEF00B09DD5 /* KeychainService.swift */; };
 		1451CABD19CDBF3900678412 /* GonawinAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1451CABC19CDBF3900678412 /* GonawinAPI.swift */; };
 		14875BF2199D2443005791D0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14875BF1199D2443005791D0 /* LoginViewController.swift */; };
@@ -70,6 +71,7 @@
 		142D9D201A8EA2BF00EFD976 /* APIKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = APIKeys.plist; sourceTree = "<group>"; };
 		142FE38B1AD2AA1E0087BB0E /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityTableViewCell.swift; path = ViewControllers/ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		1434952F1ACF2DFF0005C86B /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		143E96811AE3E2EB00E39EF4 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = Pods/FontAwesomeKit/FontAwesomeKit/FontAwesome.otf; sourceTree = "<group>"; };
 		1445D29919D6DEEF00B09DD5 /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		1451CABC19CDBF3900678412 /* GonawinAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GonawinAPI.swift; sourceTree = "<group>"; };
 		14875BF1199D2443005791D0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		14F87A5B1998EBE400A6EB11 = {
 			isa = PBXGroup;
 			children = (
+				143E96811AE3E2EB00E39EF4 /* FontAwesome.otf */,
 				14D7F54319A25FB60020D51A /* Podfile */,
 				14F87A661998EBE400A6EB11 /* Gonawin */,
 				14F87A7B1998EBE400A6EB11 /* GonawinTests */,
@@ -348,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				143E96821AE3E2EB00E39EF4 /* FontAwesome.otf in Resources */,
 				14D7F54419A25FB60020D51A /* Podfile in Resources */,
 				142D9D211A8EA2BF00EFD976 /* APIKeys.plist in Resources */,
 				14F87A711998EBE400A6EB11 /* Main.storyboard in Resources */,

@@ -1,6 +1,9 @@
 PODS:
   - Alamofire (1.1.4)
   - DateTools (1.5.0)
+  - FontAwesomeKit/Core (2.2.0)
+  - FontAwesomeKit/FontAwesome (2.2.0):
+    - FontAwesomeKit/Core
   - LVTwitterOAuthClient (0.3.0):
     - OAuthCore
   - NSData+Base64 (1.0.0)
@@ -10,6 +13,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, branch `xcode-6.3`)
   - DateTools
+  - FontAwesomeKit/FontAwesome
   - LVTwitterOAuthClient (~> 0.3)
 
 EXTERNAL SOURCES:
@@ -25,6 +29,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 6a2cbaebe78a6d469bc55ee37f0a24ba22af76ac
   DateTools: b93a2c2017747329c6077c7d7e8a75106e23d0d7
+  FontAwesomeKit: 025fd4dd1017fe4e3f8d47b03e024deedbb33cd4
   LVTwitterOAuthClient: 058199e43af92c0b99332332fa26d2229c59f04d
   NSData+Base64: 4e84902c4db907a15673474677e57763ef3903e4
   OAuthCore: 43dce261db846a1fe20234d95654257e00e78581

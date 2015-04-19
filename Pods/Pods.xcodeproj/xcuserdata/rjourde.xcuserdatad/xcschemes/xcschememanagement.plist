@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-FontAwesomeKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-LVTwitterOAuthClient.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>19785D7B7654A0F9F77B9386</key>
+		<key>1394411068BE45F0CD981F0F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>39A07C589FAB63487FF892FC</key>
+		<key>1A7968F2549FB7B4D9A1B597</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>63878DDB719B9DB3D7662272</key>
+		<key>1FE59692AAD5778C1F97D8B2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A06985AEE228CFFC761853A9</key>
+		<key>54CA81C5B78793AEF26AC125</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BEAD8878895A8B24BFC18947</key>
+		<key>719D610FC74F4B80ADDD980F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C5208CAC09F685C9B64D5583</key>
+		<key>74EE966F52881401B310C457</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>84C5EEE9712874D42154A089</key>
 		<dict>
 			<key>primary</key>
 			<true/>

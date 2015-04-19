@@ -5,3 +5,4 @@ use_frameworks!
 pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git', :branch => 'xcode-6.3'
 pod 'LVTwitterOAuthClient', '~> 0.3'
 pod 'DateTools'
+pod 'FontAwesomeKit/FontAwesome'

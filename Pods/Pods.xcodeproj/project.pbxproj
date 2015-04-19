@@ -7,617 +7,673 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0216B17E95A445204B0CE643 /* OAuthCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 253CAD9B044D0C36FA82C6BF /* OAuthCore.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		04DAA1497542FD2072BC1CF9 /* DTTimePeriodCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = BB23C486D4E0721978B253AE /* DTTimePeriodCollection.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0513E00E0F294E638808F0D8 /* OAuthCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9989AE7183EF5E7B3C9392B6 /* OAuthCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0899B1C236F00E238A15B788 /* DateTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7C830EAD6F5234BA9080F95F /* DateTools.bundle */; };
-		0C364BD081AF90540A5E5D03 /* Pods-NSData+Base64-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87A13F8D84B1190657B6E771 /* Pods-NSData+Base64-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0C607E50F8321E84AA6566C1 /* LVTwitterOAuthClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C03C04CC72FC97D7F46C16F /* LVTwitterOAuthClient.m */; };
-		17174B532D99C43795A4E1D5 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8F5AE56A4B5D1E8CBDDC34 /* NSData+Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2EC2DBE8262C7A5BB88D384F /* Pods-Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55587321AA131293D0F140C1 /* Pods-Alamofire-dummy.m */; };
-		2F96BBB64748C554428B3708 /* Pods-OAuthCore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AEB09FBBE4697A041BF2327C /* Pods-OAuthCore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		384501D42A0443581D151B46 /* Pods-Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 30F23777684D02A9307A1934 /* Pods-Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		384A5F2C8CC33E6FFCDCCCFA /* NSData_Base64.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA1AA404041735131101E4F /* NSData_Base64.framework */; };
-		3B6AB52182B521F75982C765 /* DateTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A7B4BE2186E879CB12FEAE9 /* DateTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DAD21FAB64475E7B3756216 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413A61BAEC5CEB6FB754A370 /* Foundation.framework */; };
-		46FAC07A2FD85FC6CDF34873 /* DTTimePeriod.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C2BB12A4632838C775C435F /* DTTimePeriod.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		471209523CB7EAD42C4FF862 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 473E3DAFC8B7866AD835F5E9 /* Social.framework */; };
-		4B0B964346D676A2ACFFCB08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413A61BAEC5CEB6FB754A370 /* Foundation.framework */; };
-		4CCE6D3F9485DF3EEFF75574 /* OAuth+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2776B1B446C9D55ED9FB9803 /* OAuth+Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		53797866841E031E86F83EFE /* Pods-LVTwitterOAuthClient-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A46776CD93F43AA596E75CB /* Pods-LVTwitterOAuthClient-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		55E710A02EF9117DA3218D80 /* OAuth+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AD8129C3388960649229687 /* OAuth+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5E6AF2EC43BE42BC275D81BE /* Pods-OAuthCore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E26099A5B11DFB46C914378 /* Pods-OAuthCore-dummy.m */; };
-		5FF209AF29487D8F9794ED2B /* NSDate+DateTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DBDB7A9CDA0A9E142278AB9 /* NSDate+DateTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		73399B4C391096417DE71469 /* DTTimePeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF4ED23014E008F99402C00 /* DTTimePeriod.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		7F6237770CF58C649D0780FE /* LVTwitterOAuthClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 24A509B8DB8DBA9817418CD5 /* LVTwitterOAuthClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		840FAD233EF640FEEEA821DC /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C9EAF23E7B5F003FC00E33 /* Alamofire.swift */; };
-		8ED3B0F65EB838FC658ABBC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413A61BAEC5CEB6FB754A370 /* Foundation.framework */; };
-		90ACF57E0AAC54097C7FE4C2 /* Pods-LVTwitterOAuthClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A2E87E3A24CE193C3CB6A6 /* Pods-LVTwitterOAuthClient-dummy.m */; };
-		9801B97211D73192F03739AF /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E306BB780AA81793FCDC523 /* Pods-dummy.m */; };
-		9B346A54B051F26865BF92F9 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 41E8BFC3D19E099FC62E36C2 /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9BD3324E0F63A9B9772D84D7 /* NSDate+DateTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 743AD0A97AE4FE212177BB43 /* NSDate+DateTools.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		9DA18CB369AC1163F56A9E4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413A61BAEC5CEB6FB754A370 /* Foundation.framework */; };
-		9E7077099BFD61B13CB04537 /* DTTimePeriodChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 66163F292EECED7D3975E5C4 /* DTTimePeriodChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A1AE40DFEC4C01D6B84B0F7C /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = FC208F57406F5B828D48C735 /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A623CC6794945357FF82D785 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413A61BAEC5CEB6FB754A370 /* Foundation.framework */; };
-		A9053BFAC154B28533A1F175 /* DTConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 492086F03CA843FE27FB0BDD /* DTConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B381D77615F3CF8701022DFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413A61BAEC5CEB6FB754A370 /* Foundation.framework */; };
-		B8CDB4981CB1991415B837F2 /* Pods-DateTools-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9F399655C3D5CFEC0E2C97 /* Pods-DateTools-dummy.m */; };
-		BAF5EDC6640397B0019B15DD /* DTError.h in Headers */ = {isa = PBXBuildFile; fileRef = D0E2E1CFF228D5ACF900DEE0 /* DTError.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C73AE24CD50B76F24CEC45BA /* Pods-NSData+Base64-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C42E682DAC3F5B32CCD10A /* Pods-NSData+Base64-dummy.m */; };
-		D4FAC16D3A45095B1C2BDD4F /* DTError.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8104B5B76E58EBD24CFB28 /* DTError.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		E5D81736C2FDF04F616BE23B /* DTTimePeriodChain.m in Sources */ = {isa = PBXBuildFile; fileRef = E33717C7BD6EAA631DB72C75 /* DTTimePeriodChain.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		E7A66EB3DAAF4366CDBE3BE9 /* DTTimePeriodGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 26074ADA8DD109E164C38F11 /* DTTimePeriodGroup.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		EBD3E5964D6BD2C92AC50D6B /* Pods-DateTools-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6145A099BEFC03502AE750E5 /* Pods-DateTools-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EE9DFDD221F7F12AC01271D2 /* OAuthCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80906A1605BF9C00B94DC246 /* OAuthCore.framework */; };
-		EF8AA73742FA659C99F8E0B4 /* DTTimePeriodGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = D9DB70564964884B771D2350 /* DTTimePeriodGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F9361859F2AE490713E95B8B /* DTTimePeriodCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = A4580DBD4FC0990FF7D44A0B /* DTTimePeriodCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		006D8C393E1CE81A79652828 /* Pods-LVTwitterOAuthClient-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6896223E8CB991AAE325F8 /* Pods-LVTwitterOAuthClient-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		011B65DD7398A0FCE744F778 /* DTTimePeriodCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = D957F1207C04C8F3A65DEB19 /* DTTimePeriodCollection.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		021A5B7C8A2127D98FD3AF91 /* Pods-DateTools-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A685C2099D5622CF252CE9E1 /* Pods-DateTools-dummy.m */; };
+		024FA9DDE0D3298AE45BDE7C /* DTConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = C0B1000C81A285ACDCE17C03 /* DTConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0544B707F47832A4FC0820BA /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC409AFE95EDE3DA1156875 /* Pods-dummy.m */; };
+		0751B2FE38BA971131264B3C /* NSDate+DateTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 60930DC40D69A2E27D1B63A4 /* NSDate+DateTools.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0C1AC8CECB5725C93B4486B5 /* DTTimePeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CF6AAC99235FE92FF4453B /* DTTimePeriod.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0E4820953BE4EB70E7A45B3C /* FAKIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFED6369DFE3DFE68F0BDED /* FAKIcon.m */; };
+		103ACD1B54D47B0217B7182B /* Pods-FontAwesomeKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 867A9D881A60D88AD2883BE2 /* Pods-FontAwesomeKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12B704C18911E2357335EBBB /* Pods-LVTwitterOAuthClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FBC1789F693EC81C684ECD /* Pods-LVTwitterOAuthClient-dummy.m */; };
+		195579A20C59A77D85CFFE87 /* OAuthCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 030F0A964A553D06678942C4 /* OAuthCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23B9814BE3609B8D4E243D8B /* FAKFontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE259BA444F201768E2B9D0 /* FAKFontAwesome.m */; };
+		271BFEFB5487958A11CAC9C8 /* LVTwitterOAuthClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D5656BD75EBA49F43406F4 /* LVTwitterOAuthClient.m */; };
+		2BB10009A00A006D13B29227 /* NSDate+DateTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 69AC5A185728D92648B71C22 /* NSDate+DateTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F769A575AF91A93E60DC2E9 /* FAKIcon.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B6380AE6DE68D4E06AFB481 /* FAKIcon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37EEF856CF2989EA22006948 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CCDC1EC1ED75FCC8421504 /* Foundation.framework */; };
+		39B2FA694CCFC3160D901625 /* DTError.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED532B2985DCE102CB04876 /* DTError.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4083F72DC1C6F639220E2448 /* DTTimePeriodGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = AD1FEDBFFAB939E60CA30673 /* DTTimePeriodGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4412D338104FA32544921D0D /* DateTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4DB00DC2730C0DE7FF0F8266 /* DateTools.bundle */; };
+		46039B369F160F55941170FE /* Pods-FontAwesomeKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EE7B9991A3D91B1D4A42B8 /* Pods-FontAwesomeKit-dummy.m */; };
+		4B55B09CA2940CBEC1BCBDE0 /* FAKFontAwesome.h in Headers */ = {isa = PBXBuildFile; fileRef = 67035C7EBEF4067DEDB1E807 /* FAKFontAwesome.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B998822E8E3A6F8F0FC5786 /* DTTimePeriodChain.h in Headers */ = {isa = PBXBuildFile; fileRef = CDB2D63E1506688DF05C9351 /* DTTimePeriodChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		528D7A4E6EA8C3A865F33F56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CCDC1EC1ED75FCC8421504 /* Foundation.framework */; };
+		57B3F55227094C645AF27057 /* OAuth+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = E17306CE2F3FE67A1A6501CC /* OAuth+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F8BD484F0BBF4D22BC6EEAB /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 42A673105A24CEBEB6F39746 /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79B6FB74A1D8B77119416AE0 /* DateTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 4042AADBDA4AF6CC7066F42B /* DateTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7ACB6943104FF80E77F866BC /* OAuthCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 489BF373F100F6CE7D548302 /* OAuthCore.framework */; };
+		7B9A2A5A7A00C94108D74C33 /* Pods-OAuthCore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87ADAB2708E7FC822575BB91 /* Pods-OAuthCore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7CE7F8B7621664A47469454B /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5BB935DAA2281B4166370485 /* FontAwesome.otf */; };
+		88207F7FC3814F858254075D /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF138916C135A2DA6B64F1 /* Alamofire.swift */; };
+		8CE2D390DCB1F10CE82246AC /* DTTimePeriod.h in Headers */ = {isa = PBXBuildFile; fileRef = BA721B5FA84C9846258C99D3 /* DTTimePeriod.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8EDD400A3EE99FF94D1E43B1 /* Pods-DateTools-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A735A76367A31490300B29E /* Pods-DateTools-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92002C9BE911966A81478D24 /* Pods-Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FB9C4F081887E739888CEB /* Pods-Alamofire-dummy.m */; };
+		92C9107A9CD58577018F719D /* Pods-NSData+Base64-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 15AC03EF4B4AE0E8B9F10343 /* Pods-NSData+Base64-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		937CCE7618F07109838BE714 /* LVTwitterOAuthClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 20F3B9051D325AEE23FAE0A0 /* LVTwitterOAuthClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A05E1CCB98B220307F4C7317 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CCDC1EC1ED75FCC8421504 /* Foundation.framework */; };
+		A122DD2CFD9714D5A21E60C9 /* Pods-Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 50F0CCD98023EE24C27489D0 /* Pods-Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6728CEC4B89FB4DC24F4D88 /* Pods-NSData+Base64-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6761B89323D77E727068F8D8 /* Pods-NSData+Base64-dummy.m */; };
+		B791A0EA3F5445EF41C30FE8 /* OAuth+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F98C9324E99D5E7274A8E53 /* OAuth+Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BA683EFB8E0C337596A0AC4E /* DTTimePeriodGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 852FDD5844C9539C58ECE01F /* DTTimePeriodGroup.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BA99E0B57BDA7E10577339BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CCDC1EC1ED75FCC8421504 /* Foundation.framework */; };
+		BE10391F94B7748F5E573760 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 2071253A02C6971B69E2EBFE /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C4181924C722217CA0F22FA3 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F478752F5470DCD5F16F480 /* NSData+Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDC8659BCBB57FABD016B35E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D470B4A54B90BDF66F2E7C1 /* UIKit.framework */; };
+		CF3C85168B0E411C77A64E4A /* DTTimePeriodCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 700D8E09241676CE8D9DD217 /* DTTimePeriodCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D98B04F5B0666ED8747ECFBE /* DTTimePeriodChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B20B4FA75C49470ECCFE052 /* DTTimePeriodChain.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DB6BCD127CBAAF2FC6A8A5FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CCDC1EC1ED75FCC8421504 /* Foundation.framework */; };
+		DDA6E4CE8DFEF6D2C7878A0E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 605D22E0507B5CD6F928F1D6 /* CoreText.framework */; };
+		DF18EBB94906AE0A1AAA5B34 /* Pods-OAuthCore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 90AFA2E881E3642FA3012F86 /* Pods-OAuthCore-dummy.m */; };
+		E109E63C5D42F23042B2D060 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CCDC1EC1ED75FCC8421504 /* Foundation.framework */; };
+		E3A4150F5C0129DA45D3FAA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CCDC1EC1ED75FCC8421504 /* Foundation.framework */; };
+		E9731B4389890FC27A740920 /* DTError.h in Headers */ = {isa = PBXBuildFile; fileRef = 36F09E8D1D35BE016B7EF26F /* DTError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6894B7EF756D220B7D07EDB /* OAuthCore.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A51992176E71FFFC5DEE3E /* OAuthCore.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F6B3C90EAACCA624F3D57AF8 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6E9AC666213F2E9F36E425 /* Social.framework */; };
+		F8DCD5DAD5EC7C376AE907F5 /* NSData_Base64.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB739E2FD37C966F9974061 /* NSData_Base64.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		21404FD7B26CC3BEF8557392 /* PBXContainerItemProxy */ = {
+		14F7FD40994E0AB8EB2B5127 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 156F1C0FFAE724E076CC7ED8 /* Project object */;
+			containerPortal = E1A56F43695CC4A04217BD47 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BEAD8878895A8B24BFC18947;
-			remoteInfo = "Pods-DateTools";
+			remoteGlobalIDString = 1FE59692AAD5778C1F97D8B2;
+			remoteInfo = "Pods-OAuthCore";
 		};
-		3511D58830A12FAF1660B8F8 /* PBXContainerItemProxy */ = {
+		277DD5E1074D051178D4E69F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 156F1C0FFAE724E076CC7ED8 /* Project object */;
+			containerPortal = E1A56F43695CC4A04217BD47 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A06985AEE228CFFC761853A9;
-			remoteInfo = "Pods-NSData+Base64";
+			remoteGlobalIDString = 74EE966F52881401B310C457;
+			remoteInfo = "Pods-Alamofire";
 		};
-		4A57615BDFF37DECD71E7755 /* PBXContainerItemProxy */ = {
+		340B65F01B785C6F7FC13C22 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 156F1C0FFAE724E076CC7ED8 /* Project object */;
+			containerPortal = E1A56F43695CC4A04217BD47 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 63878DDB719B9DB3D7662272;
+			remoteGlobalIDString = 54CA81C5B78793AEF26AC125;
 			remoteInfo = "Pods-LVTwitterOAuthClient";
 		};
-		A7B3F4A09A071A03868D13DE /* PBXContainerItemProxy */ = {
+		39BDF6B7B0EBFFC438B0B0BC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 156F1C0FFAE724E076CC7ED8 /* Project object */;
+			containerPortal = E1A56F43695CC4A04217BD47 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A06985AEE228CFFC761853A9;
+			remoteGlobalIDString = 719D610FC74F4B80ADDD980F;
 			remoteInfo = "Pods-NSData+Base64";
 		};
-		B7818DE8117D698D73147963 /* PBXContainerItemProxy */ = {
+		94B7ACEBEAD48CB24729CCBE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 156F1C0FFAE724E076CC7ED8 /* Project object */;
+			containerPortal = E1A56F43695CC4A04217BD47 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 19785D7B7654A0F9F77B9386;
-			remoteInfo = "Pods-OAuthCore";
+			remoteGlobalIDString = 1A7968F2549FB7B4D9A1B597;
+			remoteInfo = "Pods-DateTools";
 		};
-		DB28F7D059B26B23D75E848D /* PBXContainerItemProxy */ = {
+		A2470AD1DA9C78A3C7F4DD01 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 156F1C0FFAE724E076CC7ED8 /* Project object */;
+			containerPortal = E1A56F43695CC4A04217BD47 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 19785D7B7654A0F9F77B9386;
-			remoteInfo = "Pods-OAuthCore";
+			remoteGlobalIDString = 719D610FC74F4B80ADDD980F;
+			remoteInfo = "Pods-NSData+Base64";
 		};
-		E85F386778AF7BFC91ED9716 /* PBXContainerItemProxy */ = {
+		C0E78D54E8B19B24AF3C9462 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 156F1C0FFAE724E076CC7ED8 /* Project object */;
+			containerPortal = E1A56F43695CC4A04217BD47 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 39A07C589FAB63487FF892FC;
-			remoteInfo = "Pods-Alamofire";
+			remoteGlobalIDString = 1394411068BE45F0CD981F0F;
+			remoteInfo = "Pods-FontAwesomeKit";
+		};
+		C504745363F02FF3DF14DF17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1A56F43695CC4A04217BD47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FE59692AAD5778C1F97D8B2;
+			remoteInfo = "Pods-OAuthCore";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06A70578E4D72A97071CCCCD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07DFA7951E980553D94D36EC /* Pods-OAuthCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-OAuthCore.modulemap"; sourceTree = "<group>"; };
-		0B5EB95A813F3A9E2FFA0A6B /* Pods-LVTwitterOAuthClient.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LVTwitterOAuthClient.xcconfig"; sourceTree = "<group>"; };
-		0DD6CFB6C97756164530A346 /* Pods-DateTools.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DateTools.xcconfig"; sourceTree = "<group>"; };
-		0F8104B5B76E58EBD24CFB28 /* DTError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTError.m; path = DateTools/DTError.m; sourceTree = "<group>"; };
-		10A2E87E3A24CE193C3CB6A6 /* Pods-LVTwitterOAuthClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LVTwitterOAuthClient-dummy.m"; sourceTree = "<group>"; };
-		1141FFFF2D9B2E1C80661D13 /* Pods-LVTwitterOAuthClient.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LVTwitterOAuthClient.modulemap"; sourceTree = "<group>"; };
-		1C03C04CC72FC97D7F46C16F /* LVTwitterOAuthClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LVTwitterOAuthClient.m; path = LVTwitterOAuthClient/LVTwitterOAuthClient.m; sourceTree = "<group>"; };
-		1DED7A04A62B120885CA3365 /* Pods-NSData+Base64-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NSData+Base64-prefix.pch"; sourceTree = "<group>"; };
-		22F69DE69B285D7D840234CF /* Pods-NSData+Base64-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NSData+Base64-Private.xcconfig"; sourceTree = "<group>"; };
-		249EF407942E0749BD4DC09E /* Pods-NSData+Base64.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-NSData+Base64.modulemap"; sourceTree = "<group>"; };
-		24A509B8DB8DBA9817418CD5 /* LVTwitterOAuthClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LVTwitterOAuthClient.h; path = LVTwitterOAuthClient/LVTwitterOAuthClient.h; sourceTree = "<group>"; };
-		253CAD9B044D0C36FA82C6BF /* OAuthCore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OAuthCore.m; sourceTree = "<group>"; };
-		26074ADA8DD109E164C38F11 /* DTTimePeriodGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTimePeriodGroup.m; path = DateTools/DTTimePeriodGroup.m; sourceTree = "<group>"; };
-		2776B1B446C9D55ED9FB9803 /* OAuth+Additions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OAuth+Additions.m"; sourceTree = "<group>"; };
-		2A7B4BE2186E879CB12FEAE9 /* DateTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DateTools.h; path = DateTools/DateTools.h; sourceTree = "<group>"; };
-		2ABB8BC21F2913C53C11A756 /* Pods-DateTools-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DateTools-Private.xcconfig"; sourceTree = "<group>"; };
-		2D0BDCA2E4F628BAFB8D995A /* Pods-Alamofire-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Alamofire-Private.xcconfig"; sourceTree = "<group>"; };
-		2DBDB7A9CDA0A9E142278AB9 /* NSDate+DateTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+DateTools.h"; path = "DateTools/NSDate+DateTools.h"; sourceTree = "<group>"; };
-		30F23777684D02A9307A1934 /* Pods-Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		35DB296C98237826A2589E05 /* Pods-DateTools-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DateTools-prefix.pch"; sourceTree = "<group>"; };
-		372638B43D163CAEB6EE9780 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		39C9EAF23E7B5F003FC00E33 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		3CA1AA404041735131101E4F /* NSData_Base64.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSData_Base64.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E26099A5B11DFB46C914378 /* Pods-OAuthCore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OAuthCore-dummy.m"; sourceTree = "<group>"; };
-		413A61BAEC5CEB6FB754A370 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		41E04A005DDBB83225AD82AE /* Pods-LVTwitterOAuthClient-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LVTwitterOAuthClient-Private.xcconfig"; sourceTree = "<group>"; };
-		41E8BFC3D19E099FC62E36C2 /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
-		44DE9B64E1A56DC5F69ED19E /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
-		4686A77B05F1258EB8446D50 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		473E3DAFC8B7866AD835F5E9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Social.framework; sourceTree = DEVELOPER_DIR; };
-		492086F03CA843FE27FB0BDD /* DTConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTConstants.h; path = DateTools/DTConstants.h; sourceTree = "<group>"; };
-		4C2BB12A4632838C775C435F /* DTTimePeriod.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTimePeriod.h; path = DateTools/DTTimePeriod.h; sourceTree = "<group>"; };
-		4F39ED0B515B016BE3BA3541 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		55587321AA131293D0F140C1 /* Pods-Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Alamofire-dummy.m"; sourceTree = "<group>"; };
-		5A46776CD93F43AA596E75CB /* Pods-LVTwitterOAuthClient-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LVTwitterOAuthClient-umbrella.h"; sourceTree = "<group>"; };
-		6145A099BEFC03502AE750E5 /* Pods-DateTools-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DateTools-umbrella.h"; sourceTree = "<group>"; };
-		634983299A6B9D3CDC85F76A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		66163F292EECED7D3975E5C4 /* DTTimePeriodChain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTimePeriodChain.h; path = DateTools/DTTimePeriodChain.h; sourceTree = "<group>"; };
-		6AAC64377488C782EBD7FDF6 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		743AD0A97AE4FE212177BB43 /* NSDate+DateTools.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+DateTools.m"; path = "DateTools/NSDate+DateTools.m"; sourceTree = "<group>"; };
-		76316CBA00DBC758BF8E907A /* Pods-Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		7AD8129C3388960649229687 /* OAuth+Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OAuth+Additions.h"; sourceTree = "<group>"; };
-		7B174134FC3D4B41D4D306A5 /* Pods-LVTwitterOAuthClient-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LVTwitterOAuthClient-prefix.pch"; sourceTree = "<group>"; };
-		7C830EAD6F5234BA9080F95F /* DateTools.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = DateTools.bundle; path = DateTools/DateTools.bundle; sourceTree = "<group>"; };
-		7D94A8F758285B709B5D1CA0 /* NSData_Base64.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSData_Base64.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7DD726A5FB32240B0E1F0239 /* OAuthCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OAuthCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		80906A1605BF9C00B94DC246 /* OAuthCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OAuthCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		85FDA212CF255C17D8D1E136 /* Pods-Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Alamofire.xcconfig"; sourceTree = "<group>"; };
-		87A13F8D84B1190657B6E771 /* Pods-NSData+Base64-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NSData+Base64-umbrella.h"; sourceTree = "<group>"; };
-		8938DAC283CFF560DEA88E97 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
-		8E306BB780AA81793FCDC523 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		8F320CEE2FC6F83FCE13C506 /* Pods-OAuthCore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OAuthCore.xcconfig"; sourceTree = "<group>"; };
-		98C42E682DAC3F5B32CCD10A /* Pods-NSData+Base64-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NSData+Base64-dummy.m"; sourceTree = "<group>"; };
-		9989AE7183EF5E7B3C9392B6 /* OAuthCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OAuthCore.h; sourceTree = "<group>"; };
-		9A8F5AE56A4B5D1E8CBDDC34 /* NSData+Base64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
-		9ADE892D36BC4E159FF0460B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A4580DBD4FC0990FF7D44A0B /* DTTimePeriodCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTimePeriodCollection.h; path = DateTools/DTTimePeriodCollection.h; sourceTree = "<group>"; };
-		A484C505DA6209C9142C7000 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AEB09FBBE4697A041BF2327C /* Pods-OAuthCore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OAuthCore-umbrella.h"; sourceTree = "<group>"; };
-		B69D924794F9A26BDE16DF40 /* Pods-OAuthCore-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OAuthCore-Private.xcconfig"; sourceTree = "<group>"; };
-		B84429368A5173158A2D070F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B890F75E6100D729B49BD01F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		BB23C486D4E0721978B253AE /* DTTimePeriodCollection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTimePeriodCollection.m; path = DateTools/DTTimePeriodCollection.m; sourceTree = "<group>"; };
-		CAEE9D9F0886DA2FE5820CBD /* Pods-NSData+Base64.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NSData+Base64.xcconfig"; sourceTree = "<group>"; };
-		CE1D422DFD52AF718DDC4338 /* Pods-DateTools.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DateTools.modulemap"; sourceTree = "<group>"; };
-		D0E2E1CFF228D5ACF900DEE0 /* DTError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTError.h; path = DateTools/DTError.h; sourceTree = "<group>"; };
-		D69C705E43387C9BAC5B984D /* DateTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DateTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D9DB70564964884B771D2350 /* DTTimePeriodGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTimePeriodGroup.h; path = DateTools/DTTimePeriodGroup.h; sourceTree = "<group>"; };
-		DEF4ED23014E008F99402C00 /* DTTimePeriod.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTimePeriod.m; path = DateTools/DTTimePeriod.m; sourceTree = "<group>"; };
-		DF811CE85DCF455160FC5A75 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E021D0A581822C792D898491 /* Pods-OAuthCore-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OAuthCore-prefix.pch"; sourceTree = "<group>"; };
-		E0DC282B48B16A26A392C10D /* Pods-Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Alamofire.modulemap"; sourceTree = "<group>"; };
-		E33717C7BD6EAA631DB72C75 /* DTTimePeriodChain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTimePeriodChain.m; path = DateTools/DTTimePeriodChain.m; sourceTree = "<group>"; };
-		E569221A85A4034EB1C5FA3D /* LVTwitterOAuthClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LVTwitterOAuthClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E865DDBC10A40A9DC3188EF2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F1C86049093C24EC0996587C /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		F891A14A718531D342D3C0BA /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8D794277A86E9A07259897B /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
-		FC208F57406F5B828D48C735 /* NSData+Base64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
-		FF9F399655C3D5CFEC0E2C97 /* Pods-DateTools-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DateTools-dummy.m"; sourceTree = "<group>"; };
+		011BD8F0AC2045884680500C /* Pods-DateTools-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DateTools-prefix.pch"; sourceTree = "<group>"; };
+		0264A75CFEBCF2AA0215F57E /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		030F0A964A553D06678942C4 /* OAuthCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OAuthCore.h; sourceTree = "<group>"; };
+		05BE31F3CEA2BFD2E4C0FC65 /* Pods-FontAwesomeKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FontAwesomeKit.xcconfig"; sourceTree = "<group>"; };
+		084ECFB1538FE425C4729DB1 /* Pods-FontAwesomeKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FontAwesomeKit-prefix.pch"; sourceTree = "<group>"; };
+		0B20B4FA75C49470ECCFE052 /* DTTimePeriodChain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTimePeriodChain.m; path = DateTools/DTTimePeriodChain.m; sourceTree = "<group>"; };
+		1420EFA9DF909D1EAD387ED0 /* Pods-FontAwesomeKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FontAwesomeKit-Private.xcconfig"; sourceTree = "<group>"; };
+		15AC03EF4B4AE0E8B9F10343 /* Pods-NSData+Base64-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NSData+Base64-umbrella.h"; sourceTree = "<group>"; };
+		1B6380AE6DE68D4E06AFB481 /* FAKIcon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKIcon.h; path = FontAwesomeKit/FAKIcon.h; sourceTree = "<group>"; };
+		1EDE09BF1E6848411B3AFD5C /* Pods-LVTwitterOAuthClient-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LVTwitterOAuthClient-prefix.pch"; sourceTree = "<group>"; };
+		1F478752F5470DCD5F16F480 /* NSData+Base64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		2071253A02C6971B69E2EBFE /* NSData+Base64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		20F3B9051D325AEE23FAE0A0 /* LVTwitterOAuthClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LVTwitterOAuthClient.h; path = LVTwitterOAuthClient/LVTwitterOAuthClient.h; sourceTree = "<group>"; };
+		23A009B174E5C7F2D2217D22 /* Pods-Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Alamofire.xcconfig"; sourceTree = "<group>"; };
+		257715E2569DF4D9F39E3B4F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2A735A76367A31490300B29E /* Pods-DateTools-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DateTools-umbrella.h"; sourceTree = "<group>"; };
+		2ED532B2985DCE102CB04876 /* DTError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTError.m; path = DateTools/DTError.m; sourceTree = "<group>"; };
+		2FEF138916C135A2DA6B64F1 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		35797B1F03A77E93800AEE3D /* LVTwitterOAuthClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LVTwitterOAuthClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36C72CE20704AB3794101D8B /* Pods-NSData+Base64-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NSData+Base64-prefix.pch"; sourceTree = "<group>"; };
+		36F09E8D1D35BE016B7EF26F /* DTError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTError.h; path = DateTools/DTError.h; sourceTree = "<group>"; };
+		38150294BD3281E8A2B6D2A4 /* Pods-OAuthCore-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OAuthCore-Private.xcconfig"; sourceTree = "<group>"; };
+		3AB739E2FD37C966F9974061 /* NSData_Base64.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSData_Base64.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4042AADBDA4AF6CC7066F42B /* DateTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DateTools.h; path = DateTools/DateTools.h; sourceTree = "<group>"; };
+		42A673105A24CEBEB6F39746 /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
+		433709E466B89A3AD8FEBB92 /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
+		489BF373F100F6CE7D548302 /* OAuthCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OAuthCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		495B2AEC318442B6FB381326 /* Pods-LVTwitterOAuthClient.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LVTwitterOAuthClient.xcconfig"; sourceTree = "<group>"; };
+		4DB00DC2730C0DE7FF0F8266 /* DateTools.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = DateTools.bundle; path = DateTools/DateTools.bundle; sourceTree = "<group>"; };
+		4DCD8AE9A51C0E59DFBEF156 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50D5656BD75EBA49F43406F4 /* LVTwitterOAuthClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LVTwitterOAuthClient.m; path = LVTwitterOAuthClient/LVTwitterOAuthClient.m; sourceTree = "<group>"; };
+		50F0CCD98023EE24C27489D0 /* Pods-Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		54BFCC079D946E07461F4ABE /* DateTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DateTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55EE7B9991A3D91B1D4A42B8 /* Pods-FontAwesomeKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FontAwesomeKit-dummy.m"; sourceTree = "<group>"; };
+		57429A568FC4D87E38ED9C20 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5771FCDA25B42FDC7F548526 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59FB9C4F081887E739888CEB /* Pods-Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Alamofire-dummy.m"; sourceTree = "<group>"; };
+		5BB935DAA2281B4166370485 /* FontAwesome.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = FontAwesome.otf; path = FontAwesomeKit/FontAwesome.otf; sourceTree = "<group>"; };
+		5C3D1468DCCCDA29A4B8C06D /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		5F98C9324E99D5E7274A8E53 /* OAuth+Additions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OAuth+Additions.m"; sourceTree = "<group>"; };
+		605D22E0507B5CD6F928F1D6 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		60930DC40D69A2E27D1B63A4 /* NSDate+DateTools.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+DateTools.m"; path = "DateTools/NSDate+DateTools.m"; sourceTree = "<group>"; };
+		61A64A609ABED20995960758 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		63CF6AAC99235FE92FF4453B /* DTTimePeriod.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTimePeriod.m; path = DateTools/DTTimePeriod.m; sourceTree = "<group>"; };
+		650B8C2DDA6F167E067BB6AF /* Pods-Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		6655254E0FAB5F8E268C9AFA /* Pods-NSData+Base64-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NSData+Base64-Private.xcconfig"; sourceTree = "<group>"; };
+		67035C7EBEF4067DEDB1E807 /* FAKFontAwesome.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKFontAwesome.h; path = FontAwesomeKit/FAKFontAwesome.h; sourceTree = "<group>"; };
+		6761B89323D77E727068F8D8 /* Pods-NSData+Base64-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NSData+Base64-dummy.m"; sourceTree = "<group>"; };
+		69AC5A185728D92648B71C22 /* NSDate+DateTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+DateTools.h"; path = "DateTools/NSDate+DateTools.h"; sourceTree = "<group>"; };
+		6AB63071C1E8185C5820F144 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		700AB3EA6361885B023A5966 /* Pods-NSData+Base64.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-NSData+Base64.modulemap"; sourceTree = "<group>"; };
+		700D8E09241676CE8D9DD217 /* DTTimePeriodCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTimePeriodCollection.h; path = DateTools/DTTimePeriodCollection.h; sourceTree = "<group>"; };
+		73F3C1CDFF969ABB3DCA2463 /* Pods-DateTools-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DateTools-Private.xcconfig"; sourceTree = "<group>"; };
+		752B467DD4D5E727E41609B8 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76F51DDEBE7E0E66448C5C53 /* Pods-NSData+Base64.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NSData+Base64.xcconfig"; sourceTree = "<group>"; };
+		7BECDBE782E2558ED8729594 /* Pods-DateTools.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DateTools.modulemap"; sourceTree = "<group>"; };
+		7E1DD5C9CE73C7CFF466E23F /* Pods-OAuthCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-OAuthCore.modulemap"; sourceTree = "<group>"; };
+		8118BB787DC964ACE8321E44 /* Pods-Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Alamofire.modulemap"; sourceTree = "<group>"; };
+		82F79720A3BEE5B2A202C507 /* Pods-FontAwesomeKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FontAwesomeKit.modulemap"; sourceTree = "<group>"; };
+		830F0BB7D4D6A642BADECA3B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		852FDD5844C9539C58ECE01F /* DTTimePeriodGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTimePeriodGroup.m; path = DateTools/DTTimePeriodGroup.m; sourceTree = "<group>"; };
+		867A9D881A60D88AD2883BE2 /* Pods-FontAwesomeKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FontAwesomeKit-umbrella.h"; sourceTree = "<group>"; };
+		87ADAB2708E7FC822575BB91 /* Pods-OAuthCore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OAuthCore-umbrella.h"; sourceTree = "<group>"; };
+		8AFED6369DFE3DFE68F0BDED /* FAKIcon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKIcon.m; path = FontAwesomeKit/FAKIcon.m; sourceTree = "<group>"; };
+		8D470B4A54B90BDF66F2E7C1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		90AFA2E881E3642FA3012F86 /* Pods-OAuthCore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OAuthCore-dummy.m"; sourceTree = "<group>"; };
+		91FBC1789F693EC81C684ECD /* Pods-LVTwitterOAuthClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LVTwitterOAuthClient-dummy.m"; sourceTree = "<group>"; };
+		947F8570E61D9C03508D90F7 /* Pods-Alamofire-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Alamofire-Private.xcconfig"; sourceTree = "<group>"; };
+		9E454BBC345606A773023283 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F19B58996039DC8BD713123 /* Pods-LVTwitterOAuthClient.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LVTwitterOAuthClient.modulemap"; sourceTree = "<group>"; };
+		A685C2099D5622CF252CE9E1 /* Pods-DateTools-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DateTools-dummy.m"; sourceTree = "<group>"; };
+		A9A51992176E71FFFC5DEE3E /* OAuthCore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OAuthCore.m; sourceTree = "<group>"; };
+		AD1FEDBFFAB939E60CA30673 /* DTTimePeriodGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTimePeriodGroup.h; path = DateTools/DTTimePeriodGroup.h; sourceTree = "<group>"; };
+		ADC409AFE95EDE3DA1156875 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		ADE7BAC6AB77C1A255DE9F46 /* Pods-OAuthCore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OAuthCore.xcconfig"; sourceTree = "<group>"; };
+		AFE259BA444F201768E2B9D0 /* FAKFontAwesome.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKFontAwesome.m; path = FontAwesomeKit/FAKFontAwesome.m; sourceTree = "<group>"; };
+		B1AC24100F2537CA7AC51F52 /* Pods-DateTools.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DateTools.xcconfig"; sourceTree = "<group>"; };
+		BA721B5FA84C9846258C99D3 /* DTTimePeriod.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTimePeriod.h; path = DateTools/DTTimePeriod.h; sourceTree = "<group>"; };
+		BC440BD615BE79EA236DAE1B /* NSData_Base64.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSData_Base64.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0B1000C81A285ACDCE17C03 /* DTConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTConstants.h; path = DateTools/DTConstants.h; sourceTree = "<group>"; };
+		CB6896223E8CB991AAE325F8 /* Pods-LVTwitterOAuthClient-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LVTwitterOAuthClient-umbrella.h"; sourceTree = "<group>"; };
+		CD7823D350DC01C2575DDEF3 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		CDB2D63E1506688DF05C9351 /* DTTimePeriodChain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTimePeriodChain.h; path = DateTools/DTTimePeriodChain.h; sourceTree = "<group>"; };
+		CDDCBCF2888679D7336E169F /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D00CD44DD4E07563FAFA6998 /* Pods-OAuthCore-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OAuthCore-prefix.pch"; sourceTree = "<group>"; };
+		D20E844A2653A821A026E175 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D881966A215C14719D3B0C5D /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		D957F1207C04C8F3A65DEB19 /* DTTimePeriodCollection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTimePeriodCollection.m; path = DateTools/DTTimePeriodCollection.m; sourceTree = "<group>"; };
+		E17306CE2F3FE67A1A6501CC /* OAuth+Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OAuth+Additions.h"; sourceTree = "<group>"; };
+		EB6E9AC666213F2E9F36E425 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Social.framework; sourceTree = DEVELOPER_DIR; };
+		EE0B60F0746C8D1B4FE85B60 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE1D48C611A828778531093C /* OAuthCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OAuthCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6B962CFDB00F89F3656323A /* Pods-LVTwitterOAuthClient-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LVTwitterOAuthClient-Private.xcconfig"; sourceTree = "<group>"; };
+		F6CCDC1EC1ED75FCC8421504 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		FABD5C8541A633F4F63D77E6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		FF2993EBFC467E72B8DAA297 /* FontAwesomeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FontAwesomeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		04231737BC412763566BBAFD /* Frameworks */ = {
+		088A996C3A65344B21D5074B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B0B964346D676A2ACFFCB08 /* Foundation.framework in Frameworks */,
-				384A5F2C8CC33E6FFCDCCCFA /* NSData_Base64.framework in Frameworks */,
+				E3A4150F5C0129DA45D3FAA4 /* Foundation.framework in Frameworks */,
+				7ACB6943104FF80E77F866BC /* OAuthCore.framework in Frameworks */,
+				F6B3C90EAACCA624F3D57AF8 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0DB964BCA1DF5D605930825A /* Frameworks */ = {
+		0DF79BB312130389D1E246C5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8ED3B0F65EB838FC658ABBC3 /* Foundation.framework in Frameworks */,
+				A05E1CCB98B220307F4C7317 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		100976A0ED3C4AE803B645FC /* Frameworks */ = {
+		275CAA3E00638C61A5A7B36E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DAD21FAB64475E7B3756216 /* Foundation.framework in Frameworks */,
+				DDA6E4CE8DFEF6D2C7878A0E /* CoreText.framework in Frameworks */,
+				E109E63C5D42F23042B2D060 /* Foundation.framework in Frameworks */,
+				CDC8659BCBB57FABD016B35E /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		24BD73910E85C3699C58754F /* Frameworks */ = {
+		36A8D35920E425F62AA3690A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DA18CB369AC1163F56A9E4D /* Foundation.framework in Frameworks */,
+				528D7A4E6EA8C3A865F33F56 /* Foundation.framework in Frameworks */,
+				F8DCD5DAD5EC7C376AE907F5 /* NSData_Base64.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		886EB231D66F7DE57DCB1EED /* Frameworks */ = {
+		BB296BA3DABB69551AD71315 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B381D77615F3CF8701022DFB /* Foundation.framework in Frameworks */,
-				EE9DFDD221F7F12AC01271D2 /* OAuthCore.framework in Frameworks */,
-				471209523CB7EAD42C4FF862 /* Social.framework in Frameworks */,
+				BA99E0B57BDA7E10577339BB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DCBC8D82690094D8D44758A5 /* Frameworks */ = {
+		C6E7541D43608697978900C0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A623CC6794945357FF82D785 /* Foundation.framework in Frameworks */,
+				DB6BCD127CBAAF2FC6A8A5FA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6F64F02F3843530FEE1F55B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37EEF856CF2989EA22006948 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		16C8814EF582E0906EBFC9A9 /* DateTools */ = {
+		04BED266C22B84FDC44230F8 = {
 			isa = PBXGroup;
 			children = (
-				492086F03CA843FE27FB0BDD /* DTConstants.h */,
-				D0E2E1CFF228D5ACF900DEE0 /* DTError.h */,
-				0F8104B5B76E58EBD24CFB28 /* DTError.m */,
-				4C2BB12A4632838C775C435F /* DTTimePeriod.h */,
-				DEF4ED23014E008F99402C00 /* DTTimePeriod.m */,
-				66163F292EECED7D3975E5C4 /* DTTimePeriodChain.h */,
-				E33717C7BD6EAA631DB72C75 /* DTTimePeriodChain.m */,
-				A4580DBD4FC0990FF7D44A0B /* DTTimePeriodCollection.h */,
-				BB23C486D4E0721978B253AE /* DTTimePeriodCollection.m */,
-				D9DB70564964884B771D2350 /* DTTimePeriodGroup.h */,
-				26074ADA8DD109E164C38F11 /* DTTimePeriodGroup.m */,
-				2A7B4BE2186E879CB12FEAE9 /* DateTools.h */,
-				2DBDB7A9CDA0A9E142278AB9 /* NSDate+DateTools.h */,
-				743AD0A97AE4FE212177BB43 /* NSDate+DateTools.m */,
-				41EE1AA9017363825FBF7247 /* Resources */,
-				546827884E5B99236DB822FD /* Support Files */,
+				257715E2569DF4D9F39E3B4F /* Podfile */,
+				3CD3BB55FA2CEB59A9333428 /* Frameworks */,
+				45C9ABBFAADC18531ECFF827 /* Pods */,
+				8D0F1EE7878B389EF15E3591 /* Products */,
+				DE70282285EDBC747A4BADF0 /* Targets Support Files */,
 			);
-			path = DateTools;
 			sourceTree = "<group>";
 		};
-		183B073414761E80277B38E2 /* Frameworks */ = {
+		1A4687263462FDC050567F8D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3CA1AA404041735131101E4F /* NSData_Base64.framework */,
-				80906A1605BF9C00B94DC246 /* OAuthCore.framework */,
-				81FAD7D34ADFE37F13235C94 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		41EE1AA9017363825FBF7247 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				7C830EAD6F5234BA9080F95F /* DateTools.bundle */,
+				4DB00DC2730C0DE7FF0F8266 /* DateTools.bundle */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		476A15A5B76BB1698F4928FC /* Support Files */ = {
+		27823EAE579026857653F406 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				9ADE892D36BC4E159FF0460B /* Info.plist */,
-				07DFA7951E980553D94D36EC /* Pods-OAuthCore.modulemap */,
-				8F320CEE2FC6F83FCE13C506 /* Pods-OAuthCore.xcconfig */,
-				B69D924794F9A26BDE16DF40 /* Pods-OAuthCore-Private.xcconfig */,
-				3E26099A5B11DFB46C914378 /* Pods-OAuthCore-dummy.m */,
-				E021D0A581822C792D898491 /* Pods-OAuthCore-prefix.pch */,
-				AEB09FBBE4697A041BF2327C /* Pods-OAuthCore-umbrella.h */,
+				605D22E0507B5CD6F928F1D6 /* CoreText.framework */,
+				F6CCDC1EC1ED75FCC8421504 /* Foundation.framework */,
+				EB6E9AC666213F2E9F36E425 /* Social.framework */,
+				8D470B4A54B90BDF66F2E7C1 /* UIKit.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-OAuthCore";
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		546827884E5B99236DB822FD /* Support Files */ = {
+		3CD3BB55FA2CEB59A9333428 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A484C505DA6209C9142C7000 /* Info.plist */,
-				CE1D422DFD52AF718DDC4338 /* Pods-DateTools.modulemap */,
-				0DD6CFB6C97756164530A346 /* Pods-DateTools.xcconfig */,
-				2ABB8BC21F2913C53C11A756 /* Pods-DateTools-Private.xcconfig */,
-				FF9F399655C3D5CFEC0E2C97 /* Pods-DateTools-dummy.m */,
-				35DB296C98237826A2589E05 /* Pods-DateTools-prefix.pch */,
-				6145A099BEFC03502AE750E5 /* Pods-DateTools-umbrella.h */,
+				3AB739E2FD37C966F9974061 /* NSData_Base64.framework */,
+				489BF373F100F6CE7D548302 /* OAuthCore.framework */,
+				27823EAE579026857653F406 /* iOS */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-DateTools";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		581F621FE16C7D0A4ED53154 /* Support Files */ = {
+		43A92DCB46EC21A16EBCF802 /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				634983299A6B9D3CDC85F76A /* Info.plist */,
-				249EF407942E0749BD4DC09E /* Pods-NSData+Base64.modulemap */,
-				CAEE9D9F0886DA2FE5820CBD /* Pods-NSData+Base64.xcconfig */,
-				22F69DE69B285D7D840234CF /* Pods-NSData+Base64-Private.xcconfig */,
-				98C42E682DAC3F5B32CCD10A /* Pods-NSData+Base64-dummy.m */,
-				1DED7A04A62B120885CA3365 /* Pods-NSData+Base64-prefix.pch */,
-				87A13F8D84B1190657B6E771 /* Pods-NSData+Base64-umbrella.h */,
+				2FEF138916C135A2DA6B64F1 /* Alamofire.swift */,
+				61914A60F92B86AD12A44365 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-NSData+Base64";
+			path = Alamofire;
 			sourceTree = "<group>";
 		};
-		610E89FCACB55B2BA94A0CDE = {
+		45C9ABBFAADC18531ECFF827 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F1C86049093C24EC0996587C /* Podfile */,
-				183B073414761E80277B38E2 /* Frameworks */,
-				8664D926639F8118CA18913F /* Pods */,
-				DE9E2842ADAE54BD86EB83E5 /* Products */,
-				8B81DBDB339F6E4A1A1AB7B3 /* Targets Support Files */,
+				43A92DCB46EC21A16EBCF802 /* Alamofire */,
+				4C9D25E80724503A47F26783 /* DateTools */,
+				7D1621CE21E047E209CB1ED5 /* FontAwesomeKit */,
+				7DA9C1D001075AD5E5B56EA4 /* LVTwitterOAuthClient */,
+				4E6BE8C17983E912D3E4EC7E /* NSData+Base64 */,
+				8ED0F2A3E2B6362432A3CC5E /* OAuthCore */,
 			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		6E6ADECB703D92B45474BAAA /* Support Files */ = {
+		4902138E9DFD7B6F3E433D04 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E865DDBC10A40A9DC3188EF2 /* Info.plist */,
-				1141FFFF2D9B2E1C80661D13 /* Pods-LVTwitterOAuthClient.modulemap */,
-				0B5EB95A813F3A9E2FFA0A6B /* Pods-LVTwitterOAuthClient.xcconfig */,
-				41E04A005DDBB83225AD82AE /* Pods-LVTwitterOAuthClient-Private.xcconfig */,
-				10A2E87E3A24CE193C3CB6A6 /* Pods-LVTwitterOAuthClient-dummy.m */,
-				7B174134FC3D4B41D4D306A5 /* Pods-LVTwitterOAuthClient-prefix.pch */,
-				5A46776CD93F43AA596E75CB /* Pods-LVTwitterOAuthClient-umbrella.h */,
+				57429A568FC4D87E38ED9C20 /* Info.plist */,
+				9F19B58996039DC8BD713123 /* Pods-LVTwitterOAuthClient.modulemap */,
+				495B2AEC318442B6FB381326 /* Pods-LVTwitterOAuthClient.xcconfig */,
+				F6B962CFDB00F89F3656323A /* Pods-LVTwitterOAuthClient-Private.xcconfig */,
+				91FBC1789F693EC81C684ECD /* Pods-LVTwitterOAuthClient-dummy.m */,
+				1EDE09BF1E6848411B3AFD5C /* Pods-LVTwitterOAuthClient-prefix.pch */,
+				CB6896223E8CB991AAE325F8 /* Pods-LVTwitterOAuthClient-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-LVTwitterOAuthClient";
 			sourceTree = "<group>";
 		};
-		777A04D533BCAC6C3AF15CF2 /* NSData+Base64 */ = {
+		4C9D25E80724503A47F26783 /* DateTools */ = {
 			isa = PBXGroup;
 			children = (
-				9A8F5AE56A4B5D1E8CBDDC34 /* NSData+Base64.h */,
-				FC208F57406F5B828D48C735 /* NSData+Base64.m */,
-				581F621FE16C7D0A4ED53154 /* Support Files */,
+				C0B1000C81A285ACDCE17C03 /* DTConstants.h */,
+				36F09E8D1D35BE016B7EF26F /* DTError.h */,
+				2ED532B2985DCE102CB04876 /* DTError.m */,
+				BA721B5FA84C9846258C99D3 /* DTTimePeriod.h */,
+				63CF6AAC99235FE92FF4453B /* DTTimePeriod.m */,
+				CDB2D63E1506688DF05C9351 /* DTTimePeriodChain.h */,
+				0B20B4FA75C49470ECCFE052 /* DTTimePeriodChain.m */,
+				700D8E09241676CE8D9DD217 /* DTTimePeriodCollection.h */,
+				D957F1207C04C8F3A65DEB19 /* DTTimePeriodCollection.m */,
+				AD1FEDBFFAB939E60CA30673 /* DTTimePeriodGroup.h */,
+				852FDD5844C9539C58ECE01F /* DTTimePeriodGroup.m */,
+				4042AADBDA4AF6CC7066F42B /* DateTools.h */,
+				69AC5A185728D92648B71C22 /* NSDate+DateTools.h */,
+				60930DC40D69A2E27D1B63A4 /* NSDate+DateTools.m */,
+				1A4687263462FDC050567F8D /* Resources */,
+				5851F05FEF3A9343D79A7B70 /* Support Files */,
+			);
+			path = DateTools;
+			sourceTree = "<group>";
+		};
+		4E6BE8C17983E912D3E4EC7E /* NSData+Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				1F478752F5470DCD5F16F480 /* NSData+Base64.h */,
+				2071253A02C6971B69E2EBFE /* NSData+Base64.m */,
+				D3AB57B26A73279572EBF5CD /* Support Files */,
 			);
 			path = "NSData+Base64";
 			sourceTree = "<group>";
 		};
-		7E24C61AFDEB0F9F46398955 /* Alamofire */ = {
+		5851F05FEF3A9343D79A7B70 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				39C9EAF23E7B5F003FC00E33 /* Alamofire.swift */,
-				F548D8A6D71F3A07BD8F1E9F /* Support Files */,
+				6AB63071C1E8185C5820F144 /* Info.plist */,
+				7BECDBE782E2558ED8729594 /* Pods-DateTools.modulemap */,
+				B1AC24100F2537CA7AC51F52 /* Pods-DateTools.xcconfig */,
+				73F3C1CDFF969ABB3DCA2463 /* Pods-DateTools-Private.xcconfig */,
+				A685C2099D5622CF252CE9E1 /* Pods-DateTools-dummy.m */,
+				011BD8F0AC2045884680500C /* Pods-DateTools-prefix.pch */,
+				2A735A76367A31490300B29E /* Pods-DateTools-umbrella.h */,
 			);
-			path = Alamofire;
+			name = "Support Files";
+			path = "../Target Support Files/Pods-DateTools";
 			sourceTree = "<group>";
 		};
-		81FAD7D34ADFE37F13235C94 /* iOS */ = {
+		60468FB20CBCB3162CDAEB43 /* FontAwesome */ = {
 			isa = PBXGroup;
 			children = (
-				413A61BAEC5CEB6FB754A370 /* Foundation.framework */,
-				473E3DAFC8B7866AD835F5E9 /* Social.framework */,
+				67035C7EBEF4067DEDB1E807 /* FAKFontAwesome.h */,
+				AFE259BA444F201768E2B9D0 /* FAKFontAwesome.m */,
+				DDF481835B2CF602B19E7B5C /* Resources */,
 			);
-			name = iOS;
+			name = FontAwesome;
 			sourceTree = "<group>";
 		};
-		8664D926639F8118CA18913F /* Pods */ = {
+		61914A60F92B86AD12A44365 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7E24C61AFDEB0F9F46398955 /* Alamofire */,
-				16C8814EF582E0906EBFC9A9 /* DateTools */,
-				96D6B8201E0808FABB279766 /* LVTwitterOAuthClient */,
-				777A04D533BCAC6C3AF15CF2 /* NSData+Base64 */,
-				C4D1AFC69A3C26D5600DADB5 /* OAuthCore */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		8B81DBDB339F6E4A1A1AB7B3 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E8139375ACB97546145B8EA6 /* Pods */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		96D6B8201E0808FABB279766 /* LVTwitterOAuthClient */ = {
-			isa = PBXGroup;
-			children = (
-				24A509B8DB8DBA9817418CD5 /* LVTwitterOAuthClient.h */,
-				1C03C04CC72FC97D7F46C16F /* LVTwitterOAuthClient.m */,
-				6E6ADECB703D92B45474BAAA /* Support Files */,
-			);
-			path = LVTwitterOAuthClient;
-			sourceTree = "<group>";
-		};
-		C4D1AFC69A3C26D5600DADB5 /* OAuthCore */ = {
-			isa = PBXGroup;
-			children = (
-				7AD8129C3388960649229687 /* OAuth+Additions.h */,
-				2776B1B446C9D55ED9FB9803 /* OAuth+Additions.m */,
-				9989AE7183EF5E7B3C9392B6 /* OAuthCore.h */,
-				253CAD9B044D0C36FA82C6BF /* OAuthCore.m */,
-				476A15A5B76BB1698F4928FC /* Support Files */,
-			);
-			path = OAuthCore;
-			sourceTree = "<group>";
-		};
-		DE9E2842ADAE54BD86EB83E5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6AAC64377488C782EBD7FDF6 /* Alamofire.framework */,
-				D69C705E43387C9BAC5B984D /* DateTools.framework */,
-				E569221A85A4034EB1C5FA3D /* LVTwitterOAuthClient.framework */,
-				7D94A8F758285B709B5D1CA0 /* NSData_Base64.framework */,
-				7DD726A5FB32240B0E1F0239 /* OAuthCore.framework */,
-				F891A14A718531D342D3C0BA /* Pods.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		E8139375ACB97546145B8EA6 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				06A70578E4D72A97071CCCCD /* Info.plist */,
-				44DE9B64E1A56DC5F69ED19E /* Pods.modulemap */,
-				DF811CE85DCF455160FC5A75 /* Pods-acknowledgements.markdown */,
-				372638B43D163CAEB6EE9780 /* Pods-acknowledgements.plist */,
-				8E306BB780AA81793FCDC523 /* Pods-dummy.m */,
-				F8D794277A86E9A07259897B /* Pods-environment.h */,
-				8938DAC283CFF560DEA88E97 /* Pods-frameworks.sh */,
-				4F39ED0B515B016BE3BA3541 /* Pods-resources.sh */,
-				41E8BFC3D19E099FC62E36C2 /* Pods-umbrella.h */,
-				4686A77B05F1258EB8446D50 /* Pods.debug.xcconfig */,
-				B890F75E6100D729B49BD01F /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			path = "Target Support Files/Pods";
-			sourceTree = "<group>";
-		};
-		F548D8A6D71F3A07BD8F1E9F /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B84429368A5173158A2D070F /* Info.plist */,
-				E0DC282B48B16A26A392C10D /* Pods-Alamofire.modulemap */,
-				85FDA212CF255C17D8D1E136 /* Pods-Alamofire.xcconfig */,
-				2D0BDCA2E4F628BAFB8D995A /* Pods-Alamofire-Private.xcconfig */,
-				55587321AA131293D0F140C1 /* Pods-Alamofire-dummy.m */,
-				76316CBA00DBC758BF8E907A /* Pods-Alamofire-prefix.pch */,
-				30F23777684D02A9307A1934 /* Pods-Alamofire-umbrella.h */,
+				9E454BBC345606A773023283 /* Info.plist */,
+				8118BB787DC964ACE8321E44 /* Pods-Alamofire.modulemap */,
+				23A009B174E5C7F2D2217D22 /* Pods-Alamofire.xcconfig */,
+				947F8570E61D9C03508D90F7 /* Pods-Alamofire-Private.xcconfig */,
+				59FB9C4F081887E739888CEB /* Pods-Alamofire-dummy.m */,
+				650B8C2DDA6F167E067BB6AF /* Pods-Alamofire-prefix.pch */,
+				50F0CCD98023EE24C27489D0 /* Pods-Alamofire-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-Alamofire";
 			sourceTree = "<group>";
 		};
+		7B71BFBE8CD5B60250E09043 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5771FCDA25B42FDC7F548526 /* Info.plist */,
+				433709E466B89A3AD8FEBB92 /* Pods.modulemap */,
+				CDDCBCF2888679D7336E169F /* Pods-acknowledgements.markdown */,
+				5C3D1468DCCCDA29A4B8C06D /* Pods-acknowledgements.plist */,
+				ADC409AFE95EDE3DA1156875 /* Pods-dummy.m */,
+				CD7823D350DC01C2575DDEF3 /* Pods-environment.h */,
+				0264A75CFEBCF2AA0215F57E /* Pods-frameworks.sh */,
+				D881966A215C14719D3B0C5D /* Pods-resources.sh */,
+				42A673105A24CEBEB6F39746 /* Pods-umbrella.h */,
+				FABD5C8541A633F4F63D77E6 /* Pods.debug.xcconfig */,
+				61A64A609ABED20995960758 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		7D1621CE21E047E209CB1ED5 /* FontAwesomeKit */ = {
+			isa = PBXGroup;
+			children = (
+				99801E7D0C867BA1BA201674 /* Core */,
+				60468FB20CBCB3162CDAEB43 /* FontAwesome */,
+				9A12D32679EAA27B383A6711 /* Support Files */,
+			);
+			path = FontAwesomeKit;
+			sourceTree = "<group>";
+		};
+		7DA9C1D001075AD5E5B56EA4 /* LVTwitterOAuthClient */ = {
+			isa = PBXGroup;
+			children = (
+				20F3B9051D325AEE23FAE0A0 /* LVTwitterOAuthClient.h */,
+				50D5656BD75EBA49F43406F4 /* LVTwitterOAuthClient.m */,
+				4902138E9DFD7B6F3E433D04 /* Support Files */,
+			);
+			path = LVTwitterOAuthClient;
+			sourceTree = "<group>";
+		};
+		7F248CBE42F8F5B6B02ADAFE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				830F0BB7D4D6A642BADECA3B /* Info.plist */,
+				7E1DD5C9CE73C7CFF466E23F /* Pods-OAuthCore.modulemap */,
+				ADE7BAC6AB77C1A255DE9F46 /* Pods-OAuthCore.xcconfig */,
+				38150294BD3281E8A2B6D2A4 /* Pods-OAuthCore-Private.xcconfig */,
+				90AFA2E881E3642FA3012F86 /* Pods-OAuthCore-dummy.m */,
+				D00CD44DD4E07563FAFA6998 /* Pods-OAuthCore-prefix.pch */,
+				87ADAB2708E7FC822575BB91 /* Pods-OAuthCore-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-OAuthCore";
+			sourceTree = "<group>";
+		};
+		8D0F1EE7878B389EF15E3591 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				752B467DD4D5E727E41609B8 /* Alamofire.framework */,
+				54BFCC079D946E07461F4ABE /* DateTools.framework */,
+				FF2993EBFC467E72B8DAA297 /* FontAwesomeKit.framework */,
+				35797B1F03A77E93800AEE3D /* LVTwitterOAuthClient.framework */,
+				BC440BD615BE79EA236DAE1B /* NSData_Base64.framework */,
+				EE1D48C611A828778531093C /* OAuthCore.framework */,
+				EE0B60F0746C8D1B4FE85B60 /* Pods.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8ED0F2A3E2B6362432A3CC5E /* OAuthCore */ = {
+			isa = PBXGroup;
+			children = (
+				E17306CE2F3FE67A1A6501CC /* OAuth+Additions.h */,
+				5F98C9324E99D5E7274A8E53 /* OAuth+Additions.m */,
+				030F0A964A553D06678942C4 /* OAuthCore.h */,
+				A9A51992176E71FFFC5DEE3E /* OAuthCore.m */,
+				7F248CBE42F8F5B6B02ADAFE /* Support Files */,
+			);
+			path = OAuthCore;
+			sourceTree = "<group>";
+		};
+		99801E7D0C867BA1BA201674 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				1B6380AE6DE68D4E06AFB481 /* FAKIcon.h */,
+				8AFED6369DFE3DFE68F0BDED /* FAKIcon.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		9A12D32679EAA27B383A6711 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4DCD8AE9A51C0E59DFBEF156 /* Info.plist */,
+				82F79720A3BEE5B2A202C507 /* Pods-FontAwesomeKit.modulemap */,
+				05BE31F3CEA2BFD2E4C0FC65 /* Pods-FontAwesomeKit.xcconfig */,
+				1420EFA9DF909D1EAD387ED0 /* Pods-FontAwesomeKit-Private.xcconfig */,
+				55EE7B9991A3D91B1D4A42B8 /* Pods-FontAwesomeKit-dummy.m */,
+				084ECFB1538FE425C4729DB1 /* Pods-FontAwesomeKit-prefix.pch */,
+				867A9D881A60D88AD2883BE2 /* Pods-FontAwesomeKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-FontAwesomeKit";
+			sourceTree = "<group>";
+		};
+		D3AB57B26A73279572EBF5CD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D20E844A2653A821A026E175 /* Info.plist */,
+				700AB3EA6361885B023A5966 /* Pods-NSData+Base64.modulemap */,
+				76F51DDEBE7E0E66448C5C53 /* Pods-NSData+Base64.xcconfig */,
+				6655254E0FAB5F8E268C9AFA /* Pods-NSData+Base64-Private.xcconfig */,
+				6761B89323D77E727068F8D8 /* Pods-NSData+Base64-dummy.m */,
+				36C72CE20704AB3794101D8B /* Pods-NSData+Base64-prefix.pch */,
+				15AC03EF4B4AE0E8B9F10343 /* Pods-NSData+Base64-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-NSData+Base64";
+			sourceTree = "<group>";
+		};
+		DDF481835B2CF602B19E7B5C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5BB935DAA2281B4166370485 /* FontAwesome.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		DE70282285EDBC747A4BADF0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B71BFBE8CD5B60250E09043 /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		00D91831AFF297C38FB8E588 /* Headers */ = {
+		296BFC0904B2FDA1B6E26684 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B346A54B051F26865BF92F9 /* Pods-umbrella.h in Headers */,
+				937CCE7618F07109838BE714 /* LVTwitterOAuthClient.h in Headers */,
+				006D8C393E1CE81A79652828 /* Pods-LVTwitterOAuthClient-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1014A3A1AE80F3DDF78A1649 /* Headers */ = {
+		5D84F119496A96006BCB333E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9053BFAC154B28533A1F175 /* DTConstants.h in Headers */,
-				BAF5EDC6640397B0019B15DD /* DTError.h in Headers */,
-				46FAC07A2FD85FC6CDF34873 /* DTTimePeriod.h in Headers */,
-				9E7077099BFD61B13CB04537 /* DTTimePeriodChain.h in Headers */,
-				F9361859F2AE490713E95B8B /* DTTimePeriodCollection.h in Headers */,
-				EF8AA73742FA659C99F8E0B4 /* DTTimePeriodGroup.h in Headers */,
-				3B6AB52182B521F75982C765 /* DateTools.h in Headers */,
-				5FF209AF29487D8F9794ED2B /* NSDate+DateTools.h in Headers */,
-				EBD3E5964D6BD2C92AC50D6B /* Pods-DateTools-umbrella.h in Headers */,
+				4B55B09CA2940CBEC1BCBDE0 /* FAKFontAwesome.h in Headers */,
+				2F769A575AF91A93E60DC2E9 /* FAKIcon.h in Headers */,
+				103ACD1B54D47B0217B7182B /* Pods-FontAwesomeKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8A831FBF4F4771C670EEA771 /* Headers */ = {
+		86E8AC451B8E09165D8A90CC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F6237770CF58C649D0780FE /* LVTwitterOAuthClient.h in Headers */,
-				53797866841E031E86F83EFE /* Pods-LVTwitterOAuthClient-umbrella.h in Headers */,
+				5F8BD484F0BBF4D22BC6EEAB /* Pods-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8D47C8EEE280996089969804 /* Headers */ = {
+		8CC52D43D77F1830CD635A72 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				384501D42A0443581D151B46 /* Pods-Alamofire-umbrella.h in Headers */,
+				C4181924C722217CA0F22FA3 /* NSData+Base64.h in Headers */,
+				92C9107A9CD58577018F719D /* Pods-NSData+Base64-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		940D781CCA8E5B6EAFD92F84 /* Headers */ = {
+		A99F8E5E3EAECA1FC19ADC74 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17174B532D99C43795A4E1D5 /* NSData+Base64.h in Headers */,
-				0C364BD081AF90540A5E5D03 /* Pods-NSData+Base64-umbrella.h in Headers */,
+				A122DD2CFD9714D5A21E60C9 /* Pods-Alamofire-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C1002FE5B18501E5DEDC212D /* Headers */ = {
+		D6A5A05DE8349877AE162328 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55E710A02EF9117DA3218D80 /* OAuth+Additions.h in Headers */,
-				0513E00E0F294E638808F0D8 /* OAuthCore.h in Headers */,
-				2F96BBB64748C554428B3708 /* Pods-OAuthCore-umbrella.h in Headers */,
+				57B3F55227094C645AF27057 /* OAuth+Additions.h in Headers */,
+				195579A20C59A77D85CFFE87 /* OAuthCore.h in Headers */,
+				7B9A2A5A7A00C94108D74C33 /* Pods-OAuthCore-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8C9062A8056216533241ABE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				024FA9DDE0D3298AE45BDE7C /* DTConstants.h in Headers */,
+				E9731B4389890FC27A740920 /* DTError.h in Headers */,
+				8CE2D390DCB1F10CE82246AC /* DTTimePeriod.h in Headers */,
+				4B998822E8E3A6F8F0FC5786 /* DTTimePeriodChain.h in Headers */,
+				CF3C85168B0E411C77A64E4A /* DTTimePeriodCollection.h in Headers */,
+				4083F72DC1C6F639220E2448 /* DTTimePeriodGroup.h in Headers */,
+				79B6FB74A1D8B77119416AE0 /* DateTools.h in Headers */,
+				2BB10009A00A006D13B29227 /* NSDate+DateTools.h in Headers */,
+				8EDD400A3EE99FF94D1E43B1 /* Pods-DateTools-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		19785D7B7654A0F9F77B9386 /* Pods-OAuthCore */ = {
+		1394411068BE45F0CD981F0F /* Pods-FontAwesomeKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D43A16F360BD370B953F597A /* Build configuration list for PBXNativeTarget "Pods-OAuthCore" */;
+			buildConfigurationList = 81F073EE7812CF9C15993849 /* Build configuration list for PBXNativeTarget "Pods-FontAwesomeKit" */;
 			buildPhases = (
-				A6849013DCB2098A3155E635 /* Sources */,
-				04231737BC412763566BBAFD /* Frameworks */,
-				C1002FE5B18501E5DEDC212D /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4ABBDE40B6160529FD743918 /* PBXTargetDependency */,
-			);
-			name = "Pods-OAuthCore";
-			productName = "Pods-OAuthCore";
-			productReference = 7DD726A5FB32240B0E1F0239 /* OAuthCore.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		39A07C589FAB63487FF892FC /* Pods-Alamofire */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7B0F66CE7DBD55FA0D2D4F92 /* Build configuration list for PBXNativeTarget "Pods-Alamofire" */;
-			buildPhases = (
-				B801C12888EDC2E2A11C4BC6 /* Sources */,
-				DCBC8D82690094D8D44758A5 /* Frameworks */,
-				8D47C8EEE280996089969804 /* Headers */,
+				4B092FDFD434DFCB509163F8 /* Sources */,
+				275CAA3E00638C61A5A7B36E /* Frameworks */,
+				5D84F119496A96006BCB333E /* Headers */,
+				0CAA211B7BF47BFC6FB1FB3C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-Alamofire";
-			productName = "Pods-Alamofire";
-			productReference = 6AAC64377488C782EBD7FDF6 /* Alamofire.framework */;
+			name = "Pods-FontAwesomeKit";
+			productName = "Pods-FontAwesomeKit";
+			productReference = FF2993EBFC467E72B8DAA297 /* FontAwesomeKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		63878DDB719B9DB3D7662272 /* Pods-LVTwitterOAuthClient */ = {
+		1A7968F2549FB7B4D9A1B597 /* Pods-DateTools */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 194E07A02EABE00A13326E21 /* Build configuration list for PBXNativeTarget "Pods-LVTwitterOAuthClient" */;
+			buildConfigurationList = 95683C47D99622BA7F89AE17 /* Build configuration list for PBXNativeTarget "Pods-DateTools" */;
 			buildPhases = (
-				1ABE0385F6363D558159E214 /* Sources */,
-				886EB231D66F7DE57DCB1EED /* Frameworks */,
-				8A831FBF4F4771C670EEA771 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F2FF0C21AC370F758B350949 /* PBXTargetDependency */,
-			);
-			name = "Pods-LVTwitterOAuthClient";
-			productName = "Pods-LVTwitterOAuthClient";
-			productReference = E569221A85A4034EB1C5FA3D /* LVTwitterOAuthClient.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		A06985AEE228CFFC761853A9 /* Pods-NSData+Base64 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 99ED1062D8EFC28855C60E0B /* Build configuration list for PBXNativeTarget "Pods-NSData+Base64" */;
-			buildPhases = (
-				B657F17C35FA94AF51E1FB8F /* Sources */,
-				24BD73910E85C3699C58754F /* Frameworks */,
-				940D781CCA8E5B6EAFD92F84 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-NSData+Base64";
-			productName = "Pods-NSData+Base64";
-			productReference = 7D94A8F758285B709B5D1CA0 /* NSData_Base64.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		BEAD8878895A8B24BFC18947 /* Pods-DateTools */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 30A7AE1B55CC041E60F9A960 /* Build configuration list for PBXNativeTarget "Pods-DateTools" */;
-			buildPhases = (
-				CCB3CBF6974E623E075BA961 /* Sources */,
-				0DB964BCA1DF5D605930825A /* Frameworks */,
-				1014A3A1AE80F3DDF78A1649 /* Headers */,
-				669C8A0D957ED3CC1DEF1155 /* Resources */,
+				5FBF7E73F90C9CDA046DC2A4 /* Sources */,
+				0DF79BB312130389D1E246C5 /* Frameworks */,
+				E8C9062A8056216533241ABE /* Headers */,
+				AA6089A01369DC01AD62F14D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -625,183 +681,279 @@
 			);
 			name = "Pods-DateTools";
 			productName = "Pods-DateTools";
-			productReference = D69C705E43387C9BAC5B984D /* DateTools.framework */;
+			productReference = 54BFCC079D946E07461F4ABE /* DateTools.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C5208CAC09F685C9B64D5583 /* Pods */ = {
+		1FE59692AAD5778C1F97D8B2 /* Pods-OAuthCore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E1BAA70786C89D32B5E40E6 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = 13D8CB85DDAF07CB2CD1461C /* Build configuration list for PBXNativeTarget "Pods-OAuthCore" */;
 			buildPhases = (
-				54B2976AB60CB248DA950636 /* Sources */,
-				100976A0ED3C4AE803B645FC /* Frameworks */,
-				00D91831AFF297C38FB8E588 /* Headers */,
+				E406D1BF021B7494BC239337 /* Sources */,
+				36A8D35920E425F62AA3690A /* Frameworks */,
+				D6A5A05DE8349877AE162328 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E4A9FE0C872217EB7EDAE065 /* PBXTargetDependency */,
-				ED45476EE5EE5BFAC8B2B4BF /* PBXTargetDependency */,
-				B576B71199E870097D4447B3 /* PBXTargetDependency */,
-				C2DD0DC57651782D4CB28143 /* PBXTargetDependency */,
-				90D4BE35AB4C8C1EF6AF1AB9 /* PBXTargetDependency */,
+				33FFB263512962D7A53A3219 /* PBXTargetDependency */,
+			);
+			name = "Pods-OAuthCore";
+			productName = "Pods-OAuthCore";
+			productReference = EE1D48C611A828778531093C /* OAuthCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		54CA81C5B78793AEF26AC125 /* Pods-LVTwitterOAuthClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77DAC46621F94A4EB6D514DB /* Build configuration list for PBXNativeTarget "Pods-LVTwitterOAuthClient" */;
+			buildPhases = (
+				AC1D2993A7F6A130486C8B02 /* Sources */,
+				088A996C3A65344B21D5074B /* Frameworks */,
+				296BFC0904B2FDA1B6E26684 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				285727AE3AA663888127C255 /* PBXTargetDependency */,
+			);
+			name = "Pods-LVTwitterOAuthClient";
+			productName = "Pods-LVTwitterOAuthClient";
+			productReference = 35797B1F03A77E93800AEE3D /* LVTwitterOAuthClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		719D610FC74F4B80ADDD980F /* Pods-NSData+Base64 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F379B0A57746AEAAF6D947CC /* Build configuration list for PBXNativeTarget "Pods-NSData+Base64" */;
+			buildPhases = (
+				1B867B8873DBA636118CD43A /* Sources */,
+				BB296BA3DABB69551AD71315 /* Frameworks */,
+				8CC52D43D77F1830CD635A72 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-NSData+Base64";
+			productName = "Pods-NSData+Base64";
+			productReference = BC440BD615BE79EA236DAE1B /* NSData_Base64.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		74EE966F52881401B310C457 /* Pods-Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 894B708F03F20E2A2496779C /* Build configuration list for PBXNativeTarget "Pods-Alamofire" */;
+			buildPhases = (
+				2CEEEED6297C6DE233CC7F5C /* Sources */,
+				D6F64F02F3843530FEE1F55B /* Frameworks */,
+				A99F8E5E3EAECA1FC19ADC74 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Alamofire";
+			productName = "Pods-Alamofire";
+			productReference = 752B467DD4D5E727E41609B8 /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		84C5EEE9712874D42154A089 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70D407DCFF431C6EC4DB0005 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				767F5F12D07E804184B766BA /* Sources */,
+				C6E7541D43608697978900C0 /* Frameworks */,
+				86E8AC451B8E09165D8A90CC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5675BA20469EAF78D594C47C /* PBXTargetDependency */,
+				F6BE4990CF483CA95E2273B0 /* PBXTargetDependency */,
+				9353E6E60802DF2511AA3FDF /* PBXTargetDependency */,
+				7AAEA6CB19F78D9A9C2A6809 /* PBXTargetDependency */,
+				8DF9308FFEE90A47BBBA5971 /* PBXTargetDependency */,
+				A04D76FEB1199F3B25B57AD7 /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
-			productReference = F891A14A718531D342D3C0BA /* Pods.framework */;
+			productReference = EE0B60F0746C8D1B4FE85B60 /* Pods.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		156F1C0FFAE724E076CC7ED8 /* Project object */ = {
+		E1A56F43695CC4A04217BD47 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 			};
-			buildConfigurationList = 1C4DBB889C7300CB911297AD /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 7E487CFB05C7D16C80CA1EE6 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 610E89FCACB55B2BA94A0CDE;
-			productRefGroup = DE9E2842ADAE54BD86EB83E5 /* Products */;
+			mainGroup = 04BED266C22B84FDC44230F8;
+			productRefGroup = 8D0F1EE7878B389EF15E3591 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C5208CAC09F685C9B64D5583 /* Pods */,
-				39A07C589FAB63487FF892FC /* Pods-Alamofire */,
-				BEAD8878895A8B24BFC18947 /* Pods-DateTools */,
-				63878DDB719B9DB3D7662272 /* Pods-LVTwitterOAuthClient */,
-				A06985AEE228CFFC761853A9 /* Pods-NSData+Base64 */,
-				19785D7B7654A0F9F77B9386 /* Pods-OAuthCore */,
+				84C5EEE9712874D42154A089 /* Pods */,
+				74EE966F52881401B310C457 /* Pods-Alamofire */,
+				1A7968F2549FB7B4D9A1B597 /* Pods-DateTools */,
+				1394411068BE45F0CD981F0F /* Pods-FontAwesomeKit */,
+				54CA81C5B78793AEF26AC125 /* Pods-LVTwitterOAuthClient */,
+				719D610FC74F4B80ADDD980F /* Pods-NSData+Base64 */,
+				1FE59692AAD5778C1F97D8B2 /* Pods-OAuthCore */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		669C8A0D957ED3CC1DEF1155 /* Resources */ = {
+		0CAA211B7BF47BFC6FB1FB3C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0899B1C236F00E238A15B788 /* DateTools.bundle in Resources */,
+				7CE7F8B7621664A47469454B /* FontAwesome.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA6089A01369DC01AD62F14D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4412D338104FA32544921D0D /* DateTools.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1ABE0385F6363D558159E214 /* Sources */ = {
+		1B867B8873DBA636118CD43A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C607E50F8321E84AA6566C1 /* LVTwitterOAuthClient.m in Sources */,
-				90ACF57E0AAC54097C7FE4C2 /* Pods-LVTwitterOAuthClient-dummy.m in Sources */,
+				BE10391F94B7748F5E573760 /* NSData+Base64.m in Sources */,
+				B6728CEC4B89FB4DC24F4D88 /* Pods-NSData+Base64-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		54B2976AB60CB248DA950636 /* Sources */ = {
+		2CEEEED6297C6DE233CC7F5C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9801B97211D73192F03739AF /* Pods-dummy.m in Sources */,
+				88207F7FC3814F858254075D /* Alamofire.swift in Sources */,
+				92002C9BE911966A81478D24 /* Pods-Alamofire-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A6849013DCB2098A3155E635 /* Sources */ = {
+		4B092FDFD434DFCB509163F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CCE6D3F9485DF3EEFF75574 /* OAuth+Additions.m in Sources */,
-				0216B17E95A445204B0CE643 /* OAuthCore.m in Sources */,
-				5E6AF2EC43BE42BC275D81BE /* Pods-OAuthCore-dummy.m in Sources */,
+				23B9814BE3609B8D4E243D8B /* FAKFontAwesome.m in Sources */,
+				0E4820953BE4EB70E7A45B3C /* FAKIcon.m in Sources */,
+				46039B369F160F55941170FE /* Pods-FontAwesomeKit-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B657F17C35FA94AF51E1FB8F /* Sources */ = {
+		5FBF7E73F90C9CDA046DC2A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1AE40DFEC4C01D6B84B0F7C /* NSData+Base64.m in Sources */,
-				C73AE24CD50B76F24CEC45BA /* Pods-NSData+Base64-dummy.m in Sources */,
+				39B2FA694CCFC3160D901625 /* DTError.m in Sources */,
+				0C1AC8CECB5725C93B4486B5 /* DTTimePeriod.m in Sources */,
+				D98B04F5B0666ED8747ECFBE /* DTTimePeriodChain.m in Sources */,
+				011B65DD7398A0FCE744F778 /* DTTimePeriodCollection.m in Sources */,
+				BA683EFB8E0C337596A0AC4E /* DTTimePeriodGroup.m in Sources */,
+				0751B2FE38BA971131264B3C /* NSDate+DateTools.m in Sources */,
+				021A5B7C8A2127D98FD3AF91 /* Pods-DateTools-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B801C12888EDC2E2A11C4BC6 /* Sources */ = {
+		767F5F12D07E804184B766BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				840FAD233EF640FEEEA821DC /* Alamofire.swift in Sources */,
-				2EC2DBE8262C7A5BB88D384F /* Pods-Alamofire-dummy.m in Sources */,
+				0544B707F47832A4FC0820BA /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CCB3CBF6974E623E075BA961 /* Sources */ = {
+		AC1D2993A7F6A130486C8B02 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4FAC16D3A45095B1C2BDD4F /* DTError.m in Sources */,
-				73399B4C391096417DE71469 /* DTTimePeriod.m in Sources */,
-				E5D81736C2FDF04F616BE23B /* DTTimePeriodChain.m in Sources */,
-				04DAA1497542FD2072BC1CF9 /* DTTimePeriodCollection.m in Sources */,
-				E7A66EB3DAAF4366CDBE3BE9 /* DTTimePeriodGroup.m in Sources */,
-				9BD3324E0F63A9B9772D84D7 /* NSDate+DateTools.m in Sources */,
-				B8CDB4981CB1991415B837F2 /* Pods-DateTools-dummy.m in Sources */,
+				271BFEFB5487958A11CAC9C8 /* LVTwitterOAuthClient.m in Sources */,
+				12B704C18911E2357335EBBB /* Pods-LVTwitterOAuthClient-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E406D1BF021B7494BC239337 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B791A0EA3F5445EF41C30FE8 /* OAuth+Additions.m in Sources */,
+				F6894B7EF756D220B7D07EDB /* OAuthCore.m in Sources */,
+				DF18EBB94906AE0A1AAA5B34 /* Pods-OAuthCore-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4ABBDE40B6160529FD743918 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-NSData+Base64";
-			target = A06985AEE228CFFC761853A9 /* Pods-NSData+Base64 */;
-			targetProxy = 3511D58830A12FAF1660B8F8 /* PBXContainerItemProxy */;
-		};
-		90D4BE35AB4C8C1EF6AF1AB9 /* PBXTargetDependency */ = {
+		285727AE3AA663888127C255 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-OAuthCore";
-			target = 19785D7B7654A0F9F77B9386 /* Pods-OAuthCore */;
-			targetProxy = B7818DE8117D698D73147963 /* PBXContainerItemProxy */;
+			target = 1FE59692AAD5778C1F97D8B2 /* Pods-OAuthCore */;
+			targetProxy = C504745363F02FF3DF14DF17 /* PBXContainerItemProxy */;
 		};
-		B576B71199E870097D4447B3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-LVTwitterOAuthClient";
-			target = 63878DDB719B9DB3D7662272 /* Pods-LVTwitterOAuthClient */;
-			targetProxy = 4A57615BDFF37DECD71E7755 /* PBXContainerItemProxy */;
-		};
-		C2DD0DC57651782D4CB28143 /* PBXTargetDependency */ = {
+		33FFB263512962D7A53A3219 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-NSData+Base64";
-			target = A06985AEE228CFFC761853A9 /* Pods-NSData+Base64 */;
-			targetProxy = A7B3F4A09A071A03868D13DE /* PBXContainerItemProxy */;
+			target = 719D610FC74F4B80ADDD980F /* Pods-NSData+Base64 */;
+			targetProxy = A2470AD1DA9C78A3C7F4DD01 /* PBXContainerItemProxy */;
 		};
-		E4A9FE0C872217EB7EDAE065 /* PBXTargetDependency */ = {
+		5675BA20469EAF78D594C47C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Alamofire";
-			target = 39A07C589FAB63487FF892FC /* Pods-Alamofire */;
-			targetProxy = E85F386778AF7BFC91ED9716 /* PBXContainerItemProxy */;
+			target = 74EE966F52881401B310C457 /* Pods-Alamofire */;
+			targetProxy = 277DD5E1074D051178D4E69F /* PBXContainerItemProxy */;
 		};
-		ED45476EE5EE5BFAC8B2B4BF /* PBXTargetDependency */ = {
+		7AAEA6CB19F78D9A9C2A6809 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-DateTools";
-			target = BEAD8878895A8B24BFC18947 /* Pods-DateTools */;
-			targetProxy = 21404FD7B26CC3BEF8557392 /* PBXContainerItemProxy */;
+			name = "Pods-LVTwitterOAuthClient";
+			target = 54CA81C5B78793AEF26AC125 /* Pods-LVTwitterOAuthClient */;
+			targetProxy = 340B65F01B785C6F7FC13C22 /* PBXContainerItemProxy */;
 		};
-		F2FF0C21AC370F758B350949 /* PBXTargetDependency */ = {
+		8DF9308FFEE90A47BBBA5971 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-NSData+Base64";
+			target = 719D610FC74F4B80ADDD980F /* Pods-NSData+Base64 */;
+			targetProxy = 39BDF6B7B0EBFFC438B0B0BC /* PBXContainerItemProxy */;
+		};
+		9353E6E60802DF2511AA3FDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-FontAwesomeKit";
+			target = 1394411068BE45F0CD981F0F /* Pods-FontAwesomeKit */;
+			targetProxy = C0E78D54E8B19B24AF3C9462 /* PBXContainerItemProxy */;
+		};
+		A04D76FEB1199F3B25B57AD7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-OAuthCore";
-			target = 19785D7B7654A0F9F77B9386 /* Pods-OAuthCore */;
-			targetProxy = DB28F7D059B26B23D75E848D /* PBXContainerItemProxy */;
+			target = 1FE59692AAD5778C1F97D8B2 /* Pods-OAuthCore */;
+			targetProxy = 14F7FD40994E0AB8EB2B5127 /* PBXContainerItemProxy */;
+		};
+		F6BE4990CF483CA95E2273B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-DateTools";
+			target = 1A7968F2549FB7B4D9A1B597 /* Pods-DateTools */;
+			targetProxy = 94B7ACEBEAD48CB24729CCBE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		06F7EF18661FEDEAE5D7AB29 /* Release */ = {
+		055C2A809B94D03854F8DF72 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D0BDCA2E4F628BAFB8D995A /* Pods-Alamofire-Private.xcconfig */;
+			baseConfigurationReference = 947F8570E61D9C03508D90F7 /* Pods-Alamofire-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -826,9 +978,36 @@
 			};
 			name = Release;
 		};
-		1BD9D8CFF2D49331156BD530 /* Release */ = {
+		10D98F6E8B20FF5E75415A0B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B69D924794F9A26BDE16DF40 /* Pods-OAuthCore-Private.xcconfig */;
+			baseConfigurationReference = F6B962CFDB00F89F3656323A /* Pods-LVTwitterOAuthClient-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-LVTwitterOAuthClient/Pods-LVTwitterOAuthClient-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-LVTwitterOAuthClient/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-LVTwitterOAuthClient/Pods-LVTwitterOAuthClient.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = LVTwitterOAuthClient;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		12BEDC2B9FC9CF6B2BEC9FFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38150294BD3281E8A2B6D2A4 /* Pods-OAuthCore-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -853,88 +1032,7 @@
 			};
 			name = Release;
 		};
-		2D620E0E2AB795853A2A47CC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41E04A005DDBB83225AD82AE /* Pods-LVTwitterOAuthClient-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-LVTwitterOAuthClient/Pods-LVTwitterOAuthClient-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-LVTwitterOAuthClient/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-LVTwitterOAuthClient/Pods-LVTwitterOAuthClient.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = LVTwitterOAuthClient;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		3C60B284B8CB3CC25523FA78 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22F69DE69B285D7D840234CF /* Pods-NSData+Base64-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-NSData+Base64/Pods-NSData+Base64-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-NSData+Base64/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-NSData+Base64/Pods-NSData+Base64.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = NSData_Base64;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		5FB21F66F6999E606BEC4CD3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22F69DE69B285D7D840234CF /* Pods-NSData+Base64-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-NSData+Base64/Pods-NSData+Base64-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-NSData+Base64/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-NSData+Base64/Pods-NSData+Base64.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = NSData_Base64;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A5C3FD09FD73CABCF1856250 /* Debug */ = {
+		22726F9977BD6220C8860A7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -973,9 +1071,174 @@
 			};
 			name = Debug;
 		};
-		A721FA7641ED245CF2CF1D00 /* Debug */ = {
+		4AFC5B3DE195F26E2FB4AF38 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B69D924794F9A26BDE16DF40 /* Pods-OAuthCore-Private.xcconfig */;
+			baseConfigurationReference = 6655254E0FAB5F8E268C9AFA /* Pods-NSData+Base64-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-NSData+Base64/Pods-NSData+Base64-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-NSData+Base64/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-NSData+Base64/Pods-NSData+Base64.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = NSData_Base64;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4D60C0A5B401EEB1522B6FDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61A64A609ABED20995960758 /* Pods.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6DF1B6CCAECA3413617AAD6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73F3C1CDFF969ABB3DCA2463 /* Pods-DateTools-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-DateTools/Pods-DateTools-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-DateTools/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-DateTools/Pods-DateTools.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = DateTools;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6F757C9E99C7E188297EC5BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73F3C1CDFF969ABB3DCA2463 /* Pods-DateTools-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-DateTools/Pods-DateTools-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-DateTools/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-DateTools/Pods-DateTools.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = DateTools;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8A28A42E149732D53D26FD98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 947F8570E61D9C03508D90F7 /* Pods-Alamofire-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Alamofire/Pods-Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Alamofire/Pods-Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A69CFDA16308604E466F7DBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1420EFA9DF909D1EAD387ED0 /* Pods-FontAwesomeKit-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-FontAwesomeKit/Pods-FontAwesomeKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-FontAwesomeKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-FontAwesomeKit/Pods-FontAwesomeKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = FontAwesomeKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AA493F81782D39507A44E5B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38150294BD3281E8A2B6D2A4 /* Pods-OAuthCore-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1000,7 +1263,61 @@
 			};
 			name = Debug;
 		};
-		AAE67A3102C96BBDC1054FDF /* Release */ = {
+		B70DA01F81AF1B5643D62745 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6B962CFDB00F89F3656323A /* Pods-LVTwitterOAuthClient-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-LVTwitterOAuthClient/Pods-LVTwitterOAuthClient-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-LVTwitterOAuthClient/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-LVTwitterOAuthClient/Pods-LVTwitterOAuthClient.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = LVTwitterOAuthClient;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BEC16ABD057A9D248C89EE4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6655254E0FAB5F8E268C9AFA /* Pods-NSData+Base64-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-NSData+Base64/Pods-NSData+Base64-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-NSData+Base64/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-NSData+Base64/Pods-NSData+Base64.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = NSData_Base64;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D2967E2A0A8883BEF4BC0A01 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1034,65 +1351,9 @@
 			};
 			name = Release;
 		};
-		BADE1120E913317CDE08A2F4 /* Release */ = {
+		D92482857DB0A49FDA93CD2B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B890F75E6100D729B49BD01F /* Pods.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C07BC31D3FC557014546FA08 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41E04A005DDBB83225AD82AE /* Pods-LVTwitterOAuthClient-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-LVTwitterOAuthClient/Pods-LVTwitterOAuthClient-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-LVTwitterOAuthClient/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-LVTwitterOAuthClient/Pods-LVTwitterOAuthClient.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = LVTwitterOAuthClient;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D13D76DB1DBC942BE69A4709 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4686A77B05F1258EB8446D50 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = FABD5C8541A633F4F63D77E6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1120,9 +1381,9 @@
 			};
 			name = Debug;
 		};
-		D8CEDBFFD9D4138F531DEA50 /* Debug */ = {
+		DD388409BEA96C1B86DA4815 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2ABB8BC21F2913C53C11A756 /* Pods-DateTools-Private.xcconfig */;
+			baseConfigurationReference = 1420EFA9DF909D1EAD387ED0 /* Pods-FontAwesomeKit-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1131,14 +1392,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-DateTools/Pods-DateTools-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-DateTools/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-FontAwesomeKit/Pods-FontAwesomeKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-FontAwesomeKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-DateTools/Pods-DateTools.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-FontAwesomeKit/Pods-FontAwesomeKit.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = DateTools;
+				PRODUCT_NAME = FontAwesomeKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1146,129 +1407,83 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		DEC5ECE6E721C7B871DC6315 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D0BDCA2E4F628BAFB8D995A /* Pods-Alamofire-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-Alamofire/Pods-Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-Alamofire/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-Alamofire/Pods-Alamofire.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Alamofire;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		ECB976CA02764ACEE27B1C35 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2ABB8BC21F2913C53C11A756 /* Pods-DateTools-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-DateTools/Pods-DateTools-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-DateTools/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-DateTools/Pods-DateTools.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = DateTools;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		194E07A02EABE00A13326E21 /* Build configuration list for PBXNativeTarget "Pods-LVTwitterOAuthClient" */ = {
+		13D8CB85DDAF07CB2CD1461C /* Build configuration list for PBXNativeTarget "Pods-OAuthCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2D620E0E2AB795853A2A47CC /* Debug */,
-				C07BC31D3FC557014546FA08 /* Release */,
+				AA493F81782D39507A44E5B3 /* Debug */,
+				12BEDC2B9FC9CF6B2BEC9FFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1C4DBB889C7300CB911297AD /* Build configuration list for PBXProject "Pods" */ = {
+		70D407DCFF431C6EC4DB0005 /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A5C3FD09FD73CABCF1856250 /* Debug */,
-				AAE67A3102C96BBDC1054FDF /* Release */,
+				D92482857DB0A49FDA93CD2B /* Debug */,
+				4D60C0A5B401EEB1522B6FDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1E1BAA70786C89D32B5E40E6 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		77DAC46621F94A4EB6D514DB /* Build configuration list for PBXNativeTarget "Pods-LVTwitterOAuthClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D13D76DB1DBC942BE69A4709 /* Debug */,
-				BADE1120E913317CDE08A2F4 /* Release */,
+				B70DA01F81AF1B5643D62745 /* Debug */,
+				10D98F6E8B20FF5E75415A0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		30A7AE1B55CC041E60F9A960 /* Build configuration list for PBXNativeTarget "Pods-DateTools" */ = {
+		7E487CFB05C7D16C80CA1EE6 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D8CEDBFFD9D4138F531DEA50 /* Debug */,
-				ECB976CA02764ACEE27B1C35 /* Release */,
+				22726F9977BD6220C8860A7A /* Debug */,
+				D2967E2A0A8883BEF4BC0A01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B0F66CE7DBD55FA0D2D4F92 /* Build configuration list for PBXNativeTarget "Pods-Alamofire" */ = {
+		81F073EE7812CF9C15993849 /* Build configuration list for PBXNativeTarget "Pods-FontAwesomeKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DEC5ECE6E721C7B871DC6315 /* Debug */,
-				06F7EF18661FEDEAE5D7AB29 /* Release */,
+				DD388409BEA96C1B86DA4815 /* Debug */,
+				A69CFDA16308604E466F7DBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		99ED1062D8EFC28855C60E0B /* Build configuration list for PBXNativeTarget "Pods-NSData+Base64" */ = {
+		894B708F03F20E2A2496779C /* Build configuration list for PBXNativeTarget "Pods-Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5FB21F66F6999E606BEC4CD3 /* Debug */,
-				3C60B284B8CB3CC25523FA78 /* Release */,
+				8A28A42E149732D53D26FD98 /* Debug */,
+				055C2A809B94D03854F8DF72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D43A16F360BD370B953F597A /* Build configuration list for PBXNativeTarget "Pods-OAuthCore" */ = {
+		95683C47D99622BA7F89AE17 /* Build configuration list for PBXNativeTarget "Pods-DateTools" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A721FA7641ED245CF2CF1D00 /* Debug */,
-				1BD9D8CFF2D49331156BD530 /* Release */,
+				6DF1B6CCAECA3413617AAD6E /* Debug */,
+				6F757C9E99C7E188297EC5BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F379B0A57746AEAAF6D947CC /* Build configuration list for PBXNativeTarget "Pods-NSData+Base64" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEC16ABD057A9D248C89EE4D /* Debug */,
+				4AFC5B3DE195F26E2FB4AF38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 156F1C0FFAE724E076CC7ED8 /* Project object */;
+	rootObject = E1A56F43695CC4A04217BD47 /* Project object */;
 }

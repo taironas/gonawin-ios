@@ -20,7 +20,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vB8-Id-CuK">
-                                            <rect key="frame" x="51" y="8" width="541" height="184"/>
+                                            <rect key="frame" x="51" y="8" width="541" height="187"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="Label">
                                                     <attributes>
@@ -32,7 +32,7 @@
                                             </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s8q-EG-eZK">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s8q-EG-eZK" customClass="UIImageView">
                                             <rect key="frame" x="8" y="8" width="35" height="35"/>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -41,8 +41,8 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIY-xH-J4e">
-                                            <rect key="frame" x="51" y="200" width="541" height="15"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <rect key="frame" x="51" y="203" width="541" height="12"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -67,7 +67,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="activityContent" destination="vB8-Id-CuK" id="tnW-kU-lPP"/>
-                                    <outlet property="activityIconView" destination="s8q-EG-eZK" id="Hdg-Ez-fj6"/>
+                                    <outlet property="activityIconView" destination="s8q-EG-eZK" id="yMW-kj-FIq"/>
                                     <outlet property="activityTime" destination="dIY-xH-J4e" id="gvJ-Mf-AY8"/>
                                 </connections>
                             </tableViewCell>

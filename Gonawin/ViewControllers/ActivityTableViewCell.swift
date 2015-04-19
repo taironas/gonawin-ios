@@ -8,6 +8,7 @@
 
 import UIKit
 import DateTools
+import FontAwesomeKit
 
 class ActivityTableViewCell: UITableViewCell {
 
@@ -16,11 +17,17 @@ class ActivityTableViewCell: UITableViewCell {
             updateUI()
         }
     }
-    @IBOutlet weak var activityIconView: UIView!
+    @IBOutlet weak var activityIconView: UIImageView!
     @IBOutlet weak var activityContent: UILabel!
     @IBOutlet weak var activityTime: UILabel!
     
     let dateFormatter = NSDateFormatter()
+    
+    override func layoutSubviews() {
+        let imageLayer = activityIconView.layer
+        imageLayer.cornerRadius = activityIconView.frame.size.height/2
+        imageLayer.masksToBounds = true
+    }
     
     func updateUI() {
         //reset any existing activity information
@@ -30,20 +37,35 @@ class ActivityTableViewCell: UITableViewCell {
         //load new information from our activity
         if let activity = self.activity {
             activityIconView.backgroundColor = activityIconViewBackgroundColor(activity)
+            activityIconView.image = activityIconViewImage(activity)
             activityContent?.attributedText = builActivityContent(activity)
             activityTime?.text = publishedFromNow(activity.published)
         }
     }
     
+    private enum ActivityType: String {
+        case Welcome = "welcome"
+        case Team = "team"
+        case Tournament = "tournament"
+        case Match = "match"
+        case Accuracy = "accuracy"
+        case Predict = "predict"
+        case Score = "score"
+        case Invitation = "invitation"
+    }
+    
     private func builActivityContent(activity: Activity) -> NSAttributedString {
-        switch activity.type {
-        case "predict":
-            return predictActivityString(activity)
-        case "match":
-            return matchActivityString(activity)
-        default:
-            return activityString(activity)
+        if let activityType = ActivityType(rawValue: activity.type) {
+            switch activityType {
+            case .Predict:
+                return predictActivityString(activity)
+            case .Match:
+                return matchActivityString(activity)
+            default:
+                return activityString(activity)
+            }
         }
+        return activityString(activity)
     }
     
     private func predictActivityString(activity: Activity) -> NSMutableAttributedString {
@@ -96,24 +118,59 @@ class ActivityTableViewCell: UITableViewCell {
     }
     
     private func activityIconViewBackgroundColor(activity: Activity) -> UIColor {
-        switch activity.type {
-        case "welcome":
-            return UIColor(red: 52.0/255.0, green: 79.0/255.0, blue: 219.0/255.0, alpha: 1.0)
-        case "team":
-            return UIColor(red: 52.0/255.0, green: 79.0/255.0, blue:219.0/255.0, alpha: 1.0)
-        case "tournament":
-            return UIColor(red: 46.0/255.0, green: 204.0/255.0, blue:113.0/255.0, alpha: 1.0)
-        case "match":
-            return UIColor(red: 241.0/255.0, green: 196.0/255.0, blue: 15.0/255.0, alpha: 1.0)
-        case "accuracy":
-            return UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0)
-        case "predict":
-            return UIColor(red: 243.0/255.0, green: 156.0/255.0, blue: 18.0/255.0, alpha: 1.0)
-        case "score":
-            return UIColor(red: 155.0/255.0, green: 89.0/255.0, blue: 182.0/255.0, alpha: 1.0)
-        default:
-            return UIColor(red: 52.0/255.0, green: 79.0/255.0, blue: 219.0/255.0, alpha: 1.0)
+        if let activityType = ActivityType(rawValue: activity.type) {
+            switch activityType {
+            case .Welcome:
+                return UIColor(red: 52.0/255.0, green: 79.0/255.0, blue: 219.0/255.0, alpha: 1.0)
+            case .Team:
+                return UIColor(red: 52.0/255.0, green: 79.0/255.0, blue:219.0/255.0, alpha: 1.0)
+            case .Tournament:
+                return UIColor(red: 46.0/255.0, green: 204.0/255.0, blue:113.0/255.0, alpha: 1.0)
+            case .Match:
+                return UIColor(red: 241.0/255.0, green: 196.0/255.0, blue: 15.0/255.0, alpha: 1.0)
+            case .Accuracy:
+                return UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0)
+            case .Predict:
+                return UIColor(red: 243.0/255.0, green: 156.0/255.0, blue: 18.0/255.0, alpha: 1.0)
+            case .Score:
+                return UIColor(red: 155.0/255.0, green: 89.0/255.0, blue: 182.0/255.0, alpha: 1.0)
+            default:
+                return UIColor(red: 52.0/255.0, green: 79.0/255.0, blue: 219.0/255.0, alpha: 1.0)
+            }
         }
+        
+        return UIColor(red: 52.0/255.0, green: 79.0/255.0, blue: 219.0/255.0, alpha: 1.0)
+    }
+    
+    private func activityIconViewImage(activity: Activity) -> UIImage {
+        var icon: FAKFontAwesome
+        if let activityType = ActivityType(rawValue: activity.type) {
+            switch activityType {
+            case .Welcome:
+                icon = FAKFontAwesome.checkIconWithSize(20)
+            case .Team:
+                icon = FAKFontAwesome.usersIconWithSize(20)
+            case .Tournament:
+                icon = FAKFontAwesome.trophyIconWithSize(20)
+            case .Match:
+                icon = FAKFontAwesome.compressIconWithSize(20)
+            case .Accuracy:
+                icon = FAKFontAwesome.barChartIconWithSize(20)
+            case .Predict:
+                icon = FAKFontAwesome.crosshairsIconWithSize(20)
+            case .Score:
+                icon = FAKFontAwesome.listIconWithSize(20)
+            case .Invitation:
+                icon = FAKFontAwesome.bullhornIconWithSize(20)
+            }
+        }
+        else {
+            // default icon
+            icon = FAKFontAwesome.checkIconWithSize(25)
+        }
+        
+        icon.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor())
+        return icon.imageWithSize(CGSizeMake(35,35))
     }
     
     private func publishedFromNow(published: String) -> String {

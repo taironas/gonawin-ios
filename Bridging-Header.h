@@ -11,5 +11,6 @@
 
 #import "LVTwitterOAuthClient/LVTwitterOAuthClient.h"
 #import "DateTools/DateTools.h"
+#import "FontAwesomeKit/FAKFontAwesome.h"
 
 #endif
