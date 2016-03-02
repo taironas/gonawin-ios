@@ -1,0 +1,6 @@
+framework module Pods_Gonawin {
+  umbrella header "Pods-Gonawin-umbrella.h"
+
+  export *
+  module * { export * }
+}

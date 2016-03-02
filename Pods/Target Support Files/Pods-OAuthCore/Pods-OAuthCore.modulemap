@@ -1,6 +1,0 @@
-framework module OAuthCore {
-  umbrella header "Pods-OAuthCore-umbrella.h"
-
-  export *
-  module * { export * }
-}

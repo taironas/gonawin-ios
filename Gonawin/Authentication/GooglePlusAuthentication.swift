@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import OAuth2
+import p2_OAuth2
 
 class GooglePlusAuthentication {
     class var sharedInstance: GooglePlusAuthentication {
@@ -38,11 +38,18 @@ class GooglePlusAuthentication {
     
     /** Start the OAuth dance. */
     func authorize(controller: UIViewController, callback: (wasFailure: Bool, error: NSError?) -> Void) {
-        let web = oauth2.authorizeEmbeddedFrom(controller, params: nil)
-        oauth2.afterAuthorizeOrFailure = { wasFailure, error in
-            web.dismissViewControllerAnimated(true, completion: nil)
-            self.accessToken = self.oauth2.accessToken
-            callback(wasFailure: wasFailure, error: error)
+        do {
+            let web = try oauth2.authorizeEmbeddedFrom(controller, params: nil)
+        
+            oauth2.afterAuthorizeOrFailure = { wasFailure, error in
+                web.dismissViewControllerAnimated(true, completion: nil)
+                self.accessToken = self.oauth2.accessToken!
+                
+                callback(wasFailure: wasFailure, error: nil)
+            }
+        }
+        catch {
+            print("Error when calling authorizeEmbeddedFrom")
         }
     }
     
@@ -60,10 +67,17 @@ class GooglePlusAuthentication {
             }
             else {
                 var err: NSError?
-                let dict = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &err) as? NSDictionary
-                dispatch_async(dispatch_get_main_queue(), {
-                    callback(dict: dict, error: err)
-                })
+                
+                do {
+                    let dict = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary
+                    
+                    dispatch_async(dispatch_get_main_queue(), {
+                        callback(dict: dict, error: err)
+                    })
+                }
+                catch {
+                    print("Error when calling JSONObjectWithData")
+                }
             }
         }
         task.resume()

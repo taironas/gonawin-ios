@@ -9,7 +9,7 @@
 import UIKit
 
 func showError(viewController: UIViewController, error: NSError) {
-    showErrorDescription(viewController, error.localizedDescription)
+    showErrorDescription(viewController, description: error.localizedDescription)
 }
 
 func showErrorDescription(viewController: UIViewController, description: String) {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GonawinEngine
 
 class ActivitiesViewController: UITableViewController {
     var activities = [[Activity]]()
@@ -33,7 +34,8 @@ class ActivitiesViewController: UITableViewController {
     }
     
     @IBAction func refresh(sender: UIRefreshControl?) {
-        GonawinAPI.client.activites(currentPage, count: 20) {
+        // TODO: call activities endpoint of the GonawinEngine
+        /*GonawinAPI.client.activites(currentPage, count: 20) {
             newActivities, error in
             
             if newActivities.count > 0 {
@@ -43,11 +45,11 @@ class ActivitiesViewController: UITableViewController {
             }
             
             if error != nil {
-                showError(self, error!)
+                showError(self, error: error!)
             }
             
             sender?.endRefreshing()
-        }
+        }*/
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -76,7 +78,8 @@ class ActivitiesViewController: UITableViewController {
         if distanceFromBottom < height {
             currentPage = currentPage + 1
             
-            GonawinAPI.client.activites(currentPage, count: 20) {
+            // TODO: call activities endpoint of the GonawinEngine
+            /*GonawinAPI.client.activites(currentPage, count: 20) {
                 newActivities, error in
                 
                 if newActivities.count > 0 {
@@ -85,9 +88,9 @@ class ActivitiesViewController: UITableViewController {
                 }
                 
                 if error != nil {
-                    showError(self, error!)
+                    showError(self, error: error!)
                 }
-            }
+            }*/
         }
     }
 }

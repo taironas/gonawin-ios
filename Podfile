@@ -1,8 +1,11 @@
-source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.3'
+platform :ios, '9.0'
 use_frameworks!
 
-pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git', :branch => 'xcode-6.3'
-pod 'LVTwitterOAuthClient', '~> 0.3'
-pod 'DateTools'
-pod 'FontAwesomeKit/FontAwesome'
+target 'Gonawin' do
+    pod 'GonawinEngine', :git => 'https://github.com/taironas/gonawin-engine-ios.git'
+    pod 'LVTwitterOAuthClient', '~> 0.3'
+    pod 'DateTools'
+    pod 'FontAwesomeKit/FontAwesome'
+    pod 'p2.OAuth2'
+    pod 'Locksmith'
+end

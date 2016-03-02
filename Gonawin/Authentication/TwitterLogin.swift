@@ -16,8 +16,6 @@ class TwitterLogin {
         let accountStore = ACAccountStore()
         let accountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
         
-        var userInfo: UserInfo?
-        
         accountStore.requestAccessToAccountsWithType(accountType, options: nil) {
             granted, error in
             if granted {
@@ -56,7 +54,7 @@ class TwitterLogin {
                 self.oauthToken(account) {
                     oauthToken, error in
                     if oauthToken != nil {
-                        completion(userInfo: UserInfo(accessToken: oauthToken!, id: id.toInt()!, email: "", name: name), error: nil)
+                        completion(userInfo: UserInfo(accessToken: oauthToken!, id: Int(id)!, email: "", name: name), error: nil)
                     }
                     else {
                         completion(userInfo: nil, error: error)

@@ -1,6 +1,0 @@
-framework module LVTwitterOAuthClient {
-  umbrella header "Pods-LVTwitterOAuthClient-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -1,37 +1,68 @@
 PODS:
-  - Alamofire (1.1.4)
+  - Alamofire (3.2.1)
   - DateTools (1.5.0)
   - FontAwesomeKit/Core (2.2.0)
   - FontAwesomeKit/FontAwesome (2.2.0):
     - FontAwesomeKit/Core
+  - GonawinEngine (0.1.0):
+    - Moya/RxSwift (~> 6.1.3)
+    - RxSwift (~> 2.2.0)
+    - SwiftyJSON (~> 2.3.2)
+    - SwiftyUserDefaults
+  - Locksmith (2.0.8)
   - LVTwitterOAuthClient (0.3.0):
     - OAuthCore
+  - Moya/Core (6.1.3):
+    - Alamofire (~> 3.0)
+    - Result (~> 1.0)
+  - Moya/RxSwift (6.1.3):
+    - Moya/Core
+    - RxSwift (~> 2.0)
   - NSData+Base64 (1.0.0)
   - OAuthCore (0.0.1):
     - NSData+Base64
+  - p2.OAuth2 (2.2.1):
+    - SwiftKeychain (~> 0.1.5)
+  - Result (1.0.2)
+  - RxSwift (2.2.0)
+  - SwiftKeychain (0.1.5)
+  - SwiftyJSON (2.3.2)
+  - SwiftyUserDefaults (2.1.2)
 
 DEPENDENCIES:
-  - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, branch `xcode-6.3`)
   - DateTools
   - FontAwesomeKit/FontAwesome
+  - GonawinEngine (from `https://github.com/taironas/gonawin-engine-ios.git`)
+  - Locksmith
   - LVTwitterOAuthClient (~> 0.3)
+  - p2.OAuth2
 
 EXTERNAL SOURCES:
-  Alamofire:
-    :branch: xcode-6.3
-    :git: https://github.com/Alamofire/Alamofire.git
+  GonawinEngine:
+    :git: https://github.com/taironas/gonawin-engine-ios.git
 
 CHECKOUT OPTIONS:
-  Alamofire:
-    :commit: 2ff5749ffc0425f05a1411b5b6fd2c25241b5b14
-    :git: https://github.com/Alamofire/Alamofire.git
+  GonawinEngine:
+    :commit: b492414fa85e13635ee7cb2f8559cad734d35787
+    :git: https://github.com/taironas/gonawin-engine-ios.git
 
 SPEC CHECKSUMS:
-  Alamofire: 6a2cbaebe78a6d469bc55ee37f0a24ba22af76ac
+  Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
   DateTools: b93a2c2017747329c6077c7d7e8a75106e23d0d7
   FontAwesomeKit: 025fd4dd1017fe4e3f8d47b03e024deedbb33cd4
+  GonawinEngine: 9dc7e21cfd6d1cd6605db5544656bef8ca1eece5
+  Locksmith: a8ed41ac4c06506ea8cb199d8ec8a8d3d108eb2a
   LVTwitterOAuthClient: 058199e43af92c0b99332332fa26d2229c59f04d
+  Moya: 26b290a8d675c167ea6229ba08e07dce562265a5
   NSData+Base64: 4e84902c4db907a15673474677e57763ef3903e4
   OAuthCore: 43dce261db846a1fe20234d95654257e00e78581
+  p2.OAuth2: 7f5c44259ef83ea5b9ef8f9049310611788f86cb
+  Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16
+  RxSwift: b8a749f2204c6c7a5c29b306a9c3bc11d5b87c5b
+  SwiftKeychain: 1387edad8b56c659daa93d9ffc99526bac5b0088
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  SwiftyUserDefaults: eadd0953dcfc4b1580009da62c5b684f4d12c708
 
-COCOAPODS: 0.36.3
+PODFILE CHECKSUM: c2c05213fd5f55b9435e92c4f84bce37c28f1fab
+
+COCOAPODS: 1.0.0.beta.4

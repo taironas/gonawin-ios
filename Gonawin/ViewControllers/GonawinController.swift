@@ -7,20 +7,21 @@
 //
 
 import UIKit
+import Locksmith
 
-class GonawinController: UITabBarController, GonawinAPIDelegate {
+class GonawinController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        GonawinAPI.client.delegate = self
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+        //TODO: Show Login view if user is not logged in
         // check if user is already logged in
-        if !GonawinAPI.client.isLoggedIn() {
+        if true {
             self.performSegueWithIdentifier("showLogin", sender: self)
         }
     }
@@ -32,8 +33,13 @@ class GonawinController: UITabBarController, GonawinAPIDelegate {
     
     func didAuthenticatedWithUser(user: User)
     {
-        // save access token in KeychainService
-        KeychainService.saveAuthToken(user.auth)
+        // save access token in keychain
+        do {
+            try Locksmith.saveData(["auth": user.auth], forUserAccount: "GonawinClient")
+        }
+        catch {
+            print("Error when trying to add the auth token in keychain")
+        }
         // store user in NSUserDefaults
         let data = NSKeyedArchiver.archivedDataWithRootObject(user.encoded())
         NSUserDefaults.standardUserDefaults().setObject(data, forKey: "CurrentUser")
@@ -43,12 +49,17 @@ class GonawinController: UITabBarController, GonawinAPIDelegate {
     
     func didFailToAuthenticateWithError(error: NSError) {
         // inform user that something wrong happened
-        println(error)
+        print(error)
     }
     
     func didLogoutWithAccessToken(authToken: String) {
-        // delete auth token in KeychainService
-        KeychainService.deleteAuthToken(authToken)
+        // delete auth token in keychain
+        do {
+            try Locksmith.deleteDataForUserAccount("GonawinClient")
+        }
+        catch {
+            print("Error when trying to delete the auth token in keychain")
+        }
         // delete user in NSUserDefaults
         NSUserDefaults.standardUserDefaults().removeObjectForKey("CurrentUser")
         

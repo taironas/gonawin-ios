@@ -8,6 +8,7 @@
 
 import UIKit
 import Accounts
+import GonawinEngine
 
 class LoginViewController: UIViewController {
     
@@ -20,11 +21,12 @@ class LoginViewController: UIViewController {
         facebookLogin.login() {
             userInfo, error in
             if userInfo != nil {
-                GonawinAPI.client.login(userInfo!.accessToken, provider: "facebook", id: userInfo!.id, email: userInfo!.email, name: userInfo!.name)
+                
+                //GonawinAPI.client.login(userInfo!.accessToken, provider: "facebook", id: userInfo!.id, email: userInfo!.email, name: userInfo!.name)
             }
             
             if error != nil {
-                showError(self, error!)
+                showError(self, error: error!)
             }
         }
 
@@ -36,11 +38,11 @@ class LoginViewController: UIViewController {
         twitterLogin.login {
             userInfo, error in
             if userInfo != nil {
-                GonawinAPI.client.login(userInfo!.accessToken, provider: "twitter", id: userInfo!.id, email: userInfo!.email, name: userInfo!.name)
+                //GonawinAPI.client.login(userInfo!.accessToken, provider: "twitter", id: userInfo!.id, email: userInfo!.email, name: userInfo!.name)
             }
             
             if error != nil {
-                showError(self, error!)
+                showError(self, error: error!)
             }
         }
         

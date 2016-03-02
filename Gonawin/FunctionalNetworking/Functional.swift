@@ -46,11 +46,11 @@ func number(input: [NSObject:AnyObject], key: String) -> NSNumber? {
 }
 
 func int(input: [NSObject:AnyObject], key: String) -> Int? {
-    return number(input,key).map { $0.integerValue }
+    return number(input,key: key).map { $0.integerValue }
 }
 
 func bool(input: [NSObject:AnyObject], key: String) -> Bool? {
-    return number(input,key).map { $0.boolValue }
+    return number(input,key: key).map { $0.boolValue }
 }
 
 

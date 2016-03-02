@@ -7,17 +7,14 @@
 //
 
 import UIKit
+import GonawinEngine
 
 class ProfileViewController: UITableViewController {
-    
-    private let gonawinAPI = GonawinAPI.client
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let currentUser = gonawinAPI.currentUser {
-            gonawinAPI.user(currentUser.id)
-        }
+        // TODO: Get current user
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,7 +25,7 @@ class ProfileViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.section {
         case 0:
-            println("TODO: not yet implemented!")
+            print("TODO: not yet implemented!")
         case 1:
             presentLogoutAlert()
         default: break
@@ -44,6 +41,6 @@ class ProfileViewController: UITableViewController {
     
     private func logout()
     {
-        gonawinAPI.logout()
+        // TODO: clear current user data
     }
 }

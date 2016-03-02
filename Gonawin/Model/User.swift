@@ -22,12 +22,12 @@ func parseUser(dict: JSONDictionary) -> User? {
     let makeUser = { User(id: $0, email: $1, username: $2, name: $3, auth: "") }
     
     return curry(makeUser)
-        <*> int(dict, "Id")
-        <*> string(dict, "Email")
-        <*> string(dict, "Username")
-        <*> string(dict, "Name")
+        <*> int(dict, key: "Id")
+        <*> string(dict, key: "Email")
+        <*> string(dict, key: "Username")
+        <*> string(dict, key: "Name")
 }
 
 func getAuthToken(dict: JSONDictionary) -> String? {
-    return string(dict, "Auth")
+    return string(dict, key: "Auth")
 }

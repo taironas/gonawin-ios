@@ -16,8 +16,6 @@ class FacebookLogin {
         let accountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierFacebook)
         let accountOptions = [ACFacebookAppIdKey: facebookAppID(), ACFacebookPermissionsKey: ["email"]]
         
-        var userInfo: UserInfo?
-        
         accountStore.requestAccessToAccountsWithType(accountType, options: accountOptions as [NSObject : AnyObject]) {
             granted, error in
             if granted {
@@ -54,7 +52,7 @@ class FacebookLogin {
                 let email = userInfoDico!["email"] as! String
                 let name = userInfoDico!["name"] as! String
                 
-                completion(userInfo: UserInfo(accessToken: account.credential.oauthToken, id: id.toInt()!, email: email, name: name), error: nil)
+                completion(userInfo: UserInfo(accessToken: account.credential.oauthToken, id: Int(id)!, email: email, name: name), error: nil)
             }
             else {
                 completion(userInfo: nil, error: error)
