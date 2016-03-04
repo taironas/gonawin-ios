@@ -9,11 +9,17 @@
 import UIKit
 import Accounts
 import GonawinEngine
+import RxSwift
+import SwiftyUserDefaults
+import Locksmith
 
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var facebookLoginButton: UIButton!
     @IBOutlet weak var twitterLoginButton: UIButton!
+    
+    private let disposeBag = DisposeBag()
+    private let provider = GonawinEngine.newGonawinEngine()
     
     @IBAction func Facebooklogin() {
         let facebookLogin = FacebookLogin()
@@ -22,7 +28,20 @@ class LoginViewController: UIViewController {
             userInfo, error in
             if userInfo != nil {
                 
-                //GonawinAPI.client.login(userInfo!.accessToken, provider: "facebook", id: userInfo!.id, email: userInfo!.email, name: userInfo!.name)
+                let authData = AuthData(accessToken: userInfo!.accessToken, provider: "facebook", id: userInfo!.id, email: userInfo!.email, name: userInfo!.name)
+                
+                self.provider.authenticate(authData)
+                    .debug()
+                    .catchError({ error in
+                        print("error : \(error)")
+                        return Observable.empty()
+                    })
+                    .subscribeNext {
+                        GonawinSession.session.newSession($0)
+                        
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                    }
+                .addDisposableTo(self.disposeBag)
             }
             
             if error != nil {
@@ -38,7 +57,20 @@ class LoginViewController: UIViewController {
         twitterLogin.login {
             userInfo, error in
             if userInfo != nil {
-                //GonawinAPI.client.login(userInfo!.accessToken, provider: "twitter", id: userInfo!.id, email: userInfo!.email, name: userInfo!.name)
+                let authData = AuthData(accessToken: userInfo!.accessToken, provider: "twitter", id: userInfo!.id, email: userInfo!.email, name: userInfo!.name)
+                
+                let subscription = GonawinEngine.newGonawinEngine().authenticate(authData)
+                    .catchError({ error in
+                        print("error : \(error)")
+                        return Observable.empty()
+                    })
+                    .subscribeNext {
+                        GonawinSession.session.newSession($0)
+                        
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                    }
+                
+                subscription.dispose()
             }
             
             if error != nil {

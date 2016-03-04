@@ -66,13 +66,12 @@ class GooglePlusAuthentication {
                 })
             }
             else {
-                var err: NSError?
                 
                 do {
                     let dict = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary
                     
                     dispatch_async(dispatch_get_main_queue(), {
-                        callback(dict: dict, error: err)
+                        callback(dict: dict, error: nil)
                     })
                 }
                 catch {

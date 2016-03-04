@@ -22,10 +22,11 @@
 		14B484E31ABE24EB000E3BA6 /* TwitterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B484E21ABE24EB000E3BA6 /* TwitterLogin.swift */; };
 		14D7F54419A25FB60020D51A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 14D7F54319A25FB60020D51A /* Podfile */; };
 		14F1842619C77C2D00437C59 /* GonawinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1842519C77C2D00437C59 /* GonawinController.swift */; };
-		14F1C74419C4DB7D00CA8975 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1C74319C4DB7D00CA8975 /* User.swift */; };
 		14F1C74B19C4E67C00CA8975 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1C74A19C4E67C00CA8975 /* Functional.swift */; };
 		14F5905F1999008600F03D43 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F5905E1999008600F03D43 /* TeamsViewController.swift */; };
 		14F59061199900B400F03D43 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F59060199900B400F03D43 /* ProfileViewController.swift */; };
+		14F7682B1C89C47F00AAF4D8 /* GonawinSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7682A1C89C47F00AAF4D8 /* GonawinSession.swift */; };
+		14F7682D1C89C5ED00AAF4D8 /* DefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7682C1C89C5ED00AAF4D8 /* DefaultsKey.swift */; };
 		14F87A6A1998EBE400A6EB11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F87A691998EBE400A6EB11 /* AppDelegate.swift */; };
 		14F87A6C1998EBE400A6EB11 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F87A6B1998EBE400A6EB11 /* ActivitiesViewController.swift */; };
 		14F87A6E1998EBE400A6EB11 /* TournamentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F87A6D1998EBE400A6EB11 /* TournamentsViewController.swift */; };
@@ -75,10 +76,11 @@
 		14B484E21ABE24EB000E3BA6 /* TwitterLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterLogin.swift; sourceTree = "<group>"; };
 		14D7F54319A25FB60020D51A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		14F1842519C77C2D00437C59 /* GonawinController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GonawinController.swift; sourceTree = "<group>"; };
-		14F1C74319C4DB7D00CA8975 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		14F1C74A19C4E67C00CA8975 /* Functional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Functional.swift; path = ../FunctionalNetworking/Functional.swift; sourceTree = "<group>"; };
 		14F5905E1999008600F03D43 /* TeamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		14F59060199900B400F03D43 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		14F7682A1C89C47F00AAF4D8 /* GonawinSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GonawinSession.swift; sourceTree = "<group>"; };
+		14F7682C1C89C5ED00AAF4D8 /* DefaultsKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsKey.swift; sourceTree = "<group>"; };
 		14F87A641998EBE400A6EB11 /* Gonawin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gonawin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F87A681998EBE400A6EB11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14F87A691998EBE400A6EB11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +146,8 @@
 				14B484DE1ABE0327000E3BA6 /* FacebookLogin.swift */,
 				14B484E21ABE24EB000E3BA6 /* TwitterLogin.swift */,
 				1422E5C41AC734ED00E6454B /* UserInfo.swift */,
+				14F7682A1C89C47F00AAF4D8 /* GonawinSession.swift */,
+				14F7682C1C89C5ED00AAF4D8 /* DefaultsKey.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -161,7 +165,6 @@
 		14F1C74219C4DB6D00CA8975 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				14F1C74319C4DB7D00CA8975 /* User.swift */,
 				1414B8C71AC86137000353C5 /* Activity.swift */,
 			);
 			path = Model;
@@ -415,12 +418,13 @@
 				1414B8C61AC857FA000353C5 /* JSON.swift in Sources */,
 				14F87A6E1998EBE400A6EB11 /* TournamentsViewController.swift in Sources */,
 				14F5905F1999008600F03D43 /* TeamsViewController.swift in Sources */,
+				14F7682B1C89C47F00AAF4D8 /* GonawinSession.swift in Sources */,
 				1414B8C81AC86137000353C5 /* Activity.swift in Sources */,
 				14F59061199900B400F03D43 /* ProfileViewController.swift in Sources */,
 				14F87A6A1998EBE400A6EB11 /* AppDelegate.swift in Sources */,
 				14B484E31ABE24EB000E3BA6 /* TwitterLogin.swift in Sources */,
 				14F87A6C1998EBE400A6EB11 /* ActivitiesViewController.swift in Sources */,
-				14F1C74419C4DB7D00CA8975 /* User.swift in Sources */,
+				14F7682D1C89C5ED00AAF4D8 /* DefaultsKey.swift in Sources */,
 				14F1842619C77C2D00437C59 /* GonawinController.swift in Sources */,
 				142D9D1C1A8EA1C400EFD976 /* GooglePlusAuthentication.swift in Sources */,
 				14B484DF1ABE0327000E3BA6 /* FacebookLogin.swift in Sources */,

@@ -8,36 +8,36 @@
 
 import Moya
 
-protocol GonawinAPIType {
+public protocol GonawinAPIType {
     var addAuthorization: Bool { get }
 }
 
-enum GonawinAPI {
+public enum GonawinAPI {
     case Auth(String, String, Int, String, String)
 }
 
-enum GonawinAuthenticatedAPI {
+public enum GonawinAuthenticatedAPI {
     case User(Int)
 }
 
 extension GonawinAPI: TargetType, GonawinAPIType {
-    var baseURL: NSURL { return NSURL(string: "http://www.gonawin.com/j")! }
+    public var baseURL: NSURL { return NSURL(string: "http://www.gonawin.com/j")! }
     
-    var path: String {
+    public var path: String {
         switch self {
         case .Auth:
             return "/auth"
         }
     }
     
-    var method: Moya.Method {
+    public var method: Moya.Method {
         switch self {
         default:
             return .GET
         }
     }
     
-    var parameters: [String: AnyObject]? {
+    public var parameters: [String: AnyObject]? {
         switch self {
         case .Auth(let accessToken, let provider, let id, let email, let name):
             return [
@@ -50,50 +50,50 @@ extension GonawinAPI: TargetType, GonawinAPIType {
         }
     }
     
-    var sampleData: NSData {
+    public var sampleData: NSData {
         switch self {
         case .Auth:
             return stubbedResponse("Auth")
         }
     }
     
-    var addAuthorization: Bool {
+    public var addAuthorization: Bool {
         return false
     }
 }
 
 extension GonawinAuthenticatedAPI: TargetType, GonawinAPIType {
-    var baseURL: NSURL { return NSURL(string: "http://www.gonawin.com/j")! }
+    public var baseURL: NSURL { return NSURL(string: "http://www.gonawin.com/j")! }
     
-    var path: String {
+    public var path: String {
         switch self {
         case .User:
             return "/user"
         }
     }
     
-    var method: Moya.Method {
+    public var method: Moya.Method {
         switch self {
         default:
             return .GET
         }
     }
     
-    var parameters: [String: AnyObject]? {
+    public var parameters: [String: AnyObject]? {
         switch self {
         case .User(let id):
             return ["id": id]
         }
     }
     
-    var sampleData: NSData {
+    public var sampleData: NSData {
         switch self {
         case .User:
             return stubbedResponse("User")
         }
     }
     
-    var addAuthorization: Bool {
+    public var addAuthorization: Bool {
         return true
     }
 }

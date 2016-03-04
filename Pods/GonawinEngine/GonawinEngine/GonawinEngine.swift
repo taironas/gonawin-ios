@@ -10,21 +10,30 @@ import Moya
 import RxSwift
 import SwiftyUserDefaults
 
-protocol GonawinEngineType {
+public protocol GonawinEngineType {
     typealias T: TargetType, GonawinAPIType
     var provider: RxMoyaProvider<T> { get }
 }
 
 extension GonawinEngineType {
-    static func newAuthorizedGonawinEngine() -> AuthorizedGonawinEngine {
+    public static func newGonawinEngine() -> GonawinEngine {
+        let provider = RxMoyaProvider<GonawinAPI>(endpointClosure: endpointsClosure())
+        return GonawinEngine(provider: provider)
+    }
+    
+    public static func newAuthorizedGonawinEngine() -> AuthorizedGonawinEngine {
         let provider = RxMoyaProvider<GonawinAuthenticatedAPI>(endpointClosure: endpointsClosure())
         return AuthorizedGonawinEngine(provider: provider)
     }
     
-    static func newStubbingGonawinEngine() -> GonawinEngine {
+    public static func newStubbingGonawinEngine() -> GonawinEngine {
         let provider = RxMoyaProvider<GonawinAPI>(plugins: [NetworkLoggerPlugin(verbose: true)], stubClosure: MoyaProvider.ImmediatelyStub)
-        
         return GonawinEngine(provider: provider)
+    }
+    
+    public static func newStubbingAuthorizedGonawinEngine() -> AuthorizedGonawinEngine {
+        let provider = RxMoyaProvider<GonawinAuthenticatedAPI>(plugins: [NetworkLoggerPlugin(verbose: true)], stubClosure: MoyaProvider.ImmediatelyStub)
+        return AuthorizedGonawinEngine(provider: provider)
     }
     
     static func endpointsClosure<T where T: TargetType, T: GonawinAPIType>()(target: T) -> Endpoint<T> {
@@ -38,11 +47,10 @@ extension GonawinEngineType {
     }
 }
 
-struct GonawinEngine: GonawinEngineType {
-    typealias T = GonawinAPI
-    let provider: RxMoyaProvider<GonawinAPI>
+public struct GonawinEngine: GonawinEngineType {
+    public let provider: RxMoyaProvider<GonawinAPI>
     
-    func authenticate(authData: AuthData) -> Observable<User> {
+    public func authenticate(authData: AuthData) -> Observable<User> {
         
         let endPoint = GonawinAPI.Auth(authData.accessToken, authData.provider, authData.id, authData.email, authData.name)
         
@@ -53,11 +61,14 @@ struct GonawinEngine: GonawinEngineType {
     }
 }
 
-struct AuthorizedGonawinEngine: GonawinEngineType {
-    typealias T = GonawinAuthenticatedAPI
-    let provider: RxMoyaProvider<GonawinAuthenticatedAPI>
+public struct AuthorizedGonawinEngine: GonawinEngineType {
+    public let provider: RxMoyaProvider<GonawinAuthenticatedAPI>
     
-    func getUser(id: Int) -> Observable<User> {
+    public init(provider: RxMoyaProvider<GonawinAuthenticatedAPI>) {
+        self.provider = provider
+    }
+    
+    public func getUser(id: Int) -> Observable<User> {
         
         let endPoint = GonawinAuthenticatedAPI.User(id)
         

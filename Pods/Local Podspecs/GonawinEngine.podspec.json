@@ -23,7 +23,7 @@
   "source_files": "GonawinEngine/**/*.{h,swift}",
   "dependencies": {
     "Moya/RxSwift": [
-      "~> 6.1.3"
+      "~> 6.2.0"
     ],
     "RxSwift": [
       "~> 2.2.0"
