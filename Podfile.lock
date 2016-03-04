@@ -1,10 +1,10 @@
 PODS:
   - Alamofire (3.2.1)
-  - DateTools (1.5.0)
+  - DateTools (1.7.0)
   - FontAwesomeKit/Core (2.2.0)
   - FontAwesomeKit/FontAwesome (2.2.0):
     - FontAwesomeKit/Core
-  - GonawinEngine (0.1.0):
+  - GonawinEngine (0.2.0):
     - Moya/RxSwift (~> 6.2.0)
     - RxSwift (~> 2.2.0)
     - SwiftyJSON (~> 2.3.2)
@@ -43,14 +43,14 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   GonawinEngine:
-    :commit: ad81c1f2609d06add791c4c6578eea21a151ac78
+    :commit: 6d09fe8ec7181df2a55ffebafa77ae1bb13e9818
     :git: https://github.com/taironas/gonawin-engine-ios.git
 
 SPEC CHECKSUMS:
   Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
-  DateTools: b93a2c2017747329c6077c7d7e8a75106e23d0d7
+  DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
   FontAwesomeKit: 025fd4dd1017fe4e3f8d47b03e024deedbb33cd4
-  GonawinEngine: 66dea02eb44279ecff81b797a92a41b6a9a2e10c
+  GonawinEngine: 675c4f427ad00c2666a24291454a1eb98f385000
   Locksmith: a8ed41ac4c06506ea8cb199d8ec8a8d3d108eb2a
   LVTwitterOAuthClient: 058199e43af92c0b99332332fa26d2229c59f04d
   Moya: a5e57a405584177027daab240f4d47baa0722562

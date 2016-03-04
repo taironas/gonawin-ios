@@ -17,12 +17,12 @@ public protocol GonawinEngineType {
 
 extension GonawinEngineType {
     public static func newGonawinEngine() -> GonawinEngine {
-        let provider = RxMoyaProvider<GonawinAPI>(endpointClosure: endpointsClosure())
+        let provider = RxMoyaProvider<GonawinAPI>()
         return GonawinEngine(provider: provider)
     }
     
-    public static func newAuthorizedGonawinEngine() -> AuthorizedGonawinEngine {
-        let provider = RxMoyaProvider<GonawinAuthenticatedAPI>(endpointClosure: endpointsClosure())
+    public static func newAuthorizedGonawinEngine(authorizationToken: String) -> AuthorizedGonawinEngine {
+        let provider = RxMoyaProvider<GonawinAuthenticatedAPI>(endpointClosure: endpointsClosure(authorizationToken))
         return AuthorizedGonawinEngine(provider: provider)
     }
     
@@ -32,15 +32,15 @@ extension GonawinEngineType {
     }
     
     public static func newStubbingAuthorizedGonawinEngine() -> AuthorizedGonawinEngine {
-        let provider = RxMoyaProvider<GonawinAuthenticatedAPI>(plugins: [NetworkLoggerPlugin(verbose: true)], stubClosure: MoyaProvider.ImmediatelyStub)
+        let provider = RxMoyaProvider<GonawinAuthenticatedAPI>(plugins: [NetworkLoggerPlugin(verbose: true)], endpointClosure: endpointsClosure("testToken"), stubClosure: MoyaProvider.ImmediatelyStub)
         return AuthorizedGonawinEngine(provider: provider)
     }
     
-    static func endpointsClosure<T where T: TargetType, T: GonawinAPIType>()(target: T) -> Endpoint<T> {
+    static func endpointsClosure<T where T: TargetType, T: GonawinAPIType>(authorizationToken: String)(target: T) -> Endpoint<T> {
         let endpoint: Endpoint<T> = Endpoint<T>(URL: url(target), sampleResponseClosure: {.NetworkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters)
         
         if target.addAuthorization {
-            return endpoint.endpointByAddingHTTPHeaderFields(["Authorization": Defaults[.authorization]])
+            return endpoint.endpointByAddingHTTPHeaderFields(["Authorization": authorizationToken])
         } else {
             return endpoint
         }
