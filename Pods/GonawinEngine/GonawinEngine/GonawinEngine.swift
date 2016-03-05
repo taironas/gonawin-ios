@@ -8,7 +8,6 @@
 
 import Moya
 import RxSwift
-import SwiftyUserDefaults
 
 public protocol GonawinEngineType {
     typealias T: TargetType, GonawinAPIType

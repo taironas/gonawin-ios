@@ -8,4 +8,5 @@ target 'Gonawin' do
     pod 'FontAwesomeKit/FontAwesome'
     pod 'p2.OAuth2'
     pod 'Locksmith'
+    pod 'SwiftyUserDefaults'
 end

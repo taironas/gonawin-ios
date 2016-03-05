@@ -67,8 +67,8 @@ extension GonawinAuthenticatedAPI: TargetType, GonawinAPIType {
     
     public var path: String {
         switch self {
-        case .User:
-            return "/user"
+        case .User(let id):
+            return "/users/show/\(id)"
         }
     }
     
@@ -80,10 +80,7 @@ extension GonawinAuthenticatedAPI: TargetType, GonawinAPIType {
     }
     
     public var parameters: [String: AnyObject]? {
-        switch self {
-        case .User(let id):
-            return ["id": id]
-        }
+        return nil
     }
     
     public var sampleData: NSData {

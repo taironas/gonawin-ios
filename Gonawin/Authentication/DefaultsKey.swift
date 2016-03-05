@@ -9,6 +9,5 @@
 import SwiftyUserDefaults
 
 extension DefaultsKeys {
-    static let authorization = DefaultsKey<String>("authorization")
-    static let currentUser = DefaultsKey<[String: AnyObject]?>("current_user")
+    static let currentUserID = DefaultsKey<Int?>("current_user_id")
 }
