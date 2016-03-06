@@ -16,6 +16,7 @@
 		142FE38C1AD2AA1E0087BB0E /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142FE38B1AD2AA1E0087BB0E /* ActivityTableViewCell.swift */; };
 		143495301ACF2DFF0005C86B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1434952F1ACF2DFF0005C86B /* Error.swift */; };
 		143E96821AE3E2EB00E39EF4 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 143E96811AE3E2EB00E39EF4 /* FontAwesome.otf */; };
+		1484E2E81C8C5EFB00A2170C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1484E2E71C8C5EFB00A2170C /* Launch Screen.storyboard */; };
 		14875BF2199D2443005791D0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14875BF1199D2443005791D0 /* LoginViewController.swift */; };
 		14B484DF1ABE0327000E3BA6 /* FacebookLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B484DE1ABE0327000E3BA6 /* FacebookLogin.swift */; };
 		14B484E11ABE04FD000E3BA6 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B484E01ABE04FD000E3BA6 /* Social.framework */; };
@@ -69,6 +70,7 @@
 		142FE38B1AD2AA1E0087BB0E /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityTableViewCell.swift; path = ViewControllers/ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		1434952F1ACF2DFF0005C86B /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		143E96811AE3E2EB00E39EF4 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = ../../Pods/FontAwesomeKit/FontAwesomeKit/FontAwesome.otf; sourceTree = "<group>"; };
+		1484E2E71C8C5EFB00A2170C /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		14875BF1199D2443005791D0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		148BBE721AB4D8030073F9EF /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../../Bridging-Header.h"; sourceTree = "<group>"; };
 		14B484DE1ABE0327000E3BA6 /* FacebookLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLogin.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				14F87A681998EBE400A6EB11 /* Info.plist */,
 				142D9D201A8EA2BF00EFD976 /* APIKeys.plist */,
 				14F87A6F1998EBE400A6EB11 /* Main.storyboard */,
+				1484E2E71C8C5EFB00A2170C /* Launch Screen.storyboard */,
 				143E96811AE3E2EB00E39EF4 /* FontAwesome.otf */,
 				14F87A721998EBE400A6EB11 /* Images.xcassets */,
 			);
@@ -342,6 +345,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1484E2E81C8C5EFB00A2170C /* Launch Screen.storyboard in Resources */,
 				143E96821AE3E2EB00E39EF4 /* FontAwesome.otf in Resources */,
 				14D7F54419A25FB60020D51A /* Podfile in Resources */,
 				142D9D211A8EA2BF00EFD976 /* APIKeys.plist in Resources */,
