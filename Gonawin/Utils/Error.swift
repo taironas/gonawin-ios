@@ -9,8 +9,8 @@
 import UIKit
 import RxSwift
 
-func showError(viewController: UIViewController, error: NSError) {
-    showErrorDescription(viewController, description: error.localizedDescription)
+func showError(viewController: UIViewController, error: ErrorType) {
+    showErrorDescription(viewController, description: "\(error)")
 }
 
 func showErrorDescription(viewController: UIViewController, description: String) {

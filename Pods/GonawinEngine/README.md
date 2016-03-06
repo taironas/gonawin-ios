@@ -6,7 +6,7 @@
 - [x] authenticate
 
 ##### Users
-- [ ] getUser
+- [x] getUser
 - [ ] updateUser
 - [ ] getUserScores
 - [ ] getUserTeams

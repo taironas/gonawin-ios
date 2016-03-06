@@ -8,13 +8,21 @@
 
 import UIKit
 import GonawinEngine
+import RxSwift
 
 class ActivitiesViewController: UITableViewController {
     var activities = [[Activity]]()
     var currentPage = 1
     
+    private let disposeBag = DisposeBag()
+    private var provider: AuthorizedGonawinEngine!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let authorizationToken = GonawinSession.session.authorizationToken {
+            provider = GonawinEngine.newAuthorizedGonawinEngine(authorizationToken)
+        }
         
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -34,22 +42,22 @@ class ActivitiesViewController: UITableViewController {
     }
     
     @IBAction func refresh(sender: UIRefreshControl?) {
-        // TODO: call activities endpoint of the GonawinEngine
-        /*GonawinAPI.client.activites(currentPage, count: 20) {
-            newActivities, error in
-            
-            if newActivities.count > 0 {
-                self.activities.removeAll(keepCapacity: true)
-                self.activities.insert(newActivities, atIndex: self.currentPage - 1)
-                self.tableView.reloadData()
+        self.provider.getActivities(currentPage, count: 20)
+            .debug()
+            .catchError({ error in
+                showError(self, error: error)
+                return Observable.empty()
+            })
+            .subscribeNext {
+                if $0.count > 0 {
+                    self.activities.removeAll(keepCapacity: true)
+                    self.activities.insert($0, atIndex: self.currentPage - 1)
+                    self.tableView.reloadData()
+                }
+                
+                sender?.endRefreshing()
             }
-            
-            if error != nil {
-                showError(self, error: error!)
-            }
-            
-            sender?.endRefreshing()
-        }*/
+            .addDisposableTo(self.disposeBag)
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -78,19 +86,20 @@ class ActivitiesViewController: UITableViewController {
         if distanceFromBottom < height {
             currentPage = currentPage + 1
             
-            // TODO: call activities endpoint of the GonawinEngine
-            /*GonawinAPI.client.activites(currentPage, count: 20) {
-                newActivities, error in
+            self.provider.getActivities(currentPage, count: 20)
+                .debug()
+                .catchError({ error in
+                    showError(self, error: error)
+                    return Observable.empty()
+                })
+                .subscribeNext {
                 
-                if newActivities.count > 0 {
-                    self.activities.insert(newActivities, atIndex: self.currentPage - 1)
-                    self.tableView.reloadData()
+                    if $0.count > 0 {
+                        self.activities.insert($0, atIndex: self.currentPage - 1)
+                        self.tableView.reloadData()
+                    }
                 }
-                
-                if error != nil {
-                    showError(self, error: error!)
-                }
-            }*/
+                .addDisposableTo(self.disposeBag)
         }
     }
 }

@@ -43,7 +43,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   GonawinEngine:
-    :commit: c8cd47492ec57817d8d84b657f4024b3e6f4cf39
+    :commit: 7423083a60378b36d079e1910fb560feb262f20d
     :git: https://github.com/taironas/gonawin-engine-ios.git
 
 SPEC CHECKSUMS:
