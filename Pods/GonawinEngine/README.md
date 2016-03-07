@@ -13,7 +13,7 @@
 - [ ] getUserTournaments
 
 ##### Activities
-- [ ] getActivities
+- [x] getActivities
 
 ##### Teams
 - [ ] getTeams

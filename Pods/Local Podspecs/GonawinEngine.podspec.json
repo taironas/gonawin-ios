@@ -1,6 +1,6 @@
 {
   "name": "GonawinEngine",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "summary": "Gonawin Engine for iOS",
   "homepage": "https://github.com/taironas/gonawin-engine-ios",
   "license": {
@@ -17,7 +17,7 @@
   "requires_arc": true,
   "source": {
     "git": "https://github.com/taironas/gonawin-engine-ios.git",
-    "tag": "v0.2.0",
+    "tag": "v0.3.0",
     "submodules": true
   },
   "source_files": "GonawinEngine/**/*.{h,swift}",
