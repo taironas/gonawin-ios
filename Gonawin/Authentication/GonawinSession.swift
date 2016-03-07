@@ -29,7 +29,7 @@ class GonawinSession {
                 // fetch current user
                 self.provider = GonawinEngine.newAuthorizedGonawinEngine(authorizationToken!)
                     
-                self.provider!.getUser(userID)
+                self.provider?.getUser(userID)
                     .debug()
                     .catchError({ error in
                         print("error : \(error)")

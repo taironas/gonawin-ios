@@ -14,6 +14,8 @@ class GonawinController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // load session
+        GonawinSession.session
     }
     
     override func viewDidAppear(animated: Bool) {
