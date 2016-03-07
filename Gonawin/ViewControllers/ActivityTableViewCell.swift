@@ -148,38 +148,41 @@ class ActivityTableViewCell: UITableViewCell {
         if let activityType = ActivityType(rawValue: activity.type) {
             switch activityType {
             case .Welcome:
-                icon = FAKFontAwesome.checkIconWithSize(20)
+                icon = FAKFontAwesome.checkIconWithSize(10)
             case .Team:
-                icon = FAKFontAwesome.usersIconWithSize(20)
+                icon = FAKFontAwesome.usersIconWithSize(10)
             case .Tournament:
-                icon = FAKFontAwesome.trophyIconWithSize(20)
+                icon = FAKFontAwesome.trophyIconWithSize(10)
             case .Match:
-                icon = FAKFontAwesome.compressIconWithSize(20)
+                icon = FAKFontAwesome.compressIconWithSize(10)
             case .Accuracy:
-                icon = FAKFontAwesome.barChartIconWithSize(20)
+                icon = FAKFontAwesome.barChartIconWithSize(10)
             case .Predict:
-                icon = FAKFontAwesome.crosshairsIconWithSize(20)
+                icon = FAKFontAwesome.crosshairsIconWithSize(10)
             case .Score:
-                icon = FAKFontAwesome.listIconWithSize(20)
+                icon = FAKFontAwesome.listIconWithSize(10)
             case .Invitation:
-                icon = FAKFontAwesome.bullhornIconWithSize(20)
+                icon = FAKFontAwesome.bullhornIconWithSize(10)
             }
         }
         else {
             // default icon
-            icon = FAKFontAwesome.checkIconWithSize(25)
+            icon = FAKFontAwesome.checkIconWithSize(15)
         }
         
         icon.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor())
-        return icon.imageWithSize(CGSizeMake(35,35))
+        return icon.imageWithSize(CGSizeMake(25,25))
     }
     
     private func publishedFromNow(published: String) -> String {
         dateFormatter.dateFormat = "YYYY-MM-ddEEEEEHH:mm:ss.AZ"
+        dateFormatter.locale = NSLocale(localeIdentifier: "en_US")
         
         let publishedDate = dateFormatter.dateFromString(published)
-        let publishedInterval = publishedDate?.timeIntervalSinceNow
+        if let publishedInterval = publishedDate?.timeIntervalSinceNow {
+            return NSDate(timeIntervalSinceNow: publishedInterval).timeAgoSinceNow()
+        }
         
-        return NSDate(timeIntervalSinceNow: publishedInterval!).timeAgoSinceNow()
+        return ""
     }
 }

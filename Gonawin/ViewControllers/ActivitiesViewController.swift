@@ -15,7 +15,7 @@ class ActivitiesViewController: UITableViewController {
     var currentPage = 1
     
     private let disposeBag = DisposeBag()
-    private var provider: AuthorizedGonawinEngine!
+    private var provider: AuthorizedGonawinEngine?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +24,8 @@ class ActivitiesViewController: UITableViewController {
             provider = GonawinEngine.newAuthorizedGonawinEngine(authorizationToken)
         }
         
-        tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 44.0
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -42,7 +42,7 @@ class ActivitiesViewController: UITableViewController {
     }
     
     @IBAction func refresh(sender: UIRefreshControl?) {
-        self.provider.getActivities(currentPage, count: 20)
+        self.provider?.getActivities(currentPage, count: 20)
             .debug()
             .catchError({ error in
                 showError(self, error: error)
@@ -86,7 +86,7 @@ class ActivitiesViewController: UITableViewController {
         if distanceFromBottom < height {
             currentPage = currentPage + 1
             
-            self.provider.getActivities(currentPage, count: 20)
+            self.provider?.getActivities(currentPage, count: 20)
                 .debug()
                 .catchError({ error in
                     showError(self, error: error)
