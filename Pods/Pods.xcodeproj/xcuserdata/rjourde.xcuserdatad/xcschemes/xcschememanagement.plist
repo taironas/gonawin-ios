@@ -64,6 +64,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftKeychain.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -92,6 +97,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>08C18596DF6B6D84CB0A32A91A6FBDE2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1D808FA082475E5C7087D716ECD7FC54</key>
 		<dict>
 			<key>primary</key>
@@ -112,12 +122,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6C0D8FCDEE7400933C2753C156480439</key>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<key>87AC10C0A4384AAFCD704142811DE3F6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -152,7 +162,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F0AD33287474C34265698A684FCD46E4</key>
+		<key>F002C87BD6C8F9C6AB08BC1E3A9FF56E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

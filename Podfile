@@ -9,4 +9,5 @@ target 'Gonawin' do
     pod 'p2.OAuth2'
     pod 'Locksmith'
     pod 'SwiftyUserDefaults'
+    pod 'SDWebImage', '~>3.7'
 end

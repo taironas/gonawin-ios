@@ -8,13 +8,27 @@
 
 import UIKit
 import GonawinEngine
+import SDWebImage
 
 class ProfileViewController: UITableViewController {
+    
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var tournamentsLabel: UILabel!
+    @IBOutlet weak var teamsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // TODO: Get current user
+        if let user = GonawinSession.session.currentUser {
+            let url = NSURL(string: user.imageURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!
+            profileImageView.sd_setImageWithURL(url)
+            nameLabel.text = user.name
+            scoreLabel.text = "\(user.score)"
+            tournamentsLabel.text = "\(user.tournamentIds.count)"
+            teamsLabel.text = "\(user.teamIds.count)"
+        }
     }
 
     override func didReceiveMemoryWarning() {
