@@ -87,4 +87,14 @@ public struct AuthorizedGonawinEngine: GonawinEngineType {
             .mapToObject(ActivityResults)
             .map{ $0.activities }
     }
+    
+    public func getTeams(page: Int, count: Int) -> Observable<[Team]>
+    {
+        let endPoint = GonawinAuthenticatedAPI.Teams(page, count)
+        
+        return provider.request(endPoint)
+            .filterSuccessfulStatusCodes()
+            .mapJSON()
+            .mapToObjectArray(Team)
+    }
 }

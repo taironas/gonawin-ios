@@ -16,7 +16,7 @@
 - [x] getActivities
 
 ##### Teams
-- [ ] getTeams
+- [x] getTeams
 - [ ] createTeam
 - [ ] getTeams
 - [ ] updateamTeam

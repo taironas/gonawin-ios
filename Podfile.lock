@@ -4,7 +4,7 @@ PODS:
   - FontAwesomeKit/Core (2.2.0)
   - FontAwesomeKit/FontAwesome (2.2.0):
     - FontAwesomeKit/Core
-  - GonawinEngine (0.3.0):
+  - GonawinEngine (0.4.0):
     - Moya/RxSwift (~> 6.2.0)
     - RxSwift (~> 2.2.0)
     - SwiftyJSON (~> 2.3.2)
@@ -47,14 +47,14 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   GonawinEngine:
-    :commit: 3412ab37acfbd81d40aabf294296a702597e408a
+    :commit: 8cc19f76714fd4cf87a4ac49068b91a24d805a3b
     :git: https://github.com/taironas/gonawin-engine-ios.git
 
 SPEC CHECKSUMS:
   Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
   FontAwesomeKit: 025fd4dd1017fe4e3f8d47b03e024deedbb33cd4
-  GonawinEngine: 82621758962ec6d8d9a703095a278e7c9c07b719
+  GonawinEngine: e74f572a8af3ee6e3ceaabf6ba3d9249bcd245f8
   Locksmith: a8ed41ac4c06506ea8cb199d8ec8a8d3d108eb2a
   LVTwitterOAuthClient: 058199e43af92c0b99332332fa26d2229c59f04d
   Moya: a5e57a405584177027daab240f4d47baa0722562
