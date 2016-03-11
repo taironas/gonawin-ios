@@ -14,6 +14,7 @@
 		142D9D211A8EA2BF00EFD976 /* APIKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 142D9D201A8EA2BF00EFD976 /* APIKeys.plist */; };
 		142FE38C1AD2AA1E0087BB0E /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142FE38B1AD2AA1E0087BB0E /* ActivityTableViewCell.swift */; };
 		143495301ACF2DFF0005C86B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1434952F1ACF2DFF0005C86B /* Error.swift */; };
+		1436CD7F1C9363A800B66777 /* TournamentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1436CD7E1C9363A800B66777 /* TournamentCollectionViewCell.swift */; };
 		143E96821AE3E2EB00E39EF4 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 143E96811AE3E2EB00E39EF4 /* FontAwesome.otf */; };
 		1484E2E81C8C5EFB00A2170C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1484E2E71C8C5EFB00A2170C /* Launch Screen.storyboard */; };
 		14875BF2199D2443005791D0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14875BF1199D2443005791D0 /* LoginViewController.swift */; };
@@ -68,6 +69,7 @@
 		142D9D201A8EA2BF00EFD976 /* APIKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = APIKeys.plist; sourceTree = "<group>"; };
 		142FE38B1AD2AA1E0087BB0E /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityTableViewCell.swift; path = ViewControllers/ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		1434952F1ACF2DFF0005C86B /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		1436CD7E1C9363A800B66777 /* TournamentCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentCollectionViewCell.swift; sourceTree = "<group>"; };
 		143E96811AE3E2EB00E39EF4 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = ../../Pods/FontAwesomeKit/FontAwesomeKit/FontAwesome.otf; sourceTree = "<group>"; };
 		1484E2E71C8C5EFB00A2170C /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		14875BF1199D2443005791D0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +89,7 @@
 		14F87A681998EBE400A6EB11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14F87A691998EBE400A6EB11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14F87A6B1998EBE400A6EB11 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActivitiesViewController.swift; path = ViewControllers/ActivitiesViewController.swift; sourceTree = "<group>"; };
-		14F87A6D1998EBE400A6EB11 /* TournamentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentsViewController.swift; sourceTree = "<group>"; };
+		14F87A6D1998EBE400A6EB11 /* TournamentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TournamentsViewController.swift; path = ViewControllers/TournamentsViewController.swift; sourceTree = "<group>"; };
 		14F87A701998EBE400A6EB11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14F87A721998EBE400A6EB11 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		14F87A781998EBE400A6EB11 /* GonawinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GonawinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,7 +127,6 @@
 			children = (
 				14F1842519C77C2D00437C59 /* GonawinController.swift */,
 				14875BF1199D2443005791D0 /* LoginViewController.swift */,
-				14F87A6D1998EBE400A6EB11 /* TournamentsViewController.swift */,
 				14F59060199900B400F03D43 /* ProfileViewController.swift */,
 			);
 			path = ViewControllers;
@@ -138,6 +139,15 @@
 				142FE38B1AD2AA1E0087BB0E /* ActivityTableViewCell.swift */,
 			);
 			name = Activities;
+			sourceTree = "<group>";
+		};
+		1436CD7D1C9362E900B66777 /* Tournaments */ = {
+			isa = PBXGroup;
+			children = (
+				14F87A6D1998EBE400A6EB11 /* TournamentsViewController.swift */,
+				1436CD7E1C9363A800B66777 /* TournamentCollectionViewCell.swift */,
+			);
+			name = Tournaments;
 			sourceTree = "<group>";
 		};
 		144904D81A87D05100AC592B /* Authentication */ = {
@@ -198,6 +208,7 @@
 			children = (
 				142FE38D1AD2B5770087BB0E /* Activities */,
 				14B40D3B1C904AAC00765325 /* Teams */,
+				1436CD7D1C9362E900B66777 /* Tournaments */,
 				140E243B1A911D9B0041E36A /* ViewControllers */,
 				144904DC1A87D07A00AC592B /* Utils */,
 				144904D81A87D05100AC592B /* Authentication */,
@@ -265,13 +276,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14F87A821998EBE400A6EB11 /* Build configuration list for PBXNativeTarget "Gonawin" */;
 			buildPhases = (
-				D1DF43BB1A259A1BA07283E0 /* Check Pods Manifest.lock */,
+				D1DF43BB1A259A1BA07283E0 /* 📦 Check Pods Manifest.lock */,
 				14F87A601998EBE400A6EB11 /* Sources */,
 				14F87A611998EBE400A6EB11 /* Frameworks */,
 				14F87A621998EBE400A6EB11 /* Resources */,
 				14D519541A3DCC1E0001F44D /* Copy Frameworks */,
-				151B7832F5B4C6694B63E36B /* Embed Pods Frameworks */,
-				D7E16E2278D8274B92217B39 /* Copy Pods Resources */,
+				151B7832F5B4C6694B63E36B /* 📦 Embed Pods Frameworks */,
+				D7E16E2278D8274B92217B39 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -364,14 +375,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		151B7832F5B4C6694B63E36B /* Embed Pods Frameworks */ = {
+		151B7832F5B4C6694B63E36B /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,14 +390,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gonawin/Pods-Gonawin-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D1DF43BB1A259A1BA07283E0 /* Check Pods Manifest.lock */ = {
+		D1DF43BB1A259A1BA07283E0 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,14 +405,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		D7E16E2278D8274B92217B39 /* Copy Pods Resources */ = {
+		D7E16E2278D8274B92217B39 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +429,7 @@
 			files = (
 				14875BF2199D2443005791D0 /* LoginViewController.swift in Sources */,
 				142FE38C1AD2AA1E0087BB0E /* ActivityTableViewCell.swift in Sources */,
+				1436CD7F1C9363A800B66777 /* TournamentCollectionViewCell.swift in Sources */,
 				14F1C74B19C4E67C00CA8975 /* Functional.swift in Sources */,
 				1414B8C61AC857FA000353C5 /* JSON.swift in Sources */,
 				14F87A6E1998EBE400A6EB11 /* TournamentsViewController.swift in Sources */,

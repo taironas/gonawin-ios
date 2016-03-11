@@ -254,23 +254,113 @@
             <point key="canvasLocation" x="3052" y="-18"/>
         </scene>
         <!--Tournaments-->
-        <scene sceneID="wg7-f3-ORb">
+        <scene sceneID="WZI-Un-lQx">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="TournamentsViewController" customModule="Gonawin" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
-                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                <collectionViewController id="fUy-1Y-KxA" customClass="TournamentsViewController" customModule="Gonawin" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Yn4-YC-U6V">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Tournaments" id="ljP-VJ-Hvm"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="5Aw-ai-Gse">
+                            <size key="itemSize" width="150" height="120"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="20" minY="8" maxX="20" maxY="8"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TournamentCell" id="vnu-af-xvL" customClass="TournamentCollectionViewCell" customModule="Gonawin" customModuleProvider="target">
+                                <rect key="frame" x="20" y="72" width="150" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Qdn-Kg-A1W">
+                                            <rect key="frame" x="8" y="8" width="134" height="104"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PLw-TX-2TG">
+                                                    <rect key="frame" x="42" y="0.0" width="50" height="50"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="8x7-hd-eMh"/>
+                                                        <constraint firstAttribute="width" constant="50" id="Uev-s8-MKG"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="kd7-dl-8Ry">
+                                                    <rect key="frame" x="49" y="50" width="36" height="27"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4dE-sn-MiK">
+                                                    <rect key="frame" x="18" y="77" width="98" height="27"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0CU-9f-HEY">
+                                                            <rect key="frame" x="0.0" y="0.0" width="58" height="27"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Participants" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvC-0U-4jF">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="58" height="12"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                                    <color key="textColor" red="1" green="0.62745098040000002" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVV-Z8-VI0">
+                                                                    <rect key="frame" x="22" y="12" width="15" height="15"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                                    <color key="textColor" red="1" green="0.62745098040000002" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mDG-uK-Pqc">
+                                                            <rect key="frame" x="66" y="0.0" width="32" height="27"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teams" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJW-Pg-xFt">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="12"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                                    <color key="textColor" red="1" green="0.62745098040000002" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87S-5g-5VH">
+                                                                    <rect key="frame" x="9" y="12" width="15" height="15"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                                    <color key="textColor" red="1" green="0.62745098040000002" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Qdn-Kg-A1W" secondAttribute="trailing" id="P1d-1o-dfJ"/>
+                                    <constraint firstItem="Qdn-Kg-A1W" firstAttribute="top" secondItem="vnu-af-xvL" secondAttribute="topMargin" id="RqS-Gf-NyI"/>
+                                    <constraint firstItem="Qdn-Kg-A1W" firstAttribute="leading" secondItem="vnu-af-xvL" secondAttribute="leadingMargin" id="as7-Cl-FMY"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="Qdn-Kg-A1W" secondAttribute="bottom" id="eVV-Ih-rjV"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="nameLabel" destination="kd7-dl-8Ry" id="LvX-6s-4XF"/>
+                                    <outlet property="participantsCountLabel" destination="HVV-Z8-VI0" id="qh4-uK-Ezz"/>
+                                    <outlet property="teamsCountLabel" destination="87S-5g-5VH" id="iu2-Zt-TOv"/>
+                                    <outlet property="tournamentImageView" destination="PLw-TX-2TG" id="1gN-zF-Q8v"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="fUy-1Y-KxA" id="YEz-PK-CSL"/>
+                            <outlet property="delegate" destination="fUy-1Y-KxA" id="nQT-WB-v8X"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Tournaments" id="NhE-Tu-yur"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fFJ-pa-paS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="1598"/>
+            <point key="canvasLocation" x="138" y="1556"/>
         </scene>
         <!--Teams-->
         <scene sceneID="hTe-gc-KEZ">
@@ -425,7 +515,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="DAY-es-prl"/>
+                        <segue destination="fUy-1Y-KxA" kind="relationship" relationship="rootViewController" id="pba-fI-cDe"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rck-hA-cs6" userLabel="First Responder" sceneMemberID="firstResponder"/>

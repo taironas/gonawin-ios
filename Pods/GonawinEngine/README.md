@@ -26,7 +26,7 @@
 - [ ] getTeamAccuracies
 
 #### Tournaments
-- [ ] getTournaments
+- [x] getTournaments
 - [ ] getTournamentCandidateTeams
 - [ ] getTournamentParticipants
 - [ ] getTournamentCalendar
