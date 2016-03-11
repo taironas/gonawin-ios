@@ -8,7 +8,6 @@
 
 import UIKit
 import GonawinEngine
-import SDWebImage
 
 class TeamCollectionViewCell: UICollectionViewCell {
     
@@ -17,15 +16,9 @@ class TeamCollectionViewCell: UICollectionViewCell {
             updateUI()
         }
     }
-    @IBOutlet weak var teamImageView: UIImageView!
+    @IBOutlet weak var teamImageView: UIWebView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var membersCountLabel: UILabel!
-    
-    override func layoutSubviews() {
-        let imageLayer = teamImageView.layer
-        imageLayer.cornerRadius = teamImageView.frame.size.height/2
-        imageLayer.masksToBounds = true
-    }
     
     func updateUI() {
         //reset any existing activity information
@@ -35,7 +28,7 @@ class TeamCollectionViewCell: UICollectionViewCell {
         //load new information from our activity
         if let team = self.team {
             let url = NSURL(string: team.imageURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!
-            teamImageView.sd_setImageWithURL(url)
+            teamImageView.loadRequest(NSURLRequest(URL: url))
             
             nameLabel.text = team.name
             membersCountLabel.text = "\(team.membersCount)"

@@ -8,11 +8,10 @@
 
 import UIKit
 import GonawinEngine
-import SDWebImage
 
 class ProfileViewController: UITableViewController {
     
-    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var profileImageView: UIWebView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var tournamentsLabel: UILabel!
@@ -23,7 +22,10 @@ class ProfileViewController: UITableViewController {
         
         if let user = GonawinSession.session.currentUser {
             let url = NSURL(string: user.imageURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!
-            profileImageView.sd_setImageWithURL(url)
+            profileImageView.loadRequest(NSURLRequest(URL: url))
+            let imageLayer = profileImageView.layer
+            imageLayer.cornerRadius = profileImageView.frame.size.height/2
+            imageLayer.masksToBounds = true
             nameLabel.text = user.name
             scoreLabel.text = "\(user.score)"
             tournamentsLabel.text = "\(user.tournamentIds.count)"

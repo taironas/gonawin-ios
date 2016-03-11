@@ -8,7 +8,6 @@
 
 import UIKit
 import GonawinEngine
-import SDWebImage
 
 class TournamentCollectionViewCell: UICollectionViewCell {
     
@@ -17,16 +16,10 @@ class TournamentCollectionViewCell: UICollectionViewCell {
             updateUI()
         }
     }
-    @IBOutlet weak var tournamentImageView: UIImageView!
+    @IBOutlet weak var tournamentImageView: UIWebView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var participantsCountLabel: UILabel!
     @IBOutlet weak var teamsCountLabel: UILabel!
-    
-    override func layoutSubviews() {
-        let imageLayer = tournamentImageView.layer
-        imageLayer.cornerRadius = tournamentImageView.frame.size.height/2
-        imageLayer.masksToBounds = true
-    }
     
     func updateUI() {
         //reset any existing activity information
@@ -37,7 +30,7 @@ class TournamentCollectionViewCell: UICollectionViewCell {
         //load new information from our activity
         if let tournament = self.tournament {
             let url = NSURL(string: tournament.imageURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!
-            tournamentImageView.sd_setImageWithURL(url)
+            tournamentImageView.loadRequest(NSURLRequest(URL: url))
             
             nameLabel.text = tournament.name
             participantsCountLabel.text = "\(tournament.participantsCount)"
