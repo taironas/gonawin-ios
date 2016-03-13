@@ -18,7 +18,7 @@
 ##### Teams
 - [x] getTeams
 - [ ] createTeam
-- [ ] getTeams
+- [x] getTeam
 - [ ] updateamTeam
 - [ ] deleteTeam
 - [ ] getTeamMembers

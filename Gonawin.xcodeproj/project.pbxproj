@@ -16,12 +16,15 @@
 		143495301ACF2DFF0005C86B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1434952F1ACF2DFF0005C86B /* Error.swift */; };
 		1436CD7F1C9363A800B66777 /* TournamentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1436CD7E1C9363A800B66777 /* TournamentCollectionViewCell.swift */; };
 		143E96821AE3E2EB00E39EF4 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 143E96811AE3E2EB00E39EF4 /* FontAwesome.otf */; };
+		14415DE31C9474BD000757E3 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14415DE21C9474BD000757E3 /* TeamViewController.swift */; };
 		1484E2E81C8C5EFB00A2170C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1484E2E71C8C5EFB00A2170C /* Launch Screen.storyboard */; };
 		14875BF2199D2443005791D0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14875BF1199D2443005791D0 /* LoginViewController.swift */; };
 		14B40D3D1C904ACE00765325 /* TeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B40D3C1C904ACE00765325 /* TeamCollectionViewCell.swift */; };
 		14B484DF1ABE0327000E3BA6 /* FacebookLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B484DE1ABE0327000E3BA6 /* FacebookLogin.swift */; };
 		14B484E11ABE04FD000E3BA6 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B484E01ABE04FD000E3BA6 /* Social.framework */; };
 		14B484E31ABE24EB000E3BA6 /* TwitterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B484E21ABE24EB000E3BA6 /* TwitterLogin.swift */; };
+		14D2EB091C9569BC00AEC603 /* TeamMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D2EB081C9569BC00AEC603 /* TeamMemberTableViewCell.swift */; };
+		14D2EB0B1C9569D100AEC603 /* TeamTournamentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D2EB0A1C9569D100AEC603 /* TeamTournamentTableViewCell.swift */; };
 		14D7F54419A25FB60020D51A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 14D7F54319A25FB60020D51A /* Podfile */; };
 		14F1842619C77C2D00437C59 /* GonawinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1842519C77C2D00437C59 /* GonawinController.swift */; };
 		14F1C74B19C4E67C00CA8975 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1C74A19C4E67C00CA8975 /* Functional.swift */; };
@@ -71,6 +74,7 @@
 		1434952F1ACF2DFF0005C86B /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		1436CD7E1C9363A800B66777 /* TournamentCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentCollectionViewCell.swift; sourceTree = "<group>"; };
 		143E96811AE3E2EB00E39EF4 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = ../../Pods/FontAwesomeKit/FontAwesomeKit/FontAwesome.otf; sourceTree = "<group>"; };
+		14415DE21C9474BD000757E3 /* TeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
 		1484E2E71C8C5EFB00A2170C /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		14875BF1199D2443005791D0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		148BBE721AB4D8030073F9EF /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../../Bridging-Header.h"; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 		14B484DE1ABE0327000E3BA6 /* FacebookLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLogin.swift; sourceTree = "<group>"; };
 		14B484E01ABE04FD000E3BA6 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		14B484E21ABE24EB000E3BA6 /* TwitterLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterLogin.swift; sourceTree = "<group>"; };
+		14D2EB081C9569BC00AEC603 /* TeamMemberTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamMemberTableViewCell.swift; sourceTree = "<group>"; };
+		14D2EB0A1C9569D100AEC603 /* TeamTournamentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTournamentTableViewCell.swift; sourceTree = "<group>"; };
 		14D7F54319A25FB60020D51A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		14F1842519C77C2D00437C59 /* GonawinController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GonawinController.swift; sourceTree = "<group>"; };
 		14F1C74A19C4E67C00CA8975 /* Functional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Functional.swift; path = ../FunctionalNetworking/Functional.swift; sourceTree = "<group>"; };
@@ -178,6 +184,9 @@
 			children = (
 				14F5905E1999008600F03D43 /* TeamsViewController.swift */,
 				14B40D3C1C904ACE00765325 /* TeamCollectionViewCell.swift */,
+				14415DE21C9474BD000757E3 /* TeamViewController.swift */,
+				14D2EB081C9569BC00AEC603 /* TeamMemberTableViewCell.swift */,
+				14D2EB0A1C9569D100AEC603 /* TeamTournamentTableViewCell.swift */,
 			);
 			name = Teams;
 			sourceTree = "<group>";
@@ -435,8 +444,11 @@
 				14F87A6E1998EBE400A6EB11 /* TournamentsViewController.swift in Sources */,
 				14F5905F1999008600F03D43 /* TeamsViewController.swift in Sources */,
 				14F7682B1C89C47F00AAF4D8 /* GonawinSession.swift in Sources */,
+				14D2EB0B1C9569D100AEC603 /* TeamTournamentTableViewCell.swift in Sources */,
 				14F59061199900B400F03D43 /* ProfileViewController.swift in Sources */,
+				14415DE31C9474BD000757E3 /* TeamViewController.swift in Sources */,
 				14F87A6A1998EBE400A6EB11 /* AppDelegate.swift in Sources */,
+				14D2EB091C9569BC00AEC603 /* TeamMemberTableViewCell.swift in Sources */,
 				14B40D3D1C904ACE00765325 /* TeamCollectionViewCell.swift in Sources */,
 				14B484E31ABE24EB000E3BA6 /* TwitterLogin.swift in Sources */,
 				14F87A6C1998EBE400A6EB11 /* ActivitiesViewController.swift in Sources */,

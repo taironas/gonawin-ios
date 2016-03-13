@@ -60,4 +60,14 @@ final public class User: JSONAble {
         
         return User(id: id, email: email, username: username, name: name, alias: alias, auth: auth, predictIds: predictIds, archivedPredictIds: archivedPredictIds, tournamentIds: tournamentIds, archivedTournamentIds: archivedTournamentIds, teamIds: teamIds, score: score, scoreOfTournaments: scoreOfTournaments, activityIds: activityIds, imageURL: imageURL)
     }
+    
+    static func fromJSON(json: JSON) -> User {
+        let id  = json["Id"].int64Value
+        let username = json["Username"].stringValue
+        let alias = json["Alias"].stringValue
+        let score = json["Score"].int64Value
+        let imageURL = json["ImageURL"].stringValue
+        
+        return User(id: id, email: "", username: username, name: "", alias: alias, auth: "", score: score, imageURL: imageURL)
+    }
 }

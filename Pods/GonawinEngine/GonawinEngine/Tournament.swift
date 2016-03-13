@@ -28,6 +28,10 @@ final public class Tournament: JSONAble {
     static func fromJSON(json: JSONDictionary) -> Tournament {
         let json = JSON(json)
         
+        return fromJSON(json)
+    }
+    
+    static func fromJSON(json: JSON) -> Tournament {
         let id  = json["Id"].int64Value
         let name = json["Name"].stringValue
         let participantsCount = json["ParticipantsCount"].int64Value

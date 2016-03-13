@@ -23,10 +23,7 @@ class TeamsViewController: UICollectionViewController {
         if let authorizationToken = GonawinSession.session.authorizationToken {
             provider = GonawinEngine.newAuthorizedGonawinEngine(authorizationToken)
         }
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
+        
         currentPage = 1
         
         self.provider?.getTeams(currentPage, count: 20)
@@ -74,4 +71,17 @@ class TeamsViewController: UICollectionViewController {
         return cell
     }
 
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("showTeam", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showTeam"{
+            if let vc = segue.destinationViewController as? TeamViewController {
+                if let teamIndex = collectionView?.indexPathsForSelectedItems()?[0].row {
+                    vc.teamID = teams[teamIndex].id
+                }
+            }
+        }
+    }
 }

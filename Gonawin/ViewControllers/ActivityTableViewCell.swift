@@ -148,21 +148,21 @@ class ActivityTableViewCell: UITableViewCell {
         if let activityType = ActivityType(rawValue: activity.type) {
             switch activityType {
             case .Welcome:
-                icon = FAKFontAwesome.checkIconWithSize(10)
+                icon = FAKFontAwesome.checkIconWithSize(15)
             case .Team:
-                icon = FAKFontAwesome.usersIconWithSize(10)
+                icon = FAKFontAwesome.usersIconWithSize(15)
             case .Tournament:
-                icon = FAKFontAwesome.trophyIconWithSize(10)
+                icon = FAKFontAwesome.trophyIconWithSize(15)
             case .Match:
-                icon = FAKFontAwesome.compressIconWithSize(10)
+                icon = FAKFontAwesome.compressIconWithSize(15)
             case .Accuracy:
-                icon = FAKFontAwesome.barChartIconWithSize(10)
+                icon = FAKFontAwesome.barChartIconWithSize(15)
             case .Predict:
-                icon = FAKFontAwesome.crosshairsIconWithSize(10)
+                icon = FAKFontAwesome.crosshairsIconWithSize(15)
             case .Score:
-                icon = FAKFontAwesome.listIconWithSize(10)
+                icon = FAKFontAwesome.listIconWithSize(15)
             case .Invitation:
-                icon = FAKFontAwesome.bullhornIconWithSize(10)
+                icon = FAKFontAwesome.bullhornIconWithSize(15)
             }
         }
         else {
@@ -171,7 +171,7 @@ class ActivityTableViewCell: UITableViewCell {
         }
         
         icon.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor())
-        return icon.imageWithSize(CGSizeMake(25,25))
+        return icon.imageWithSize(CGSizeMake(30, 30))
     }
     
     private func publishedFromNow(published: String) -> String {
