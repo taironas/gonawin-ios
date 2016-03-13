@@ -84,4 +84,28 @@ class TeamsViewController: UICollectionViewController {
             }
         }
     }
+    
+    override func scrollViewWillBeginDecelerating(scrollView: UIScrollView) {
+        // scroll to bottom
+        let currentOffset = scrollView.contentOffset.y
+        let distanceFromBottom = scrollView.contentSize.height - currentOffset
+        let height = scrollView.frame.size.height
+        if distanceFromBottom < height {
+            currentPage = currentPage + 1
+            
+            self.provider?.getTeams(currentPage, count: 20)
+                .debug()
+                .catchError({ error in
+                    showError(self, error: error)
+                    return Observable.empty()
+                })
+                .subscribeNext {
+                    if $0.count > 0 {
+                        self.teams.appendContentsOf($0)
+                        self.collectionView?.reloadData()
+                    }
+                }
+                .addDisposableTo(self.disposeBag)
+        }
+    }
 }
