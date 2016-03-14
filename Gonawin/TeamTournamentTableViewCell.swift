@@ -27,7 +27,7 @@ class TeamTournamentTableViewCell: TeamMemberTableViewCell {
         
         //load new information from our user
         if let tournament = self.tournament {
-            let url = NSURL(string: (tournament.imageURL + "&size=160").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!
+            let url = NSURL(string: (tournament.imageURL + "&size=150").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!
             teamImageView.loadRequest(NSURLRequest(URL: url))
             
             teamTitlelabel.text = tournament.name

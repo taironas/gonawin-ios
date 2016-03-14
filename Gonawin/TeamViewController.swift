@@ -28,6 +28,12 @@ class TeamViewController: UITableViewController {
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+    private enum SegmentedControlState: Int {
+        case Members = 0
+        case Tournaments = 1
+        case Leaderboard = 2
+    }
+    
     private let disposeBag = DisposeBag()
     private var provider: AuthorizedGonawinEngine?
     
@@ -71,6 +77,8 @@ class TeamViewController: UITableViewController {
             }
             
             navigationItem.title = team.name
+            
+            tableView.reloadData()
         }
     }
     
@@ -80,11 +88,9 @@ class TeamViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch(segmentedControl.selectedSegmentIndex) {
-        case 0:
-            return 0
-        case 1:
+        case SegmentedControlState.Members.rawValue:
             return team?.members?.count ?? 0
-        case 2:
+        case SegmentedControlState.Tournaments.rawValue:
             return team?.tournaments?.count ?? 0
         default:
             return 0
@@ -94,7 +100,7 @@ class TeamViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         switch(segmentedControl.selectedSegmentIndex) {
-        case 2:
+        case SegmentedControlState.Tournaments.rawValue:
             let cell = tableView.dequeueReusableCellWithIdentifier("TeamTournamentCell", forIndexPath: indexPath) as! TeamTournamentTableViewCell
             cell.tournament = team?.tournaments?[indexPath.row]
             return cell

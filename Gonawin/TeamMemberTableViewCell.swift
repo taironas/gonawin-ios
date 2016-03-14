@@ -35,7 +35,7 @@ class TeamMemberTableViewCell: UITableViewCell {
         
         //load new information from our user
         if let member = self.member {
-            let url = NSURL(string: (member.imageURL + "&size=170").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!
+            let url = NSURL(string: (member.imageURL + "&size=150").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!
             teamImageView.loadRequest(NSURLRequest(URL: url))
             
             teamTitlelabel.text = member.username
