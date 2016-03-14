@@ -23,6 +23,7 @@
 		14B484DF1ABE0327000E3BA6 /* FacebookLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B484DE1ABE0327000E3BA6 /* FacebookLogin.swift */; };
 		14B484E11ABE04FD000E3BA6 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B484E01ABE04FD000E3BA6 /* Social.framework */; };
 		14B484E31ABE24EB000E3BA6 /* TwitterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B484E21ABE24EB000E3BA6 /* TwitterLogin.swift */; };
+		14D2BC4A1C96B9FE00602838 /* TeamLeaderboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D2BC491C96B9FE00602838 /* TeamLeaderboardTableViewCell.swift */; };
 		14D2EB091C9569BC00AEC603 /* TeamMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D2EB081C9569BC00AEC603 /* TeamMemberTableViewCell.swift */; };
 		14D2EB0B1C9569D100AEC603 /* TeamTournamentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D2EB0A1C9569D100AEC603 /* TeamTournamentTableViewCell.swift */; };
 		14D7F54419A25FB60020D51A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 14D7F54319A25FB60020D51A /* Podfile */; };
@@ -82,6 +83,7 @@
 		14B484DE1ABE0327000E3BA6 /* FacebookLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLogin.swift; sourceTree = "<group>"; };
 		14B484E01ABE04FD000E3BA6 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		14B484E21ABE24EB000E3BA6 /* TwitterLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterLogin.swift; sourceTree = "<group>"; };
+		14D2BC491C96B9FE00602838 /* TeamLeaderboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamLeaderboardTableViewCell.swift; sourceTree = "<group>"; };
 		14D2EB081C9569BC00AEC603 /* TeamMemberTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamMemberTableViewCell.swift; sourceTree = "<group>"; };
 		14D2EB0A1C9569D100AEC603 /* TeamTournamentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTournamentTableViewCell.swift; sourceTree = "<group>"; };
 		14D7F54319A25FB60020D51A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -187,6 +189,7 @@
 				14415DE21C9474BD000757E3 /* TeamViewController.swift */,
 				14D2EB081C9569BC00AEC603 /* TeamMemberTableViewCell.swift */,
 				14D2EB0A1C9569D100AEC603 /* TeamTournamentTableViewCell.swift */,
+				14D2BC491C96B9FE00602838 /* TeamLeaderboardTableViewCell.swift */,
 			);
 			name = Teams;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				14F59061199900B400F03D43 /* ProfileViewController.swift in Sources */,
 				14415DE31C9474BD000757E3 /* TeamViewController.swift in Sources */,
 				14F87A6A1998EBE400A6EB11 /* AppDelegate.swift in Sources */,
+				14D2BC4A1C96B9FE00602838 /* TeamLeaderboardTableViewCell.swift in Sources */,
 				14D2EB091C9569BC00AEC603 /* TeamMemberTableViewCell.swift in Sources */,
 				14B40D3D1C904ACE00765325 /* TeamCollectionViewCell.swift in Sources */,
 				14B484E31ABE24EB000E3BA6 /* TwitterLogin.swift in Sources */,

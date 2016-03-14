@@ -88,25 +88,28 @@ class TeamViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch(segmentedControl.selectedSegmentIndex) {
-        case SegmentedControlState.Members.rawValue:
-            return team?.members?.count ?? 0
         case SegmentedControlState.Tournaments.rawValue:
             return team?.tournaments?.count ?? 0
         default:
-            return 0
+            return team?.members?.count ?? 0
         }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         switch(segmentedControl.selectedSegmentIndex) {
+        case SegmentedControlState.Members.rawValue:
+            let cell = tableView.dequeueReusableCellWithIdentifier("TeamMemberCell", forIndexPath: indexPath) as! TeamMemberTableViewCell
+            cell.member = team?.members?[indexPath.row]
+            return cell
         case SegmentedControlState.Tournaments.rawValue:
             let cell = tableView.dequeueReusableCellWithIdentifier("TeamTournamentCell", forIndexPath: indexPath) as! TeamTournamentTableViewCell
             cell.tournament = team?.tournaments?[indexPath.row]
             return cell
         default:
-            let cell = tableView.dequeueReusableCellWithIdentifier("TeamMemberCell", forIndexPath: indexPath) as! TeamMemberTableViewCell
-            cell.member = team?.members?[indexPath.row]
+            let cell = tableView.dequeueReusableCellWithIdentifier("TeamLeaderboardCell", forIndexPath: indexPath) as! TeamLeaderboardTableViewCell
+            cell.member = team?.members?.sort{$0.score > $1.score}[indexPath.row]
+            cell.teamRankinglabel.text = "\(indexPath.row + 1)"
             return cell
         }
     }
