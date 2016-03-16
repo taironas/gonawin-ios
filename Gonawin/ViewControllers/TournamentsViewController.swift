@@ -57,7 +57,7 @@ class TournamentsViewController: UICollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("TournamentCell", forIndexPath: indexPath) as! TournamentCollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(CollectionViewCellIdentifier.Tournament.rawValue, forIndexPath: indexPath) as! TournamentCollectionViewCell
         
         cell.tournament = tournaments[indexPath.row]
         
@@ -70,6 +70,20 @@ class TournamentsViewController: UICollectionViewController {
         //        cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).CGPath;
         
         return cell
+    }
+    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("showTournament", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showTournament"{
+            if let vc = segue.destinationViewController as? TournamentViewController {
+                if let tournamentIndex = collectionView?.indexPathsForSelectedItems()?[0].row {
+                    vc.tournamentID = tournaments[tournamentIndex].id
+                }
+            }
+        }
     }
     
 }

@@ -22,6 +22,7 @@ public enum GonawinAuthenticatedAPI {
     case Teams(Int, Int)
     case Team(Int)
     case Tournaments(Int, Int)
+    case Tournament(Int)
 }
 
 extension GonawinAPI: TargetType, GonawinAPIType {
@@ -81,6 +82,8 @@ extension GonawinAuthenticatedAPI: TargetType, GonawinAPIType {
             return "/teams/show/\(id)"
         case .Tournaments:
             return "/tournaments"
+        case .Tournament(let id):
+            return "/tournaments/show/\(id)"
         }
     }
     
@@ -116,6 +119,8 @@ extension GonawinAuthenticatedAPI: TargetType, GonawinAPIType {
             return stubbedResponse("Team")
         case .Tournaments:
             return stubbedResponse("Tournaments")
+        case .Tournament:
+            return stubbedResponse("Tournament")
         }
     }
     

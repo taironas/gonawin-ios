@@ -36,6 +36,11 @@ final public class Team: JSONAble {
     static func fromJSON(json: JSONDictionary) -> Team {
         let json = JSON(json)
         
+        return fromJSON(json)
+    }
+    
+    static func fromJSON(json: JSON) -> Team {
+        
         if json["Team"].isExists() {
             let jsonTeam = json["Team"]
             

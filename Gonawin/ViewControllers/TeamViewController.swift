@@ -99,17 +99,17 @@ class TeamViewController: UITableViewController {
         
         switch(segmentedControl.selectedSegmentIndex) {
         case SegmentedControlState.Members.rawValue:
-            let cell = tableView.dequeueReusableCellWithIdentifier("TeamMemberCell", forIndexPath: indexPath) as! TeamMemberTableViewCell
-            cell.member = team?.members?[indexPath.row]
+            let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifier.User.rawValue, forIndexPath: indexPath) as! UserTableViewCell
+            cell.user = team?.members?[indexPath.row]
             return cell
         case SegmentedControlState.Tournaments.rawValue:
-            let cell = tableView.dequeueReusableCellWithIdentifier("TeamTournamentCell", forIndexPath: indexPath) as! TeamTournamentTableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifier.Tournament.rawValue, forIndexPath: indexPath) as! TournamentTableViewCell
             cell.tournament = team?.tournaments?[indexPath.row]
             return cell
         default:
-            let cell = tableView.dequeueReusableCellWithIdentifier("TeamLeaderboardCell", forIndexPath: indexPath) as! TeamLeaderboardTableViewCell
-            cell.member = team?.members?.sort{$0.score > $1.score}[indexPath.row]
-            cell.teamRankinglabel.text = "\(indexPath.row + 1)"
+            let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifier.Ranking.rawValue, forIndexPath: indexPath) as! UserRankingTableViewCell
+            cell.user = team?.members?.sort{$0.score > $1.score}[indexPath.row]
+            cell.rankinglabel.text = "\(indexPath.row + 1)"
             return cell
         }
     }

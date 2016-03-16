@@ -19,14 +19,13 @@
 - [x] getTeams
 - [ ] createTeam
 - [x] getTeam
-- [ ] updateamTeam
+- [ ] updateTeam
 - [ ] deleteTeam
-- [ ] getTeamMembers
-- [ ] getTeamRanking
 - [ ] getTeamAccuracies
 
 #### Tournaments
 - [x] getTournaments
+- [x] getTournament
 - [ ] getTournamentCandidateTeams
 - [ ] getTournamentParticipants
 - [ ] getTournamentCalendar

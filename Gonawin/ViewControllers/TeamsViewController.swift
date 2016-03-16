@@ -56,7 +56,7 @@ class TeamsViewController: UICollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("TeamCell", forIndexPath: indexPath) as! TeamCollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(CollectionViewCellIdentifier.Team.rawValue, forIndexPath: indexPath) as! TeamCollectionViewCell
         
         cell.team = teams[indexPath.row]
         

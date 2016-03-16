@@ -269,7 +269,7 @@
                             <inset key="sectionInset" minX="20" minY="8" maxX="20" maxY="8"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TournamentCell" id="vnu-af-xvL" customClass="TournamentCollectionViewCell" customModule="Gonawin" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TournamentCollectionViewCell" id="vnu-af-xvL" customClass="TournamentCollectionViewCell" customModule="Gonawin" customModuleProvider="target">
                                 <rect key="frame" x="20" y="72" width="150" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -358,6 +358,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Tournaments" id="NhE-Tu-yur"/>
+                    <connections>
+                        <segue destination="AyG-JD-gih" kind="show" identifier="showTournament" id="12n-xb-9jv"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFJ-pa-paS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -378,7 +381,7 @@
                             <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="8"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TeamCell" id="BhV-3s-4K7" customClass="TeamCollectionViewCell" customModule="Gonawin" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TeamCollectionViewCell" id="BhV-3s-4K7" customClass="TeamCollectionViewCell" customModule="Gonawin" customModuleProvider="target">
                                 <rect key="frame" x="8" y="72" width="110" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -457,6 +460,137 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Km3-Sh-4gq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="892" y="1562"/>
+        </scene>
+        <!--Tournament View Controller-->
+        <scene sceneID="4od-b8-c4f">
+            <objects>
+                <tableViewController id="AyG-JD-gih" customClass="TournamentViewController" customModule="Gonawin" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bnd-78-lvO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="phc-dx-dnb">
+                            <rect key="frame" x="0.0" y="64" width="600" height="225"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <webView userInteractionEnabled="NO" contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jer-ur-if6">
+                                    <rect key="frame" x="271" y="10" width="58" height="58"/>
+                                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="58" id="Rkk-uu-LWp"/>
+                                        <constraint firstAttribute="height" constant="58" id="hPK-Nr-Dga"/>
+                                    </constraints>
+                                </webView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCa-s9-yeF">
+                                    <rect key="frame" x="10" y="78" width="580" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hid-E2-oiL">
+                                    <rect key="frame" x="8" y="107" width="582" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="NpQ-yT-3fG">
+                                    <rect key="frame" x="10" y="134" width="580" height="32"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BnK-t4-fxY">
+                                            <rect key="frame" x="0.0" y="0.0" width="290" height="32"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Participants" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oip-rH-c9I">
+                                                    <rect key="frame" x="111" y="0.0" width="68" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="0.62745098040000002" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pra-gS-iVn">
+                                                    <rect key="frame" x="137" y="15" width="17" height="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="0.62745098040000002" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nbZ-1i-2Ic">
+                                            <rect key="frame" x="290" y="0.0" width="290" height="32"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teams" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jhv-io-W0p">
+                                                    <rect key="frame" x="127" y="0.0" width="37" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="0.62745098040000002" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5r-6U-xAN">
+                                                    <rect key="frame" x="137" y="15" width="17" height="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="0.62745098040000002" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="20f-Au-5qr">
+                                    <rect key="frame" x="10" y="186" width="580" height="30"/>
+                                    <segments>
+                                        <segment title="Participants"/>
+                                        <segment title="Teams"/>
+                                        <segment title="Leaderboard"/>
+                                    </segments>
+                                    <color key="tintColor" red="1" green="0.62745098040000002" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="segmentedControlValueChanged" destination="AyG-JD-gih" eventType="valueChanged" id="oG0-rW-bP2"/>
+                                    </connections>
+                                </segmentedControl>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="jer-ur-if6" firstAttribute="centerX" secondItem="phc-dx-dnb" secondAttribute="centerX" id="DBt-N8-2F2"/>
+                                <constraint firstItem="dCa-s9-yeF" firstAttribute="leading" secondItem="phc-dx-dnb" secondAttribute="leading" constant="10" id="EkV-Gs-PzL"/>
+                                <constraint firstAttribute="trailing" secondItem="dCa-s9-yeF" secondAttribute="trailing" constant="10" id="Fmb-Fw-Ise"/>
+                                <constraint firstItem="dCa-s9-yeF" firstAttribute="top" secondItem="jer-ur-if6" secondAttribute="bottom" constant="10" id="I18-CW-5Xz"/>
+                                <constraint firstAttribute="trailing" secondItem="NpQ-yT-3fG" secondAttribute="trailing" constant="10" id="M4f-Ki-75y"/>
+                                <constraint firstItem="jer-ur-if6" firstAttribute="top" secondItem="phc-dx-dnb" secondAttribute="top" constant="10" id="Mc7-NB-ccY"/>
+                                <constraint firstAttribute="trailing" secondItem="20f-Au-5qr" secondAttribute="trailing" constant="10" id="VRj-GM-8jB"/>
+                                <constraint firstItem="20f-Au-5qr" firstAttribute="leading" secondItem="phc-dx-dnb" secondAttribute="leading" constant="10" id="Vjg-d8-wZY"/>
+                                <constraint firstItem="hid-E2-oiL" firstAttribute="top" secondItem="dCa-s9-yeF" secondAttribute="bottom" constant="8" symbolic="YES" id="ZzC-Mv-hRj"/>
+                                <constraint firstAttribute="bottom" secondItem="20f-Au-5qr" secondAttribute="bottom" constant="10" id="baL-Mp-I8y"/>
+                                <constraint firstItem="20f-Au-5qr" firstAttribute="top" secondItem="NpQ-yT-3fG" secondAttribute="bottom" constant="20" id="cRZ-aK-2wI"/>
+                                <constraint firstItem="hid-E2-oiL" firstAttribute="leading" secondItem="phc-dx-dnb" secondAttribute="leading" constant="8" id="fAb-bs-A1H"/>
+                                <constraint firstItem="NpQ-yT-3fG" firstAttribute="leading" secondItem="phc-dx-dnb" secondAttribute="leading" constant="10" id="gEG-KA-jst"/>
+                                <constraint firstItem="NpQ-yT-3fG" firstAttribute="top" secondItem="hid-E2-oiL" secondAttribute="bottom" constant="10" id="kAJ-zc-dYz"/>
+                                <constraint firstAttribute="trailing" secondItem="hid-E2-oiL" secondAttribute="trailing" constant="10" id="wdg-00-v5Q"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Gqn-xT-aM0">
+                                <rect key="frame" x="0.0" y="317" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gqn-xT-aM0" id="hj9-59-pN5">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="AyG-JD-gih" id="i7v-ts-SDT"/>
+                            <outlet property="delegate" destination="AyG-JD-gih" id="CxJ-bh-gIA"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="datesLabel" destination="hid-E2-oiL" id="n4t-w9-V7b"/>
+                        <outlet property="nameLabel" destination="dCa-s9-yeF" id="um0-qj-cby"/>
+                        <outlet property="participantsLabel" destination="Pra-gS-iVn" id="o79-nF-ege"/>
+                        <outlet property="segmentedControl" destination="20f-Au-5qr" id="V2g-aQ-xAn"/>
+                        <outlet property="teamsLabel" destination="o5r-6U-xAN" id="ne4-jh-zPj"/>
+                        <outlet property="tournamentImageView" destination="jer-ur-if6" id="ZX0-jW-cRc"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1TB-nG-Yku" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="2328"/>
         </scene>
         <!--Team View Controller-->
         <scene sceneID="M0d-1j-Uz9">
@@ -570,7 +704,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeamMemberCell" id="Zat-Wm-oAt" customClass="TeamMemberTableViewCell" customModule="Gonawin" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserTableViewCell" id="Zat-Wm-oAt" customClass="UserTableViewCell" customModule="Gonawin" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="292" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zat-Wm-oAt" id="kYn-1l-PVX">
@@ -639,12 +773,12 @@
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="teamImageView" destination="iUA-dG-7uM" id="jh7-1u-tXa"/>
-                                    <outlet property="teamSubtitleLabel" destination="EzE-wt-EsO" id="7C6-mz-Omi"/>
-                                    <outlet property="teamTitlelabel" destination="vzW-O7-D79" id="5tA-Xz-f5v"/>
+                                    <outlet property="userImageView" destination="iUA-dG-7uM" id="GvT-nN-1cI"/>
+                                    <outlet property="userNamelabel" destination="vzW-O7-D79" id="BQ5-lQ-eR1"/>
+                                    <outlet property="userScoreLabel" destination="EzE-wt-EsO" id="EEb-hy-a6I"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeamTournamentCell" id="zo1-Uy-IDz" customClass="TeamTournamentTableViewCell" customModule="Gonawin" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TournamentTableViewCell" id="zo1-Uy-IDz" customClass="TournamentTableViewCell" customModule="Gonawin" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="336" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zo1-Uy-IDz" id="dlS-8c-xnT">
@@ -731,13 +865,13 @@
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="teamImageView" destination="9Ca-vt-9oh" id="wpq-9s-eZb"/>
-                                    <outlet property="teamSubtitle2label" destination="JsP-9V-nP5" id="DhC-SX-wsQ"/>
-                                    <outlet property="teamSubtitleLabel" destination="lWO-Zm-gip" id="jHg-wk-z9M"/>
-                                    <outlet property="teamTitlelabel" destination="Fva-EL-bhO" id="fnZ-bx-ka4"/>
+                                    <outlet property="participantsCountLabel" destination="lWO-Zm-gip" id="Xtc-oG-wiy"/>
+                                    <outlet property="teamsCountlabel" destination="JsP-9V-nP5" id="JJF-Iu-Gwt"/>
+                                    <outlet property="tournamentImageView" destination="9Ca-vt-9oh" id="1Ue-Ca-NJh"/>
+                                    <outlet property="tournamentNamelabel" destination="Fva-EL-bhO" id="RR4-BA-pIm"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeamLeaderboardCell" id="v4Y-Vv-W2R" customClass="TeamLeaderboardTableViewCell" customModule="Gonawin" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RankingTableViewCell" id="v4Y-Vv-W2R" customClass="UserRankingTableViewCell" customModule="Gonawin" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="380" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v4Y-Vv-W2R" id="KxI-Pm-1N5">
@@ -828,10 +962,10 @@
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="teamImageView" destination="V1F-vE-FCg" id="fan-w9-XZD"/>
-                                    <outlet property="teamRankinglabel" destination="F05-CK-vYC" id="r5O-4k-b7q"/>
-                                    <outlet property="teamSubtitleLabel" destination="qkG-hI-4E4" id="tbZ-2v-67c"/>
-                                    <outlet property="teamTitlelabel" destination="cla-OU-F06" id="3Mb-tM-gOX"/>
+                                    <outlet property="rankinglabel" destination="F05-CK-vYC" id="tYK-Lq-nte"/>
+                                    <outlet property="userImageView" destination="V1F-vE-FCg" id="2qG-gR-DAa"/>
+                                    <outlet property="userNamelabel" destination="cla-OU-F06" id="kEA-g0-RLM"/>
+                                    <outlet property="userScoreLabel" destination="qkG-hI-4E4" id="SLO-cz-rgH"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1159,6 +1293,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i3O-Oy-0Ah" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2352" y="-18"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="L82-on-YKZ">
+            <objects>
+                <viewController id="p9d-YQ-g72" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fil-EE-PUq"/>
+                        <viewControllerLayoutGuide type="bottom" id="vgo-PE-l76"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ncF-iq-iRz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VgT-wa-QVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
