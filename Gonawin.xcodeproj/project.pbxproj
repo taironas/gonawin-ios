@@ -137,12 +137,12 @@
 		140E243B1A911D9B0041E36A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				14C15F1B1C99546A009B1E8D /* TeamViewController.swift */,
-				14C15F1C1C99546A009B1E8D /* TournamentViewController.swift */,
 				14F1842519C77C2D00437C59 /* GonawinController.swift */,
 				14F87A6B1998EBE400A6EB11 /* ActivitiesViewController.swift */,
 				14F5905E1999008600F03D43 /* TeamsViewController.swift */,
+				14C15F1B1C99546A009B1E8D /* TeamViewController.swift */,
 				14F87A6D1998EBE400A6EB11 /* TournamentsViewController.swift */,
+				14C15F1C1C99546A009B1E8D /* TournamentViewController.swift */,
 				14875BF1199D2443005791D0 /* LoginViewController.swift */,
 				14F59060199900B400F03D43 /* ProfileViewController.swift */,
 			);
@@ -174,14 +174,14 @@
 		14CD9D061C9808AF0057D2E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				14C15F171C99544F009B1E8D /* ActivityTableViewCell.swift */,
 				14C15F181C99544F009B1E8D /* CellIdentifier.swift */,
-				14C15F0B1C99541B009B1E8D /* TeamCollectionViewCell.swift */,
+				14C15F171C99544F009B1E8D /* ActivityTableViewCell.swift */,
 				14C15F0C1C99541B009B1E8D /* TeamTableViewCell.swift */,
-				14C15F0D1C99541B009B1E8D /* TournamentCollectionViewCell.swift */,
 				14C15F0E1C99541B009B1E8D /* TournamentTableViewCell.swift */,
-				14C15F0F1C99541B009B1E8D /* UserRankingTableViewCell.swift */,
 				14C15F101C99541B009B1E8D /* UserTableViewCell.swift */,
+				14C15F0F1C99541B009B1E8D /* UserRankingTableViewCell.swift */,
+				14C15F0B1C99541B009B1E8D /* TeamCollectionViewCell.swift */,
+				14C15F0D1C99541B009B1E8D /* TournamentCollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
