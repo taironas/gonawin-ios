@@ -42,7 +42,6 @@
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s8q-EG-eZK" customClass="UIImageView">
                                             <rect key="frame" x="10" y="10" width="30" height="30"/>
-                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="25" id="4nE-TP-O6e"/>
                                                 <constraint firstAttribute="width" constant="25" id="89H-JE-vH5"/>

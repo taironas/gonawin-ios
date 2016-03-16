@@ -24,12 +24,6 @@ class ActivityTableViewCell: UITableViewCell {
     
     let dateFormatter = NSDateFormatter()
     
-    override func layoutSubviews() {
-        let imageLayer = activityIconView.layer
-        imageLayer.cornerRadius = activityIconView.frame.size.height/2
-        imageLayer.masksToBounds = true
-    }
-    
     func updateUI() {
         //reset any existing activity information
         activityContent?.text = nil
@@ -37,7 +31,6 @@ class ActivityTableViewCell: UITableViewCell {
         
         //load new information from our activity
         if let activity = self.activity {
-            activityIconView.backgroundColor = activityIconViewBackgroundColor(activity)
             activityIconView.image = activityIconViewImage(activity)
             activityContent?.attributedText = builActivityContent(activity)
             activityTime?.text = publishedFromNow(activity.published)
@@ -118,7 +111,7 @@ class ActivityTableViewCell: UITableViewCell {
         return attributedString
     }
     
-    private func activityIconViewBackgroundColor(activity: Activity) -> UIColor {
+    private func activityIconColor(activity: Activity) -> UIColor {
         if let activityType = ActivityType(rawValue: activity.type) {
             switch activityType {
             case .Welcome:
@@ -143,34 +136,39 @@ class ActivityTableViewCell: UITableViewCell {
         return UIColor(red: 52.0/255.0, green: 79.0/255.0, blue: 219.0/255.0, alpha: 1.0)
     }
     
-    private func activityIconViewImage(activity: Activity) -> UIImage {
-        var icon: FAKFontAwesome
+    private func activityIcon(activity: Activity) -> FAKFontAwesome {
+        let iconSize: CGFloat = 30.0
+        
         if let activityType = ActivityType(rawValue: activity.type) {
+            
             switch activityType {
             case .Welcome:
-                icon = FAKFontAwesome.checkIconWithSize(15)
+                return FAKFontAwesome.checkIconWithSize(iconSize)
             case .Team:
-                icon = FAKFontAwesome.usersIconWithSize(15)
+                return FAKFontAwesome.usersIconWithSize(iconSize)
             case .Tournament:
-                icon = FAKFontAwesome.trophyIconWithSize(15)
+                return FAKFontAwesome.trophyIconWithSize(iconSize)
             case .Match:
-                icon = FAKFontAwesome.compressIconWithSize(15)
+                return FAKFontAwesome.compressIconWithSize(iconSize)
             case .Accuracy:
-                icon = FAKFontAwesome.barChartIconWithSize(15)
+                return FAKFontAwesome.barChartIconWithSize(iconSize)
             case .Predict:
-                icon = FAKFontAwesome.crosshairsIconWithSize(15)
+                return FAKFontAwesome.crosshairsIconWithSize(iconSize)
             case .Score:
-                icon = FAKFontAwesome.listIconWithSize(15)
+                return FAKFontAwesome.listIconWithSize(iconSize)
             case .Invitation:
-                icon = FAKFontAwesome.bullhornIconWithSize(15)
+                return FAKFontAwesome.bullhornIconWithSize(iconSize)
             }
         }
-        else {
-            // default icon
-            icon = FAKFontAwesome.checkIconWithSize(15)
-        }
         
-        icon.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor())
+        return FAKFontAwesome.checkIconWithSize(iconSize)
+    }
+    
+    private func activityIconViewImage(activity: Activity) -> UIImage {
+        let icon = activityIcon(activity)
+        
+        icon.addAttribute(NSForegroundColorAttributeName, value: activityIconColor(activity))
+        
         return icon.imageWithSize(CGSizeMake(30, 30))
     }
     
