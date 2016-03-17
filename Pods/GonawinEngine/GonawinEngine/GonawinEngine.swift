@@ -127,4 +127,14 @@ public struct AuthorizedGonawinEngine: GonawinEngineType {
             .mapJSON()
             .mapToObject(Tournament)
     }
+    
+    public func getTournamentCalendar(id: Int) -> Observable<TournamentCalendar> {
+        
+        let endPoint = GonawinAuthenticatedAPI.TournamentCalendar(id)
+        
+        return provider.request(endPoint)
+            .filterSuccessfulStatusCodes()
+            .mapJSON()
+            .mapToObject(TournamentCalendar)
+    }
 }

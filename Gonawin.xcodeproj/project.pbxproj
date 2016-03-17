@@ -13,6 +13,7 @@
 		142D9D1C1A8EA1C400EFD976 /* GooglePlusAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D9D1B1A8EA1C400EFD976 /* GooglePlusAuthentication.swift */; };
 		142D9D211A8EA2BF00EFD976 /* APIKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 142D9D201A8EA2BF00EFD976 /* APIKeys.plist */; };
 		143495301ACF2DFF0005C86B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1434952F1ACF2DFF0005C86B /* Error.swift */; };
+		143A27371C9AAE5600B5E42A /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A27361C9AAE5600B5E42A /* MatchTableViewCell.swift */; };
 		143E96821AE3E2EB00E39EF4 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 143E96811AE3E2EB00E39EF4 /* FontAwesome.otf */; };
 		14875BF2199D2443005791D0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14875BF1199D2443005791D0 /* LoginViewController.swift */; };
 		14B484DF1ABE0327000E3BA6 /* FacebookLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B484DE1ABE0327000E3BA6 /* FacebookLogin.swift */; };
@@ -74,6 +75,7 @@
 		142D9D1B1A8EA1C400EFD976 /* GooglePlusAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlusAuthentication.swift; sourceTree = "<group>"; };
 		142D9D201A8EA2BF00EFD976 /* APIKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = APIKeys.plist; sourceTree = "<group>"; };
 		1434952F1ACF2DFF0005C86B /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		143A27361C9AAE5600B5E42A /* MatchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchTableViewCell.swift; path = Views/MatchTableViewCell.swift; sourceTree = "<group>"; };
 		143E96811AE3E2EB00E39EF4 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = ../../Pods/FontAwesomeKit/FontAwesomeKit/FontAwesome.otf; sourceTree = "<group>"; };
 		14875BF1199D2443005791D0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		148BBE721AB4D8030073F9EF /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../../Bridging-Header.h"; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				14C15F0F1C99541B009B1E8D /* UserRankingTableViewCell.swift */,
 				14C15F0B1C99541B009B1E8D /* TeamCollectionViewCell.swift */,
 				14C15F0D1C99541B009B1E8D /* TournamentCollectionViewCell.swift */,
+				143A27361C9AAE5600B5E42A /* MatchTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				14C15F151C99541B009B1E8D /* UserRankingTableViewCell.swift in Sources */,
 				14C15F1A1C99544F009B1E8D /* CellIdentifier.swift in Sources */,
 				14875BF2199D2443005791D0 /* LoginViewController.swift in Sources */,
+				143A27371C9AAE5600B5E42A /* MatchTableViewCell.swift in Sources */,
 				14C15F121C99541B009B1E8D /* TeamTableViewCell.swift in Sources */,
 				14C15F131C99541B009B1E8D /* TournamentCollectionViewCell.swift in Sources */,
 				14C15F1D1C99546A009B1E8D /* TeamViewController.swift in Sources */,

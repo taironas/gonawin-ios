@@ -11,6 +11,7 @@ enum TableViewCellIdentifier: String {
     case Team = "TeamTableViewCell"
     case Tournament = "TournamentTableViewCell"
     case Ranking = "RankingTableViewCell"
+    case Match = "MatchTableViewCell"
 }
 
 enum CollectionViewCellIdentifier: String {
