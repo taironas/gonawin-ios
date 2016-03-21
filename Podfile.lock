@@ -22,6 +22,7 @@ PODS:
     - NSData+Base64
   - p2.OAuth2 (2.2.1):
     - SwiftKeychain (~> 0.1.5)
+  - PageMenu (1.2.9)
   - Result (1.0.2)
   - RxSwift (2.2.0)
   - SDWebImage (3.7.5):
@@ -38,6 +39,7 @@ DEPENDENCIES:
   - Locksmith
   - LVTwitterOAuthClient (~> 0.3)
   - p2.OAuth2
+  - PageMenu (~> 1.2.9)
   - SDWebImage (~> 3.7)
   - SwiftyUserDefaults
 
@@ -61,6 +63,7 @@ SPEC CHECKSUMS:
   NSData+Base64: 4e84902c4db907a15673474677e57763ef3903e4
   OAuthCore: 43dce261db846a1fe20234d95654257e00e78581
   p2.OAuth2: 7f5c44259ef83ea5b9ef8f9049310611788f86cb
+  PageMenu: ba19ff267f7a19e444e93c20a7847b78954a7011
   Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16
   RxSwift: b8a749f2204c6c7a5c29b306a9c3bc11d5b87c5b
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
@@ -68,6 +71,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   SwiftyUserDefaults: bd394a09247e3f00e17e402aa535c047c5d12b07
 
-PODFILE CHECKSUM: a8ee19e26d2b69c710c7ea5d82bf666553723356
+PODFILE CHECKSUM: b33029ee5bf24ca2d0078e59359e2b243195d178
 
 COCOAPODS: 1.0.0.beta.5

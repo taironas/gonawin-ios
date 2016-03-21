@@ -10,4 +10,5 @@ target 'Gonawin' do
     pod 'Locksmith'
     pod 'SwiftyUserDefaults'
     pod 'SDWebImage', '~>3.7'
+    pod 'PageMenu', '~> 1.2.9'
 end

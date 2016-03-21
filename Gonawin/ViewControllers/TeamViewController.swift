@@ -9,8 +9,9 @@
 import UIKit
 import GonawinEngine
 import RxSwift
+import PageMenu
 
-class TeamViewController: UITableViewController {
+class TeamViewController: UIViewController {
     
     var teamID: Int64 = 0
     
@@ -26,20 +27,20 @@ class TeamViewController: UITableViewController {
     @IBOutlet weak var membersLabel: UILabel!
     @IBOutlet weak var tournamentsLabel: UILabel!
     
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    private var pageMenu : CAPSPageMenu?
     
-    private enum SegmentedControlState: Int {
-        case Members = 0
-        case Tournaments = 1
-        case Leaderboard = 2
-    }
+    private let membersController = UsersViewController()
+    private let tournamentsController = TournamentsViewController()
+    private let leaderboardController = RankingViewController()
     
     private let disposeBag = DisposeBag()
     private var provider: AuthorizedGonawinEngine?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        setupPageMenu()
+        
         if let authorizationToken = GonawinSession.session.authorizationToken {
             provider = GonawinEngine.newAuthorizedGonawinEngine(authorizationToken)
         }
@@ -52,6 +53,12 @@ class TeamViewController: UITableViewController {
             })
             .subscribeNext {
                 self.team = $0
+                
+                if let members = self.team?.members {
+                    
+                    self.membersController.users = members
+                    self.leaderboardController.users = members.sort{ $0.score > $1.score }
+                }
             }
             .addDisposableTo(self.disposeBag)
     }
@@ -77,40 +84,37 @@ class TeamViewController: UITableViewController {
             }
             
             navigationItem.title = team.name
-            
-            tableView.reloadData()
         }
     }
     
-    @IBAction func segmentedControlValueChanged() {
-        tableView.reloadData()
-    }
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch(segmentedControl.selectedSegmentIndex) {
-        case SegmentedControlState.Tournaments.rawValue:
-            return team?.tournaments?.count ?? 0
-        default:
-            return team?.members?.count ?? 0
-        }
-    }
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    private func setupPageMenu() {
+        var controllerArray : [UIViewController] = []
         
-        switch(segmentedControl.selectedSegmentIndex) {
-        case SegmentedControlState.Members.rawValue:
-            let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifier.User.rawValue, forIndexPath: indexPath) as! UserTableViewCell
-            cell.user = team?.members?[indexPath.row]
-            return cell
-        case SegmentedControlState.Tournaments.rawValue:
-            let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifier.Tournament.rawValue, forIndexPath: indexPath) as! TournamentTableViewCell
-            cell.tournament = team?.tournaments?[indexPath.row]
-            return cell
-        default:
-            let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifier.Ranking.rawValue, forIndexPath: indexPath) as! UserRankingTableViewCell
-            cell.user = team?.members?.sort{$0.score > $1.score}[indexPath.row]
-            cell.rankinglabel.text = "\(indexPath.row + 1)"
-            return cell
-        }
+        membersController.title = "MEMBERS"
+        controllerArray.append(membersController)
+        
+        
+        tournamentsController.title = "TOURNAMENTS"
+        controllerArray.append(tournamentsController)
+        
+        leaderboardController.title = "LEADERBOARD"
+        controllerArray.append(leaderboardController)
+        
+        let parameters: [CAPSPageMenuOption] = [
+            .MenuItemSeparatorWidth(0.0),
+            .UseMenuLikeSegmentedControl(true),
+            .MenuItemSeparatorPercentageHeight(0.1),
+            .SelectionIndicatorColor(UIColor(red: 255.0/255.0, green: 160.0/255.0, blue: 122.0/255.0, alpha: 1.0)),
+            .SelectedMenuItemLabelColor(UIColor(red: 255.0/255.0, green: 160.0/255.0, blue: 122.0/255.0, alpha: 1.0)),
+            .UnselectedMenuItemLabelColor(UIColor.blackColor()),
+            .ScrollMenuBackgroundColor(UIColor.clearColor()),
+            .BottomMenuHairlineColor(UIColor.groupTableViewBackgroundColor()),
+            .MenuItemFont(UIFont.systemFontOfSize(13.0, weight: UIFontWeightMedium)),
+        ]
+        
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 220.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
+        
+        self.view.addSubview(pageMenu!.view)
     }
+    
 }

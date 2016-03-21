@@ -15,14 +15,13 @@
 		143495301ACF2DFF0005C86B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1434952F1ACF2DFF0005C86B /* Error.swift */; };
 		143A27371C9AAE5600B5E42A /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A27361C9AAE5600B5E42A /* MatchTableViewCell.swift */; };
 		143E96821AE3E2EB00E39EF4 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 143E96811AE3E2EB00E39EF4 /* FontAwesome.otf */; };
+		145B4B501C9C51B9007393B1 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 145B4B4E1C9C51B9007393B1 /* UserTableViewCell.xib */; };
+		145B4B5C1C9C56CD007393B1 /* UserRankingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 145B4B5A1C9C56CD007393B1 /* UserRankingTableViewCell.xib */; };
 		14875BF2199D2443005791D0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14875BF1199D2443005791D0 /* LoginViewController.swift */; };
+		148F93E91C9FEAFF00765D30 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148F93E81C9FEAFF00765D30 /* RankingViewController.swift */; };
 		14B484DF1ABE0327000E3BA6 /* FacebookLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B484DE1ABE0327000E3BA6 /* FacebookLogin.swift */; };
 		14B484E11ABE04FD000E3BA6 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B484E01ABE04FD000E3BA6 /* Social.framework */; };
 		14B484E31ABE24EB000E3BA6 /* TwitterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B484E21ABE24EB000E3BA6 /* TwitterLogin.swift */; };
-		14C15F111C99541B009B1E8D /* TeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C15F0B1C99541B009B1E8D /* TeamCollectionViewCell.swift */; };
-		14C15F121C99541B009B1E8D /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C15F0C1C99541B009B1E8D /* TeamTableViewCell.swift */; };
-		14C15F131C99541B009B1E8D /* TournamentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C15F0D1C99541B009B1E8D /* TournamentCollectionViewCell.swift */; };
-		14C15F141C99541B009B1E8D /* TournamentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C15F0E1C99541B009B1E8D /* TournamentTableViewCell.swift */; };
 		14C15F151C99541B009B1E8D /* UserRankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C15F0F1C99541B009B1E8D /* UserRankingTableViewCell.swift */; };
 		14C15F161C99541B009B1E8D /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C15F101C99541B009B1E8D /* UserTableViewCell.swift */; };
 		14C15F191C99544F009B1E8D /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C15F171C99544F009B1E8D /* ActivityTableViewCell.swift */; };
@@ -42,6 +41,11 @@
 		14F87A711998EBE400A6EB11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F87A6F1998EBE400A6EB11 /* Main.storyboard */; };
 		14F87A731998EBE400A6EB11 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F87A721998EBE400A6EB11 /* Images.xcassets */; };
 		14F87A7F1998EBE400A6EB11 /* GonawinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F87A7E1998EBE400A6EB11 /* GonawinTests.swift */; };
+		14FEDF481C9EB87000BBC5B1 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEDF461C9EB87000BBC5B1 /* TeamTableViewCell.swift */; };
+		14FEDF491C9EB87000BBC5B1 /* TournamentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEDF471C9EB87000BBC5B1 /* TournamentTableViewCell.swift */; };
+		14FEDF4E1C9EB8A000BBC5B1 /* TeamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14FEDF4C1C9EB8A000BBC5B1 /* TeamTableViewCell.xib */; };
+		14FEDF531C9EBA0800BBC5B1 /* TournamentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14FEDF511C9EBA0800BBC5B1 /* TournamentTableViewCell.xib */; };
+		14FEDF551C9EEA9200BBC5B1 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEDF541C9EEA9200BBC5B1 /* UsersViewController.swift */; };
 		2D2AE489EAEC2581BE803F53 /* Pods_Gonawin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD1AB4F4AA6E94D6D4DC853 /* Pods_Gonawin.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,15 +81,14 @@
 		1434952F1ACF2DFF0005C86B /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		143A27361C9AAE5600B5E42A /* MatchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchTableViewCell.swift; path = Views/MatchTableViewCell.swift; sourceTree = "<group>"; };
 		143E96811AE3E2EB00E39EF4 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = ../../Pods/FontAwesomeKit/FontAwesomeKit/FontAwesome.otf; sourceTree = "<group>"; };
+		145B4B4F1C9C51B9007393B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/UserTableViewCell.xib; sourceTree = "<group>"; };
+		145B4B5B1C9C56CD007393B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/UserRankingTableViewCell.xib; sourceTree = "<group>"; };
 		14875BF1199D2443005791D0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		148BBE721AB4D8030073F9EF /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../../Bridging-Header.h"; sourceTree = "<group>"; };
+		148F93E81C9FEAFF00765D30 /* RankingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
 		14B484DE1ABE0327000E3BA6 /* FacebookLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLogin.swift; sourceTree = "<group>"; };
 		14B484E01ABE04FD000E3BA6 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		14B484E21ABE24EB000E3BA6 /* TwitterLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterLogin.swift; sourceTree = "<group>"; };
-		14C15F0B1C99541B009B1E8D /* TeamCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamCollectionViewCell.swift; path = Views/TeamCollectionViewCell.swift; sourceTree = "<group>"; };
-		14C15F0C1C99541B009B1E8D /* TeamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamTableViewCell.swift; path = Views/TeamTableViewCell.swift; sourceTree = "<group>"; };
-		14C15F0D1C99541B009B1E8D /* TournamentCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TournamentCollectionViewCell.swift; path = Views/TournamentCollectionViewCell.swift; sourceTree = "<group>"; };
-		14C15F0E1C99541B009B1E8D /* TournamentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TournamentTableViewCell.swift; path = Views/TournamentTableViewCell.swift; sourceTree = "<group>"; };
 		14C15F0F1C99541B009B1E8D /* UserRankingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserRankingTableViewCell.swift; path = Views/UserRankingTableViewCell.swift; sourceTree = "<group>"; };
 		14C15F101C99541B009B1E8D /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserTableViewCell.swift; path = Views/UserTableViewCell.swift; sourceTree = "<group>"; };
 		14C15F171C99544F009B1E8D /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityTableViewCell.swift; path = Views/ActivityTableViewCell.swift; sourceTree = "<group>"; };
@@ -109,6 +112,11 @@
 		14F87A781998EBE400A6EB11 /* GonawinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GonawinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F87A7D1998EBE400A6EB11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14F87A7E1998EBE400A6EB11 /* GonawinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GonawinTests.swift; sourceTree = "<group>"; };
+		14FEDF461C9EB87000BBC5B1 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamTableViewCell.swift; path = Views/TeamTableViewCell.swift; sourceTree = "<group>"; };
+		14FEDF471C9EB87000BBC5B1 /* TournamentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TournamentTableViewCell.swift; path = Views/TournamentTableViewCell.swift; sourceTree = "<group>"; };
+		14FEDF4D1C9EB8A000BBC5B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TeamTableViewCell.xib; sourceTree = "<group>"; };
+		14FEDF521C9EBA0800BBC5B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TournamentTableViewCell.xib; sourceTree = "<group>"; };
+		14FEDF541C9EEA9200BBC5B1 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		178F17FDA6B70C0FE4B3078A /* Pods-Gonawin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gonawin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gonawin/Pods-Gonawin.release.xcconfig"; sourceTree = "<group>"; };
 		8DD1AB4F4AA6E94D6D4DC853 /* Pods_Gonawin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gonawin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E7BF400D8F0EE39BC83B67 /* Pods-Gonawin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gonawin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gonawin/Pods-Gonawin.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,9 +152,11 @@
 				14F5905E1999008600F03D43 /* TeamsViewController.swift */,
 				14C15F1B1C99546A009B1E8D /* TeamViewController.swift */,
 				14F87A6D1998EBE400A6EB11 /* TournamentsViewController.swift */,
+				14FEDF541C9EEA9200BBC5B1 /* UsersViewController.swift */,
 				14C15F1C1C99546A009B1E8D /* TournamentViewController.swift */,
 				14875BF1199D2443005791D0 /* LoginViewController.swift */,
 				14F59060199900B400F03D43 /* ProfileViewController.swift */,
+				148F93E81C9FEAFF00765D30 /* RankingViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -178,12 +188,10 @@
 			children = (
 				14C15F181C99544F009B1E8D /* CellIdentifier.swift */,
 				14C15F171C99544F009B1E8D /* ActivityTableViewCell.swift */,
-				14C15F0C1C99541B009B1E8D /* TeamTableViewCell.swift */,
-				14C15F0E1C99541B009B1E8D /* TournamentTableViewCell.swift */,
 				14C15F101C99541B009B1E8D /* UserTableViewCell.swift */,
 				14C15F0F1C99541B009B1E8D /* UserRankingTableViewCell.swift */,
-				14C15F0B1C99541B009B1E8D /* TeamCollectionViewCell.swift */,
-				14C15F0D1C99541B009B1E8D /* TournamentCollectionViewCell.swift */,
+				14FEDF461C9EB87000BBC5B1 /* TeamTableViewCell.swift */,
+				14FEDF471C9EB87000BBC5B1 /* TournamentTableViewCell.swift */,
 				143A27361C9AAE5600B5E42A /* MatchTableViewCell.swift */,
 			);
 			name = Views;
@@ -229,8 +237,12 @@
 				148BBE721AB4D8030073F9EF /* Bridging-Header.h */,
 				14F87A681998EBE400A6EB11 /* Info.plist */,
 				142D9D201A8EA2BF00EFD976 /* APIKeys.plist */,
-				14F87A6F1998EBE400A6EB11 /* Main.storyboard */,
 				14C15F1F1C9954D8009B1E8D /* LaunchScreen.storyboard */,
+				14F87A6F1998EBE400A6EB11 /* Main.storyboard */,
+				145B4B4E1C9C51B9007393B1 /* UserTableViewCell.xib */,
+				145B4B5A1C9C56CD007393B1 /* UserRankingTableViewCell.xib */,
+				14FEDF4C1C9EB8A000BBC5B1 /* TeamTableViewCell.xib */,
+				14FEDF511C9EBA0800BBC5B1 /* TournamentTableViewCell.xib */,
 				143E96811AE3E2EB00E39EF4 /* FontAwesome.otf */,
 				14F87A721998EBE400A6EB11 /* Images.xcassets */,
 			);
@@ -361,11 +373,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				145B4B501C9C51B9007393B1 /* UserTableViewCell.xib in Resources */,
+				14FEDF531C9EBA0800BBC5B1 /* TournamentTableViewCell.xib in Resources */,
 				143E96821AE3E2EB00E39EF4 /* FontAwesome.otf in Resources */,
 				14D7F54419A25FB60020D51A /* Podfile in Resources */,
 				142D9D211A8EA2BF00EFD976 /* APIKeys.plist in Resources */,
+				14FEDF4E1C9EB8A000BBC5B1 /* TeamTableViewCell.xib in Resources */,
 				14F87A711998EBE400A6EB11 /* Main.storyboard in Resources */,
 				14F87A731998EBE400A6EB11 /* Images.xcassets in Resources */,
+				145B4B5C1C9C56CD007393B1 /* UserRankingTableViewCell.xib in Resources */,
 				14C15F211C9954D8009B1E8D /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,25 +448,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14C15F111C99541B009B1E8D /* TeamCollectionViewCell.swift in Sources */,
 				14C15F1E1C99546A009B1E8D /* TournamentViewController.swift in Sources */,
 				14C15F151C99541B009B1E8D /* UserRankingTableViewCell.swift in Sources */,
 				14C15F1A1C99544F009B1E8D /* CellIdentifier.swift in Sources */,
 				14875BF2199D2443005791D0 /* LoginViewController.swift in Sources */,
 				143A27371C9AAE5600B5E42A /* MatchTableViewCell.swift in Sources */,
-				14C15F121C99541B009B1E8D /* TeamTableViewCell.swift in Sources */,
-				14C15F131C99541B009B1E8D /* TournamentCollectionViewCell.swift in Sources */,
+				14FEDF481C9EB87000BBC5B1 /* TeamTableViewCell.swift in Sources */,
 				14C15F1D1C99546A009B1E8D /* TeamViewController.swift in Sources */,
 				1414B8C61AC857FA000353C5 /* JSON.swift in Sources */,
 				14F87A6E1998EBE400A6EB11 /* TournamentsViewController.swift in Sources */,
-				14C15F141C99541B009B1E8D /* TournamentTableViewCell.swift in Sources */,
 				14F5905F1999008600F03D43 /* TeamsViewController.swift in Sources */,
 				14F7682B1C89C47F00AAF4D8 /* GonawinSession.swift in Sources */,
 				14F59061199900B400F03D43 /* ProfileViewController.swift in Sources */,
 				14F87A6A1998EBE400A6EB11 /* AppDelegate.swift in Sources */,
 				14C15F161C99541B009B1E8D /* UserTableViewCell.swift in Sources */,
 				14B484E31ABE24EB000E3BA6 /* TwitterLogin.swift in Sources */,
+				148F93E91C9FEAFF00765D30 /* RankingViewController.swift in Sources */,
 				14F87A6C1998EBE400A6EB11 /* ActivitiesViewController.swift in Sources */,
+				14FEDF491C9EB87000BBC5B1 /* TournamentTableViewCell.swift in Sources */,
+				14FEDF551C9EEA9200BBC5B1 /* UsersViewController.swift in Sources */,
 				14F7682D1C89C5ED00AAF4D8 /* DefaultsKey.swift in Sources */,
 				14F1842619C77C2D00437C59 /* GonawinController.swift in Sources */,
 				142D9D1C1A8EA1C400EFD976 /* GooglePlusAuthentication.swift in Sources */,
@@ -480,6 +496,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		145B4B4E1C9C51B9007393B1 /* UserTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				145B4B4F1C9C51B9007393B1 /* Base */,
+			);
+			name = UserTableViewCell.xib;
+			sourceTree = "<group>";
+		};
+		145B4B5A1C9C56CD007393B1 /* UserRankingTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				145B4B5B1C9C56CD007393B1 /* Base */,
+			);
+			name = UserRankingTableViewCell.xib;
+			sourceTree = "<group>";
+		};
 		14C15F1F1C9954D8009B1E8D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -495,6 +527,22 @@
 			);
 			name = Main.storyboard;
 			path = .;
+			sourceTree = "<group>";
+		};
+		14FEDF4C1C9EB8A000BBC5B1 /* TeamTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14FEDF4D1C9EB8A000BBC5B1 /* Base */,
+			);
+			name = TeamTableViewCell.xib;
+			sourceTree = "<group>";
+		};
+		14FEDF511C9EBA0800BBC5B1 /* TournamentTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14FEDF521C9EBA0800BBC5B1 /* Base */,
+			);
+			name = TournamentTableViewCell.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

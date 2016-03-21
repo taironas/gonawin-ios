@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeamTableViewCell" rowHeight="54" id="KGk-i7-Jjw" customClass="TeamTableViewCell" customModule="Gonawin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="54"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="53"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <webView userInteractionEnabled="NO" contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fQ6-xU-ES4">
+                        <rect key="frame" x="8" y="9" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="EI3-D5-FZw"/>
+                            <constraint firstAttribute="width" constant="35" id="euU-4l-Ktd"/>
+                        </constraints>
+                    </webView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBT-e9-1bG">
+                        <rect key="frame" x="53" y="9" width="539" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Cdk-JZ-XJY">
+                        <rect key="frame" x="53" y="27" width="57" height="17"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmS-1U-ISg">
+                                <rect key="frame" x="0.0" y="0.0" width="31" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGc-jq-qUc">
+                                <rect key="frame" x="41" y="0.0" width="16" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="JBT-e9-1bG" firstAttribute="leading" secondItem="fQ6-xU-ES4" secondAttribute="trailing" constant="10" id="07F-Yx-UDA"/>
+                    <constraint firstItem="Cdk-JZ-XJY" firstAttribute="bottom" secondItem="fQ6-xU-ES4" secondAttribute="bottom" id="CuR-kw-nYa"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="fQ6-xU-ES4" secondAttribute="leading" id="GeB-7G-PIG"/>
+                    <constraint firstItem="JBT-e9-1bG" firstAttribute="top" secondItem="fQ6-xU-ES4" secondAttribute="top" id="fjL-w5-mvC"/>
+                    <constraint firstItem="Cdk-JZ-XJY" firstAttribute="leading" secondItem="fQ6-xU-ES4" secondAttribute="trailing" constant="10" id="gjO-8S-S9Y"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="JBT-e9-1bG" secondAttribute="trailing" id="hgw-Hn-ald"/>
+                    <constraint firstItem="fQ6-xU-ES4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="u1I-n4-uV4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="teamImageView" destination="fQ6-xU-ES4" id="oIo-Li-6Zx"/>
+                <outlet property="teamMembersCountLabel" destination="fGc-jq-qUc" id="Zwj-fd-EbP"/>
+                <outlet property="teamNamelabel" destination="JBT-e9-1bG" id="nXs-ZQ-6YO"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

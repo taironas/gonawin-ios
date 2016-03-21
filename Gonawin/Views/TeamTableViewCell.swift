@@ -21,12 +21,6 @@ class TeamTableViewCell: UITableViewCell {
     @IBOutlet weak var teamNamelabel: UILabel!
     @IBOutlet weak var teamMembersCountLabel: UILabel!
     
-    override func layoutSubviews() {
-        let imageLayer = teamImageView.layer
-        imageLayer.cornerRadius = teamImageView.frame.size.height/2
-        imageLayer.masksToBounds = true
-    }
-    
     func updateUI() {
         //reset any existing activity information
         teamNamelabel?.text = nil
@@ -34,7 +28,7 @@ class TeamTableViewCell: UITableViewCell {
         
         //load new information from our user
         if let team = self.team {
-            let url = NSURL(string: (team.imageURL + "&size=150").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!
+            let url = NSURL(string: (team.imageURL + "&size=140").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!
             teamImageView.loadRequest(NSURLRequest(URL: url))
             
             teamNamelabel.text = team.name

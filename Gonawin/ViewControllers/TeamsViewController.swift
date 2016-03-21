@@ -10,7 +10,7 @@ import UIKit
 import GonawinEngine
 import RxSwift
 
-class TeamsViewController: UICollectionViewController {
+class TeamsViewController: UITableViewController {
     var teams = [Team]()
     var currentPage = 1
     
@@ -36,7 +36,7 @@ class TeamsViewController: UICollectionViewController {
                 if $0.count > 0 {
                     self.teams.removeAll(keepCapacity: true)
                     self.teams.insertContentsOf($0, at: self.currentPage - 1)
-                    self.collectionView?.reloadData()
+                    self.tableView?.reloadData()
                 }
             }
             .addDisposableTo(self.disposeBag)
@@ -47,38 +47,33 @@ class TeamsViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return teams.count
     }
     
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(CollectionViewCellIdentifier.Team.rawValue, forIndexPath: indexPath) as! TeamCollectionViewCell
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        tableView.registerNib(UINib(nibName: "TeamTableViewCell", bundle: nil ), forCellReuseIdentifier: TableViewCellIdentifier.Team.rawValue)
         
+        let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifier.Team.rawValue, forIndexPath: indexPath) as! TeamTableViewCell
         cell.team = teams[indexPath.row]
-        
-        cell.layer.cornerRadius = 5.0;
-        //        cell.layer.shadowColor = UIColor.grayColor().CGColor;
-        //        cell.layer.shadowOffset = CGSizeMake(0.0, 1.0);
-        //        cell.layer.shadowRadius = 2.0;
-        //        cell.layer.shadowOpacity = 1.0;
-        //        cell.layer.masksToBounds = false;
-        //        cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).CGPath;
         
         return cell
     }
-
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    
+    
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 54
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         performSegueWithIdentifier("showTeam", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showTeam"{
             if let vc = segue.destinationViewController as? TeamViewController {
-                if let teamIndex = collectionView?.indexPathsForSelectedItems()?[0].row {
+                if let teamIndex = tableView.indexPathForSelectedRow?.row {
                     vc.teamID = teams[teamIndex].id
                 }
             }
@@ -102,7 +97,7 @@ class TeamsViewController: UICollectionViewController {
                 .subscribeNext {
                     if $0.count > 0 {
                         self.teams.appendContentsOf($0)
-                        self.collectionView?.reloadData()
+                        self.tableView?.reloadData()
                     }
                 }
                 .addDisposableTo(self.disposeBag)
