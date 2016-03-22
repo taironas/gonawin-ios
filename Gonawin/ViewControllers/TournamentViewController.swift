@@ -110,10 +110,33 @@ class TournamentViewController: UITableViewController {
     }
     
     private func configureCell(forIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        tableView.registerNib(UINib(nibName: "MatchTableViewCell", bundle: nil ), forCellReuseIdentifier: TableViewCellIdentifier.Match.rawValue)
+        
         let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifier.Match.rawValue, forIndexPath: indexPath) as! MatchTableViewCell
         cell.match = calendar?.days[indexPath.section].matches[indexPath.row]
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 109.0
+    }
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let titleLabel = UILabel(frame: CGRect(x: 20, y: 5, width: tableView.frame.width, height: 20))
+        titleLabel.font = UIFont.systemFontOfSize(14)
+        titleLabel.textColor = UIColor.lightGrayColor()
+        titleLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
+        
+        let headerView = UIView()
+        headerView.addSubview(titleLabel)
+        headerView.backgroundColor = UIColor.groupTableViewBackgroundColor()
+        
+        return headerView;
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30.0
     }
     
     private func formatDayDate(day: String?) -> String {

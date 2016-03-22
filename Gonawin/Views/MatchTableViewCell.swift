@@ -21,6 +21,13 @@ class MatchTableViewCell: UITableViewCell {
     @IBOutlet weak var result1: UILabel!
     @IBOutlet weak var team2: UILabel!
     @IBOutlet weak var result2: UILabel!
+    @IBOutlet weak var predictButton: UIButton!
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        predictButton.layer.borderColor = UIColor.greenColor().CGColor
+    }
     
     func updateUI() {
         //reset any existing activity information

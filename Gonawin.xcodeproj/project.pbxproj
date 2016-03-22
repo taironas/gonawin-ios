@@ -19,6 +19,7 @@
 		145B4B5C1C9C56CD007393B1 /* UserRankingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 145B4B5A1C9C56CD007393B1 /* UserRankingTableViewCell.xib */; };
 		14875BF2199D2443005791D0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14875BF1199D2443005791D0 /* LoginViewController.swift */; };
 		148F93E91C9FEAFF00765D30 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148F93E81C9FEAFF00765D30 /* RankingViewController.swift */; };
+		148F93EC1CA01AB700765D30 /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 148F93EA1CA01AB700765D30 /* MatchTableViewCell.xib */; };
 		14B484DF1ABE0327000E3BA6 /* FacebookLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B484DE1ABE0327000E3BA6 /* FacebookLogin.swift */; };
 		14B484E11ABE04FD000E3BA6 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B484E01ABE04FD000E3BA6 /* Social.framework */; };
 		14B484E31ABE24EB000E3BA6 /* TwitterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B484E21ABE24EB000E3BA6 /* TwitterLogin.swift */; };
@@ -86,6 +87,7 @@
 		14875BF1199D2443005791D0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		148BBE721AB4D8030073F9EF /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../../Bridging-Header.h"; sourceTree = "<group>"; };
 		148F93E81C9FEAFF00765D30 /* RankingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
+		148F93EB1CA01AB700765D30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MatchTableViewCell.xib; sourceTree = "<group>"; };
 		14B484DE1ABE0327000E3BA6 /* FacebookLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLogin.swift; sourceTree = "<group>"; };
 		14B484E01ABE04FD000E3BA6 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		14B484E21ABE24EB000E3BA6 /* TwitterLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterLogin.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				145B4B5A1C9C56CD007393B1 /* UserRankingTableViewCell.xib */,
 				14FEDF4C1C9EB8A000BBC5B1 /* TeamTableViewCell.xib */,
 				14FEDF511C9EBA0800BBC5B1 /* TournamentTableViewCell.xib */,
+				148F93EA1CA01AB700765D30 /* MatchTableViewCell.xib */,
 				143E96811AE3E2EB00E39EF4 /* FontAwesome.otf */,
 				14F87A721998EBE400A6EB11 /* Images.xcassets */,
 			);
@@ -374,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				145B4B501C9C51B9007393B1 /* UserTableViewCell.xib in Resources */,
+				148F93EC1CA01AB700765D30 /* MatchTableViewCell.xib in Resources */,
 				14FEDF531C9EBA0800BBC5B1 /* TournamentTableViewCell.xib in Resources */,
 				143E96821AE3E2EB00E39EF4 /* FontAwesome.otf in Resources */,
 				14D7F54419A25FB60020D51A /* Podfile in Resources */,
@@ -510,6 +514,14 @@
 				145B4B5B1C9C56CD007393B1 /* Base */,
 			);
 			name = UserRankingTableViewCell.xib;
+			sourceTree = "<group>";
+		};
+		148F93EA1CA01AB700765D30 /* MatchTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				148F93EB1CA01AB700765D30 /* Base */,
+			);
+			name = MatchTableViewCell.xib;
 			sourceTree = "<group>";
 		};
 		14C15F1F1C9954D8009B1E8D /* LaunchScreen.storyboard */ = {
