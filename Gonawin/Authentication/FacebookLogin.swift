@@ -29,6 +29,10 @@ class FacebookLogin {
                         }
                     }
                 }
+                else {
+                    let error = NSError(domain: "com.taironas.gonawin", code: 0, userInfo: ["Error": "No Facebook account has been found"])
+                    completion(userInfo: nil, error: error)
+                }
             }
             else {
                 completion(userInfo: nil, error: error)
