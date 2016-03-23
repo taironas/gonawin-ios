@@ -112,7 +112,7 @@ class TeamViewController: UIViewController {
             .MenuItemFont(UIFont.systemFontOfSize(13.0, weight: UIFontWeightMedium)),
         ]
         
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 220.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 160.0, self.view.frame.width, self.view.frame.height - 160.0), pageMenuOptions: parameters)
         
         self.view.addSubview(pageMenu!.view)
     }
