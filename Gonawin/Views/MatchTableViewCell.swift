@@ -21,14 +21,14 @@ class MatchTableViewCell: UITableViewCell {
     @IBOutlet weak var result1: UILabel!
     @IBOutlet weak var team2: UILabel!
     @IBOutlet weak var result2: UILabel!
-    @IBOutlet weak var predictButton: UIButton!
+    @IBOutlet weak var predictButton: PredictButton!
     @IBOutlet weak var predict1: UILabel!
     @IBOutlet weak var predict2: UILabel!
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        predictButton.layer.borderColor = UIColor.greenColor().CGColor
+        predictButton.setTitleColor(UIColor.groupTableViewBackgroundColor(), forState: .Disabled)
     }
     
     func updateUI() {
@@ -45,9 +45,13 @@ class MatchTableViewCell: UITableViewCell {
             team2.text = match.team2
             result2.text = "\(match.result2)"
             
-            let predicts = match.predict.componentsSeparatedByString("-")
-            predict1.text = predicts[0]
-            predict2.text = predicts[1]
+            if !match.predict.isEmpty {
+                let predicts = match.predict.trim().componentsSeparatedByString("-")
+                predict1.text = predicts[0]
+                predict2.text = predicts[1]
+            }
+            
+            predictButton.enabled = match.canPredict || !match.finished
         }
     }
 

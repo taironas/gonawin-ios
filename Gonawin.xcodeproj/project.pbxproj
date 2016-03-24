@@ -17,6 +17,9 @@
 		143E96821AE3E2EB00E39EF4 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 143E96811AE3E2EB00E39EF4 /* FontAwesome.otf */; };
 		145B4B501C9C51B9007393B1 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 145B4B4E1C9C51B9007393B1 /* UserTableViewCell.xib */; };
 		145B4B5C1C9C56CD007393B1 /* UserRankingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 145B4B5A1C9C56CD007393B1 /* UserRankingTableViewCell.xib */; };
+		1470B18D1CA3E10500254A91 /* PredictButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1470B18C1CA3E10500254A91 /* PredictButton.swift */; };
+		1470B18F1CA3E8BF00254A91 /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1470B18E1CA3E8BF00254A91 /* UIColor+Palette.swift */; };
+		1470B1911CA4130000254A91 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1470B1901CA4130000254A91 /* String+Utils.swift */; };
 		14875BF2199D2443005791D0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14875BF1199D2443005791D0 /* LoginViewController.swift */; };
 		148F93E91C9FEAFF00765D30 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148F93E81C9FEAFF00765D30 /* RankingViewController.swift */; };
 		148F93EC1CA01AB700765D30 /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 148F93EA1CA01AB700765D30 /* MatchTableViewCell.xib */; };
@@ -85,6 +88,9 @@
 		143E96811AE3E2EB00E39EF4 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = ../../Pods/FontAwesomeKit/FontAwesomeKit/FontAwesome.otf; sourceTree = "<group>"; };
 		145B4B4F1C9C51B9007393B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/UserTableViewCell.xib; sourceTree = "<group>"; };
 		145B4B5B1C9C56CD007393B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/UserRankingTableViewCell.xib; sourceTree = "<group>"; };
+		1470B18C1CA3E10500254A91 /* PredictButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PredictButton.swift; path = Buttons/PredictButton.swift; sourceTree = "<group>"; };
+		1470B18E1CA3E8BF00254A91 /* UIColor+Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
+		1470B1901CA4130000254A91 /* String+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 		14875BF1199D2443005791D0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		148BBE721AB4D8030073F9EF /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../../Bridging-Header.h"; sourceTree = "<group>"; };
 		148F93E81C9FEAFF00765D30 /* RankingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
@@ -184,8 +190,18 @@
 			children = (
 				1414B8C51AC857FA000353C5 /* JSON.swift */,
 				1434952F1ACF2DFF0005C86B /* Error.swift */,
+				1470B18E1CA3E8BF00254A91 /* UIColor+Palette.swift */,
+				1470B1901CA4130000254A91 /* String+Utils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		1470B18B1CA3E0E200254A91 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				1470B18C1CA3E10500254A91 /* PredictButton.swift */,
+			);
+			name = Buttons;
 			sourceTree = "<group>";
 		};
 		14CD9D061C9808AF0057D2E8 /* Views */ = {
@@ -226,6 +242,7 @@
 		14F87A661998EBE400A6EB11 /* Gonawin */ = {
 			isa = PBXGroup;
 			children = (
+				1470B18B1CA3E0E200254A91 /* Buttons */,
 				14CD9D061C9808AF0057D2E8 /* Views */,
 				140E243B1A911D9B0041E36A /* ViewControllers */,
 				144904DC1A87D07A00AC592B /* Utils */,
@@ -472,14 +489,17 @@
 				14C15F161C99541B009B1E8D /* UserTableViewCell.swift in Sources */,
 				14B484E31ABE24EB000E3BA6 /* TwitterLogin.swift in Sources */,
 				148F93E91C9FEAFF00765D30 /* RankingViewController.swift in Sources */,
+				1470B18D1CA3E10500254A91 /* PredictButton.swift in Sources */,
 				14F87A6C1998EBE400A6EB11 /* ActivitiesViewController.swift in Sources */,
 				14FEDF491C9EB87000BBC5B1 /* TournamentTableViewCell.swift in Sources */,
+				1470B1911CA4130000254A91 /* String+Utils.swift in Sources */,
 				14FEDF551C9EEA9200BBC5B1 /* UsersViewController.swift in Sources */,
 				14F7682D1C89C5ED00AAF4D8 /* DefaultsKey.swift in Sources */,
 				14F1842619C77C2D00437C59 /* GonawinController.swift in Sources */,
 				142D9D1C1A8EA1C400EFD976 /* GooglePlusAuthentication.swift in Sources */,
 				14B484DF1ABE0327000E3BA6 /* FacebookLogin.swift in Sources */,
 				1422E5C51AC734ED00E6454B /* UserInfo.swift in Sources */,
+				1470B18F1CA3E8BF00254A91 /* UIColor+Palette.swift in Sources */,
 				143495301ACF2DFF0005C86B /* Error.swift in Sources */,
 				14C15F191C99544F009B1E8D /* ActivityTableViewCell.swift in Sources */,
 			);
