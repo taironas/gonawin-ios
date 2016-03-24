@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (3.2.1)
+  - Alamofire (3.3.0)
   - DateTools (1.7.0)
   - FontAwesomeKit/Core (2.2.0)
   - FontAwesomeKit/FontAwesome (2.2.0):
@@ -49,11 +49,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   GonawinEngine:
-    :commit: fc69d19684f62a58c2c461f4fb4784c60359cbfe
+    :commit: 190cc8cf94fcb62701ce93d26e58ae71851b0d80
     :git: https://github.com/taironas/gonawin-engine-ios.git
 
 SPEC CHECKSUMS:
-  Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
+  Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
   FontAwesomeKit: 025fd4dd1017fe4e3f8d47b03e024deedbb33cd4
   GonawinEngine: 039fb7ec31a97bcc809f1cb9a8dafe581f97657e
@@ -73,4 +73,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: b33029ee5bf24ca2d0078e59359e2b243195d178
 
-COCOAPODS: 1.0.0.beta.5
+COCOAPODS: 1.0.0.beta.6
