@@ -22,6 +22,8 @@ class MatchTableViewCell: UITableViewCell {
     @IBOutlet weak var team2: UILabel!
     @IBOutlet weak var result2: UILabel!
     @IBOutlet weak var predictButton: UIButton!
+    @IBOutlet weak var predict1: UILabel!
+    @IBOutlet weak var predict2: UILabel!
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -42,6 +44,10 @@ class MatchTableViewCell: UITableViewCell {
             result1.text = "\(match.result1)"
             team2.text = match.team2
             result2.text = "\(match.result2)"
+            
+            let predicts = match.predict.componentsSeparatedByString("-")
+            predict1.text = predicts[0]
+            predict2.text = predicts[1]
         }
     }
 

@@ -30,6 +30,7 @@
 		14C15F1D1C99546A009B1E8D /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C15F1B1C99546A009B1E8D /* TeamViewController.swift */; };
 		14C15F1E1C99546A009B1E8D /* TournamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C15F1C1C99546A009B1E8D /* TournamentViewController.swift */; };
 		14C15F211C9954D8009B1E8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C15F1F1C9954D8009B1E8D /* LaunchScreen.storyboard */; };
+		14C7B5401CA2902C00B8689E /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C7B53F1CA2902C00B8689E /* MatchesViewController.swift */; };
 		14D7F54419A25FB60020D51A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 14D7F54319A25FB60020D51A /* Podfile */; };
 		14F1842619C77C2D00437C59 /* GonawinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1842519C77C2D00437C59 /* GonawinController.swift */; };
 		14F5905F1999008600F03D43 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F5905E1999008600F03D43 /* TeamsViewController.swift */; };
@@ -98,6 +99,7 @@
 		14C15F1B1C99546A009B1E8D /* TeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
 		14C15F1C1C99546A009B1E8D /* TournamentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentViewController.swift; sourceTree = "<group>"; };
 		14C15F201C9954D8009B1E8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		14C7B53F1CA2902C00B8689E /* MatchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		14D7F54319A25FB60020D51A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		14F1842519C77C2D00437C59 /* GonawinController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GonawinController.swift; sourceTree = "<group>"; };
 		14F5905E1999008600F03D43 /* TeamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
@@ -151,14 +153,15 @@
 			children = (
 				14F1842519C77C2D00437C59 /* GonawinController.swift */,
 				14F87A6B1998EBE400A6EB11 /* ActivitiesViewController.swift */,
+				14F87A6D1998EBE400A6EB11 /* TournamentsViewController.swift */,
+				14C15F1C1C99546A009B1E8D /* TournamentViewController.swift */,
 				14F5905E1999008600F03D43 /* TeamsViewController.swift */,
 				14C15F1B1C99546A009B1E8D /* TeamViewController.swift */,
-				14F87A6D1998EBE400A6EB11 /* TournamentsViewController.swift */,
 				14FEDF541C9EEA9200BBC5B1 /* UsersViewController.swift */,
-				14C15F1C1C99546A009B1E8D /* TournamentViewController.swift */,
-				14875BF1199D2443005791D0 /* LoginViewController.swift */,
 				14F59060199900B400F03D43 /* ProfileViewController.swift */,
+				14875BF1199D2443005791D0 /* LoginViewController.swift */,
 				148F93E81C9FEAFF00765D30 /* RankingViewController.swift */,
+				14C7B53F1CA2902C00B8689E /* MatchesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				14C15F1E1C99546A009B1E8D /* TournamentViewController.swift in Sources */,
 				14C15F151C99541B009B1E8D /* UserRankingTableViewCell.swift in Sources */,
 				14C15F1A1C99544F009B1E8D /* CellIdentifier.swift in Sources */,
+				14C7B5401CA2902C00B8689E /* MatchesViewController.swift in Sources */,
 				14875BF2199D2443005791D0 /* LoginViewController.swift in Sources */,
 				143A27371C9AAE5600B5E42A /* MatchTableViewCell.swift in Sources */,
 				14FEDF481C9EB87000BBC5B1 /* TeamTableViewCell.swift in Sources */,

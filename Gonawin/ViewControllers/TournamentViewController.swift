@@ -9,8 +9,9 @@
 import UIKit
 import GonawinEngine
 import RxSwift
+import PageMenu
 
-class TournamentViewController: UITableViewController {
+class TournamentViewController: UIViewController {
 
     var tournamentID: Int64 = 0
     
@@ -22,25 +23,24 @@ class TournamentViewController: UITableViewController {
         }
     }
     
-    private var calendar: TournamentCalendar? {
-        didSet {
-            tableView.reloadData()
-        }
-    }
-    
-    private let dateFormatter = NSDateFormatter()
-    
     @IBOutlet weak var tournamentImageView: UIWebView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var datesLabel: UILabel!
     @IBOutlet weak var participantsLabel: UILabel!
     @IBOutlet weak var teamsLabel: UILabel!
     
+    private var pageMenu : CAPSPageMenu?
+    
+    private let matchesController = MatchesViewController()
+    private let leaderboardController = RankingViewController()
+    
     private let disposeBag = DisposeBag()
     private var provider: AuthorizedGonawinEngine?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupPageMenu()
         
         if let authorizationToken = GonawinSession.session.authorizationToken {
             provider = GonawinEngine.newAuthorizedGonawinEngine(authorizationToken)
@@ -88,70 +88,34 @@ class TournamentViewController: UITableViewController {
                 return Observable.empty()
             })
             .subscribeNext {
-                self.calendar = $0
+                self.matchesController.calendar = $0
             }
             .addDisposableTo(self.disposeBag)
     }
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return calendar?.days.count ?? 0
-    }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return calendar?.days[section].matches.count ?? 0
-    }
-    
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return formatDayDate(calendar?.days[section].day)
-    }
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return configureCell(forIndexPath: indexPath)
-    }
-    
-    private func configureCell(forIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        tableView.registerNib(UINib(nibName: "MatchTableViewCell", bundle: nil ), forCellReuseIdentifier: TableViewCellIdentifier.Match.rawValue)
+    private func setupPageMenu() {
+        var controllerArray : [UIViewController] = []
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifier.Match.rawValue, forIndexPath: indexPath) as! MatchTableViewCell
-        cell.match = calendar?.days[indexPath.section].matches[indexPath.row]
+        matchesController.title = "MATCHES"
+        controllerArray.append(matchesController)
         
-        return cell
-    }
-    
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 109.0
-    }
-    
-    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let titleLabel = UILabel(frame: CGRect(x: 20, y: 5, width: tableView.frame.width, height: 20))
-        titleLabel.font = UIFont.systemFontOfSize(14)
-        titleLabel.textColor = UIColor.lightGrayColor()
-        titleLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
+        leaderboardController.title = "LEADERBOARD"
+        controllerArray.append(leaderboardController)
         
-        let headerView = UIView()
-        headerView.addSubview(titleLabel)
-        headerView.backgroundColor = UIColor.groupTableViewBackgroundColor()
+        let parameters: [CAPSPageMenuOption] = [
+            .MenuItemSeparatorWidth(0.0),
+            .UseMenuLikeSegmentedControl(true),
+            .MenuItemSeparatorPercentageHeight(0.1),
+            .SelectionIndicatorColor(UIColor.orangeColor()),
+            .SelectedMenuItemLabelColor(UIColor.orangeColor()),
+            .UnselectedMenuItemLabelColor(UIColor.blackColor()),
+            .ScrollMenuBackgroundColor(UIColor.clearColor()),
+            .BottomMenuHairlineColor(UIColor.groupTableViewBackgroundColor()),
+            .MenuItemFont(UIFont.systemFontOfSize(13.0, weight: UIFontWeightMedium)),
+            ]
         
-        return headerView;
-    }
-    
-    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30.0
-    }
-    
-    private func formatDayDate(day: String?) -> String {
-        guard let day = day else {
-            return ""
-        }
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 180.0, self.view.frame.width, self.view.frame.height - 180.0), pageMenuOptions: parameters)
         
-        dateFormatter.dateFormat = "yyyy-MM-ddEEEEEHH:mm:ssZ"
-        dateFormatter.locale = NSLocale(localeIdentifier: "en_US")
-        
-        let date = dateFormatter.dateFromString(day)
-        
-        dateFormatter.dateStyle = NSDateFormatterStyle.LongStyle
-        dateFormatter.timeStyle = .NoStyle
-        
-        return dateFormatter.stringFromDate(date!)
+        self.view.addSubview(pageMenu!.view)
     }
 }
