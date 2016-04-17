@@ -35,6 +35,11 @@
 		14C15F211C9954D8009B1E8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C15F1F1C9954D8009B1E8D /* LaunchScreen.storyboard */; };
 		14C7B5401CA2902C00B8689E /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C7B53F1CA2902C00B8689E /* MatchesViewController.swift */; };
 		14D7F54419A25FB60020D51A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 14D7F54319A25FB60020D51A /* Podfile */; };
+		14DFE58E1CC3C658000BF8C4 /* Activities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14DFE58C1CC3C658000BF8C4 /* Activities.storyboard */; };
+		14DFE5901CC3C674000BF8C4 /* Tournaments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14DFE58F1CC3C674000BF8C4 /* Tournaments.storyboard */; };
+		14DFE5931CC3C68A000BF8C4 /* Teams.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14DFE5911CC3C68A000BF8C4 /* Teams.storyboard */; };
+		14DFE5951CC3C6A1000BF8C4 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14DFE5941CC3C6A1000BF8C4 /* Profile.storyboard */; };
+		14DFE5991CC3C71D000BF8C4 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14DFE5971CC3C71D000BF8C4 /* Authentication.storyboard */; };
 		14F1842619C77C2D00437C59 /* GonawinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1842519C77C2D00437C59 /* GonawinController.swift */; };
 		14F5905F1999008600F03D43 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F5905E1999008600F03D43 /* TeamsViewController.swift */; };
 		14F59061199900B400F03D43 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F59060199900B400F03D43 /* ProfileViewController.swift */; };
@@ -107,6 +112,11 @@
 		14C15F201C9954D8009B1E8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14C7B53F1CA2902C00B8689E /* MatchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		14D7F54319A25FB60020D51A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		14DFE58D1CC3C658000BF8C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Activities.storyboard; sourceTree = "<group>"; };
+		14DFE58F1CC3C674000BF8C4 /* Tournaments.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tournaments.storyboard; sourceTree = "<group>"; };
+		14DFE5921CC3C68A000BF8C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Teams.storyboard; sourceTree = "<group>"; };
+		14DFE5941CC3C6A1000BF8C4 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		14DFE5981CC3C71D000BF8C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Authentication.storyboard; sourceTree = "<group>"; };
 		14F1842519C77C2D00437C59 /* GonawinController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GonawinController.swift; sourceTree = "<group>"; };
 		14F5905E1999008600F03D43 /* TeamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		14F59060199900B400F03D43 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +228,20 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		14DFE5961CC3C6B2000BF8C4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				14C15F1F1C9954D8009B1E8D /* LaunchScreen.storyboard */,
+				14F87A6F1998EBE400A6EB11 /* Main.storyboard */,
+				14DFE5971CC3C71D000BF8C4 /* Authentication.storyboard */,
+				14DFE58F1CC3C674000BF8C4 /* Tournaments.storyboard */,
+				14DFE58C1CC3C658000BF8C4 /* Activities.storyboard */,
+				14DFE5911CC3C68A000BF8C4 /* Teams.storyboard */,
+				14DFE5941CC3C6A1000BF8C4 /* Profile.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		14F87A5B1998EBE400A6EB11 = {
 			isa = PBXGroup;
 			children = (
@@ -259,8 +283,7 @@
 				148BBE721AB4D8030073F9EF /* Bridging-Header.h */,
 				14F87A681998EBE400A6EB11 /* Info.plist */,
 				142D9D201A8EA2BF00EFD976 /* APIKeys.plist */,
-				14C15F1F1C9954D8009B1E8D /* LaunchScreen.storyboard */,
-				14F87A6F1998EBE400A6EB11 /* Main.storyboard */,
+				14DFE5961CC3C6B2000BF8C4 /* Storyboards */,
 				145B4B4E1C9C51B9007393B1 /* UserTableViewCell.xib */,
 				145B4B5A1C9C56CD007393B1 /* UserRankingTableViewCell.xib */,
 				14FEDF4C1C9EB8A000BBC5B1 /* TeamTableViewCell.xib */,
@@ -396,15 +419,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14DFE5991CC3C71D000BF8C4 /* Authentication.storyboard in Resources */,
 				145B4B501C9C51B9007393B1 /* UserTableViewCell.xib in Resources */,
+				14DFE58E1CC3C658000BF8C4 /* Activities.storyboard in Resources */,
+				14DFE5901CC3C674000BF8C4 /* Tournaments.storyboard in Resources */,
 				148F93EC1CA01AB700765D30 /* MatchTableViewCell.xib in Resources */,
 				14FEDF531C9EBA0800BBC5B1 /* TournamentTableViewCell.xib in Resources */,
 				143E96821AE3E2EB00E39EF4 /* FontAwesome.otf in Resources */,
 				14D7F54419A25FB60020D51A /* Podfile in Resources */,
+				14DFE5931CC3C68A000BF8C4 /* Teams.storyboard in Resources */,
 				142D9D211A8EA2BF00EFD976 /* APIKeys.plist in Resources */,
 				14FEDF4E1C9EB8A000BBC5B1 /* TeamTableViewCell.xib in Resources */,
 				14F87A711998EBE400A6EB11 /* Main.storyboard in Resources */,
 				14F87A731998EBE400A6EB11 /* Images.xcassets in Resources */,
+				14DFE5951CC3C6A1000BF8C4 /* Profile.storyboard in Resources */,
 				145B4B5C1C9C56CD007393B1 /* UserRankingTableViewCell.xib in Resources */,
 				14C15F211C9954D8009B1E8D /* LaunchScreen.storyboard in Resources */,
 			);
@@ -554,6 +582,30 @@
 				14C15F201C9954D8009B1E8D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		14DFE58C1CC3C658000BF8C4 /* Activities.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14DFE58D1CC3C658000BF8C4 /* Base */,
+			);
+			name = Activities.storyboard;
+			sourceTree = "<group>";
+		};
+		14DFE5911CC3C68A000BF8C4 /* Teams.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14DFE5921CC3C68A000BF8C4 /* Base */,
+			);
+			name = Teams.storyboard;
+			sourceTree = "<group>";
+		};
+		14DFE5971CC3C71D000BF8C4 /* Authentication.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14DFE5981CC3C71D000BF8C4 /* Base */,
+			);
+			name = Authentication.storyboard;
 			sourceTree = "<group>";
 		};
 		14F87A6F1998EBE400A6EB11 /* Main.storyboard */ = {
