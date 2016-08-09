@@ -38,6 +38,9 @@ class ActivitiesViewController: UITableViewController {
         if refreshControl != nil {
             refreshControl?.beginRefreshing()
         }
+        
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        
         refresh(refreshControl)
     }
     
@@ -56,6 +59,7 @@ class ActivitiesViewController: UITableViewController {
                 }
                 
                 sender?.endRefreshing()
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
             }
             .addDisposableTo(self.disposeBag)
     }

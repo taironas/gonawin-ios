@@ -10,7 +10,7 @@ import Moya
 import RxSwift
 
 public protocol GonawinEngineType {
-    typealias T: TargetType, GonawinAPIType
+    associatedtype T: TargetType, GonawinAPIType
     var provider: RxMoyaProvider<T> { get }
 }
 
@@ -35,13 +35,15 @@ extension GonawinEngineType {
         return AuthorizedGonawinEngine(provider: provider)
     }
     
-    static func endpointsClosure<T where T: TargetType, T: GonawinAPIType>(authorizationToken: String)(target: T) -> Endpoint<T> {
-        let endpoint: Endpoint<T> = Endpoint<T>(URL: url(target), sampleResponseClosure: {.NetworkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters)
+    static func endpointsClosure<T where T: TargetType, T: GonawinAPIType>(authorizationToken: String) -> (target: T) -> Endpoint<T> {
+        return { target in
+            let endpoint: Endpoint<T> = Endpoint<T>(URL: url(target), sampleResponseClosure: {.NetworkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters)
         
-        if target.addAuthorization {
-            return endpoint.endpointByAddingHTTPHeaderFields(["Authorization": authorizationToken])
-        } else {
-            return endpoint
+            if target.addAuthorization {
+                return endpoint.endpointByAddingHTTPHeaderFields(["Authorization": authorizationToken])
+            } else {
+                return endpoint
+            }
         }
     }
 }
@@ -136,5 +138,15 @@ public struct AuthorizedGonawinEngine: GonawinEngineType {
             .filterSuccessfulStatusCodes()
             .mapJSON()
             .mapToObject(TournamentCalendar)
+    }
+    
+    public func getTournamentMatchPredict(id: Int, matchId: Int, homeTeamScore: Int, awayTeamScore: Int) -> Observable<Predict> {
+        
+        let endPoint = GonawinAuthenticatedAPI.TournamentMatchPredict(id, matchId, homeTeamScore, awayTeamScore)
+        
+        return provider.request(endPoint)
+            .filterSuccessfulStatusCodes()
+            .mapJSON()
+            .mapToObject(Predict)
     }
 }

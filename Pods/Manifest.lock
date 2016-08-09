@@ -1,20 +1,20 @@
 PODS:
-  - Alamofire (3.3.0)
+  - Alamofire (3.4.1)
   - DateTools (1.7.0)
   - FontAwesomeKit/Core (2.2.0)
   - FontAwesomeKit/FontAwesome (2.2.0):
     - FontAwesomeKit/Core
-  - GonawinEngine (0.8.0):
-    - Moya/RxSwift (~> 6.2.0)
-    - RxSwift (~> 2.2.0)
+  - GonawinEngine (0.9.1):
+    - Moya/RxSwift (~> 7.0)
+    - RxSwift (~> 2.6)
     - SwiftyJSON (~> 2.3.2)
   - Locksmith (2.0.8)
   - LVTwitterOAuthClient (0.3.0):
     - OAuthCore
-  - Moya/Core (6.2.0):
+  - Moya/Core (7.0.0):
     - Alamofire (~> 3.0)
-    - Result (~> 1.0)
-  - Moya/RxSwift (6.2.0):
+    - Result (~> 2.0)
+  - Moya/RxSwift (7.0.0):
     - Moya/Core
     - RxSwift (~> 2.0)
   - NSData+Base64 (1.0.0)
@@ -23,8 +23,8 @@ PODS:
   - p2.OAuth2 (2.2.1):
     - SwiftKeychain (~> 0.1.5)
   - PageMenu (1.2.9)
-  - Result (1.0.2)
-  - RxSwift (2.2.0)
+  - Result (2.1.3)
+  - RxSwift (2.6.0)
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
@@ -49,23 +49,23 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   GonawinEngine:
-    :commit: 190cc8cf94fcb62701ce93d26e58ae71851b0d80
+    :commit: 6ff52f04eed8d856d042708edd1831befb4b4597
     :git: https://github.com/taironas/gonawin-engine-ios.git
 
 SPEC CHECKSUMS:
-  Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
   FontAwesomeKit: 025fd4dd1017fe4e3f8d47b03e024deedbb33cd4
-  GonawinEngine: 039fb7ec31a97bcc809f1cb9a8dafe581f97657e
+  GonawinEngine: 14580a0417b6dd98ad1f2d64a8bc3f9db37580ef
   Locksmith: a8ed41ac4c06506ea8cb199d8ec8a8d3d108eb2a
   LVTwitterOAuthClient: 058199e43af92c0b99332332fa26d2229c59f04d
-  Moya: a5e57a405584177027daab240f4d47baa0722562
+  Moya: f004b82418fb8165ee1fc9f86190db4b3611fda9
   NSData+Base64: 4e84902c4db907a15673474677e57763ef3903e4
   OAuthCore: 43dce261db846a1fe20234d95654257e00e78581
   p2.OAuth2: 7f5c44259ef83ea5b9ef8f9049310611788f86cb
   PageMenu: ba19ff267f7a19e444e93c20a7847b78954a7011
-  Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16
-  RxSwift: b8a749f2204c6c7a5c29b306a9c3bc11d5b87c5b
+  Result: 18e1a7597fbcca5923c565b40a25a98afafdee02
+  RxSwift: 77f3a0b15324baa7a1c9bfa9f199648a82424e26
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   SwiftKeychain: 1387edad8b56c659daa93d9ffc99526bac5b0088
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
@@ -73,4 +73,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: b33029ee5bf24ca2d0078e59359e2b243195d178
 
-COCOAPODS: 1.0.0.beta.6
+COCOAPODS: 1.0.0

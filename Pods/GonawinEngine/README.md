@@ -31,6 +31,6 @@
 - [x] getTournamentCalendar
 - [ ] getTournamentGroups
 - [ ] getTournamentMatches
-- [ ] setTournamentMatchPrediction
+- [x] setTournamentMatchPrediction
 - [ ] getTournamentRanking
 - [ ] getTournamentTeams

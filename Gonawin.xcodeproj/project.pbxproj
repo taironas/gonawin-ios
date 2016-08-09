@@ -11,7 +11,6 @@
 		1422E5C51AC734ED00E6454B /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422E5C41AC734ED00E6454B /* UserInfo.swift */; };
 		1423DD631AB5DF1D0097D800 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1423DD621AB5DF1D0097D800 /* Accounts.framework */; };
 		142D9D1C1A8EA1C400EFD976 /* GooglePlusAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D9D1B1A8EA1C400EFD976 /* GooglePlusAuthentication.swift */; };
-		142D9D211A8EA2BF00EFD976 /* APIKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 142D9D201A8EA2BF00EFD976 /* APIKeys.plist */; };
 		143495301ACF2DFF0005C86B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1434952F1ACF2DFF0005C86B /* Error.swift */; };
 		143A27371C9AAE5600B5E42A /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A27361C9AAE5600B5E42A /* MatchTableViewCell.swift */; };
 		143E96821AE3E2EB00E39EF4 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 143E96811AE3E2EB00E39EF4 /* FontAwesome.otf */; };
@@ -51,6 +50,7 @@
 		14F87A711998EBE400A6EB11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F87A6F1998EBE400A6EB11 /* Main.storyboard */; };
 		14F87A731998EBE400A6EB11 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F87A721998EBE400A6EB11 /* Images.xcassets */; };
 		14F87A7F1998EBE400A6EB11 /* GonawinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F87A7E1998EBE400A6EB11 /* GonawinTests.swift */; };
+		14FD2AF31D59F44E002947D6 /* APIKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14FD2AF21D59F44E002947D6 /* APIKeys.plist */; };
 		14FEDF481C9EB87000BBC5B1 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEDF461C9EB87000BBC5B1 /* TeamTableViewCell.swift */; };
 		14FEDF491C9EB87000BBC5B1 /* TournamentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEDF471C9EB87000BBC5B1 /* TournamentTableViewCell.swift */; };
 		14FEDF4E1C9EB8A000BBC5B1 /* TeamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14FEDF4C1C9EB8A000BBC5B1 /* TeamTableViewCell.xib */; };
@@ -87,7 +87,6 @@
 		1422E5C41AC734ED00E6454B /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		1423DD621AB5DF1D0097D800 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		142D9D1B1A8EA1C400EFD976 /* GooglePlusAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlusAuthentication.swift; sourceTree = "<group>"; };
-		142D9D201A8EA2BF00EFD976 /* APIKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = APIKeys.plist; sourceTree = "<group>"; };
 		1434952F1ACF2DFF0005C86B /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		143A27361C9AAE5600B5E42A /* MatchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchTableViewCell.swift; path = Views/MatchTableViewCell.swift; sourceTree = "<group>"; };
 		143E96811AE3E2EB00E39EF4 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = ../../Pods/FontAwesomeKit/FontAwesomeKit/FontAwesome.otf; sourceTree = "<group>"; };
@@ -132,6 +131,7 @@
 		14F87A781998EBE400A6EB11 /* GonawinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GonawinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F87A7D1998EBE400A6EB11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14F87A7E1998EBE400A6EB11 /* GonawinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GonawinTests.swift; sourceTree = "<group>"; };
+		14FD2AF21D59F44E002947D6 /* APIKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = APIKeys.plist; path = ../../APIKeys.plist; sourceTree = "<group>"; };
 		14FEDF461C9EB87000BBC5B1 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamTableViewCell.swift; path = Views/TeamTableViewCell.swift; sourceTree = "<group>"; };
 		14FEDF471C9EB87000BBC5B1 /* TournamentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TournamentTableViewCell.swift; path = Views/TournamentTableViewCell.swift; sourceTree = "<group>"; };
 		14FEDF4D1C9EB8A000BBC5B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TeamTableViewCell.xib; sourceTree = "<group>"; };
@@ -282,7 +282,7 @@
 				14F87A691998EBE400A6EB11 /* AppDelegate.swift */,
 				148BBE721AB4D8030073F9EF /* Bridging-Header.h */,
 				14F87A681998EBE400A6EB11 /* Info.plist */,
-				142D9D201A8EA2BF00EFD976 /* APIKeys.plist */,
+				14FD2AF21D59F44E002947D6 /* APIKeys.plist */,
 				14DFE5961CC3C6B2000BF8C4 /* Storyboards */,
 				145B4B4E1C9C51B9007393B1 /* UserTableViewCell.xib */,
 				145B4B5A1C9C56CD007393B1 /* UserRankingTableViewCell.xib */,
@@ -428,12 +428,12 @@
 				143E96821AE3E2EB00E39EF4 /* FontAwesome.otf in Resources */,
 				14D7F54419A25FB60020D51A /* Podfile in Resources */,
 				14DFE5931CC3C68A000BF8C4 /* Teams.storyboard in Resources */,
-				142D9D211A8EA2BF00EFD976 /* APIKeys.plist in Resources */,
 				14FEDF4E1C9EB8A000BBC5B1 /* TeamTableViewCell.xib in Resources */,
 				14F87A711998EBE400A6EB11 /* Main.storyboard in Resources */,
 				14F87A731998EBE400A6EB11 /* Images.xcassets in Resources */,
 				14DFE5951CC3C6A1000BF8C4 /* Profile.storyboard in Resources */,
 				145B4B5C1C9C56CD007393B1 /* UserRankingTableViewCell.xib in Resources */,
+				14FD2AF31D59F44E002947D6 /* APIKeys.plist in Resources */,
 				14C15F211C9954D8009B1E8D /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
