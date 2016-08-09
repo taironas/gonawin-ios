@@ -21,12 +21,6 @@ class TeamViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var teamImageView: UIWebView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var accuracyLabel: UILabel!
-    @IBOutlet weak var membersLabel: UILabel!
-    @IBOutlet weak var tournamentsLabel: UILabel!
-    
     private var pageMenu : CAPSPageMenu?
     
     private let membersController = UsersViewController()
@@ -71,17 +65,6 @@ class TeamViewController: UIViewController {
     func updateUI() {
         //load new information from the team
         if let team = self.team {
-            let url = NSURL(string: team.imageURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!
-            teamImageView.loadRequest(NSURLRequest(URL: url))
-            
-            nameLabel.text = team.name
-            if let accuracy = team.accuracy {
-                accuracyLabel.text = "\(round(accuracy * 100) / 100)"
-            }
-            membersLabel.text = "\(team.membersCount)"
-            if let tournamentsCount = team.tournaments?.count {
-                tournamentsLabel.text = "\(tournamentsCount)"
-            }
             
             navigationItem.title = team.name
         }
@@ -102,17 +85,20 @@ class TeamViewController: UIViewController {
         
         let parameters: [CAPSPageMenuOption] = [
             .MenuItemSeparatorWidth(0.0),
+            .MenuHeight(44.0),
             .UseMenuLikeSegmentedControl(true),
             .MenuItemSeparatorPercentageHeight(0.1),
-            .SelectionIndicatorColor(UIColor.seaFoamColor()),
-            .SelectedMenuItemLabelColor(UIColor.seaFoamColor()),
+            .SelectionIndicatorColor(UIColor.greenSeaFoamColor()),
+            .SelectedMenuItemLabelColor(UIColor.greenSeaFoamColor()),
             .UnselectedMenuItemLabelColor(UIColor.blackColor()),
             .ScrollMenuBackgroundColor(UIColor.clearColor()),
             .BottomMenuHairlineColor(UIColor.groupTableViewBackgroundColor()),
-            .MenuItemFont(UIFont.systemFontOfSize(13.0, weight: UIFontWeightMedium)),
+            .MenuItemFont(UIFont.systemFontOfSize(12.0, weight: UIFontWeightMedium)),
         ]
         
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 160.0, self.view.frame.width, self.view.frame.height - 160.0), pageMenuOptions: parameters)
+        let frame = CGRectMake(0, 0, view.frame.width, view.frame.height)
+        
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: frame, pageMenuOptions: parameters)
         
         self.view.addSubview(pageMenu!.view)
     }

@@ -12,5 +12,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
     var window: UIWindow?
+    
+    func applicationDidFinishLaunching(application: UIApplication) {
+        let navigationBarAppearance = UINavigationBar.appearance()
+        
+        navigationBarAppearance.barTintColor = UIColor.whiteColor()
+        navigationBarAppearance.tintColor = UIColor.greenSeaFoamColor()
+        navigationBarAppearance.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.darkBlueColor()]
+        navigationBarAppearance.translucent = false
+        
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.greenSeaFoamColor()], forState:.Selected)
+    }
 }
 

@@ -22,4 +22,8 @@ extension UIColor {
     static func greenSeaFoamColor() -> UIColor {
         return UIColor(colorLiteralRed: 0.0/255.0, green: 204.0/255.0, blue: 102.0/255.0, alpha: 1.0)
     }
+    
+    static func darkBlueColor() -> UIColor {
+        return UIColor(colorLiteralRed: 82.0/255.0, green: 101.0/255.0, blue: 122.0/255.0, alpha: 1.0)
+    }
 }

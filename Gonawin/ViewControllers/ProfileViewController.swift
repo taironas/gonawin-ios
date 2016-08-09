@@ -26,7 +26,7 @@ class ProfileViewController: UITableViewController {
             let imageLayer = profileImageView.layer
             imageLayer.cornerRadius = profileImageView.frame.size.height/2
             imageLayer.masksToBounds = true
-            nameLabel.text = user.name
+            nameLabel.text = user.username
             scoreLabel.text = "\(user.score)"
             tournamentsLabel.text = "\(user.tournamentIds.count)"
             teamsLabel.text = "\(user.teamIds.count)"

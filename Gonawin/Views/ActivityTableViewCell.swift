@@ -70,7 +70,7 @@ class ActivityTableViewCell: UITableViewCell {
         
         let attributedString = NSMutableAttributedString(string: activityString as String)
         
-        let attributes = [NSForegroundColorAttributeName: UIColor.blackColor(), NSFontAttributeName: UIFont.boldSystemFontOfSize(activityContent!.font.pointSize)]
+        let attributes = [NSForegroundColorAttributeName: UIColor.darkBlueColor(), NSFontAttributeName: UIFont.boldSystemFontOfSize(activityContent!.font.pointSize)]
         
         attributedString.addAttributes(attributes, range: activityString.rangeOfString(target!))
         attributedString.addAttributes(attributes, range: activityString.rangeOfString(actor!))
@@ -87,7 +87,7 @@ class ActivityTableViewCell: UITableViewCell {
         
         let attributedString = NSMutableAttributedString(string: activityString as String)
         
-        let attributes = [NSForegroundColorAttributeName: UIColor.blackColor(), NSFontAttributeName: UIFont.boldSystemFontOfSize(activityContent!.font.pointSize)]
+        let attributes = [NSForegroundColorAttributeName: UIColor.darkBlueColor(), NSFontAttributeName: UIFont.boldSystemFontOfSize(activityContent!.font.pointSize)]
         
         attributedString.addAttributes(attributes, range: activityString.rangeOfString(actor!))
         attributedString.addAttributes(attributes, range: activityString.rangeOfString(object!))
@@ -103,7 +103,7 @@ class ActivityTableViewCell: UITableViewCell {
         
         let attributedString = NSMutableAttributedString(string: activityString as String)
         
-        let attributes = [NSForegroundColorAttributeName: UIColor.blackColor(), NSFontAttributeName: UIFont.boldSystemFontOfSize(activityContent!.font.pointSize)]
+        let attributes = [NSForegroundColorAttributeName: UIColor.darkBlueColor(), NSFontAttributeName: UIFont.boldSystemFontOfSize(activityContent!.font.pointSize)]
         
         attributedString.addAttributes(attributes, range: activityString.rangeOfString(actor!))
         attributedString.addAttributes(attributes, range: activityString.rangeOfString(object!))
