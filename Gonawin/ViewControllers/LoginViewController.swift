@@ -21,6 +21,13 @@ class LoginViewController: UIViewController {
     private let disposeBag = DisposeBag()
     private let provider = GonawinEngine.newGonawinEngine()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        facebookLoginButton.layer.cornerRadius = 5.0
+        twitterLoginButton.layer.cornerRadius = 5.0
+    }
+    
     @IBAction func Facebooklogin() {
         let facebookLogin = FacebookLogin()
         

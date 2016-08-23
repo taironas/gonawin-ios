@@ -15,7 +15,6 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="jlm-0F-oEi" kind="presentation" identifier="showLogin" id="I4Z-0Y-PWc"/>
                         <segue destination="PfX-GU-JTg" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="vMN-nm-iAK" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="cP6-CI-fnD" kind="relationship" relationship="viewControllers" id="gQa-QF-7ix"/>
@@ -121,14 +120,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mg4-LY-uW9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="752" y="418"/>
-        </scene>
-        <!--UINavigationController-7ka-AA-do3-->
-        <scene sceneID="sfq-fs-bgi">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="UINavigationController-7ka-AA-do3" storyboardName="Authentication" referencedIdentifier="UINavigationController-7ka-AA-do3" id="jlm-0F-oEi" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7w2-e3-JLa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1134" y="-44"/>
         </scene>
     </scenes>
 </document>

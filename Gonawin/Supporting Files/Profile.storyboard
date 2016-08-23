@@ -53,7 +53,7 @@
                                         <constraint firstAttribute="width" constant="58" id="nTE-HZ-36U"/>
                                     </constraints>
                                 </webView>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="pxy-Zi-Ega">
+                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="pxy-Zi-Ega">
                                     <rect key="frame" x="78" y="8" width="514" height="35"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ges-Qs-ZN9">
@@ -210,20 +210,11 @@
                         <outlet property="scoreLabel" destination="0Wd-OR-IIn" id="j0s-XA-yaU"/>
                         <outlet property="teamsLabel" destination="Q72-Xe-MCV" id="s02-yN-VMq"/>
                         <outlet property="tournamentsLabel" destination="Phd-62-un8" id="RyS-2p-iXs"/>
-                        <segue destination="idB-5q-Opz" kind="presentation" identifier="showLogin" id="hvp-pS-7kK"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TKD-l1-ylO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1632" y="1598"/>
-        </scene>
-        <!--UINavigationController-7ka-AA-do3-->
-        <scene sceneID="pwA-4B-UB2">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="UINavigationController-7ka-AA-do3" id="idB-5q-Opz" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IUX-ta-qFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2352" y="-18"/>
         </scene>
     </scenes>
     <resources>

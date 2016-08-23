@@ -11,6 +11,10 @@ import SwiftyUserDefaults
 import Locksmith
 import RxSwift
 
+protocol GonawinSessionDelegate: class {
+    func didLogin()
+    func didLogout()
+}
 class GonawinSession {
     var authorizationToken: String?
     var currentUser: User?
@@ -19,6 +23,8 @@ class GonawinSession {
     
     private let disposeBag = DisposeBag()
     private var provider: AuthorizedGonawinEngine?
+    
+    weak var delegate: GonawinSessionDelegate?
     
     private init() {
         if let data = Locksmith.loadDataForUserAccount("GonawinClient") {
@@ -55,6 +61,8 @@ class GonawinSession {
         
         // save user id in user defaults
         Defaults[.currentUserID] = Int(user.id)
+        
+        delegate?.didLogin()
     }
     
     func deleteSession() {
@@ -68,6 +76,8 @@ class GonawinSession {
         
         // delete user id from user defaults
         Defaults.remove(.currentUserID)
+        
+        delegate?.didLogout()
     }
     
     func isLoggedIn() -> Bool {

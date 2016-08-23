@@ -28,8 +28,8 @@ class ActivitiesViewController: UITableViewController {
         tableView.estimatedRowHeight = 44.0
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         currentPage = 1
         refresh()
     }

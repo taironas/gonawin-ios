@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qkY-sX-CIH">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -8,7 +8,7 @@
         <!--Sign in-->
         <scene sceneID="EVA-He-vWh">
             <objects>
-                <viewController id="qkY-sX-CIH" customClass="LoginViewController" customModule="Gonawin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qkY-sX-CIH" customClass="LoginViewController" customModule="Gonawin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ciM-uF-I4a"/>
                         <viewControllerLayoutGuide type="bottom" id="Vrh-lt-qbU"/>
@@ -17,38 +17,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KAF-m4-Vp9">
-                                <rect key="frame" x="20" y="270" width="560" height="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KAF-m4-Vp9">
+                                <rect key="frame" x="40" y="490" width="520" height="90"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79M-UU-02g">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
-                                        <state key="normal" title="Login with Facebook">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79M-UU-02g">
+                                        <rect key="frame" x="0.0" y="0.0" width="520" height="40"/>
+                                        <color key="backgroundColor" red="0.2901960784" green="0.4549019608" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="GpU-ug-2JA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                                        <state key="normal" title="Login with Facebook" image="facebook_icon">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="Facebooklogin" destination="qkY-sX-CIH" eventType="touchUpInside" id="fGg-zj-WjK"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYW-s0-K1u">
-                                        <rect key="frame" x="0.0" y="30" width="560" height="30"/>
-                                        <state key="normal" title="Login with Twitter">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYW-s0-K1u">
+                                        <rect key="frame" x="0.0" y="50" width="520" height="40"/>
+                                        <color key="backgroundColor" red="0.33333333329999998" green="0.67450980390000004" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                                        <state key="normal" title="Login with Twitter" image="twitter_icon">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="Twiterlogin" destination="qkY-sX-CIH" eventType="touchUpInside" id="ljb-Rp-pP9"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="QYW-s0-K1u" firstAttribute="height" secondItem="79M-UU-02g" secondAttribute="height" id="0KB-YC-Y5y"/>
+                                </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gonawin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3z2-v7-YuJ">
+                                <rect key="frame" x="20" y="74" width="560" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                <color key="textColor" red="0.32156862745098036" green="0.396078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="KAF-m4-Vp9" firstAttribute="centerX" secondItem="TWX-ag-IvU" secondAttribute="centerX" id="7Kp-8c-ZAz"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="KAF-m4-Vp9" secondAttribute="trailing" id="Pw9-Ob-QJo"/>
-                            <constraint firstItem="KAF-m4-Vp9" firstAttribute="leading" secondItem="TWX-ag-IvU" secondAttribute="leadingMargin" id="VvT-de-kax"/>
+                            <constraint firstItem="3z2-v7-YuJ" firstAttribute="leading" secondItem="TWX-ag-IvU" secondAttribute="leadingMargin" id="HRu-3M-lLe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KAF-m4-Vp9" secondAttribute="trailing" constant="20" id="Pw9-Ob-QJo"/>
+                            <constraint firstItem="3z2-v7-YuJ" firstAttribute="top" secondItem="ciM-uF-I4a" secondAttribute="bottom" constant="54" id="TtU-tS-tyl"/>
+                            <constraint firstItem="KAF-m4-Vp9" firstAttribute="leading" secondItem="TWX-ag-IvU" secondAttribute="leadingMargin" constant="20" id="VvT-de-kax"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3z2-v7-YuJ" secondAttribute="trailing" id="al6-45-fbR"/>
+                            <constraint firstItem="Vrh-lt-qbU" firstAttribute="top" secondItem="KAF-m4-Vp9" secondAttribute="bottom" constant="20" id="bth-UL-QuC"/>
                             <constraint firstItem="KAF-m4-Vp9" firstAttribute="centerY" secondItem="TWX-ag-IvU" secondAttribute="centerY" id="iHi-AO-8ph"/>
                             <constraint firstItem="KAF-m4-Vp9" firstAttribute="centerX" secondItem="TWX-ag-IvU" secondAttribute="centerX" id="o64-lt-H1x"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7Kp-8c-ZAz"/>
+                                <exclude reference="iHi-AO-8ph"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Sign in" id="Rjt-k5-R1b"/>
                     <connections>
@@ -60,26 +88,9 @@
             </objects>
             <point key="canvasLocation" x="2084" y="-44"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Fe6-GX-0Gs">
-            <objects>
-                <navigationController storyboardIdentifier="UINavigationController-7ka-AA-do3" automaticallyAdjustsScrollViewInsets="NO" id="7ka-AA-do3" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CAz-su-Dgi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="qkY-sX-CIH" kind="relationship" relationship="rootViewController" id="w8K-Yq-07b"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i3O-Oy-0Ah" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1290" y="-44"/>
-        </scene>
     </scenes>
+    <resources>
+        <image name="facebook_icon" width="29" height="29"/>
+        <image name="twitter_icon" width="29" height="24"/>
+    </resources>
 </document>

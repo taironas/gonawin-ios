@@ -58,8 +58,5 @@ class ProfileViewController: UITableViewController {
     private func logout()
     {
         GonawinSession.session.deleteSession()
-        
-        // show login view
-        self.performSegueWithIdentifier("showLogin", sender: self)
     }
 }
