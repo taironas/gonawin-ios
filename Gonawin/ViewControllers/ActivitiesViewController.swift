@@ -14,6 +14,13 @@ class ActivitiesViewController: UITableViewController {
     var activities = [[Activity]]()
     var currentPage = 1
     
+    let moreIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+        indicator.hidesWhenStopped = true
+        
+        return indicator
+    }()
+    
     private let disposeBag = DisposeBag()
     private var provider: AuthorizedGonawinEngine?
     
@@ -26,11 +33,13 @@ class ActivitiesViewController: UITableViewController {
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44.0
+        
+        tableView.tableFooterView = moreIndicator
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        currentPage = 1
+    
         refresh()
     }
     
@@ -45,8 +54,9 @@ class ActivitiesViewController: UITableViewController {
     }
     
     @IBAction func refresh(sender: UIRefreshControl?) {
+        currentPage = 1
+        
         self.provider?.getActivities(currentPage, count: 20)
-            .debug()
             .catchError({ error in
                 showError(self, error: error)
                 return Observable.empty()
@@ -87,17 +97,21 @@ class ActivitiesViewController: UITableViewController {
         let currentOffset = scrollView.contentOffset.y
         let distanceFromBottom = scrollView.contentSize.height - currentOffset
         let height = scrollView.frame.size.height
+        
         if distanceFromBottom < height {
+            moreIndicator.startAnimating()
             currentPage = currentPage + 1
             
             self.provider?.getActivities(currentPage, count: 20)
-                .debug()
                 .catchError({ error in
                     showError(self, error: error)
+                    self.moreIndicator.stopAnimating()
                     return Observable.empty()
                 })
                 .subscribeNext {
                 
+                    self.moreIndicator.stopAnimating()
+                    
                     if $0.count > 0 {
                         self.activities.insert($0, atIndex: self.currentPage - 1)
                         self.tableView.reloadData()

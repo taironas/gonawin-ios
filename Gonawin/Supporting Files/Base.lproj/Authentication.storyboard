@@ -60,6 +60,7 @@
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="KAF-m4-Vp9" firstAttribute="centerX" secondItem="TWX-ag-IvU" secondAttribute="centerX" id="7Kp-8c-ZAz"/>
                             <constraint firstItem="3z2-v7-YuJ" firstAttribute="leading" secondItem="TWX-ag-IvU" secondAttribute="leadingMargin" id="HRu-3M-lLe"/>
