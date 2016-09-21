@@ -18,8 +18,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var facebookLoginButton: UIButton!
     @IBOutlet weak var twitterLoginButton: UIButton!
     
-    private let disposeBag = DisposeBag()
-    private let provider = GonawinEngine.newGonawinEngine()
+    fileprivate let disposeBag = DisposeBag()
+    fileprivate let provider = GonawinEngine.newGonawinEngine()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,16 +43,16 @@ class LoginViewController: UIViewController {
                         print("error : \(error)")
                         return Observable.empty()
                     })
-                    .subscribeNext {
+                    .subscribe(onNext: {
                         GonawinSession.session.newSession($0)
                         
-                        self.dismissViewControllerAnimated(true, completion: nil)
-                    }
-                .addDisposableTo(self.disposeBag)
+                        self.dismiss(animated: true, completion: nil)
+                    })
+                    .addDisposableTo(self.disposeBag)
             }
             
             if error != nil {
-                showError(self, error: error!)
+                showError(error!, from: self)
             }
         }
 
@@ -66,22 +66,21 @@ class LoginViewController: UIViewController {
             if userInfo != nil {
                 let authData = AuthData(accessToken: userInfo!.accessToken, provider: "twitter", id: userInfo!.id, email: userInfo!.email, name: userInfo!.name)
                 
-                let subscription = GonawinEngine.newGonawinEngine().authenticate(authData)
+                GonawinEngine.newGonawinEngine().authenticate(authData)
                     .catchError({ error in
                         print("error : \(error)")
                         return Observable.empty()
                     })
-                    .subscribeNext {
+                    .subscribe(onNext: {
                         GonawinSession.session.newSession($0)
                         
-                        self.dismissViewControllerAnimated(true, completion: nil)
-                    }
-                
-                subscription.dispose()
+                        self.dismiss(animated: true, completion: nil)
+                    })
+                    .addDisposableTo(self.disposeBag)
             }
             
             if error != nil {
-                showError(self, error: error!)
+                showError(error!, from: self)
             }
         }
         

@@ -10,31 +10,31 @@ import UIKit
 
 class PredictButton: UIButton {
     
-    @IBInspectable var normalBackgroundColor : UIColor = UIColor.greenSeaFoamColor() {
+    @IBInspectable var normalBackgroundColor : UIColor = UIColor.greenSeaFoam {
         didSet {
             self.setNeedsDisplay()
         }
     }
     
-    @IBInspectable var normalBorderColor : UIColor = UIColor.greenSeaFoamColor() {
+    @IBInspectable var normalBorderColor : UIColor = UIColor.greenSeaFoam {
         didSet {
             self.setNeedsDisplay()
         }
     }
     
-    @IBInspectable var highlightedBackgroundColor : UIColor = UIColor.seaFoamColor() {
+    @IBInspectable var highlightedBackgroundColor : UIColor = UIColor.seaFoam {
         didSet {
             self.setNeedsDisplay()
         }
     }
     
-    @IBInspectable var highlightedBorderColor : UIColor = UIColor.seaFoamColor() {
+    @IBInspectable var highlightedBorderColor : UIColor = UIColor.seaFoam {
         didSet {
             self.setNeedsDisplay()
         }
     }
     
-    @IBInspectable var disabledBorderColor : UIColor = UIColor.groupTableViewBackgroundColor() {
+    @IBInspectable var disabledBorderColor : UIColor = UIColor.groupTableViewBackground {
         didSet {
             self.setNeedsDisplay()
         }
@@ -52,25 +52,25 @@ class PredictButton: UIButton {
         }
     }
     
-    override var highlighted: Bool {
+    override var isHighlighted: Bool {
         didSet {
-            if highlighted {
-                layer.borderColor = highlightedBorderColor.CGColor
+            if isHighlighted {
+                layer.borderColor = highlightedBorderColor.cgColor
             } else {
                 self.backgroundColor = normalBackgroundColor
-                layer.borderColor = normalBorderColor.CGColor
+                layer.borderColor = normalBorderColor.cgColor
             }
         }
     }
     
-    override var enabled: Bool {
+    override var isEnabled: Bool {
         didSet {
-            if enabled {
+            if isEnabled {
                 self.backgroundColor = normalBackgroundColor
-                layer.borderColor = normalBorderColor.CGColor
+                layer.borderColor = normalBorderColor.cgColor
             } else {
-                self.backgroundColor = UIColor.clearColor()
-                layer.borderColor = disabledBorderColor.CGColor
+                self.backgroundColor = UIColor.clear
+                layer.borderColor = disabledBorderColor.cgColor
             }
         }
     }

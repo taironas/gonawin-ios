@@ -12,45 +12,45 @@ import LVTwitterOAuthClient
 
 class TwitterLogin {
     
-    func login(completion: UserInfoCompletionHandler) {
+    func login(_ completion: @escaping UserInfoCompletionHandler) {
         let accountStore = ACAccountStore()
-        let accountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
+        let accountType = accountStore.accountType(withAccountTypeIdentifier: ACAccountTypeIdentifierTwitter)
         
-        accountStore.requestAccessToAccountsWithType(accountType, options: nil) {
+        accountStore.requestAccessToAccounts(with: accountType, options: nil) {
             granted, error in
             if granted {
-                let accountArray = accountStore.accountsWithAccountType(accountType)
+                let accountArray = accountStore.accounts(with: accountType)
                 
-                if accountArray.count > 0 {
-                    if let twitterAccount = accountArray[0] as? ACAccount {
+                if (accountArray?.count)! > 0 {
+                    if let twitterAccount = accountArray?[0] as? ACAccount {
                         self.userInfo(twitterAccount) {
                             userInfo, error in
-                            completion(userInfo: userInfo, error: nil)
+                            completion(userInfo, nil)
                         }
                     }
                 }
                 else {
                     let error = NSError(domain: "com.taironas.gonawin", code: 0, userInfo: ["Error": "No Twitter account has been found"])
-                    completion(userInfo: nil, error: error)
+                    completion(nil, error)
                 }
             }
             else {
-                completion(userInfo: nil, error: error)
+                completion(nil, error as NSError?)
             }
         }
     }
     
-    private func userInfo(account: ACAccount, completion: UserInfoCompletionHandler ) {
-        let url = NSURL(string: "https://api.twitter.com/1.1/users/show.json?screen_name=\(account.username)")!
+    fileprivate func userInfo(_ account: ACAccount, completion: @escaping UserInfoCompletionHandler ) {
+        let url = URL(string: "https://api.twitter.com/1.1/users/show.json?screen_name=\(account.username)")!
         
-        let request = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: SLRequestMethod.GET, URL: url, parameters: nil)
+        let request = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: SLRequestMethod.GET, url: url, parameters: nil)
         
-        request.account = account
+        request?.account = account
         
-        request.performRequestWithHandler() {
+        request?.perform() {
             data, response, error in
             if data != nil {
-                let userInfoDico = decodeJSON(data)
+                let userInfoDico = decodeJSON(data!)
                 
                 let id = userInfoDico!["id_str"] as! String
                 let name = userInfoDico!["name"] as! String
@@ -58,40 +58,40 @@ class TwitterLogin {
                 self.oauthToken(account) {
                     oauthToken, error in
                     if oauthToken != nil {
-                        completion(userInfo: UserInfo(accessToken: oauthToken!, id: Int(id)!, email: "", name: name), error: nil)
+                        completion(UserInfo(accessToken: oauthToken!, id: Int(id)!, email: "", name: name), nil)
                     }
                     else {
-                        completion(userInfo: nil, error: error)
+                        completion(nil, error)
                     }
                 }
             }
             else {
-                completion(userInfo: nil, error: error)
+                completion(nil, error as NSError?)
             }
         }
     }
     
-    private func oauthToken(account: ACAccount, completion: (oauthToken: String?, error: NSError?) -> Void) {
+    fileprivate func oauthToken(_ account: ACAccount, completion: @escaping (_ oauthToken: String?, _ error: NSError?) -> Void) {
         let client = LVTwitterOAuthClient(consumerKey: twitterConsumerKey(), andConsumerSecret: twitterConsumerSecret())
         
-        client.requestTokensForAccount(account) {
+        client?.requestTokens(for: account) {
             oauthResponse, error in
-            let oauthToken = oauthResponse[kLVOAuthAccessTokenKey] as! String?
+            let oauthToken = oauthResponse?[kLVOAuthAccessTokenKey] as! String?
             
-            completion(oauthToken: oauthToken, error: error)
+            completion(oauthToken, error as NSError?)
         }
     }
     
-    private func twitterConsumerKey() -> String {
-        let apiKeysPath = NSBundle.mainBundle().pathForResource("APIKeys", ofType: "plist")
+    fileprivate func twitterConsumerKey() -> String {
+        let apiKeysPath = Bundle.main.path(forResource: "APIKeys", ofType: "plist")
         let keys = NSDictionary(contentsOfFile: apiKeysPath!)
         let FacebookAppID = keys!["TwitterConsumerKey"] as! String
         
         return FacebookAppID
     }
     
-    private func twitterConsumerSecret() -> String {
-        let apiKeysPath = NSBundle.mainBundle().pathForResource("APIKeys", ofType: "plist")
+    fileprivate func twitterConsumerSecret() -> String {
+        let apiKeysPath = Bundle.main.path(forResource: "APIKeys", ofType: "plist")
         let keys = NSDictionary(contentsOfFile: apiKeysPath!)
         let FacebookAppID = keys!["TwitterConsumerSecret"] as! String
         

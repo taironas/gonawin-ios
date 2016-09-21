@@ -21,13 +21,13 @@ class GonawinSession {
     
     static let session = GonawinSession()
     
-    private let disposeBag = DisposeBag()
-    private var provider: AuthorizedGonawinEngine?
+    fileprivate let disposeBag = DisposeBag()
+    fileprivate var provider: AuthorizedGonawinEngine?
     
     weak var delegate: GonawinSessionDelegate?
     
-    private init() {
-        if let data = Locksmith.loadDataForUserAccount("GonawinClient") {
+    fileprivate init() {
+        if let data = Locksmith.loadDataForUserAccount(userAccount: "GonawinClient") {
             
             authorizationToken = data["auth"] as? String
             
@@ -41,19 +41,19 @@ class GonawinSession {
                         print("error : \(error)")
                         return Observable.empty()
                     })
-                    .subscribeNext {
+                    .subscribe(onNext: {
                         self.currentUser = $0
-                    }
+                    })
                     .addDisposableTo(self.disposeBag)
             }
         }
     }
     
-    func newSession(user: User) {
+    func newSession(_ user: User) {
         authorizationToken = user.auth
         // save access token in keychain
         do {
-            try Locksmith.saveData(["auth": user.auth], forUserAccount: "GonawinClient")
+            try Locksmith.saveData(data: ["auth": user.auth], forUserAccount: "GonawinClient")
         }
         catch {
             print("error :  cannot add the auth token into the keychain")
@@ -68,7 +68,7 @@ class GonawinSession {
     func deleteSession() {
         // delete auth token in keychain
         do {
-            try Locksmith.deleteDataForUserAccount("GonawinClient")
+            try Locksmith.deleteDataForUserAccount(userAccount: "GonawinClient")
         }
         catch {
             print("Error when trying to delete the auth token in keychain")

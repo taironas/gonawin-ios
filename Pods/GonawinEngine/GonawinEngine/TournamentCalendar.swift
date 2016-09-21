@@ -15,13 +15,13 @@ final public class TournamentCalendar: JSONAble {
         self.days = days
     }
     
-    static func fromJSON(json: JSONDictionary) -> TournamentCalendar {
+    static func fromJSON(_ json: JSONDictionary) -> TournamentCalendar {
         let json = JSON(json)
         
-        return fromJSON(json)
+        return from(json: json)
     }
     
-    static func fromJSON(json: JSON) -> TournamentCalendar {
+    static func from(json: JSON) -> TournamentCalendar {
         
         let days = json["Days"].arrayValue.map{ MatchDay.fromJSON($0) }
         

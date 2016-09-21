@@ -23,7 +23,7 @@ final public class ActivityResults: JSONAble {
         self.activities = activities
     }
     
-    static func fromJSON(json: JSONDictionary) -> ActivityResults {
+    static func fromJSON(_ json: JSONDictionary) -> ActivityResults {
         let json = JSON(json)
         
         let jsonResults = json["Results"]
@@ -55,7 +55,7 @@ final public class Activity {
         self.target = target
     }
     
-    static func fromJSON(json: JSON) -> Activity {
+    static func fromJSON(_ json: JSON) -> Activity {
         let type = json["Type"].stringValue
         let verb = json["Verb"].stringValue
         let actor = ActivityEntity.fromJSON(json["Actor"])
@@ -78,7 +78,7 @@ final public class ActivityEntity {
         self.displayName = displayName
     }
     
-    static func fromJSON(json: JSON) -> ActivityEntity {
+    static func fromJSON(_ json: JSON) -> ActivityEntity {
         
         let id = json["Id"].int64Value
         let type = json["Type"].stringValue

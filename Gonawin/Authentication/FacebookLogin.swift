@@ -11,61 +11,61 @@ import Social
 
 class FacebookLogin {
     
-    func login(completion: UserInfoCompletionHandler) {
+    func login(_ completion: @escaping UserInfoCompletionHandler) {
         let accountStore = ACAccountStore()
-        let accountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierFacebook)
-        let accountOptions = [ACFacebookAppIdKey: facebookAppID(), ACFacebookPermissionsKey: ["email"]]
+        let accountType = accountStore.accountType(withAccountTypeIdentifier: ACAccountTypeIdentifierFacebook)
+        let accountOptions = [ACFacebookAppIdKey: facebookAppID(), ACFacebookPermissionsKey: ["email"]] as [String : Any]
         
-        accountStore.requestAccessToAccountsWithType(accountType, options: accountOptions as [NSObject : AnyObject]) {
+        accountStore.requestAccessToAccounts(with: accountType, options: accountOptions as [AnyHashable: Any]) {
             granted, error in
             if granted {
-                let accountArray = accountStore.accountsWithAccountType(accountType)
+                let accountArray = accountStore.accounts(with: accountType)
                 
-                if accountArray.count > 0 {
-                    if let facebookAccount = accountArray[0] as? ACAccount {
+                if (accountArray?.count)! > 0 {
+                    if let facebookAccount = accountArray?[0] as? ACAccount {
                         self.userInfo(facebookAccount) {
                             userInfo, error in
-                            completion(userInfo: userInfo, error: nil)
+                            completion(userInfo, nil)
                         }
                     }
                 }
                 else {
                     let error = NSError(domain: "com.taironas.gonawin", code: 0, userInfo: ["Error": "No Facebook account has been found"])
-                    completion(userInfo: nil, error: error)
+                    completion(nil, error)
                 }
             }
             else {
-                completion(userInfo: nil, error: error)
+                completion(nil, error as NSError?)
             }
         }
     }
     
-    private func userInfo(account: ACAccount, completion: UserInfoCompletionHandler ) {
-        let url = NSURL(string: "https://graph.facebook.com/v2.2/me")!
+    fileprivate func userInfo(_ account: ACAccount, completion: @escaping UserInfoCompletionHandler ) {
+        let url = URL(string: "https://graph.facebook.com/v2.2/me")!
         
-        let request = SLRequest(forServiceType: SLServiceTypeFacebook, requestMethod: SLRequestMethod.GET, URL: url, parameters: nil)
+        let request = SLRequest(forServiceType: SLServiceTypeFacebook, requestMethod: SLRequestMethod.GET, url: url, parameters: nil)
         
-        request.account = account
+        request?.account = account
         
-        request.performRequestWithHandler() {
+        request?.perform() {
             data, response, error in
             if data != nil {
-                let userInfoDico = decodeJSON(data)
+                let userInfoDico = decodeJSON(data!)
                 
                 let id = userInfoDico!["id"] as! String
                 let email = userInfoDico!["email"] as! String
                 let name = userInfoDico!["name"] as! String
                 
-                completion(userInfo: UserInfo(accessToken: account.credential.oauthToken, id: Int(id)!, email: email, name: name), error: nil)
+                completion(UserInfo(accessToken: account.credential.oauthToken, id: Int(id)!, email: email, name: name), nil)
             }
             else {
-                completion(userInfo: nil, error: error)
+                completion(nil, error as NSError?)
             }
         }
     }
     
-    private func facebookAppID() -> String {
-        let apiKeysPath = NSBundle.mainBundle().pathForResource("APIKeys", ofType: "plist")
+    fileprivate func facebookAppID() -> String {
+        let apiKeysPath = Bundle.main.path(forResource: "APIKeys", ofType: "plist")
         let keys = NSDictionary(contentsOfFile: apiKeysPath!)
         let FacebookAppID = keys!["FacebookAppID"] as! String
     

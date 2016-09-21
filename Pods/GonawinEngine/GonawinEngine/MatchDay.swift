@@ -17,13 +17,13 @@ final public class MatchDay: JSONAble {
         self.matches = matches
     }
     
-    static func fromJSON(json: JSONDictionary) -> MatchDay {
+    static func fromJSON(_ json: JSONDictionary) -> MatchDay {
         let json = JSON(json)
         
         return fromJSON(json)
     }
     
-    static func fromJSON(json: JSON) -> MatchDay {
+    static func fromJSON(_ json: JSON) -> MatchDay {
         
         let date = json["Date"].stringValue
         let matches = json["Matches"].arrayValue.map{ Match.fromJSON($0) }

@@ -9,12 +9,12 @@
 import UIKit
 import RxSwift
 
-func showError(viewController: UIViewController, error: ErrorType) {
-    showErrorDescription(viewController, description: "\(error)")
+func showError(_ error: Error, from viewController: UIViewController) {
+    showErrorAlert(error, from: viewController)
 }
 
-func showErrorDescription(viewController: UIViewController, description: String) {
-    let alert = UIAlertController(title: "Error", message: description, preferredStyle: UIAlertControllerStyle.Alert)
-    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-    viewController.presentViewController(alert, animated: true, completion: nil)
+func showErrorAlert(_ error: Error, from viewController: UIViewController) {
+    let alert = UIAlertController(title: "Error", message: "\(error.localizedDescription)", preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+    viewController.present(alert, animated: true, completion: nil)
 }

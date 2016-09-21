@@ -30,8 +30,8 @@ class TournamentTableViewCell: UITableViewCell {
         
         //load new information from our user
         if let tournament = self.tournament {
-            let url = NSURL(string: (tournament.imageURL + "&size=150").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!
-            tournamentImageView.loadRequest(NSURLRequest(URL: url))
+            let url = URL(string: (tournament.imageURL + "&size=140").addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
+            tournamentImageView.loadRequest(URLRequest(url: url))
             
             tournamentNamelabel.text = tournament.name
             participantsCountLabel.text = "\(tournament.participantsCount)"

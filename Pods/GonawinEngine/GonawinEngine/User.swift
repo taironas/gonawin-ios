@@ -36,7 +36,7 @@ final public class User: JSONAble {
         self.imageURL = imageURL
     }
     
-    static func fromJSON(json: JSONDictionary) -> User {
+    static func fromJSON(_ json: JSONDictionary) -> User {
         let json = JSON(json)
         
         let jsonUser = json["User"]
@@ -61,7 +61,7 @@ final public class User: JSONAble {
         return User(id: id, email: email, username: username, name: name, alias: alias, auth: auth, predictIds: predictIds, archivedPredictIds: archivedPredictIds, tournamentIds: tournamentIds, archivedTournamentIds: archivedTournamentIds, teamIds: teamIds, score: score, scoreOfTournaments: scoreOfTournaments, activityIds: activityIds, imageURL: imageURL)
     }
     
-    static func fromJSON(json: JSON) -> User {
+    static func fromJSON(_ json: JSON) -> User {
         let id  = json["Id"].int64Value
         let username = json["Username"].stringValue
         let alias = json["Alias"].stringValue

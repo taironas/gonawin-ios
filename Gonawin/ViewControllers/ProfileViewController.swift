@@ -21,8 +21,8 @@ class ProfileViewController: UITableViewController {
         super.viewDidLoad()
         
         if let user = GonawinSession.session.currentUser {
-            let url = NSURL(string: user.imageURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!
-            profileImageView.loadRequest(NSURLRequest(URL: url))
+            let url = URL(string: user.imageURL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
+            profileImageView.loadRequest(URLRequest(url: url))
             let imageLayer = profileImageView.layer
             imageLayer.cornerRadius = profileImageView.frame.size.height/2
             imageLayer.masksToBounds = true
@@ -38,8 +38,8 @@ class ProfileViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        switch indexPath.section {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch (indexPath as NSIndexPath).section {
         case 0:
             print("TODO: not yet implemented!")
         case 1:
@@ -48,14 +48,14 @@ class ProfileViewController: UITableViewController {
         }
     }
     
-    private func presentLogoutAlert() {
-        let alert = UIAlertController(title: "Logout", message: "Are sure you want be logged out?", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.Cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default, handler: { action in self.logout() }))
-        self.presentViewController(alert, animated: true, completion: nil)
+    fileprivate func presentLogoutAlert() {
+        let alert = UIAlertController(title: "Logout", message: "Are sure you want be logged out?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in self.logout() }))
+        self.present(alert, animated: true, completion: nil)
     }
     
-    private func logout()
+    fileprivate func logout()
     {
         GonawinSession.session.deleteSession()
     }

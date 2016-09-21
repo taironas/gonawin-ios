@@ -28,7 +28,7 @@ class MatchTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        predictButton.setTitleColor(UIColor.groupTableViewBackgroundColor(), forState: .Disabled)
+        predictButton.setTitleColor(UIColor.groupTableViewBackground, for: .disabled)
     }
     
     func updateUI() {
@@ -46,12 +46,12 @@ class MatchTableViewCell: UITableViewCell {
             result2.text = "\(match.result2)"
             
             if !match.predict.isEmpty {
-                let predicts = match.predict.trim().componentsSeparatedByString("-")
+                let predicts = match.predict.trim().components(separatedBy: "-")
                 predict1.text = predicts[0]
                 predict2.text = predicts[1]
             }
             
-            predictButton.enabled = match.canPredict || !match.finished
+            predictButton.isEnabled = match.canPredict || !match.finished
         }
     }
 

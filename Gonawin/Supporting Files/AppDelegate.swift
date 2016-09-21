@@ -17,15 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GonawinSessionDelegate {
     let authenticationStoryboard = UIStoryboard(name: "Authentication", bundle: nil)
     
     
-    func applicationDidFinishLaunching(application: UIApplication) {
+    func applicationDidFinishLaunching(_ application: UIApplication) {
         let navigationBarAppearance = UINavigationBar.appearance()
         
-        navigationBarAppearance.barTintColor = UIColor.whiteColor()
-        navigationBarAppearance.tintColor = UIColor.greenSeaFoamColor()
-        navigationBarAppearance.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.darkBlueColor()]
-        navigationBarAppearance.translucent = false
+        navigationBarAppearance.barTintColor = UIColor.white
+        navigationBarAppearance.tintColor = UIColor.greenSeaFoam
+        navigationBarAppearance.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.darkBlue]
+        navigationBarAppearance.isTranslucent = false
         
-        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.greenSeaFoamColor()], forState:.Selected)
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.greenSeaFoam], for: .selected)
         
         GonawinSession.session.delegate = self
         

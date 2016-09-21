@@ -15,8 +15,8 @@ class TournamentsViewController: UITableViewController {
     var tournaments = [Tournament]()
     var currentPage = 1
     
-    private let disposeBag = DisposeBag()
-    private var provider: AuthorizedGonawinEngine?
+    fileprivate let disposeBag = DisposeBag()
+    fileprivate var provider: AuthorizedGonawinEngine?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,16 +30,16 @@ class TournamentsViewController: UITableViewController {
         self.provider?.getTournaments(currentPage, count: 20)
             .debug()
             .catchError({ error in
-                showError(self, error: error)
+                showError(self as! Error, from: error as! UIViewController)
                 return Observable.empty()
             })
-            .subscribeNext {
+            .subscribe(onNext: {
                 if $0.count > 0 {
-                    self.tournaments.removeAll(keepCapacity: true)
-                    self.tournaments.insertContentsOf($0, at: self.currentPage - 1)
+                    self.tournaments.removeAll(keepingCapacity: true)
+                    self.tournaments.insert(contentsOf: $0, at: self.currentPage - 1)
                     self.tableView?.reloadData()
                 }
-            }
+            })
             .addDisposableTo(self.disposeBag)
     }
     
@@ -48,31 +48,31 @@ class TournamentsViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tournaments.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        tableView.registerNib(UINib(nibName: "TournamentTableViewCell", bundle: nil ), forCellReuseIdentifier: TableViewCellIdentifier.Tournament.rawValue)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        tableView.register(UINib(nibName: "TournamentTableViewCell", bundle: nil ), forCellReuseIdentifier: TableViewCellIdentifier.Tournament.rawValue)
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifier.Tournament.rawValue, forIndexPath: indexPath) as! TournamentTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifier.Tournament.rawValue, for: indexPath) as! TournamentTableViewCell
         cell.tournament = tournaments[indexPath.row]
         
         return cell
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 54
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        performSegueWithIdentifier("showTournament", sender: self)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showTournament", sender: self)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showTournament"{
-            if let vc = segue.destinationViewController as? TournamentViewController {
-                if let tournamentIndex = tableView.indexPathForSelectedRow?.row {
+            if let vc = segue.destination as? TournamentViewController {
+                if let tournamentIndex = (tableView.indexPathForSelectedRow as NSIndexPath?)?.row {
                     vc.tournamentID = tournaments[tournamentIndex].id
                 }
             }

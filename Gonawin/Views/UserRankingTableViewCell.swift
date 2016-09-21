@@ -25,8 +25,8 @@ class UserRankingTableViewCell: UserTableViewCell {
         
         //load new information from our user
         if let user = self.user {
-            let url = NSURL(string: (user.imageURL + "&size=150").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!
-            userImageView.loadRequest(NSURLRequest(URL: url))
+            let url = URL(string: (user.imageURL + "&size=150").addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
+            userImageView.loadRequest(URLRequest(url: url))
             
             userNamelabel.text = user.username
             userScoreLabel.text = "\(user.score)"

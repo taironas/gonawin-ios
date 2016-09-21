@@ -15,20 +15,20 @@ class TeamViewController: UIViewController {
     
     var teamID: Int64 = 0
     
-    private var team: Team? {
+    fileprivate var team: Team? {
         didSet {
             updateUI()
         }
     }
     
-    private var pageMenu : CAPSPageMenu?
+    fileprivate var pageMenu : CAPSPageMenu?
     
-    private let membersController = UsersViewController()
-    private let tournamentsController = TournamentsViewController()
-    private let leaderboardController = RankingViewController()
+    fileprivate let membersController = UsersViewController()
+    fileprivate let tournamentsController = TournamentsViewController()
+    fileprivate let leaderboardController = RankingViewController()
     
-    private let disposeBag = DisposeBag()
-    private var provider: AuthorizedGonawinEngine?
+    fileprivate let disposeBag = DisposeBag()
+    fileprivate var provider: AuthorizedGonawinEngine?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,18 +42,18 @@ class TeamViewController: UIViewController {
         self.provider?.getTeam(Int(teamID))
             .debug()
             .catchError({ error in
-                showError(self, error: error)
+                showError(error, from: self)
                 return Observable.empty()
             })
-            .subscribeNext {
+            .subscribe(onNext: {
                 self.team = $0
                 
                 if let members = self.team?.members {
                     
                     self.membersController.users = members
-                    self.leaderboardController.users = members.sort{ $0.score > $1.score }
+                    self.leaderboardController.users = members.sorted{ $0.score > $1.score }
                 }
-            }
+            })
             .addDisposableTo(self.disposeBag)
     }
 
@@ -70,7 +70,7 @@ class TeamViewController: UIViewController {
         }
     }
     
-    private func setupPageMenu() {
+    fileprivate func setupPageMenu() {
         var controllerArray : [UIViewController] = []
         
         membersController.title = "MEMBERS"
@@ -84,19 +84,19 @@ class TeamViewController: UIViewController {
         controllerArray.append(leaderboardController)
         
         let parameters: [CAPSPageMenuOption] = [
-            .MenuItemSeparatorWidth(0.0),
-            .MenuHeight(44.0),
-            .UseMenuLikeSegmentedControl(true),
-            .MenuItemSeparatorPercentageHeight(0.1),
-            .SelectionIndicatorColor(UIColor.greenSeaFoamColor()),
-            .SelectedMenuItemLabelColor(UIColor.greenSeaFoamColor()),
-            .UnselectedMenuItemLabelColor(UIColor.blackColor()),
-            .ScrollMenuBackgroundColor(UIColor.clearColor()),
-            .BottomMenuHairlineColor(UIColor.groupTableViewBackgroundColor()),
-            .MenuItemFont(UIFont.systemFontOfSize(12.0, weight: UIFontWeightMedium)),
+            .menuItemSeparatorWidth(0.0),
+            .menuHeight(44.0),
+            .useMenuLikeSegmentedControl(true),
+            .menuItemSeparatorPercentageHeight(0.1),
+            .selectionIndicatorColor(UIColor.greenSeaFoam),
+            .selectedMenuItemLabelColor(UIColor.greenSeaFoam),
+            .unselectedMenuItemLabelColor(UIColor.black),
+            .scrollMenuBackgroundColor(UIColor.clear),
+            .bottomMenuHairlineColor(UIColor.groupTableViewBackground),
+            .menuItemFont(UIFont.systemFont(ofSize: 12.0, weight: UIFontWeightMedium)),
         ]
         
-        let frame = CGRectMake(0, 0, view.frame.width, view.frame.height)
+        let frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: frame, pageMenuOptions: parameters)
         

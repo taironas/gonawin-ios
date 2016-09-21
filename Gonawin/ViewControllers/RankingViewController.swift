@@ -25,22 +25,22 @@ class RankingViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        tableView.registerNib(UINib(nibName: "UserRankingTableViewCell", bundle: nil ), forCellReuseIdentifier: TableViewCellIdentifier.Ranking.rawValue)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifier.Ranking.rawValue, forIndexPath: indexPath) as! UserRankingTableViewCell
+        tableView.register(UINib(nibName: "UserRankingTableViewCell", bundle: nil ), forCellReuseIdentifier: TableViewCellIdentifier.Ranking.rawValue)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifier.Ranking.rawValue, for: indexPath as IndexPath) as! UserRankingTableViewCell
         cell.user = users[indexPath.row]
         cell.rankinglabel.text = "\(indexPath.row + 1)"
         
         return cell
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 54
     }
-    
 }

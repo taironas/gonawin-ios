@@ -8,7 +8,6 @@
 
 import UIKit
 import GonawinEngine
-import DateTools
 import FontAwesomeKit
 
 class ActivityTableViewCell: UITableViewCell {
@@ -22,7 +21,7 @@ class ActivityTableViewCell: UITableViewCell {
     @IBOutlet weak var activityContent: UILabel!
     @IBOutlet weak var activityTime: UILabel!
     
-    let dateFormatter = NSDateFormatter()
+    let dateFormatter = DateFormatter()
     
     func updateUI() {
         //reset any existing activity information
@@ -37,7 +36,7 @@ class ActivityTableViewCell: UITableViewCell {
         }
     }
     
-    private enum ActivityType: String {
+    fileprivate enum ActivityType: String {
         case Welcome = "welcome"
         case Team = "team"
         case Tournament = "tournament"
@@ -48,7 +47,7 @@ class ActivityTableViewCell: UITableViewCell {
         case Invitation = "invitation"
     }
     
-    private func builActivityContent(activity: Activity) -> NSAttributedString {
+    fileprivate func builActivityContent(_ activity: Activity) -> NSAttributedString {
         if let activityType = ActivityType(rawValue: activity.type) {
             switch activityType {
             case .Predict:
@@ -62,7 +61,7 @@ class ActivityTableViewCell: UITableViewCell {
         return activityString(activity)
     }
     
-    private func predictActivityString(activity: Activity) -> NSMutableAttributedString {
+    fileprivate func predictActivityString(_ activity: Activity) -> NSMutableAttributedString {
         let target = activity.target?.displayName
         let actor = activity.actor?.displayName
         let object = activity.object?.displayName
@@ -70,16 +69,16 @@ class ActivityTableViewCell: UITableViewCell {
         
         let attributedString = NSMutableAttributedString(string: activityString as String)
         
-        let attributes = [NSForegroundColorAttributeName: UIColor.darkBlueColor(), NSFontAttributeName: UIFont.boldSystemFontOfSize(activityContent!.font.pointSize)]
+        let attributes = [NSForegroundColorAttributeName: UIColor.darkBlue, NSFontAttributeName: UIFont.boldSystemFont(ofSize: activityContent!.font.pointSize)]
         
-        attributedString.addAttributes(attributes, range: activityString.rangeOfString(target!))
-        attributedString.addAttributes(attributes, range: activityString.rangeOfString(actor!))
-        attributedString.addAttributes(attributes, range: activityString.rangeOfString(object!))
+        attributedString.addAttributes(attributes, range: activityString.range(of: target!))
+        attributedString.addAttributes(attributes, range: activityString.range(of: actor!))
+        attributedString.addAttributes(attributes, range: activityString.range(of: object!))
         
         return attributedString
     }
     
-    private func matchActivityString(activity: Activity) -> NSMutableAttributedString {
+    fileprivate func matchActivityString(_ activity: Activity) -> NSMutableAttributedString {
         let actor = activity.actor?.displayName
         let object = activity.object?.displayName
         let target = activity.target?.displayName
@@ -87,31 +86,31 @@ class ActivityTableViewCell: UITableViewCell {
         
         let attributedString = NSMutableAttributedString(string: activityString as String)
         
-        let attributes = [NSForegroundColorAttributeName: UIColor.darkBlueColor(), NSFontAttributeName: UIFont.boldSystemFontOfSize(activityContent!.font.pointSize)]
+        let attributes = [NSForegroundColorAttributeName: UIColor.darkBlue, NSFontAttributeName: UIFont.boldSystemFont(ofSize: activityContent!.font.pointSize)]
         
-        attributedString.addAttributes(attributes, range: activityString.rangeOfString(actor!))
-        attributedString.addAttributes(attributes, range: activityString.rangeOfString(object!))
-        attributedString.addAttributes(attributes, range: activityString.rangeOfString(target!))
+        attributedString.addAttributes(attributes, range: activityString.range(of: actor!))
+        attributedString.addAttributes(attributes, range: activityString.range(of: object!))
+        attributedString.addAttributes(attributes, range: activityString.range(of: target!))
         
         return attributedString
     }
     
-    private func activityString(activity: Activity) -> NSMutableAttributedString {
+    fileprivate func activityString(_ activity: Activity) -> NSMutableAttributedString {
         let actor = activity.actor?.displayName
         let object = activity.object?.displayName
-        let activityString = actor! + " \(activity.verb) " + object! as NSString
+        let activityString = "\(actor!) \(activity.verb) \(object!)" as NSString
         
         let attributedString = NSMutableAttributedString(string: activityString as String)
         
-        let attributes = [NSForegroundColorAttributeName: UIColor.darkBlueColor(), NSFontAttributeName: UIFont.boldSystemFontOfSize(activityContent!.font.pointSize)]
+        let attributes = [NSForegroundColorAttributeName: UIColor.darkBlue, NSFontAttributeName: UIFont.boldSystemFont(ofSize: activityContent!.font.pointSize)]
         
-        attributedString.addAttributes(attributes, range: activityString.rangeOfString(actor!))
-        attributedString.addAttributes(attributes, range: activityString.rangeOfString(object!))
+        attributedString.addAttributes(attributes, range: activityString.range(of: actor!))
+        attributedString.addAttributes(attributes, range: activityString.range(of: object!))
         
         return attributedString
     }
     
-    private func activityIconColor(activity: Activity) -> UIColor {
+    fileprivate func activityIconColor(_ activity: Activity) -> UIColor {
         if let activityType = ActivityType(rawValue: activity.type) {
             switch activityType {
             case .Welcome:
@@ -136,49 +135,49 @@ class ActivityTableViewCell: UITableViewCell {
         return UIColor(red: 52.0/255.0, green: 79.0/255.0, blue: 219.0/255.0, alpha: 1.0)
     }
     
-    private func activityIcon(activity: Activity) -> FAKFontAwesome {
+    fileprivate func activityIcon(_ activity: Activity) -> FAKFontAwesome {
         let iconSize: CGFloat = 30.0
         
         if let activityType = ActivityType(rawValue: activity.type) {
             
             switch activityType {
             case .Welcome:
-                return FAKFontAwesome.checkIconWithSize(iconSize)
+                return FAKFontAwesome.checkIcon(withSize: iconSize)
             case .Team:
-                return FAKFontAwesome.usersIconWithSize(iconSize)
+                return FAKFontAwesome.usersIcon(withSize: iconSize)
             case .Tournament:
-                return FAKFontAwesome.trophyIconWithSize(iconSize)
+                return FAKFontAwesome.trophyIcon(withSize: iconSize)
             case .Match:
-                return FAKFontAwesome.compressIconWithSize(iconSize)
+                return FAKFontAwesome.compressIcon(withSize: iconSize)
             case .Accuracy:
-                return FAKFontAwesome.barChartIconWithSize(iconSize)
+                return FAKFontAwesome.barChartIcon(withSize: iconSize)
             case .Predict:
-                return FAKFontAwesome.crosshairsIconWithSize(iconSize)
+                return FAKFontAwesome.crosshairsIcon(withSize: iconSize)
             case .Score:
-                return FAKFontAwesome.listIconWithSize(iconSize)
+                return FAKFontAwesome.listIcon(withSize: iconSize)
             case .Invitation:
-                return FAKFontAwesome.bullhornIconWithSize(iconSize)
+                return FAKFontAwesome.bullhornIcon(withSize: iconSize)
             }
         }
         
-        return FAKFontAwesome.checkIconWithSize(iconSize)
+        return FAKFontAwesome.checkIcon(withSize: iconSize)
     }
     
-    private func activityIconViewImage(activity: Activity) -> UIImage {
+    fileprivate func activityIconViewImage(_ activity: Activity) -> UIImage {
         let icon = activityIcon(activity)
         
         icon.addAttribute(NSForegroundColorAttributeName, value: activityIconColor(activity))
         
-        return icon.imageWithSize(CGSizeMake(30, 30))
+        return icon.image(with: CGSize(width: 30, height: 30))
     }
     
-    private func publishedFromNow(published: String) -> String {
+    fileprivate func publishedFromNow(_ published: String) -> String {
         dateFormatter.dateFormat = "YYYY-MM-ddEEEEEHH:mm:ss.AZ"
-        dateFormatter.locale = NSLocale(localeIdentifier: "en_US")
+        dateFormatter.locale = Locale(identifier: "en_US")
         
-        let publishedDate = dateFormatter.dateFromString(published)
+        let publishedDate = dateFormatter.date(from: published)
         if let publishedInterval = publishedDate?.timeIntervalSinceNow {
-            return NSDate(timeIntervalSinceNow: publishedInterval).timeAgoSinceNow()
+            return dateFormatter.timeSince(from: Date(timeIntervalSinceNow: publishedInterval))
         }
         
         return ""

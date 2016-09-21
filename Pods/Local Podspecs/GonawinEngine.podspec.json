@@ -1,6 +1,6 @@
 {
   "name": "GonawinEngine",
-  "version": "0.9.1",
+  "version": "0.10",
   "summary": "Gonawin Engine for iOS",
   "homepage": "https://github.com/taironas/gonawin-engine-ios",
   "license": {
@@ -12,24 +12,23 @@
   },
   "social_media_url": "https://twitter.com/gonawin_app",
   "platforms": {
-    "ios": "9.0"
+    "ios": "10.0"
   },
   "requires_arc": true,
   "source": {
     "git": "https://github.com/taironas/gonawin-engine-ios.git",
-    "tag": "v0.9.1",
-    "submodules": true
+    "tag": "v0.10"
   },
-  "source_files": "GonawinEngine/**/*.{h,swift}",
+  "source_files": "GonawinEngine/**/*.swift",
   "dependencies": {
     "Moya/RxSwift": [
-      "~> 7.0"
+
     ],
     "RxSwift": [
-      "~> 2.6"
+
     ],
     "SwiftyJSON": [
-      "~> 2.3.2"
+
     ]
   }
 }

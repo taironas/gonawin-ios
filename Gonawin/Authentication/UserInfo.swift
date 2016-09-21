@@ -13,4 +13,4 @@ struct UserInfo {
     let name: String
 }
 
-typealias UserInfoCompletionHandler = (userInfo: UserInfo?, error: NSError?) -> Void
+typealias UserInfoCompletionHandler = (_ userInfo: UserInfo?, _ error: NSError?) -> Void

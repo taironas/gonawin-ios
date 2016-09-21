@@ -9,10 +9,10 @@
 public typealias JSONDictionary = [String:AnyObject]
 public typealias JSONArray = [JSONDictionary]
 
-func decodeJSON(data: NSData) -> JSONDictionary? {
-    return (try? NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions())) as? JSONDictionary
+func decodeJSON(_ data: Data) -> JSONDictionary? {
+    return (try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions())) as? JSONDictionary
 }
 
-func decodeJSONArray(data: NSData) -> JSONArray? {
-    return (try? NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers)) as? JSONArray
+func decodeJSONArray(_ data: Data) -> JSONArray? {
+    return (try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers)) as? JSONArray
 }

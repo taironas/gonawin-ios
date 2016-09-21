@@ -13,26 +13,27 @@ public protocol GonawinAPIType {
 }
 
 public enum GonawinAPI {
-    case Auth(String, String, Int, String, String)
+    case auth(String, String, Int, String, String)
 }
 
 public enum GonawinAuthenticatedAPI {
-    case User(Int)
-    case Activities(Int, Int)
-    case Teams(Int, Int)
-    case Team(Int)
-    case Tournaments(Int, Int)
-    case Tournament(Int)
-    case TournamentCalendar(Int)
-    case TournamentMatchPredict(Int, Int, Int, Int)
+    case user(Int)
+    case activities(Int, Int)
+    case teams(Int, Int)
+    case team(Int)
+    case tournaments(Int, Int)
+    case tournament(Int)
+    case tournamentCalendar(Int)
+    case tournamentMatchPredict(Int, Int, Int, Int)
 }
 
 extension GonawinAPI: TargetType, GonawinAPIType {
-    public var baseURL: NSURL { return NSURL(string: "http://www.gonawin.com/j")! }
+
+    public var baseURL: URL { return URL(string: "http://www.gonawin.com/j")! }
     
     public var path: String {
         switch self {
-        case .Auth:
+        case .auth:
             return "/auth"
         }
     }
@@ -44,9 +45,9 @@ extension GonawinAPI: TargetType, GonawinAPIType {
         }
     }
     
-    public var parameters: [String: AnyObject]? {
+    public var parameters: [String: Any]? {
         switch self {
-        case .Auth(let accessToken, let provider, let id, let email, let name):
+        case .auth(let accessToken, let provider, let id, let email, let name):
             return [
                 "access_token": accessToken,
                 "provider": provider,
@@ -57,9 +58,13 @@ extension GonawinAPI: TargetType, GonawinAPIType {
         }
     }
     
-    public var sampleData: NSData {
+    public var task: Task {
+        return .request
+    }
+    
+    public var sampleData: Data {
         switch self {
-        case .Auth:
+        case .auth:
             return stubbedResponse("Auth")
         }
     }
@@ -74,72 +79,76 @@ extension GonawinAPI: TargetType, GonawinAPIType {
 }
 
 extension GonawinAuthenticatedAPI: TargetType, GonawinAPIType {
-    public var baseURL: NSURL { return NSURL(string: "http://www.gonawin.com/j")! }
+    public var baseURL: URL { return URL(string: "http://www.gonawin.com/j")! }
     
     public var path: String {
         switch self {
-        case .User(let id):
+        case .user(let id):
             return "/users/show/\(id)"
-        case .Activities:
+        case .activities:
             return "/activities"
-        case .Teams:
+        case .teams:
             return "/teams"
-        case .Team(let id):
+        case .team(let id):
             return "/teams/show/\(id)"
-        case .Tournaments:
+        case .tournaments:
             return "/tournaments"
-        case .Tournament(let id):
+        case .tournament(let id):
             return "/tournaments/show/\(id)"
-        case .TournamentCalendar(let id):
+        case .tournamentCalendar(let id):
             return "tournaments/\(id)/calendar"
-        case .TournamentMatchPredict(let id, let matchId, _, _):
+        case .tournamentMatchPredict(let id, let matchId, _, _):
             return "tournaments/\(id)/matches/\(matchId)"
         }
     }
     
     public var method: Moya.Method {
         switch self {
-        case .TournamentMatchPredict:
+        case .tournamentMatchPredict:
             return .POST
         default:
             return .GET
         }
     }
     
-    public var parameters: [String: AnyObject]? {
+    public var parameters: [String: Any]? {
         switch self {
-        case .Activities(let page, let count):
+        case .activities(let page, let count):
             return ["page": page, "count": count]
-        case .Teams(let page, let count):
+        case .teams(let page, let count):
             return ["page": page, "count": count]
-        case .Tournaments(let page, let count):
+        case .tournaments(let page, let count):
             return ["page": page, "count": count]
-        case .TournamentMatchPredict(_, _, let homeTeamScore, let awayTeamScore):
+        case .tournamentMatchPredict(_, _, let homeTeamScore, let awayTeamScore):
             return ["result1": homeTeamScore, "result2": awayTeamScore]
         default:
             return nil
         }
     }
     
-    public var sampleData: NSData {
+    public var sampleData: Data {
         switch self {
-        case .User:
+        case .user:
             return stubbedResponse("User")
-        case .Activities:
+        case .activities:
             return stubbedResponse("Activities")
-        case .Teams:
+        case .teams:
             return stubbedResponse("Teams")
-        case .Team:
+        case .team:
             return stubbedResponse("Team")
-        case .Tournaments:
+        case .tournaments:
             return stubbedResponse("Tournaments")
-        case .Tournament:
+        case .tournament:
             return stubbedResponse("Tournament")
-        case .TournamentCalendar:
+        case .tournamentCalendar:
             return stubbedResponse("TournamentCalendar")
-        case .TournamentMatchPredict:
+        case .tournamentMatchPredict:
             return stubbedResponse("TournamentMatchPredict")
         }
+    }
+    
+    public var task: Task {
+        return .request
     }
     
     public var multipartBody: [MultipartFormData]? {
@@ -153,14 +162,14 @@ extension GonawinAuthenticatedAPI: TargetType, GonawinAPIType {
 
 // MARK - Provider support
 
-func stubbedResponse(filename: String) -> NSData! {
+func stubbedResponse(_ filename: String) -> Data! {
     @objc class TestClass: NSObject { }
     
-    let bundle = NSBundle(forClass: TestClass.self)
-    let path = bundle.pathForResource(filename, ofType: "json")
-    return NSData(contentsOfFile: path!)
+    let bundle = Bundle(for: TestClass.self)
+    let path = bundle.path(forResource: filename, ofType: "json")
+    return (try? Data(contentsOf: URL(fileURLWithPath: path!)))
 }
 
-func url(route: TargetType) -> String {
-    return route.baseURL.URLByAppendingPathComponent(route.path).absoluteString
+func url(_ route: TargetType) -> String {
+    return route.baseURL.appendingPathComponent(route.path).absoluteString
 }

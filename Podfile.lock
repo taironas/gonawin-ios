@@ -1,76 +1,109 @@
 PODS:
-  - Alamofire (3.4.1)
-  - DateTools (1.7.0)
+  - Alamofire (4.0.0)
   - FontAwesomeKit/Core (2.2.0)
   - FontAwesomeKit/FontAwesome (2.2.0):
     - FontAwesomeKit/Core
-  - GonawinEngine (0.9.1):
-    - Moya/RxSwift (~> 7.0)
-    - RxSwift (~> 2.6)
-    - SwiftyJSON (~> 2.3.2)
+  - GonawinEngine (0.10):
+    - Moya/RxSwift
+    - RxSwift
+    - SwiftyJSON
   - Locksmith (2.0.8)
   - LVTwitterOAuthClient (0.3.0):
     - OAuthCore
-  - Moya/Core (7.0.0):
-    - Alamofire (~> 3.0)
-    - Result (~> 2.0)
-  - Moya/RxSwift (7.0.0):
+  - Moya/Core (8.0.0-beta.1):
+    - Alamofire (~> 4.0.0)
+    - Result
+  - Moya/RxSwift (8.0.0-beta.1):
     - Moya/Core
-    - RxSwift (~> 2.0)
+    - RxSwift (= 3.0.0-beta.1)
   - NSData+Base64 (1.0.0)
   - OAuthCore (0.0.1):
     - NSData+Base64
-  - p2.OAuth2 (2.2.1):
-    - SwiftKeychain (~> 0.1.5)
+  - p2.OAuth2 (3.0.0)
   - PageMenu (1.2.9)
-  - Result (2.1.3)
-  - RxSwift (2.6.0)
-  - SDWebImage (3.7.5):
-    - SDWebImage/Core (= 3.7.5)
-  - SDWebImage/Core (3.7.5)
-  - SwiftKeychain (0.1.5)
+  - Result (3.0.0)
+  - RxSwift (3.0.0-beta.1)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
   - SwiftyJSON (2.3.2)
-  - SwiftyUserDefaults (2.1.3)
+  - SwiftyUserDefaults (3.0.0)
 
 DEPENDENCIES:
-  - DateTools
   - FontAwesomeKit/FontAwesome
   - GonawinEngine (from `https://github.com/taironas/gonawin-engine-ios.git`)
-  - Locksmith
-  - LVTwitterOAuthClient (~> 0.3)
-  - p2.OAuth2
-  - PageMenu (~> 1.2.9)
-  - SDWebImage (~> 3.7)
+  - Locksmith (from `https://github.com/matthewpalmer/Locksmith`, branch `swift-3.0`)
+  - LVTwitterOAuthClient
+  - Moya/RxSwift (from `https://github.com/Moya/Moya`, tag `8.0.0-beta.1`)
+  - p2.OAuth2 (from `https://github.com/p2/OAuth2`)
+  - PageMenu (from `https://github.com/lowki93/PageMenu`, branch `swift3`)
+  - RxSwift (from `https://github.com/ReactiveX/RxSwift`, tag `3.0.0-beta.1`)
+  - SDWebImage
+  - SwiftyJSON (from `https://github.com/IBM-Swift/SwiftyJSON.git`)
   - SwiftyUserDefaults
 
 EXTERNAL SOURCES:
   GonawinEngine:
     :git: https://github.com/taironas/gonawin-engine-ios.git
+  Locksmith:
+    :branch: swift-3.0
+    :git: https://github.com/matthewpalmer/Locksmith
+  Moya:
+    :git: https://github.com/Moya/Moya
+    :tag: 8.0.0-beta.1
+  p2.OAuth2:
+    :git: https://github.com/p2/OAuth2
+    :submodules: true
+  PageMenu:
+    :branch: swift3
+    :git: https://github.com/lowki93/PageMenu
+  RxSwift:
+    :git: https://github.com/ReactiveX/RxSwift
+    :tag: 3.0.0-beta.1
+  SwiftyJSON:
+    :git: https://github.com/IBM-Swift/SwiftyJSON.git
 
 CHECKOUT OPTIONS:
   GonawinEngine:
-    :commit: 6ff52f04eed8d856d042708edd1831befb4b4597
+    :commit: 1fc59d3a6ed6f6bae30723e0b9419d38d61752de
     :git: https://github.com/taironas/gonawin-engine-ios.git
+  Locksmith:
+    :commit: 1039eedb312f49049d13e5fcddd67879b31c74b7
+    :git: https://github.com/matthewpalmer/Locksmith
+  Moya:
+    :git: https://github.com/Moya/Moya
+    :tag: 8.0.0-beta.1
+  p2.OAuth2:
+    :commit: fb9797900978837b0f19ef91d9ccf2c4df2634bf
+    :git: https://github.com/p2/OAuth2
+    :submodules: true
+  PageMenu:
+    :commit: 639b40b7440eaf4146ace93a323616f956280151
+    :git: https://github.com/lowki93/PageMenu
+  RxSwift:
+    :git: https://github.com/ReactiveX/RxSwift
+    :tag: 3.0.0-beta.1
+  SwiftyJSON:
+    :commit: 73b523a107b798021ca9af74b5f7c20e435c8809
+    :git: https://github.com/IBM-Swift/SwiftyJSON.git
 
 SPEC CHECKSUMS:
-  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
-  DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
+  Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
   FontAwesomeKit: 025fd4dd1017fe4e3f8d47b03e024deedbb33cd4
-  GonawinEngine: 14580a0417b6dd98ad1f2d64a8bc3f9db37580ef
+  GonawinEngine: 99a30bf3e94013daf7df1c18fce7cc9fe0146543
   Locksmith: a8ed41ac4c06506ea8cb199d8ec8a8d3d108eb2a
   LVTwitterOAuthClient: 058199e43af92c0b99332332fa26d2229c59f04d
-  Moya: f004b82418fb8165ee1fc9f86190db4b3611fda9
+  Moya: 63c4a59d2643c824df8c5a3b3a5f38dc2b48b055
   NSData+Base64: 4e84902c4db907a15673474677e57763ef3903e4
   OAuthCore: 43dce261db846a1fe20234d95654257e00e78581
-  p2.OAuth2: 7f5c44259ef83ea5b9ef8f9049310611788f86cb
+  p2.OAuth2: a8f96ecad6a46189b9b193691fea401139e43491
   PageMenu: ba19ff267f7a19e444e93c20a7847b78954a7011
-  Result: 18e1a7597fbcca5923c565b40a25a98afafdee02
-  RxSwift: 77f3a0b15324baa7a1c9bfa9f199648a82424e26
-  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
-  SwiftKeychain: 1387edad8b56c659daa93d9ffc99526bac5b0088
+  Result: 1b3e431f37cbcd3ad89c6aa9ab0ae55515fae3b6
+  RxSwift: 0823e8d7969c23bfa9ddfb2afa4881e424a1a710
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
-  SwiftyUserDefaults: bd394a09247e3f00e17e402aa535c047c5d12b07
+  SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
 
-PODFILE CHECKSUM: b33029ee5bf24ca2d0078e59359e2b243195d178
+PODFILE CHECKSUM: 3a941c2a4f9c7ce6ae485efd9508edcc929797a6
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.1.0.rc.2

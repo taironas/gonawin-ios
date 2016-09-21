@@ -23,13 +23,13 @@ final public class Predict: JSONAble {
         self.awayTeamScore = awayTeamScore
     }
     
-    static func fromJSON(json: JSONDictionary) -> Predict {
+    static func fromJSON(_ json: JSONDictionary) -> Predict {
         let json = JSON(json)
         
         return fromJSON(json)
     }
     
-    static func fromJSON(json: JSON) -> Predict {
+    static func fromJSON(_ json: JSON) -> Predict {
         
         let jsonPredict = json["Predict"]
         

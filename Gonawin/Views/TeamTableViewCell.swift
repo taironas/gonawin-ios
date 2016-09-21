@@ -28,8 +28,8 @@ class TeamTableViewCell: UITableViewCell {
         
         //load new information from our user
         if let team = self.team {
-            let url = NSURL(string: (team.imageURL + "&size=140").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!
-            teamImageView.loadRequest(NSURLRequest(URL: url))
+            let url = URL(string: (team.imageURL + "&size=140").addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
+            teamImageView.loadRequest(URLRequest(url: url))
             
             teamNamelabel.text = team.name
             teamMembersCountLabel.text = "\(team.membersCount)"

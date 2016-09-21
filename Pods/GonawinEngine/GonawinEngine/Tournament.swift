@@ -37,14 +37,14 @@ final public class Tournament: JSONAble {
         self.remainingDays = remainingDays
     }
     
-    static func fromJSON(json: JSONDictionary) -> Tournament {
+    static func fromJSON(_ json: JSONDictionary) -> Tournament {
         let json = JSON(json)
         
         return fromJSON(json)
     }
     
-    static func fromJSON(json: JSON) -> Tournament {
-        if json["Tournament"].isExists() {
+    static func fromJSON(_ json: JSON) -> Tournament {
+        if json["Tournament"].exists() {
             let jsonTournament = json["Tournament"]
             
             let id = jsonTournament["Id"].int64Value

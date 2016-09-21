@@ -10,4 +10,4 @@ enum GonawinError: String {
     case CouldNotParseJSON
 }
 
-extension GonawinError: ErrorType { }
+extension GonawinError: Error { }

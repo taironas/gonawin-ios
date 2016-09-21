@@ -44,13 +44,13 @@ final public class Match: JSONAble {
         self.canPredict = canPredict
     }
     
-    static func fromJSON(json: JSONDictionary) -> Match {
+    static func fromJSON(_ json: JSONDictionary) -> Match {
         let json = JSON(json)
         
         return fromJSON(json)
     }
     
-    static func fromJSON(json: JSON) -> Match {
+    static func fromJSON(_ json: JSON) -> Match {
         let id = json["Id"].int64Value
         let idNumber = json["IdNumber"].int64Value
         let date = json["Date"].stringValue

@@ -33,15 +33,15 @@ final public class Team: JSONAble {
         self.tournaments = tournaments
     }
     
-    static func fromJSON(json: JSONDictionary) -> Team {
+    static func fromJSON(_ json: JSONDictionary) -> Team {
         let json = JSON(json)
         
         return fromJSON(json)
     }
     
-    static func fromJSON(json: JSON) -> Team {
+    static func fromJSON(_ json: JSON) -> Team {
         
-        if json["Team"].isExists() {
+        if json["Team"].exists() {
             let jsonTeam = json["Team"]
             
             let id = jsonTeam["Id"].int64Value

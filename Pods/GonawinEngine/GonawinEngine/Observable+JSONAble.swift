@@ -10,7 +10,7 @@ import RxSwift
 
 extension Observable {
     
-    func mapToObject<B: JSONAble>(classType: B.Type) -> Observable<B> {
+    func mapToObject<B: JSONAble>(_ classType: B.Type) -> Observable<B> {
         return self.map { json in
             guard let dict = json as? JSONDictionary else {
                 throw GonawinError.CouldNotParseJSON
@@ -20,7 +20,7 @@ extension Observable {
         }
     }
     
-    func mapToObjectArray<B: JSONAble>(classType: B.Type) -> Observable<[B]> {
+    func mapToObjectArray<B: JSONAble>(_ classType: B.Type) -> Observable<[B]> {
         return self.map { json in
             guard let array = json as? JSONArray else {
                 throw GonawinError.CouldNotParseJSON

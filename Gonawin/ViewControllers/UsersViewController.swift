@@ -25,20 +25,20 @@ class UsersViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        tableView.registerNib(UINib(nibName: "UserTableViewCell", bundle: nil ), forCellReuseIdentifier: TableViewCellIdentifier.User.rawValue)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        tableView.register(UINib(nibName: "UserTableViewCell", bundle: nil ), forCellReuseIdentifier: TableViewCellIdentifier.User.rawValue)
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifier.User.rawValue, forIndexPath: indexPath) as! UserTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifier.User.rawValue, for: indexPath as IndexPath) as! UserTableViewCell
         cell.user = users[indexPath.row]
         
         return cell
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 54
     }
     
