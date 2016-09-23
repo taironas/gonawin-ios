@@ -42,6 +42,7 @@
 		14F1842619C77C2D00437C59 /* GonawinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1842519C77C2D00437C59 /* GonawinController.swift */; };
 		14F5905F1999008600F03D43 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F5905E1999008600F03D43 /* TeamsViewController.swift */; };
 		14F59061199900B400F03D43 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F59060199900B400F03D43 /* ProfileViewController.swift */; };
+		14F6DADC1D9295B000765CEB /* TournamentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F6DADB1D9295B000765CEB /* TournamentViewCell.swift */; };
 		14F7682B1C89C47F00AAF4D8 /* GonawinSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7682A1C89C47F00AAF4D8 /* GonawinSession.swift */; };
 		14F7682D1C89C5ED00AAF4D8 /* DefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7682C1C89C5ED00AAF4D8 /* DefaultsKey.swift */; };
 		14F87A6A1998EBE400A6EB11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F87A691998EBE400A6EB11 /* AppDelegate.swift */; };
@@ -52,9 +53,7 @@
 		14F87A7F1998EBE400A6EB11 /* GonawinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F87A7E1998EBE400A6EB11 /* GonawinTests.swift */; };
 		14FD2AF31D59F44E002947D6 /* APIKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14FD2AF21D59F44E002947D6 /* APIKeys.plist */; };
 		14FEDF481C9EB87000BBC5B1 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEDF461C9EB87000BBC5B1 /* TeamTableViewCell.swift */; };
-		14FEDF491C9EB87000BBC5B1 /* TournamentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEDF471C9EB87000BBC5B1 /* TournamentTableViewCell.swift */; };
 		14FEDF4E1C9EB8A000BBC5B1 /* TeamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14FEDF4C1C9EB8A000BBC5B1 /* TeamTableViewCell.xib */; };
-		14FEDF531C9EBA0800BBC5B1 /* TournamentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14FEDF511C9EBA0800BBC5B1 /* TournamentTableViewCell.xib */; };
 		14FEDF551C9EEA9200BBC5B1 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEDF541C9EEA9200BBC5B1 /* UsersViewController.swift */; };
 		526712DCDF1848CBBC55E543 /* Pods_Gonawin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93453BD3E612CD9578856E02 /* Pods_Gonawin.framework */; };
 /* End PBXBuildFile section */
@@ -119,6 +118,7 @@
 		14F1842519C77C2D00437C59 /* GonawinController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GonawinController.swift; sourceTree = "<group>"; };
 		14F5905E1999008600F03D43 /* TeamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		14F59060199900B400F03D43 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		14F6DADB1D9295B000765CEB /* TournamentViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentViewCell.swift; sourceTree = "<group>"; };
 		14F7682A1C89C47F00AAF4D8 /* GonawinSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GonawinSession.swift; sourceTree = "<group>"; };
 		14F7682C1C89C5ED00AAF4D8 /* DefaultsKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsKey.swift; sourceTree = "<group>"; };
 		14F87A641998EBE400A6EB11 /* Gonawin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gonawin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,9 +133,7 @@
 		14F87A7E1998EBE400A6EB11 /* GonawinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GonawinTests.swift; sourceTree = "<group>"; };
 		14FD2AF21D59F44E002947D6 /* APIKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = APIKeys.plist; path = ../../APIKeys.plist; sourceTree = "<group>"; };
 		14FEDF461C9EB87000BBC5B1 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamTableViewCell.swift; path = Views/TeamTableViewCell.swift; sourceTree = "<group>"; };
-		14FEDF471C9EB87000BBC5B1 /* TournamentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TournamentTableViewCell.swift; path = Views/TournamentTableViewCell.swift; sourceTree = "<group>"; };
 		14FEDF4D1C9EB8A000BBC5B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TeamTableViewCell.xib; sourceTree = "<group>"; };
-		14FEDF521C9EBA0800BBC5B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TournamentTableViewCell.xib; sourceTree = "<group>"; };
 		14FEDF541C9EEA9200BBC5B1 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		8FB8EFF33B1AE03299470605 /* Pods-Gonawin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gonawin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gonawin/Pods-Gonawin.debug.xcconfig"; sourceTree = "<group>"; };
 		93453BD3E612CD9578856E02 /* Pods_Gonawin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gonawin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,7 +221,7 @@
 				14C15F101C99541B009B1E8D /* UserTableViewCell.swift */,
 				14C15F0F1C99541B009B1E8D /* UserRankingTableViewCell.swift */,
 				14FEDF461C9EB87000BBC5B1 /* TeamTableViewCell.swift */,
-				14FEDF471C9EB87000BBC5B1 /* TournamentTableViewCell.swift */,
+				14F6DADB1D9295B000765CEB /* TournamentViewCell.swift */,
 				143A27361C9AAE5600B5E42A /* MatchTableViewCell.swift */,
 			);
 			name = Views;
@@ -287,7 +285,6 @@
 				145B4B4E1C9C51B9007393B1 /* UserTableViewCell.xib */,
 				145B4B5A1C9C56CD007393B1 /* UserRankingTableViewCell.xib */,
 				14FEDF4C1C9EB8A000BBC5B1 /* TeamTableViewCell.xib */,
-				14FEDF511C9EBA0800BBC5B1 /* TournamentTableViewCell.xib */,
 				148F93EA1CA01AB700765D30 /* MatchTableViewCell.xib */,
 				143E96811AE3E2EB00E39EF4 /* FontAwesome.otf */,
 				14F87A721998EBE400A6EB11 /* Images.xcassets */,
@@ -426,7 +423,6 @@
 				14DFE58E1CC3C658000BF8C4 /* Activities.storyboard in Resources */,
 				14DFE5901CC3C674000BF8C4 /* Tournaments.storyboard in Resources */,
 				148F93EC1CA01AB700765D30 /* MatchTableViewCell.xib in Resources */,
-				14FEDF531C9EBA0800BBC5B1 /* TournamentTableViewCell.xib in Resources */,
 				143E96821AE3E2EB00E39EF4 /* FontAwesome.otf in Resources */,
 				14DFE5931CC3C68A000BF8C4 /* Teams.storyboard in Resources */,
 				14FEDF4E1C9EB8A000BBC5B1 /* TeamTableViewCell.xib in Resources */,
@@ -521,13 +517,13 @@
 				148F93E91C9FEAFF00765D30 /* RankingViewController.swift in Sources */,
 				1470B18D1CA3E10500254A91 /* PredictButton.swift in Sources */,
 				14F87A6C1998EBE400A6EB11 /* ActivitiesViewController.swift in Sources */,
-				14FEDF491C9EB87000BBC5B1 /* TournamentTableViewCell.swift in Sources */,
 				1470B1911CA4130000254A91 /* String+Utils.swift in Sources */,
 				14FEDF551C9EEA9200BBC5B1 /* UsersViewController.swift in Sources */,
 				14F7682D1C89C5ED00AAF4D8 /* DefaultsKey.swift in Sources */,
 				14F1842619C77C2D00437C59 /* GonawinController.swift in Sources */,
 				142D9D1C1A8EA1C400EFD976 /* GooglePlusAuthentication.swift in Sources */,
 				14B484DF1ABE0327000E3BA6 /* FacebookLogin.swift in Sources */,
+				14F6DADC1D9295B000765CEB /* TournamentViewCell.swift in Sources */,
 				1422E5C51AC734ED00E6454B /* UserInfo.swift in Sources */,
 				1470B18F1CA3E8BF00254A91 /* UIColor+Palette.swift in Sources */,
 				143495301ACF2DFF0005C86B /* Error.swift in Sources */,
@@ -625,14 +621,6 @@
 				14FEDF4D1C9EB8A000BBC5B1 /* Base */,
 			);
 			name = TeamTableViewCell.xib;
-			sourceTree = "<group>";
-		};
-		14FEDF511C9EBA0800BBC5B1 /* TournamentTableViewCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				14FEDF521C9EBA0800BBC5B1 /* Base */,
-			);
-			name = TournamentTableViewCell.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

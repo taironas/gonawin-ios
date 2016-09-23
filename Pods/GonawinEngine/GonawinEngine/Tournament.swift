@@ -14,26 +14,26 @@ final public class Tournament: JSONAble {
     public let participantsCount: Int64
     public let teamsCount: Int64
     public let progress: Int64
+    public let start: String
+    public let end: String
     public let imageURL: String
     public let joined: Bool?
     public let participants: [User]?
     public let teams: [Team]?
-    public let start: String?
-    public let end: String?
     public let remainingDays: String?
     
-    public init(id: Int64, name: String, participantsCount: Int64, teamsCount: Int64, progress: Int64, imageURL: String, joined: Bool? = nil, participants: [User]? = nil, teams: [Team]? = nil, start: String? = nil, end: String? = nil, remainingDays: String? = nil) {
+    public init(id: Int64, name: String, participantsCount: Int64, teamsCount: Int64, progress: Int64, start: String, end: String, imageURL: String, joined: Bool? = nil, participants: [User]? = nil, teams: [Team]? = nil, remainingDays: String? = nil) {
         self.id = id
         self.name = name
         self.participantsCount = participantsCount
         self.teamsCount = teamsCount
         self.progress = progress
+        self.start = start
+        self.end = end
         self.imageURL = imageURL
         self.joined = joined
         self.participants = participants
         self.teams = teams
-        self.start = start
-        self.end = end
         self.remainingDays = remainingDays
     }
     
@@ -58,16 +58,18 @@ final public class Tournament: JSONAble {
             let remainingDays = json["RemainingDays"].stringValue
             let imageURL = json["ImageURL"].stringValue
             
-            return Tournament(id: id, name: name, participantsCount: Int64(participants.count), teamsCount: Int64(teams.count), progress: progress, imageURL: imageURL, joined:  joined, participants:  participants, teams: teams, start: start, end: end, remainingDays: remainingDays)
+            return Tournament(id: id, name: name, participantsCount: Int64(participants.count), teamsCount: Int64(teams.count), progress: progress, start: start, end: end, imageURL: imageURL, joined:  joined, participants:  participants, teams: teams, remainingDays: remainingDays)
         }
         
         let id  = json["Id"].int64Value
         let name = json["Name"].stringValue
         let participantsCount = json["ParticipantsCount"].int64Value
         let teamsCount = json["TeamsCount"].int64Value
+        let start = json["Start"].stringValue
+        let end = json["End"].stringValue
         let progress = json["Progress"].int64Value
         let imageURL = json["ImageURL"].stringValue
         
-        return Tournament(id: id, name: name, participantsCount: participantsCount, teamsCount: teamsCount, progress: progress, imageURL: imageURL)
+        return Tournament(id: id, name: name, participantsCount: participantsCount, teamsCount: teamsCount, progress: progress, start: start, end: end, imageURL: imageURL)
     }
 }

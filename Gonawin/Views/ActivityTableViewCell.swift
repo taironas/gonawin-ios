@@ -32,7 +32,7 @@ class ActivityTableViewCell: UITableViewCell {
         if let activity = self.activity {
             activityIconView.image = activityIconViewImage(activity)
             activityContent?.attributedText = builActivityContent(activity)
-            activityTime?.text = publishedFromNow(activity.published)
+            activityTime?.text = published(from: activity.published)
         }
     }
     
@@ -171,11 +171,11 @@ class ActivityTableViewCell: UITableViewCell {
         return icon.image(with: CGSize(width: 30, height: 30))
     }
     
-    fileprivate func publishedFromNow(_ published: String) -> String {
+    fileprivate func published(from now: String) -> String {
         dateFormatter.dateFormat = "YYYY-MM-ddEEEEEHH:mm:ss.AZ"
         dateFormatter.locale = Locale(identifier: "en_US")
         
-        let publishedDate = dateFormatter.date(from: published)
+        let publishedDate = dateFormatter.date(from: now)
         if let publishedInterval = publishedDate?.timeIntervalSinceNow {
             return dateFormatter.timeSince(from: Date(timeIntervalSinceNow: publishedInterval))
         }

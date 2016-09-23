@@ -65,7 +65,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   GonawinEngine:
-    :commit: 1fc59d3a6ed6f6bae30723e0b9419d38d61752de
+    :commit: 0cc2e702cbbf2dc1f2c84cab5b3ce180c19b96f9
     :git: https://github.com/taironas/gonawin-engine-ios.git
   Locksmith:
     :commit: 1039eedb312f49049d13e5fcddd67879b31c74b7

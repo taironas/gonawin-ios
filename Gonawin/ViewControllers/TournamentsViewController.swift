@@ -10,10 +10,13 @@ import UIKit
 import GonawinEngine
 import RxSwift
 
-class TournamentsViewController: UITableViewController {
+class TournamentsViewController: UICollectionViewController {
                             
     var tournaments = [Tournament]()
     var currentPage = 1
+    
+    let cellIdentifier = "TournamentViewCell"
+    let segueIdentifier = "showTournament"
     
     fileprivate let disposeBag = DisposeBag()
     fileprivate var provider: AuthorizedGonawinEngine?
@@ -37,7 +40,7 @@ class TournamentsViewController: UITableViewController {
                 if $0.count > 0 {
                     self.tournaments.removeAll(keepingCapacity: true)
                     self.tournaments.insert(contentsOf: $0, at: self.currentPage - 1)
-                    self.tableView?.reloadData()
+                    self.collectionView?.reloadData()
                 }
             })
             .addDisposableTo(self.disposeBag)
@@ -48,36 +51,42 @@ class TournamentsViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return tournaments.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.register(UINib(nibName: "TournamentTableViewCell", bundle: nil ), forCellReuseIdentifier: TableViewCellIdentifier.Tournament.rawValue)
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! TournamentViewCell
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifier.Tournament.rawValue, for: indexPath) as! TournamentTableViewCell
         cell.tournament = tournaments[indexPath.row]
         
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 54
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showTournament", sender: self)
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: segueIdentifier, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showTournament"{
+        if segue.identifier == segueIdentifier {
             if let vc = segue.destination as? TournamentViewController {
-                if let tournamentIndex = (tableView.indexPathForSelectedRow as NSIndexPath?)?.row {
+                if let tournamentIndex = (collectionView?.indexPathsForSelectedItems?[0])?.row {
                     vc.tournamentID = tournaments[tournamentIndex].id
                 }
             }
         }
     }
+}
+
+extension TournamentsViewController : UICollectionViewDelegateFlowLayout {
     
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let screenSize = UIScreen.main.bounds
+        
+        return CGSize(width: screenSize.width - 2*10.0, height: screenSize.width/3)
+    }
 }
 
