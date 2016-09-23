@@ -30,6 +30,8 @@ class TournamentsViewController: UICollectionViewController {
         
         currentPage = 1
         
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        
         self.provider?.getTournaments(currentPage, count: 20)
             .debug()
             .catchError({ error in
@@ -37,6 +39,8 @@ class TournamentsViewController: UICollectionViewController {
                 return Observable.empty()
             })
             .subscribe(onNext: {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                
                 if $0.count > 0 {
                     self.tournaments.removeAll(keepingCapacity: true)
                     self.tournaments.insert(contentsOf: $0, at: self.currentPage - 1)
