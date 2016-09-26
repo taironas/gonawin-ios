@@ -9,24 +9,26 @@
 import UIKit
 import GonawinEngine
 import RxSwift
-import PageMenu
 
-class TournamentViewController: UIViewController {
+class TournamentViewController: UITableViewController {
 
-    var tournamentID: Int64 = 0
-    
-    fileprivate var tournament: Tournament? {
+    var tournament: Tournament? {
         didSet {
-            updateUI()
-            
-            fetchCalendar()
+            navigationItem.title = tournament?.name
         }
     }
     
-    fileprivate var pageMenu : CAPSPageMenu?
+    fileprivate var calendar: TournamentCalendar? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
-    fileprivate let matchesController = MatchesViewController()
-    fileprivate let leaderboardController = RankingViewController()
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var logoImageView: UIWebView!
+    @IBOutlet weak var participantsCountLabel: UILabel!
+    @IBOutlet weak var teamsCountLabel: UILabel!
+    
     
     fileprivate let disposeBag = DisposeBag()
     fileprivate var provider: AuthorizedGonawinEngine?
@@ -34,22 +36,19 @@ class TournamentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupPageMenu()
-        
         if let authorizationToken = GonawinSession.session.authorizationToken {
             provider = GonawinEngine.newAuthorizedGonawinEngine(authorizationToken)
         }
         
-        self.provider?.getTournament(Int(tournamentID))
-            .debug()
-            .catchError({ error in
-                showError(error, from: self)
-                return Observable.empty()
-            })
-            .subscribe(onNext: {
-                self.tournament = $0
-            })
-            .addDisposableTo(self.disposeBag)
+        if let tournament = self.tournament {
+            nameLabel.text = tournament.name
+            let url = URL(string: (tournament.imageURL + "&size=80").addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
+            logoImageView.loadRequest(URLRequest(url: url))
+            participantsCountLabel.text = "\(tournament.participantsCount)"
+            teamsCountLabel.text = "\(tournament.teamsCount)"
+            
+            fetchCalendar()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,53 +56,65 @@ class TournamentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    fileprivate func updateUI() {
-        //load new information from the team
-        if let tournament = self.tournament {
-            
-            navigationItem.title = tournament.name
+    fileprivate func fetchCalendar() {
+        if let tournamentID = tournament?.id {
+            self.provider?.getTournamentCalendar(Int(tournamentID))
+                .debug()
+                .catchError({ error in
+                    showError(error, from: self)
+                    return Observable.empty()
+                })
+                .subscribe(onNext: {
+                    self.calendar = $0
+                })
+                .addDisposableTo(self.disposeBag)
         }
     }
     
-    fileprivate func fetchCalendar() {
-        self.provider?.getTournamentCalendar(Int(tournamentID))
-            .debug()
-            .catchError({ error in
-                showError(error, from: self)
-                return Observable.empty()
-            })
-            .subscribe(onNext: {
-                self.matchesController.calendar = $0
-            })
-            .addDisposableTo(self.disposeBag)
+    fileprivate let dateFormatter = DateFormatter()
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return calendar?.days.count ?? 0
     }
     
-    fileprivate func setupPageMenu() {
-        var controllerArray = [UIViewController]()
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return calendar?.days[section].matches.count ?? 0
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return format(calendar?.days[section].day)
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return configureCell(for: indexPath)
+    }
+    
+    fileprivate func configureCell(for indexPath: IndexPath) -> UITableViewCell {
+        tableView.register(UINib(nibName: TableViewCellIdentifier.match.rawValue, bundle: nil ), forCellReuseIdentifier: TableViewCellIdentifier.match.rawValue)
         
-        matchesController.title = "MATCHES"
-        controllerArray.append(matchesController)
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifier.match.rawValue, for: indexPath) as! MatchTableViewCell
+        cell.match = calendar?.days[indexPath.section].matches[indexPath.row]
         
-        leaderboardController.title = "LEADERBOARD"
-        controllerArray.append(leaderboardController)
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 109.0
+    }
+    
+    fileprivate func format(_ day: String?) -> String {
+        guard let day = day else {
+            return ""
+        }
         
-        let parameters: [CAPSPageMenuOption] = [
-            .menuItemSeparatorWidth(0.0),
-            .menuHeight(44.0),
-            .useMenuLikeSegmentedControl(true),
-            .menuItemSeparatorPercentageHeight(0.1),
-            .selectionIndicatorColor(UIColor.greenSeaFoam),
-            .selectedMenuItemLabelColor(UIColor.greenSeaFoam),
-            .unselectedMenuItemLabelColor(UIColor.black),
-            .scrollMenuBackgroundColor(UIColor.clear),
-            .bottomMenuHairlineColor(UIColor.groupTableViewBackground),
-            .menuItemFont(UIFont.systemFont(ofSize: 13.0, weight: UIFontWeightMedium)),
-            ]
+        dateFormatter.dateFormat = "yyyy-MM-ddEEEEEHH:mm:ssZ"
+        dateFormatter.locale = Locale(identifier: "en_US")
         
-        let frame = CGRect(x:0, y:0, width: view.frame.width, height: view.frame.height)
+        let date = dateFormatter.date(from: day)
         
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: frame, pageMenuOptions: parameters)
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .none
         
-        view.addSubview(pageMenu!.view)
+        return dateFormatter.string(from: date!)
     }
 }

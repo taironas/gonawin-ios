@@ -31,9 +31,9 @@ class RankingViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        tableView.register(UINib(nibName: "UserRankingTableViewCell", bundle: nil ), forCellReuseIdentifier: TableViewCellIdentifier.Ranking.rawValue)
+        tableView.register(UINib(nibName: "UserRankingTableViewCell", bundle: nil ), forCellReuseIdentifier: TableViewCellIdentifier.ranking.rawValue)
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifier.Ranking.rawValue, for: indexPath as IndexPath) as! UserRankingTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifier.ranking.rawValue, for: indexPath as IndexPath) as! UserRankingTableViewCell
         cell.user = users[indexPath.row]
         cell.rankinglabel.text = "\(indexPath.row + 1)"
         

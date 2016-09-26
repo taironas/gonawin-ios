@@ -7,9 +7,9 @@
 //
 
 enum TableViewCellIdentifier: String {
-    case User = "UserTableViewCell"
-    case Team = "TeamTableViewCell"
-    case Tournament = "TournamentTableViewCell"
-    case Ranking = "RankingTableViewCell"
-    case Match = "MatchTableViewCell"
+    case user = "UserTableViewCell"
+    case team = "TeamTableViewCell"
+    case tournament = "TournamentTableViewCell"
+    case ranking = "RankingTableViewCell"
+    case match = "MatchTableViewCell"
 }

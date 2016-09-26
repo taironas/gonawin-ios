@@ -26,17 +26,17 @@ class TournamentViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        layer.borderWidth = 1.0;
-        layer.borderColor = UIColor.lightGray.cgColor
-        layer.cornerRadius = 3.0;
+        layer.borderWidth = 1.0
+        layer.borderColor = UIColor.lighterGray.cgColor
+        layer.cornerRadius = 3.0
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        layer.borderWidth = 1.0;
-        layer.borderColor = UIColor.lightGray.cgColor
-        layer.cornerRadius = 3.0;
+        layer.borderWidth = 1.0
+        layer.borderColor = UIColor.lighterGray.cgColor
+        layer.cornerRadius = 3.0
     }
     
     func updateUI() {

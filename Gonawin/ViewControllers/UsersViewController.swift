@@ -30,9 +30,9 @@ class UsersViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.register(UINib(nibName: "UserTableViewCell", bundle: nil ), forCellReuseIdentifier: TableViewCellIdentifier.User.rawValue)
+        tableView.register(UINib(nibName: "UserTableViewCell", bundle: nil ), forCellReuseIdentifier: TableViewCellIdentifier.user.rawValue)
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifier.User.rawValue, for: indexPath as IndexPath) as! UserTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifier.user.rawValue, for: indexPath as IndexPath) as! UserTableViewCell
         cell.user = users[indexPath.row]
         
         return cell

@@ -52,9 +52,9 @@ class TeamsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.register(UINib(nibName: "TeamTableViewCell", bundle: nil ), forCellReuseIdentifier: TableViewCellIdentifier.Team.rawValue)
+        tableView.register(UINib(nibName: "TeamTableViewCell", bundle: nil ), forCellReuseIdentifier: TableViewCellIdentifier.team.rawValue)
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifier.Team.rawValue, for: indexPath) as! TeamTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifier.team.rawValue, for: indexPath) as! TeamTableViewCell
         cell.team = teams[indexPath.row]
         
         return cell

@@ -75,7 +75,7 @@ class TournamentsViewController: UICollectionViewController {
         if segue.identifier == segueIdentifier {
             if let vc = segue.destination as? TournamentViewController {
                 if let tournamentIndex = (collectionView?.indexPathsForSelectedItems?[0])?.row {
-                    vc.tournamentID = tournaments[tournamentIndex].id
+                    vc.tournament = tournaments[tournamentIndex]
                 }
             }
         }

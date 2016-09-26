@@ -33,7 +33,6 @@
 		14C15F1D1C99546A009B1E8D /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C15F1B1C99546A009B1E8D /* TeamViewController.swift */; };
 		14C15F1E1C99546A009B1E8D /* TournamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C15F1C1C99546A009B1E8D /* TournamentViewController.swift */; };
 		14C15F211C9954D8009B1E8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C15F1F1C9954D8009B1E8D /* LaunchScreen.storyboard */; };
-		14C7B5401CA2902C00B8689E /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C7B53F1CA2902C00B8689E /* MatchesViewController.swift */; };
 		14DFE58E1CC3C658000BF8C4 /* Activities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14DFE58C1CC3C658000BF8C4 /* Activities.storyboard */; };
 		14DFE5901CC3C674000BF8C4 /* Tournaments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14DFE58F1CC3C674000BF8C4 /* Tournaments.storyboard */; };
 		14DFE5931CC3C68A000BF8C4 /* Teams.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14DFE5911CC3C68A000BF8C4 /* Teams.storyboard */; };
@@ -109,7 +108,6 @@
 		14C15F1B1C99546A009B1E8D /* TeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
 		14C15F1C1C99546A009B1E8D /* TournamentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentViewController.swift; sourceTree = "<group>"; };
 		14C15F201C9954D8009B1E8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		14C7B53F1CA2902C00B8689E /* MatchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		14DFE58D1CC3C658000BF8C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Activities.storyboard; sourceTree = "<group>"; };
 		14DFE58F1CC3C674000BF8C4 /* Tournaments.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tournaments.storyboard; sourceTree = "<group>"; };
 		14DFE5921CC3C68A000BF8C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Teams.storyboard; sourceTree = "<group>"; };
@@ -175,7 +173,6 @@
 				14F59060199900B400F03D43 /* ProfileViewController.swift */,
 				14875BF1199D2443005791D0 /* LoginViewController.swift */,
 				148F93E81C9FEAFF00765D30 /* RankingViewController.swift */,
-				14C7B53F1CA2902C00B8689E /* MatchesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -500,7 +497,6 @@
 				14C15F1E1C99546A009B1E8D /* TournamentViewController.swift in Sources */,
 				14C15F151C99541B009B1E8D /* UserRankingTableViewCell.swift in Sources */,
 				14C15F1A1C99544F009B1E8D /* CellIdentifier.swift in Sources */,
-				14C7B5401CA2902C00B8689E /* MatchesViewController.swift in Sources */,
 				14875BF2199D2443005791D0 /* LoginViewController.swift in Sources */,
 				143A27371C9AAE5600B5E42A /* MatchTableViewCell.swift in Sources */,
 				14FEDF481C9EB87000BBC5B1 /* TeamTableViewCell.swift in Sources */,
