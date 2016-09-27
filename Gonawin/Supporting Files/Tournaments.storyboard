@@ -141,6 +141,12 @@
                                         </stackView>
                                     </subviews>
                                 </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3EA-cj-gac">
+                                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="Glt-ch-CLg"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -149,7 +155,10 @@
                                 <constraint firstAttribute="trailing" secondItem="Q3o-Mx-6LW" secondAttribute="trailing" constant="33" id="EnE-d2-nT4"/>
                                 <constraint firstItem="Q3o-Mx-6LW" firstAttribute="leading" secondItem="DCw-cr-4zl" secondAttribute="trailing" constant="10" id="Fm1-L6-hz0"/>
                                 <constraint firstItem="DCw-cr-4zl" firstAttribute="leading" secondItem="ZTS-1U-d0G" secondAttribute="leading" constant="19" id="VS5-Rd-bew"/>
+                                <constraint firstAttribute="trailing" secondItem="3EA-cj-gac" secondAttribute="trailing" id="YGC-Fq-o8S"/>
+                                <constraint firstItem="3EA-cj-gac" firstAttribute="leading" secondItem="ZTS-1U-d0G" secondAttribute="leading" id="eWf-oW-7C8"/>
                                 <constraint firstItem="DCw-cr-4zl" firstAttribute="top" secondItem="ZTS-1U-d0G" secondAttribute="top" constant="10" id="hdP-sb-dlD"/>
+                                <constraint firstAttribute="bottom" secondItem="3EA-cj-gac" secondAttribute="bottom" id="n9D-Xa-FWs"/>
                                 <constraint firstItem="Q3o-Mx-6LW" firstAttribute="top" secondItem="ZTS-1U-d0G" secondAttribute="top" constant="10" id="nOD-hR-qmM"/>
                                 <constraint firstItem="ial-Kl-W3h" firstAttribute="bottom" secondItem="Q3o-Mx-6LW" secondAttribute="bottom" id="tyK-rD-j13"/>
                                 <constraint firstItem="ial-Kl-W3h" firstAttribute="leading" secondItem="DCw-cr-4zl" secondAttribute="leading" id="w3r-YQ-Ymu"/>
@@ -179,7 +188,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZa-0B-Iue" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887" y="1548"/>
+            <point key="canvasLocation" x="885.60000000000002" y="1547.6761619190406"/>
         </scene>
         <!--Tournaments-->
         <scene sceneID="dHK-oZ-eeb">

@@ -22,12 +22,6 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var userNamelabel: UILabel!
     @IBOutlet weak var userScoreLabel: UILabel!
     
-    override func layoutSubviews() {
-        let imageLayer = userImageView.layer
-        imageLayer.cornerRadius = userImageView.frame.size.height/2
-        imageLayer.masksToBounds = true
-    }
-
     func updateUI() {
         //reset any existing activity information
         userNamelabel?.text = nil
@@ -35,7 +29,7 @@ class UserTableViewCell: UITableViewCell {
         
         //load new information from our user
         if let user = self.user {
-            let url = URL(string: (user.imageURL + "&size=35").addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
+            let url = URL(string: (user.imageURL + "&size=40").addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
             userImageView.loadRequest(URLRequest(url: url))
             
             userNamelabel.text = user.username

@@ -16,17 +16,16 @@
 		143A27371C9AAE5600B5E42A /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A27361C9AAE5600B5E42A /* MatchTableViewCell.swift */; };
 		143E96821AE3E2EB00E39EF4 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 143E96811AE3E2EB00E39EF4 /* FontAwesome.otf */; };
 		145B4B501C9C51B9007393B1 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 145B4B4E1C9C51B9007393B1 /* UserTableViewCell.xib */; };
-		145B4B5C1C9C56CD007393B1 /* UserRankingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 145B4B5A1C9C56CD007393B1 /* UserRankingTableViewCell.xib */; };
+		145B4B5C1C9C56CD007393B1 /* RankedUserViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 145B4B5A1C9C56CD007393B1 /* RankedUserViewCell.xib */; };
 		1470B18D1CA3E10500254A91 /* PredictButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1470B18C1CA3E10500254A91 /* PredictButton.swift */; };
 		1470B18F1CA3E8BF00254A91 /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1470B18E1CA3E8BF00254A91 /* UIColor+Palette.swift */; };
 		1470B1911CA4130000254A91 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1470B1901CA4130000254A91 /* String+Utils.swift */; };
 		14875BF2199D2443005791D0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14875BF1199D2443005791D0 /* LoginViewController.swift */; };
-		148F93E91C9FEAFF00765D30 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148F93E81C9FEAFF00765D30 /* RankingViewController.swift */; };
 		148F93EC1CA01AB700765D30 /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 148F93EA1CA01AB700765D30 /* MatchTableViewCell.xib */; };
 		14B484DF1ABE0327000E3BA6 /* FacebookLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B484DE1ABE0327000E3BA6 /* FacebookLogin.swift */; };
 		14B484E11ABE04FD000E3BA6 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B484E01ABE04FD000E3BA6 /* Social.framework */; };
 		14B484E31ABE24EB000E3BA6 /* TwitterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B484E21ABE24EB000E3BA6 /* TwitterLogin.swift */; };
-		14C15F151C99541B009B1E8D /* UserRankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C15F0F1C99541B009B1E8D /* UserRankingTableViewCell.swift */; };
+		14C15F151C99541B009B1E8D /* RankedUserViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C15F0F1C99541B009B1E8D /* RankedUserViewCell.swift */; };
 		14C15F161C99541B009B1E8D /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C15F101C99541B009B1E8D /* UserTableViewCell.swift */; };
 		14C15F191C99544F009B1E8D /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C15F171C99544F009B1E8D /* ActivityTableViewCell.swift */; };
 		14C15F1A1C99544F009B1E8D /* CellIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C15F181C99544F009B1E8D /* CellIdentifier.swift */; };
@@ -90,18 +89,17 @@
 		143A27361C9AAE5600B5E42A /* MatchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchTableViewCell.swift; path = Views/MatchTableViewCell.swift; sourceTree = "<group>"; };
 		143E96811AE3E2EB00E39EF4 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = ../../Pods/FontAwesomeKit/FontAwesomeKit/FontAwesome.otf; sourceTree = "<group>"; };
 		145B4B4F1C9C51B9007393B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/UserTableViewCell.xib; sourceTree = "<group>"; };
-		145B4B5B1C9C56CD007393B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/UserRankingTableViewCell.xib; sourceTree = "<group>"; };
+		145B4B5B1C9C56CD007393B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/RankedUserViewCell.xib; sourceTree = "<group>"; };
 		1470B18C1CA3E10500254A91 /* PredictButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PredictButton.swift; path = Buttons/PredictButton.swift; sourceTree = "<group>"; };
 		1470B18E1CA3E8BF00254A91 /* UIColor+Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
 		1470B1901CA4130000254A91 /* String+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 		14875BF1199D2443005791D0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		148BBE721AB4D8030073F9EF /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../../Bridging-Header.h"; sourceTree = "<group>"; };
-		148F93E81C9FEAFF00765D30 /* RankingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
 		148F93EB1CA01AB700765D30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MatchTableViewCell.xib; sourceTree = "<group>"; };
 		14B484DE1ABE0327000E3BA6 /* FacebookLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLogin.swift; sourceTree = "<group>"; };
 		14B484E01ABE04FD000E3BA6 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		14B484E21ABE24EB000E3BA6 /* TwitterLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterLogin.swift; sourceTree = "<group>"; };
-		14C15F0F1C99541B009B1E8D /* UserRankingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserRankingTableViewCell.swift; path = Views/UserRankingTableViewCell.swift; sourceTree = "<group>"; };
+		14C15F0F1C99541B009B1E8D /* RankedUserViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RankedUserViewCell.swift; path = Views/RankedUserViewCell.swift; sourceTree = "<group>"; };
 		14C15F101C99541B009B1E8D /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserTableViewCell.swift; path = Views/UserTableViewCell.swift; sourceTree = "<group>"; };
 		14C15F171C99544F009B1E8D /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityTableViewCell.swift; path = Views/ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		14C15F181C99544F009B1E8D /* CellIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellIdentifier.swift; path = Views/CellIdentifier.swift; sourceTree = "<group>"; };
@@ -172,7 +170,6 @@
 				14FEDF541C9EEA9200BBC5B1 /* UsersViewController.swift */,
 				14F59060199900B400F03D43 /* ProfileViewController.swift */,
 				14875BF1199D2443005791D0 /* LoginViewController.swift */,
-				148F93E81C9FEAFF00765D30 /* RankingViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -216,7 +213,7 @@
 				14C15F181C99544F009B1E8D /* CellIdentifier.swift */,
 				14C15F171C99544F009B1E8D /* ActivityTableViewCell.swift */,
 				14C15F101C99541B009B1E8D /* UserTableViewCell.swift */,
-				14C15F0F1C99541B009B1E8D /* UserRankingTableViewCell.swift */,
+				14C15F0F1C99541B009B1E8D /* RankedUserViewCell.swift */,
 				14FEDF461C9EB87000BBC5B1 /* TeamViewCell.swift */,
 				14F6DADB1D9295B000765CEB /* TournamentViewCell.swift */,
 				143A27361C9AAE5600B5E42A /* MatchTableViewCell.swift */,
@@ -280,7 +277,7 @@
 				14FD2AF21D59F44E002947D6 /* APIKeys.plist */,
 				14DFE5961CC3C6B2000BF8C4 /* Storyboards */,
 				145B4B4E1C9C51B9007393B1 /* UserTableViewCell.xib */,
-				145B4B5A1C9C56CD007393B1 /* UserRankingTableViewCell.xib */,
+				145B4B5A1C9C56CD007393B1 /* RankedUserViewCell.xib */,
 				14FEDF4C1C9EB8A000BBC5B1 /* TeamTableViewCell.xib */,
 				148F93EA1CA01AB700765D30 /* MatchTableViewCell.xib */,
 				143E96811AE3E2EB00E39EF4 /* FontAwesome.otf */,
@@ -426,7 +423,7 @@
 				14F87A711998EBE400A6EB11 /* Main.storyboard in Resources */,
 				14F87A731998EBE400A6EB11 /* Images.xcassets in Resources */,
 				14DFE5951CC3C6A1000BF8C4 /* Profile.storyboard in Resources */,
-				145B4B5C1C9C56CD007393B1 /* UserRankingTableViewCell.xib in Resources */,
+				145B4B5C1C9C56CD007393B1 /* RankedUserViewCell.xib in Resources */,
 				14FD2AF31D59F44E002947D6 /* APIKeys.plist in Resources */,
 				14C15F211C9954D8009B1E8D /* LaunchScreen.storyboard in Resources */,
 			);
@@ -495,7 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14C15F1E1C99546A009B1E8D /* TournamentViewController.swift in Sources */,
-				14C15F151C99541B009B1E8D /* UserRankingTableViewCell.swift in Sources */,
+				14C15F151C99541B009B1E8D /* RankedUserViewCell.swift in Sources */,
 				14C15F1A1C99544F009B1E8D /* CellIdentifier.swift in Sources */,
 				14875BF2199D2443005791D0 /* LoginViewController.swift in Sources */,
 				143A27371C9AAE5600B5E42A /* MatchTableViewCell.swift in Sources */,
@@ -510,7 +507,6 @@
 				14F87A6A1998EBE400A6EB11 /* AppDelegate.swift in Sources */,
 				14C15F161C99541B009B1E8D /* UserTableViewCell.swift in Sources */,
 				14B484E31ABE24EB000E3BA6 /* TwitterLogin.swift in Sources */,
-				148F93E91C9FEAFF00765D30 /* RankingViewController.swift in Sources */,
 				1470B18D1CA3E10500254A91 /* PredictButton.swift in Sources */,
 				14F87A6C1998EBE400A6EB11 /* ActivitiesViewController.swift in Sources */,
 				1470B1911CA4130000254A91 /* String+Utils.swift in Sources */,
@@ -554,12 +550,12 @@
 			name = UserTableViewCell.xib;
 			sourceTree = "<group>";
 		};
-		145B4B5A1C9C56CD007393B1 /* UserRankingTableViewCell.xib */ = {
+		145B4B5A1C9C56CD007393B1 /* RankedUserViewCell.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				145B4B5B1C9C56CD007393B1 /* Base */,
 			);
-			name = UserRankingTableViewCell.xib;
+			name = RankedUserViewCell.xib;
 			sourceTree = "<group>";
 		};
 		148F93EA1CA01AB700765D30 /* MatchTableViewCell.xib */ = {

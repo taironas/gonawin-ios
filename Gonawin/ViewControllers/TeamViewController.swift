@@ -9,36 +9,46 @@
 import UIKit
 import GonawinEngine
 import RxSwift
-import PageMenu
 
-class TeamViewController: UIViewController {
+class TeamViewController: UITableViewController {
     
     var team: Team? {
         didSet {
             navigationItem.title = team?.name
-            
-            updateUI()
         }
     }
     
-    fileprivate var pageMenu : CAPSPageMenu?
-    
-    fileprivate let membersController = UsersViewController()
-    fileprivate let tournamentsController = TournamentsViewController()
-    fileprivate let leaderboardController = RankingViewController()
+    fileprivate var members: [User]? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     fileprivate let disposeBag = DisposeBag()
     fileprivate var provider: AuthorizedGonawinEngine?
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var avatarImageView: UIWebView!
+    @IBOutlet weak var membersCountLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupPageMenu()
         
         if let authorizationToken = GonawinSession.session.authorizationToken {
             provider = GonawinEngine.newAuthorizedGonawinEngine(authorizationToken)
         }
         
+        if let team = self.team {
+            nameLabel.text = team.name
+            let url = URL(string: (team.imageURL + "&size=80").addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
+            avatarImageView.loadRequest(URLRequest(url: url))
+            membersCountLabel.text = "\(team.membersCount)"
+            
+            fetchMembers(of: Int(team.id))
+        }
+    }
+    
+    fileprivate func fetchMembers(of teamID: Int) {
         self.provider?.getTeam(Int(team!.id))
             .debug()
             .catchError({ error in
@@ -46,12 +56,9 @@ class TeamViewController: UIViewController {
                 return Observable.empty()
             })
             .subscribe(onNext: {
-                self.team = $0
-                
-                if let members = self.team?.members {
+                if let members = $0.members {
                     
-                    self.membersController.users = members
-                    self.leaderboardController.users = members.sorted{ $0.score > $1.score }
+                    self.members = members.sorted{ $0.score > $1.score }
                 }
             })
             .addDisposableTo(self.disposeBag)
@@ -62,45 +69,22 @@ class TeamViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func updateUI() {
-        //load new information from the team
-        if let team = self.team {
-            
-            navigationItem.title = team.name
-        }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return members?.count ?? 0
     }
     
-    fileprivate func setupPageMenu() {
-        var controllerArray : [UIViewController] = []
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return configureCell(for: indexPath)
+    }
+    
+    fileprivate func configureCell(for indexPath: IndexPath) -> UITableViewCell {
+        tableView.register(UINib(nibName: TableViewCellIdentifier.ranked.rawValue, bundle: nil ), forCellReuseIdentifier: TableViewCellIdentifier.ranked.rawValue)
         
-        membersController.title = "MEMBERS"
-        controllerArray.append(membersController)
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifier.ranked.rawValue, for: indexPath) as! RankedUserViewCell
+        cell.user = members?[indexPath.row]
+        cell.rankinglabel.text = "\(indexPath.row + 1)"
         
-        
-        tournamentsController.title = "TOURNAMENTS"
-        controllerArray.append(tournamentsController)
-        
-        leaderboardController.title = "LEADERBOARD"
-        controllerArray.append(leaderboardController)
-        
-        let parameters: [CAPSPageMenuOption] = [
-            .menuItemSeparatorWidth(0.0),
-            .menuHeight(44.0),
-            .useMenuLikeSegmentedControl(true),
-            .menuItemSeparatorPercentageHeight(0.1),
-            .selectionIndicatorColor(UIColor.greenSeaFoam),
-            .selectedMenuItemLabelColor(UIColor.greenSeaFoam),
-            .unselectedMenuItemLabelColor(UIColor.black),
-            .scrollMenuBackgroundColor(UIColor.clear),
-            .bottomMenuHairlineColor(UIColor.groupTableViewBackground),
-            .menuItemFont(UIFont.systemFont(ofSize: 12.0, weight: UIFontWeightMedium)),
-        ]
-        
-        let frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-        
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: frame, pageMenuOptions: parameters)
-        
-        self.view.addSubview(pageMenu!.view)
+        return cell
     }
     
 }

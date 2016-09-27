@@ -8,7 +8,7 @@
 
 enum TableViewCellIdentifier: String {
     case user = "UserTableViewCell"
-    case ranking = "RankingTableViewCell"
+    case ranked = "RankedUserViewCell"
     case match = "MatchTableViewCell"
 }
 
