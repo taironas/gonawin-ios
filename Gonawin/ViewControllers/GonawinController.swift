@@ -13,6 +13,5 @@ class GonawinController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 }

@@ -21,11 +21,8 @@ class ProfileViewController: UITableViewController {
         super.viewDidLoad()
         
         if let user = GonawinSession.session.currentUser {
-            let url = URL(string: user.imageURL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
+            let url = URL(string: (user.imageURL + "&size=80").addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
             profileImageView.loadRequest(URLRequest(url: url))
-            let imageLayer = profileImageView.layer
-            imageLayer.cornerRadius = profileImageView.frame.size.height/2
-            imageLayer.masksToBounds = true
             nameLabel.text = user.username
             scoreLabel.text = "\(user.score)"
             tournamentsLabel.text = "\(user.tournamentIds.count)"

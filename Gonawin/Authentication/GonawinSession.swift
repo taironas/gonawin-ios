@@ -32,19 +32,7 @@ class GonawinSession {
             authorizationToken = data["auth"] as? String
             
             if let userID = Defaults[.currentUserID] {
-                // fetch current user
-                self.provider = GonawinEngine.newAuthorizedGonawinEngine(authorizationToken!)
-                    
-                self.provider?.getUser(userID)
-                    .debug()
-                    .catchError({ error in
-                        print("error : \(error)")
-                        return Observable.empty()
-                    })
-                    .subscribe(onNext: {
-                        self.currentUser = $0
-                    })
-                    .addDisposableTo(self.disposeBag)
+                fetchCurrentUser(userID: userID)
             }
         }
     }
@@ -61,6 +49,8 @@ class GonawinSession {
         
         // save user id in user defaults
         Defaults[.currentUserID] = Int(user.id)
+        
+        fetchCurrentUser(userID: Int(user.id))
         
         delegate?.didLogin()
     }
@@ -82,5 +72,21 @@ class GonawinSession {
     
     func isLoggedIn() -> Bool {
         return (authorizationToken != nil)
+    }
+    
+    fileprivate func fetchCurrentUser(userID: Int) {
+    
+        self.provider = GonawinEngine.newAuthorizedGonawinEngine(authorizationToken!)
+        
+        self.provider?.getUser(userID)
+            .debug()
+            .catchError({ error in
+                print("error : \(error)")
+                return Observable.empty()
+            })
+            .subscribe(onNext: {
+                self.currentUser = $0
+            })
+            .addDisposableTo(self.disposeBag)
     }
 }
