@@ -13,10 +13,10 @@ import PageMenu
 
 class TeamViewController: UIViewController {
     
-    var teamID: Int64 = 0
-    
-    fileprivate var team: Team? {
+    var team: Team? {
         didSet {
+            navigationItem.title = team?.name
+            
             updateUI()
         }
     }
@@ -39,7 +39,7 @@ class TeamViewController: UIViewController {
             provider = GonawinEngine.newAuthorizedGonawinEngine(authorizationToken)
         }
         
-        self.provider?.getTeam(Int(teamID))
+        self.provider?.getTeam(Int(team!.id))
             .debug()
             .catchError({ error in
                 showError(error, from: self)

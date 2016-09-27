@@ -10,9 +10,11 @@ import UIKit
 import GonawinEngine
 import RxSwift
 
-class TeamsViewController: UITableViewController {
+class TeamsViewController: UICollectionViewController {
     var teams = [Team]()
     var currentPage = 1
+    
+    let segueIdentifier = "showTeam"
     
     fileprivate let disposeBag = DisposeBag()
     fileprivate var provider: AuthorizedGonawinEngine?
@@ -36,7 +38,7 @@ class TeamsViewController: UITableViewController {
                 if $0.count > 0 {
                     self.teams.removeAll(keepingCapacity: true)
                     self.teams.insert(contentsOf: $0, at: self.currentPage - 1)
-                    self.tableView?.reloadData()
+                    self.collectionView?.reloadData()
                 }
             })
             .addDisposableTo(self.disposeBag)
@@ -47,32 +49,27 @@ class TeamsViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return teams.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.register(UINib(nibName: "TeamTableViewCell", bundle: nil ), forCellReuseIdentifier: TableViewCellIdentifier.team.rawValue)
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCellIdentifier.team.rawValue, for: indexPath) as! TeamViewCell
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifier.team.rawValue, for: indexPath) as! TeamTableViewCell
         cell.team = teams[indexPath.row]
         
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 54
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showTeam", sender: self)
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: segueIdentifier, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showTeam"{
+        if segue.identifier == segueIdentifier {
             if let vc = segue.destination as? TeamViewController {
-                if let teamIndex = (tableView.indexPathForSelectedRow as NSIndexPath?)?.row {
-                    vc.teamID = teams[teamIndex].id
+                if let teamIndex = (collectionView?.indexPathsForSelectedItems?[0])?.row {
+                    vc.team = teams[teamIndex]
                 }
             }
         }
@@ -95,7 +92,7 @@ class TeamsViewController: UITableViewController {
                 .subscribe(onNext: {
                     if $0.count > 0 {
                         self.teams.append(contentsOf: $0)
-                        self.tableView?.reloadData()
+                        self.collectionView?.reloadData()
                     }
                 })
                 .addDisposableTo(self.disposeBag)

@@ -51,7 +51,7 @@
 		14F87A731998EBE400A6EB11 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F87A721998EBE400A6EB11 /* Images.xcassets */; };
 		14F87A7F1998EBE400A6EB11 /* GonawinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F87A7E1998EBE400A6EB11 /* GonawinTests.swift */; };
 		14FD2AF31D59F44E002947D6 /* APIKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14FD2AF21D59F44E002947D6 /* APIKeys.plist */; };
-		14FEDF481C9EB87000BBC5B1 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEDF461C9EB87000BBC5B1 /* TeamTableViewCell.swift */; };
+		14FEDF481C9EB87000BBC5B1 /* TeamViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEDF461C9EB87000BBC5B1 /* TeamViewCell.swift */; };
 		14FEDF4E1C9EB8A000BBC5B1 /* TeamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14FEDF4C1C9EB8A000BBC5B1 /* TeamTableViewCell.xib */; };
 		14FEDF551C9EEA9200BBC5B1 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEDF541C9EEA9200BBC5B1 /* UsersViewController.swift */; };
 		526712DCDF1848CBBC55E543 /* Pods_Gonawin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93453BD3E612CD9578856E02 /* Pods_Gonawin.framework */; };
@@ -130,7 +130,7 @@
 		14F87A7D1998EBE400A6EB11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14F87A7E1998EBE400A6EB11 /* GonawinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GonawinTests.swift; sourceTree = "<group>"; };
 		14FD2AF21D59F44E002947D6 /* APIKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = APIKeys.plist; path = ../../APIKeys.plist; sourceTree = "<group>"; };
-		14FEDF461C9EB87000BBC5B1 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamTableViewCell.swift; path = Views/TeamTableViewCell.swift; sourceTree = "<group>"; };
+		14FEDF461C9EB87000BBC5B1 /* TeamViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamViewCell.swift; path = Views/TeamViewCell.swift; sourceTree = "<group>"; };
 		14FEDF4D1C9EB8A000BBC5B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TeamTableViewCell.xib; sourceTree = "<group>"; };
 		14FEDF541C9EEA9200BBC5B1 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		8FB8EFF33B1AE03299470605 /* Pods-Gonawin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gonawin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gonawin/Pods-Gonawin.debug.xcconfig"; sourceTree = "<group>"; };
@@ -217,7 +217,7 @@
 				14C15F171C99544F009B1E8D /* ActivityTableViewCell.swift */,
 				14C15F101C99541B009B1E8D /* UserTableViewCell.swift */,
 				14C15F0F1C99541B009B1E8D /* UserRankingTableViewCell.swift */,
-				14FEDF461C9EB87000BBC5B1 /* TeamTableViewCell.swift */,
+				14FEDF461C9EB87000BBC5B1 /* TeamViewCell.swift */,
 				14F6DADB1D9295B000765CEB /* TournamentViewCell.swift */,
 				143A27361C9AAE5600B5E42A /* MatchTableViewCell.swift */,
 			);
@@ -499,7 +499,7 @@
 				14C15F1A1C99544F009B1E8D /* CellIdentifier.swift in Sources */,
 				14875BF2199D2443005791D0 /* LoginViewController.swift in Sources */,
 				143A27371C9AAE5600B5E42A /* MatchTableViewCell.swift in Sources */,
-				14FEDF481C9EB87000BBC5B1 /* TeamTableViewCell.swift in Sources */,
+				14FEDF481C9EB87000BBC5B1 /* TeamViewCell.swift in Sources */,
 				14C15F1D1C99546A009B1E8D /* TeamViewController.swift in Sources */,
 				1414B8C61AC857FA000353C5 /* JSON.swift in Sources */,
 				14F87A6E1998EBE400A6EB11 /* TournamentsViewController.swift in Sources */,

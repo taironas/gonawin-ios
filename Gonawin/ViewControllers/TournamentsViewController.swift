@@ -15,7 +15,6 @@ class TournamentsViewController: UICollectionViewController {
     var tournaments = [Tournament]()
     var currentPage = 1
     
-    let cellIdentifier = "TournamentViewCell"
     let segueIdentifier = "showTournament"
     
     fileprivate let disposeBag = DisposeBag()
@@ -60,7 +59,7 @@ class TournamentsViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! TournamentViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCellIdentifier.tournament.rawValue, for: indexPath) as! TournamentViewCell
         
         cell.tournament = tournaments[indexPath.row]
         

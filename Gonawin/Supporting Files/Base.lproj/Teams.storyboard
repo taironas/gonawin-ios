@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,7 +14,7 @@
                     <tabBarItem key="tabBarItem" title="Teams" image="teams" id="wgA-YI-sK0"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="JY2-zn-LiF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JY2-zn-LiF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
@@ -22,7 +23,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="5np-7v-9rl" kind="relationship" relationship="rootViewController" id="OyD-SH-08K"/>
+                        <segue destination="qWk-mC-p8O" kind="relationship" relationship="rootViewController" id="kUK-EK-77g"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mI-5v-Ayx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -30,43 +31,73 @@
             <point key="canvasLocation" x="892" y="788"/>
         </scene>
         <!--Teams-->
-        <scene sceneID="vJ1-Gj-8fm">
+        <scene sceneID="mam-wd-89V">
             <objects>
-                <tableViewController id="5np-7v-9rl" customClass="TeamsViewController" customModule="Gonawin" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="28" sectionFooterHeight="28" id="bRd-bm-1QG">
+                <collectionViewController storyboardIdentifier="TeamsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qWk-mC-p8O" customClass="TeamsViewController" customModule="Gonawin" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ZVs-dU-ljB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="ot2-Vt-CQw">
-                            <rect key="frame" x="0.0" y="146" width="375" height="0.0"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TeamTableViewCell" rowHeight="54" id="wXV-FW-dWe">
-                                <rect key="frame" x="0.0" y="92" width="375" height="54"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wXV-FW-dWe" id="fWo-Vv-Z7a">
-                                    <frame key="frameInset" width="375" height="53"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2.5" minimumInteritemSpacing="2.5" id="2Lm-RM-qPn">
+                            <size key="itemSize" width="120" height="120"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="5" minY="10" maxX="5" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TeamViewCell" id="MUH-O2-9WO" customClass="TeamViewCell" customModule="Gonawin" customModuleProvider="target">
+                                <rect key="frame" x="5" y="10" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ang-yc-uPP">
+                                            <subviews>
+                                                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NDa-FX-wMU">
+                                                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="Gja-H9-E0r"/>
+                                                        <constraint firstAttribute="width" secondItem="NDa-FX-wMU" secondAttribute="height" multiplier="1:1" id="NIi-bb-5hL"/>
+                                                    </constraints>
+                                                </webView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fR1-RM-UhE">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ang-yc-uPP" secondAttribute="trailing" constant="5" id="Ik9-dE-4c2"/>
+                                    <constraint firstItem="ang-yc-uPP" firstAttribute="leading" secondItem="MUH-O2-9WO" secondAttribute="leading" constant="5" id="eRl-I0-eG8"/>
+                                    <constraint firstItem="ang-yc-uPP" firstAttribute="top" secondItem="MUH-O2-9WO" secondAttribute="top" constant="10" id="isV-1T-gF1"/>
+                                    <constraint firstAttribute="bottom" secondItem="ang-yc-uPP" secondAttribute="bottom" constant="10" id="uhj-e3-nv7"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="avatarImageView" destination="NDa-FX-wMU" id="uw6-NL-v1B"/>
+                                    <outlet property="nameLabel" destination="fR1-RM-UhE" id="g2Q-CR-yaj"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
                         <connections>
-                            <outlet property="dataSource" destination="5np-7v-9rl" id="x48-oD-xCu"/>
-                            <outlet property="delegate" destination="5np-7v-9rl" id="XL5-67-bZQ"/>
+                            <outlet property="dataSource" destination="qWk-mC-p8O" id="MB3-Kq-QWC"/>
+                            <outlet property="delegate" destination="qWk-mC-p8O" id="tYo-pM-YJp"/>
                         </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Teams" id="2CB-au-reh">
-                        <barButtonItem key="backBarButtonItem" title=" " id="zRb-wY-6hz"/>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Teams" id="cU3-gP-fsB">
+                        <barButtonItem key="backBarButtonItem" title=" " id="TJW-5k-OGh"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="mV9-Th-dud" kind="show" identifier="showTeam" id="Ocu-vr-QHG"/>
+                        <segue destination="mV9-Th-dud" kind="show" identifier="showTeam" id="eKh-gw-7Kw"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XfL-dt-DeW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vz9-uA-kkJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="892" y="1598"/>
+            <point key="canvasLocation" x="892" y="1565"/>
         </scene>
         <!--Team View Controller-->
         <scene sceneID="eeU-jc-T85">
@@ -84,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A6G-Hq-HDa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="892" y="2328"/>
+            <point key="canvasLocation" x="1625" y="1565"/>
         </scene>
     </scenes>
     <resources>
