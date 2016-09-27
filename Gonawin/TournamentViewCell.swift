@@ -52,6 +52,7 @@ class TournamentViewCell: UICollectionViewCell {
     
     fileprivate func formattedDate(from string: String) -> String {
         dateFormatter.dateFormat = "YYYY-MM-ddEEEEEHH:mm:ss"
+        dateFormatter.locale = Locale(identifier: "en_US")
         
         let truncatedDate = string.substring(to: string.index(before: string.endIndex))
         

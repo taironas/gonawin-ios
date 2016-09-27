@@ -9,8 +9,6 @@ target 'Gonawin' do
     pod 'FontAwesomeKit/FontAwesome'
     pod 'Locksmith', :git => 'https://github.com/matthewpalmer/Locksmith', :branch => 'swift-3.0'
     pod 'SwiftyUserDefaults'
-    pod 'SDWebImage'
-    pod 'PageMenu', :git => 'https://github.com/lowki93/PageMenu', :branch => 'swift3'
     pod 'p2.OAuth2', :git => 'https://github.com/p2/OAuth2', :submodules => true
     pod 'LVTwitterOAuthClient'
 end
